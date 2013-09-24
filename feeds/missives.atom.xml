@@ -380,6 +380,7 @@ This was originally published at
 &lt;br /&gt;&lt;div&gt;&lt;em&gt;Gloria perpetua!&lt;/em&gt;&lt;/div&gt;
 </summary></entry><entry><title>The Shining: Panda Edition</title><link href="http://anthony.scopatz.com/the-shining-panda-edition.html" rel="alternate"></link><updated>2013-01-19T00:00:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-01-19:the-shining-panda-edition.html</id><summary type="html">&lt;div class="section" id="or-adventures-in-ci-py"&gt;
 &lt;h2&gt;Or, Adventures in &lt;span class="caps"&gt;CI&lt;/span&gt;&amp;nbsp;Py&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;This was originally published at&lt;/em&gt; &lt;a class="reference external" href="http://inscight.org/2013/01/19/the-shining-panda-edition/"&gt;inSCIght&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As some of you may know I help run an open source nuclear engineering project called
 &lt;a class="reference external" href="http://www.pynesim.org/"&gt;PyNE&lt;/a&gt;.  It is awesome, and complicated.  It isn’t
 complicated because it is nuclear related.  It is complicated because we provide
@@ -486,4 +487,132 @@ nosetests
 &lt;p&gt;[1] From my point of view the C++ &lt;span class="caps"&gt;API&lt;/span&gt; is a carrot to get more people using&amp;nbsp;Python.&lt;/p&gt;
 &lt;p&gt;[2] I don’t think that this is Shining Panda’s fault.  I think it is a limitation of the underlying&amp;nbsp;tools.&lt;/p&gt;
 &lt;/div&gt;
+</summary></entry><entry><title>Passive Reproducibility: It’s Not You, It’s Me</title><link href="http://anthony.scopatz.com/passive-reproducibility.html" rel="alternate"></link><updated>2012-11-29T00:00:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-11-29:passive-reproducibility.html</id><summary type="html">&lt;p&gt;&lt;em&gt;This was originally published at&lt;/em&gt; &lt;a class="reference external" href="http://inscight.org/2012/11/29/passive-reproducibility-its-not-you-its-me/"&gt;inSCIght&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The&lt;/em&gt;
+&lt;a class="reference external" href="http://icerm.brown.edu/tw12-5-rcem"&gt;&lt;span class="caps"&gt;ICERM&lt;/span&gt; workshop on Reproducibility in Computational and Experimental Mathematics&lt;/a&gt;
+&lt;em&gt;at Brown University is coming up in a couple of  weeks.  Prior to this, they invited all participants to submit a short position paper “…to express [our] thoughts on issues concerning reproducibility…”  I couldn’t pass up the opportunity.  I hope you enjoy my submission&amp;nbsp;(below).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Dear&amp;nbsp;User,&lt;/p&gt;
+&lt;p&gt;Ugggh, I don’t know how to tell you this so I am just going to come out and say it. It’s over. There, bam, I’m sorry. I would have liked to do this face-to-face or over the phone (but I am a computer). So it&amp;nbsp;goes.&lt;/p&gt;
+&lt;p&gt;I just need some time to work on myself. You obviously were not paying enough attention to me. You were always writing some paper or proceeding. “Publish or perish,” I know. Well you’d think that occasionally you would be able to spend some time writing me. I am publication too! You write me, you copyright me, and you put me out there in the world for others to read. You would think that counts for something. I have heard your arguments over and over and over that I can’t get you a shiny faculty gig. I think that is ridiculous. Thousands of lines of code, a Ph.D., and a post-doc later and now the review committee won’t give me the time since&amp;nbsp;epoch?!&lt;/p&gt;
+&lt;p&gt;Also there is this unnatural obsession you have with the novelness of your work. I understand that you want to do something new, something that distinguishes you. You are smart. You have had some wins. But look, science, technology, engineering, and mathematics are cumulative pursuits. These things get built up over time. Also, you are human. You live and work in a community of people very similar to you. Most of them share this ridiculous predilection with you. I’ll let you do the math about a group of people with effectively the same training all trying to do something differentially new at the same&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;You wanna do something really novel? Run the same simulation twice and get the same answer! Bonus points for recording and saving exactly what you did to get that&amp;nbsp;answer.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;, I am not saying that it isn’t a noble pursuit to try to do something unique. But it is not the only worthwhile pursuit. I have needs too! I feel like the quality of my code base has decreased in the years that I have stood by you. This will come back to bite you. P = 1. I do not want to be around when that&amp;nbsp;happens.&lt;/p&gt;
+&lt;p&gt;Listen, I know that I am not perfect. I am sorry. Total reproducibility is hard. It requires a lot of active, concentrated effort on your part. With out anyone forcing it down your throat, it is easy to understand that you dropped this whole long-term reproducibility thing with all that you are juggling. In my humble opinion, it is a failure of the education system that reproducibility wasn’t beaten into you to the point of self-regulation. C’est la vie, nothing we can do about that&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;But it is not as if there are no tools out there whatsoever. I know how much you love labeling directories ‘v01’, ‘v02’, ‘v03’, and all. But honey, there are version control systems out there. There are also these things called test suites I think that you would really like if you gave them a shot. (Plus you can sell them to your &lt;span class="caps"&gt;PI&lt;/span&gt; as part of your V&amp;amp;V/&lt;span class="caps"&gt;UQ&lt;/span&gt; effort.) Oh and since you like writing so much, you should really look into documentation tools. Using them is like writing a paper, only even more technical (and&amp;nbsp;prettier).&lt;/p&gt;
+&lt;p&gt;I know you have your workflow. But it is so manual that my friends mistake you for a ditch digger! And we never go out anymore because &lt;span class="caps"&gt;YOU&lt;/span&gt; spend all of your time flirting with that tease &lt;span class="caps"&gt;BASH&lt;/span&gt;. (“Most religious terminal,” yeah,&amp;nbsp;right.)&lt;/p&gt;
+&lt;p&gt;Sorry, sorry, I got worked up there. Maybe I should just be invisible. You are right that even if you adopted all of the tools I just mentioned you are only half way to real simulation reproducibility. Easy-to-use, transparent environment and workflow capturing tools just are not widely available. And even if they were, it probably wouldn’t be a walk in the park making such tools work with that &lt;span class="caps"&gt;FORTRAN&lt;/span&gt; 2 code everyone in your research group seems to think is so&amp;nbsp;magical.&lt;/p&gt;
+&lt;p&gt;I knew you were like this when we started running together. And to be fair, you haven’t changed all that much. So it is not really you, it’s me. But for my own sake I am going to have to find someone who respects me for who I am, maybe a software developer. I hope that we can still be&amp;nbsp;friends…&lt;/p&gt;
+&lt;p&gt;Love Always, Computational&amp;nbsp;Science&lt;/p&gt;
+</summary></entry><entry><title>A Note on Replication</title><link href="http://anthony.scopatz.com/a-note-on-replication.html" rel="alternate"></link><updated>2012-07-22T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-07-22:a-note-on-replication.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2012/07/22/a-note-on-replication/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;strong&gt;SciPy 2012 Postview:&lt;/strong&gt; &lt;em&gt;The following is a section taken from my &lt;a href="http://conference.scipy.org/scipy2012/"&gt;SciPy 2012&lt;/a&gt; proceeding from the conference last week.   You can see &lt;a href="https://github.com/scopatz/scipy_proceedings/blob/2012/papers/anthony_scopatz_flmake/anthony_scopatz_flmake.rst"&gt;the paper at github&lt;/a&gt;.  This post is a follow up to &lt;a href="http://inscight.org/2012/07/13/why-reproducibility-is-important/"&gt;the &amp;#8220;Why Reproducibility is Important&amp;#8221; post&lt;/a&gt;.  I hope to do a recap of the conference itself next week!  (&lt;span class="caps"&gt;NOTE&lt;/span&gt;: flmake is a specific &lt;span class="caps"&gt;CLI&lt;/span&gt; utility for workflow management in the &lt;span class="caps"&gt;FLASH&lt;/span&gt;&amp;nbsp;code.)&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+A weaker form of reproducibility is known as replication [&lt;span class="caps"&gt;SCHMIDT&lt;/span&gt;]. Replication is the process of recreating a result when “you take all the same data and all the same tools” [&lt;span class="caps"&gt;GRAHAM&lt;/span&gt;] which were used in the original determination. Replication is a weaker determination than reproduction because at minimum the original scientist should be able to replicate their own work. Without replication, the same code executed twice will produce distinct results. In this case no trust may be placed in the conclusions&amp;nbsp;whatsoever.
+&lt;/p&gt;
+
+&lt;p&gt;
+Much as version control has given developers greater control over reproducibility, other modern tools are powerful instruments of replicability. Foremost among these are hypervisors. The ease-of-use and ubiquity of virtual machines (&lt;span class="caps"&gt;VM&lt;/span&gt;) in the software ecosystem allows for the total capture and persistence of the environment in which any computation was performed. Such environments may be hosted and shared with collaborators, editors, reviewers, or the public at large. If the original analysis was performed in a &lt;span class="caps"&gt;VM&lt;/span&gt; context, shared, and rerun by other scientists then this is replicability. Such a strategy has been proposed by &lt;span class="caps"&gt;C. T.&lt;/span&gt; Brown as a stop-gap measure until diacomputational science is realized&amp;nbsp;[&lt;span class="caps"&gt;BROWN&lt;/span&gt;].
+&lt;/p&gt;
+
+&lt;p&gt;
+However, as Brown admits (see comments), the delineation between replication and reproduction is fuzzy. Consider these questions which have no clear answers:
+&lt;ul&gt;
+  &lt;li&gt;Are bit-identical results needed for&amp;nbsp;replication?&lt;/li&gt;
+  &lt;li&gt;How much of the environment must be reinstated for replication versus&amp;nbsp;reproduction?&lt;/li&gt;
+  &lt;li&gt;How much of the hardware and software stack must&amp;nbsp;be recreated?&lt;/li&gt;
+  &lt;li&gt;What precisely is meant by ‘the environment’ and how large is&amp;nbsp;it?&lt;/li&gt;
+  &lt;li&gt;For codes depending on stochastic processes, is reusing the same random seed replication or&amp;nbsp;reproduction?&lt;/li&gt;
+&lt;/ul&gt;
+Without justifiable answers to the above, ad hoc definitions have governed the use of replicability and reproducibility. Yet to the quantitatively minded, an I-know-reproducibility-when-I-see-it approach falls short. Thus the science of science, at least in the computational sphere, has much work&amp;nbsp;remaining.
+&lt;/p&gt;
+
+&lt;p&gt;
+Even with the reproduction/replication dilemma, the flmake reproduce command is a reproducibility tool. This is because it takes the opposite approach to Brown’s &lt;span class="caps"&gt;VM&lt;/span&gt;-based replication. Though the environment is captured within the description file, flmake reproduce does not attempt to recreate this original environment at all. The previous environment information is simply there for posterity, helping to uncover any discrepancies which may arise. User specific settings on the reproducing machine are maintained. This includes but is not limited to which compiler is&amp;nbsp;used.
+&lt;/p&gt;
+
+&lt;p&gt;
+The claim that Brown’s work and flmake reproduce represent paragons of replicability and reproducibility respectively may be easily challenged. The author, like Brown himself, does not presuppose to have all - or even partially satisfactory - answers. What is presented here is an attempt to frame the discussion and bound the option space of possible meanings for these terms. Doing so with concrete code examples is preferable to debating this issue in the&amp;nbsp;abstract.
+&lt;/p&gt;
+
+&lt;h4&gt;References&lt;/h4&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;BROWN&lt;/span&gt;]  C. Titus Brown, “Our approach to replication in computational science,” Living in an Ivory Basement, April 2012,&amp;nbsp;http://ivory.idyll.org/blog/replication-i.html.
+&lt;/p&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;GRAHAM&lt;/span&gt;] Jim Graham, “What is ‘Reproducibility,’ Anyway?”, Scimatic, April 2010,&amp;nbsp;http://www.scimatic.com/node/361.
+&lt;/p&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;SCHMIDT&lt;/span&gt;] Gavin A. Schmidt, “On replication,” RealClimate, Feb 2009,&amp;nbsp;http://www.realclimate.org/index.php/archives/2009/02/on-replication/langswitch_lang/in/.
+&lt;/p&gt;
+</summary></entry><entry><title>Why Reproducibility is Important</title><link href="http://anthony.scopatz.com/why-reproducibility-is-important.html" rel="alternate"></link><updated>2012-07-13T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-07-13:why-reproducibility-is-important.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2012/07/13/why-reproducibility-is-important/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;em&gt;&lt;strong&gt;SciPy 2012 Preview:&lt;/strong&gt; The following is a section taken from my &lt;a href="http://conference.scipy.org/scipy2012/"&gt;SciPy 2012&lt;/a&gt; proceeding for the conference next week.   You can see a preview of &lt;a href="https://github.com/scopatz/scipy_proceedings/blob/2012/papers/anthony_scopatz_flmake/anthony_scopatz_flmake.rst"&gt;the paper at github&lt;/a&gt;.  I hope to see you at the conference (and my&amp;nbsp;talk)!&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+True to its part of speech, much of &amp;#8216;scientific computing&amp;#8217; has the trappings of science in that it is code produced to solve problems in (big-&amp;#8216;S&amp;#8217;) Science. However, the process by which said programs are written is not typically itself subject to the rigors of the scientific method. The vaulted method contains components of prediction, experimentation, duplication, analysis, and openness [&lt;span class="caps"&gt;GODFREY&lt;/span&gt;-&lt;span class="caps"&gt;SMITH&lt;/span&gt;]. While software engineers often engage in such activities when programming, scientific developers usually forgo these methods, often to their&amp;nbsp;detriment [&lt;span class="caps"&gt;WILSON&lt;/span&gt;].
+&lt;/p&gt;
+
+&lt;p&gt;
+Whatever the reason for this may be - ignorance, sloth, or other deadly sins - the impetus for adopting modern software development practices only increases every year. The evolution of tools such as version control and environment capturing mechanisms (such as virtual machines/hypervisors) enable researchers to more easily retain information about software during and after production. Furthermore, the apparent end of Silicon-based Moore&amp;#8217;s Law has necessitated a move to more exotic architectures and increased parallelism to see further speed increases [&lt;span class="caps"&gt;MIMS&lt;/span&gt;]. This implies that code that runs on machines now may not be able to run on future processors without significant&amp;nbsp;refactoring.
+&lt;/p&gt;
+
+&lt;p&gt;
+Therefore the scientific computing landscape is such that there are presently the tools and the need to have fully reproducible simulations. However, most scientists choose to not utilize these technologies. This is akin to a chemist not keeping a lab notebook. The lack of reproducibility means that many solutions to science problems garnered through computational means are relegated to the realm of technical achievements. Irreproducible results may be novel and interesting but they are not science. Unlike the current paradigm of computing-about-science, or &lt;em&gt;periscientific computing&lt;/em&gt;, reproducibility is a keystone of &lt;em&gt;diacomputational science&lt;/em&gt;(computing-throughout-science).
+&lt;/p&gt;
+
+&lt;p&gt;
+In periscientific computing there may exist a partition between expert software developers and expert scientists, each of whom must learn to partially speak the language of the other camp. Alternatively, when expert software engineers are not available, canonically ill-equipped scientists perform only the bare minimum development to solve computing&amp;nbsp;problems.
+&lt;/p&gt;
+
+&lt;p&gt;
+On the other hand, in diacomputational science, software exists as a substrate on top of which science and engineering problems are solved. Whether theoretical, simulation, or experimental problems are at hand the scientist has a working knowledge of computing tools available and an understanding of how to use them responsibly. While the level of education required for diacomputational science may seem extreme in a constantly changing software ecosystem, this is in fact no greater than what is currently expect from scientists with regard to&amp;nbsp;Statistics [&lt;span class="caps"&gt;WILSON&lt;/span&gt;].
+&lt;/p&gt;
+
+&lt;p&gt;
+With the extreme cases illustrated above, there are some notable exceptions. The first is that there are researchers who are cognizant and respectful of these reproducibility issues. The efforts of these scientists help paint a less dire picture than the one framed&amp;nbsp;here.
+&lt;/p&gt;
+
+&lt;p&gt;
+The second exception is that while reproducibility is a key feature of fundamental science it is not the only one. For example, openness is another point whereby the statement &amp;#8220;If a result is not produced openly then it is not science&amp;#8221; holds. Open access to results - itself is a hotly contested issue [&lt;span class="caps"&gt;VRIEZE&lt;/span&gt;] - is certainly a component of computational science. Though having open and available code is likely critical for pure science, it often lies outside the scope of normal research practice. This is for a variety of reasons, including the fear that releasing code too early or at all will negatively impact personal publication records. Tackling the openness issue must be left for another&amp;nbsp;paper.
+&lt;/p&gt;
+
+&lt;p&gt;
+In summary, reproducibility is important because without it any results generated are periscientific. To achieve diacomputational science there exist computational tools to aid in this endeavor, as in analogue science there are physical solutions. Though it is not the only criticism to be levied against modern research practices, irreproducibility is one that affects computation acutely and uniquely as compared to other&amp;nbsp;spheres.
+&lt;/p&gt;
+
+&lt;h4&gt;References&lt;/h4&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;GODFREY&lt;/span&gt;-&lt;span class="caps"&gt;SMITH&lt;/span&gt;] Godfrey-Smith, Peter (2003), &lt;em&gt;Theory and Reality: An introduction to the philosophy of science&lt;/em&gt;, University of Chicago Press, &lt;span class="caps"&gt;ISBN&lt;/span&gt;&amp;nbsp;0-226-30063-3.
+&lt;/p&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;MIMS&lt;/span&gt;] C. Mims, &lt;em&gt;Moore&amp;#8217;s Law Over, Supercomputing &amp;#8220;In Triage,&amp;#8221; Says Expert,&lt;/em&gt; http://www.technologyreview.com/view/427891/moores-law-over-supercomputing-in-triage-says/ May 2012, Technology Review,&amp;nbsp;&lt;span class="caps"&gt;MIT&lt;/span&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;VRIEZE&lt;/span&gt;] Jop de Vrieze, &lt;em&gt;Thousands of Scientists Vow to Boycott Elsevier to Protest Journal Prices&lt;/em&gt;, Science Insider, February&amp;nbsp;2012.
+&lt;/p&gt;
+
+&lt;p&gt;
+[&lt;span class="caps"&gt;WILSON&lt;/span&gt;] &lt;span class="caps"&gt;G.V.&lt;/span&gt; Wilson, &lt;em&gt;Where&amp;#8217;s the real bottleneck in scientific computing?&lt;/em&gt; Am Sci.&amp;nbsp;2005;94:5.
+&lt;/p&gt;
 </summary></entry></feed>
