@@ -37,11 +37,11 @@ MENUITEMS = [('Projects', 'projects.html'),
              ('Board', 'board.html'),
              ('Membership', 'membership.html'),
              ('Donations', 'donations.html'),
-             ('Sponsors', 'sponsors.html'),
+#             ('Sponsors', 'sponsors.html'),
              ('Contact', 'contact.html'),
              ]
 
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sponsors')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives',)
 
 EXTRA_TEMPLATE_PATHS = ('templates',)
 #PAGINATED_DIRECT_TEMPLATES = []
