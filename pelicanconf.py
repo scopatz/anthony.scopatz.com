@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Anthony Scopatz'
 SITENAME = u'Anthony Scopatz'
+SITESUBTITLE = "I think, therefore I amino acid."
 SITEURL = ''
 
 TIMEZONE = 'America/Central'
@@ -25,19 +26,22 @@ TRANSLATION_FEED_ATOM = None
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('numfocus+subscribe@googlegroups.com', 'Join out mailing list'),
-          ('https://groups.google.com/forum/#!forum/numfocus', 'Read the archives'),
+SOCIAL = (('Other Website', 'http://scopatz.com/'),
+          ('Google+', 'https://plus.google.com/u/0/116439624339414215461'),
+          ('GitHub', 'https://github.com/scopatz'),
+          ('BitBucket', 'https://bitbucket.org/scopatz'),
+          ('Twitter', 'https://twitter.com/scopatz'),
+          ('LinkedIn', 'http://www.linkedin.com/in/scopatz'),
           )
 
+#DISQUS_SITENAME = ""
 GITHUB_URL = 'https://github.com/scopatz'
 TWITTER_URL = 'https://twitter.com/scopatz'
 GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
 
-MENUITEMS = [('Projects', 'projects.html'),
-             ('Board', 'board.html'),
-             ('Membership', 'membership.html'),
-             ('Donations', 'donations.html'),
-#             ('Sponsors', 'sponsors.html'),
+MENUITEMS = [('Missives', 'missives.html'),
+             ('Archives', 'archives.html'),
+             ('About', 'about.html'),
              ('Contact', 'contact.html'),
              ]
 
@@ -51,7 +55,7 @@ DEFAULT_PAGINATION = 8
 # pre-defined category (i.e. it has a directory) or to explicitly give it a
 # category
 # the default category is "nofeed"
-DEFAULT_CATEGORY = 'nofeed'
+DEFAULT_CATEGORY = 'null'
 
 TYPOGRIFY = True
 
