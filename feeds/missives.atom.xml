@@ -349,4 +349,141 @@ I promise that you will not regret&amp;nbsp;it!
 &lt;p&gt;&lt;i&gt;Jubilant photograph with the students after the final&amp;nbsp;lecture.&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-</summary><category term="teaching"></category></entry></feed>
+</summary><category term="teaching"></category></entry><entry><title>Thence FLASH, Thither UW</title><link href="http://anthony.scopatz.com/thence-flash-thither-uw.html" rel="alternate"></link><updated>2013-06-02T09:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-06-02:thence-flash-thither-uw.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2013/06/02/thence-flash-thither-uw/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+
+&lt;div&gt;
+&lt;h2&gt;Life&amp;nbsp;Update&lt;/h2&gt;
+&lt;br /&gt;
+&lt;div&gt;I am not really sure where to post this, so I have decided that inSCIght is as good a place as any.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;Due to our current funding round coming up during &lt;a href="http://www.whitehouse.gov/issues/sequester"&gt;the sequester&lt;/a&gt;,  &lt;a href="http://flash.uchicago.edu/site/"&gt;the Flash Center&lt;/a&gt; is currently scaling back to focus on its core mission.  &lt;strong&gt;So my job as a Research Scientist at the University of Chicago will eventually go away.&lt;/strong&gt;  I was not laid off today nor would I have been tomorrow.  I would have likely been able to remain at the Flash Center for up to another year.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;However, I like being proactive in these situations and in being proactive new opportunities present themselves.  As of yesterday, &lt;strong&gt;I am now an Assistant Visiting Scientist in the Engineering Physics department at the University of Wisconsin-Madison.&lt;/strong&gt;  In many ways this is a return to Computational Nuclear Engineering and Fuel Cycle research.  But don&amp;#8217;t get me wrong, I thoroughly enjoyed my time researching in Plasma Physics and High-Energy Density Physics.  &lt;em&gt;Crescat scientia, vita excolatur!&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;From here on I&amp;#8217;ll be working with the research groups of &lt;a href="https://directory.engr.wisc.edu/ep/faculty/wilson_paul" target="_blank"&gt;Dr. Paul Wilson&lt;/a&gt;.  Paul is very supportive of open source scientific computing and this software ecosystem as part of his critical research path.  By hiring me, relevant projects &amp;#8212; namely &lt;a href="http://cyclus.github.io/"&gt;Cyclus&lt;/a&gt; and &lt;a href="http://pynesim.org/"&gt;PyNE&lt;/a&gt; &amp;#8212; now become my full time job.   Other projects that I contribute to &amp;#8212; &lt;a href="http://pytables.github.io/"&gt;PyTables&lt;/a&gt;, &lt;a href="https://s3.amazonaws.com/xdress/index.html"&gt;xdress&lt;/a&gt;, and other minutia around the SciPy ecosystem &amp;#8212; play a synergistic role with my main duties and I am free to continue helping with.  Furthermore, after checking with the rest of the board that there were no unforeseen conflicts of interest, I will remain the treasurer and a board member for &lt;a href="http://numfocus.org/"&gt;NumFOCUS&lt;/a&gt;.  I am very happy about this since NumFOCUS has been doing some really great things lately!&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;Lastly, for some family health related reasons, the position that I have taken at &lt;span class="caps"&gt;UW&lt;/span&gt; is 3/4 remote &amp;#8212; ie 1 week / month I will physically be in Madison.  Starting August 1, I will be moving out of Chicago begin splitting my time between Santa Barbara, Madison, and Austin.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;If you have any questions for me, or just want to chat, don&amp;#8217;t hesitate to contact me and ask.&lt;/div&gt;
+&lt;br /&gt;&lt;div&gt;&lt;em&gt;Gloria perpetua!&lt;/em&gt;&lt;/div&gt;
+</summary></entry><entry><title>The Shining: Panda Edition</title><link href="http://anthony.scopatz.com/the-shining-panda-edition.html" rel="alternate"></link><updated>2013-01-19T00:00:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-01-19:the-shining-panda-edition.html</id><summary type="html">&lt;div class="section" id="or-adventures-in-ci-py"&gt;
+&lt;h2&gt;Or, Adventures in &lt;span class="caps"&gt;CI&lt;/span&gt;&amp;nbsp;Py&lt;/h2&gt;
+&lt;p&gt;As some of you may know I help run an open source nuclear engineering project called
+&lt;a class="reference external" href="http://www.pynesim.org/"&gt;PyNE&lt;/a&gt;.  It is awesome, and complicated.  It isn’t
+complicated because it is nuclear related.  It is complicated because we provide
+C++ and Python APIs (which are idiomatic to each language) and data.  We also have
+the dream of being truly multiplatform (someday Windows, someday).  From this point
+on I’ll only be speaking for myself, and not on behalf of other PyNE&amp;nbsp;devs.&lt;/p&gt;
+&lt;p&gt;About 6 months ago, I gave up and admitted that since we develop a Python-independent
+C++ library [1] we should start acting like one.  Driven largely by Katy Huff and
+enabled by Matt McCormick’s
+&lt;a class="reference external" href="https://github.com/thewtex/cython-cmake-example"&gt;cmake-cython-example&lt;/a&gt;,
+we rightly ditched my ridiculously monkey patched version of distutils in favor
+of CMake, subprocess, and out-of-the-box distutils.  It has been&amp;nbsp;fantastic.&lt;/p&gt;
+&lt;p&gt;The natural next step to this is continuous integration (&lt;span class="caps"&gt;CI&lt;/span&gt;).  After all, most other projects I have worked on in the SciPy community have gone to some form of &lt;span class="caps"&gt;CI&lt;/span&gt;.  It couldn’t be that hard, right?  Wrong.  Very wrong.  Sad panda&amp;nbsp;wrong.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="attempt-1-travis-ci"&gt;
+&lt;h2&gt;Attempt 1: Travis&amp;nbsp;&lt;span class="caps"&gt;CI&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Travis &lt;span class="caps"&gt;CI&lt;/span&gt; seems like a great tool: github integration, ubuntu vm with sudo access, 20 minute build times before timeout.  It certainly works for a lot of big projects, but it failed for PyNE.  The first issue that you are faced with in &lt;span class="caps"&gt;CI&lt;/span&gt; is the packaging problem.  Since I enjoy not reinventing the wheel, the depth of our dependency stack is kept in check only by social pressures that I feel from other&amp;nbsp;developers.&lt;/p&gt;
+&lt;p&gt;With Travis &lt;span class="caps"&gt;CI&lt;/span&gt;, for compiled library dependencies you are supposed to use “sudo apt-get install” to install packages during your pre-build.   Fine. We have an &lt;span class="caps"&gt;HDF5&lt;/span&gt; dependency.  Easy peasy.  However, for Python code you have to use  pip and virtualenv.  What?&amp;nbsp;Really?&lt;/p&gt;
+&lt;p&gt;We have a SciPy dependency, which I feel is a pretty normal thing to have.  But the Cheese Shop version of SciPy is source-only.  This means for a SciPy dependency you have to first apt-get gfortran, &lt;span class="caps"&gt;BLAS&lt;/span&gt;, lapack, and the rest of the SciPy dependencies.  &lt;span class="caps"&gt;THEN&lt;/span&gt; you have to compile SciPy.  You can kiss half of your 20 minute allocation&amp;nbsp;goodbye.&lt;/p&gt;
+&lt;p&gt;Since our compile times our a couple of minutes and it can take a few minutes to pull down all of the data we need, build times were easily 15+ mins.  And we haven’t even gotten to testing yet.  What is really frustrating is that most of this time was unnecessarily spent compiling SciPy…. which has its own &lt;span class="caps"&gt;CI&lt;/span&gt; services  doing this all the time! Furthermore the python-scipy debian package is sitting there, taunting you the whole time.  (“Look at me all pretty and&amp;nbsp;built!”)&lt;/p&gt;
+&lt;p&gt;Still it almost works.  The build times remained under 20 minutes.
+Then when we started getting &lt;a class="reference external" href="https://travis-ci.org/pyne/pyne/builds/4224346"&gt;random segfaults in testing&lt;/a&gt;
+with no good method to debug them, I eventually gave&amp;nbsp;up.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="attempt-2-shining-panda"&gt;
+&lt;h2&gt;Attempt 2: Shining&amp;nbsp;Panda&lt;/h2&gt;
+&lt;p&gt;This story has a happier, if no less frustrating, ending.  The kind folks at
+&lt;a class="reference external" href="https://www.shiningpanda-ci.com/"&gt;Shining Panda&lt;/a&gt; (&lt;span class="caps"&gt;SP&lt;/span&gt;) have provided PyNE with
+a Jenkins instance.  (Thanks a million bamboo stalks!)  Compared to Travis&amp;nbsp;&lt;span class="caps"&gt;CI&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;ssh access to the&amp;nbsp;&lt;span class="caps"&gt;VM&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;can completely avoid&amp;nbsp;virtualenv&lt;/li&gt;
+&lt;li&gt;and commit changes to the&amp;nbsp;&lt;span class="caps"&gt;VM&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;no sudo access (and installing debian packages in user space&amp;nbsp;sucks)&lt;/li&gt;
+&lt;li&gt;default packages not as&amp;nbsp;up-to-date&lt;/li&gt;
+&lt;li&gt;less well&amp;nbsp;documented&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I finally got &lt;span class="caps"&gt;SP&lt;/span&gt; up and running and all of the tests passing, but it took a lot of trial and error.  This is because, unlike Travis &lt;span class="caps"&gt;CI&lt;/span&gt; where you can look at other project’s ‘.travis.yml’ files, you can’t inspect the configurations of other &lt;span class="caps"&gt;SP&lt;/span&gt; projects.  I even have user access to the yt-project’s &lt;span class="caps"&gt;SP&lt;/span&gt; Jenkins instance, but because I am not an admin or a super-admin I couldn’t see the config.  To add to the frustration, every time you wanted to start up a new &lt;span class="caps"&gt;VM&lt;/span&gt; to test the build or ssh into the machine it took 5 – 10 minutes.  I am complaining because The 47 iterations I needed to get this right took me 2.5 days [2].  It is a good thing I really believe in these&amp;nbsp;tools…&lt;/p&gt;
+&lt;p&gt;Additionally, after the Travis &lt;span class="caps"&gt;CI&lt;/span&gt; experience, I was dead set against compiling anything that wasn’t PyNE.  Since &lt;span class="caps"&gt;SP&lt;/span&gt; doesn’t give you sudo access I ended up using
+&lt;a class="reference external" href="https://www.shiningpanda-ci.com/"&gt;Anaconda &lt;span class="caps"&gt;CE&lt;/span&gt;&lt;/a&gt;.    Why Anaconda &lt;span class="caps"&gt;CE&lt;/span&gt; and not
+&lt;a class="reference external" href="http://www.enthought.com/products/epd_free.php"&gt;&lt;span class="caps"&gt;EPD&lt;/span&gt; Free&lt;/a&gt; or something else?
+Anaconda has PyTables and a compiler (but sadly no&amp;nbsp;CMake).&lt;/p&gt;
+&lt;p&gt;Having installed Anaconda inside ssh, I then cloned PyNE, built it, installed it, grabbed the data, and ran the tests.  Worked like a dream.  If only the pain ended there… (This is starting to sound like a broken record by the&amp;nbsp;Police.)&lt;/p&gt;
+&lt;p&gt;It turns out the shell that Jenkins uses to build is different from the shell that ssh gives you.  Annoyingly, the source command isn’t available in the build shell so you can’t even start you build off with a “source ~/.bashrc” to recover most of your normal environment.  Damn.  To get around this I ended up exporting a lot of variables at the top of the build script, such as &lt;span class="caps"&gt;PATH&lt;/span&gt;, &lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;, LD_LIBARRY_PATH. (I never did figure out where source&amp;nbsp;went.)&lt;/p&gt;
+&lt;p&gt;After that, all of the Python stuff works well.  However even though it is receiving the correct environment, CMake’s FindPythonInterp, FindPythonLib, and FindPythonLibsNew (PyNE and numexpr) totally failed to find the Anaconda install.  I have no idea why.  The environment really was being passed down properly (I verified this in Python and CMake).  To fix this problem, a bunch of environment variables have to be re-passed down into&amp;nbsp;CMake!&lt;/p&gt;
+&lt;p&gt;Unfortunately not everything can even be passed in from the command line.  Thus, I had to create a special &lt;span class="caps"&gt;CI&lt;/span&gt;-mode in the CMakeLists.txt file, to optionally set a couple paths that are otherwise &lt;span class="caps"&gt;CLI&lt;/span&gt;&amp;nbsp;unresponsive.&lt;/p&gt;
+&lt;p&gt;For posterity, my Jenkins build script is&amp;nbsp;below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/bin:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/cmake-2.8.10.2/bin:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/.local/bin:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/.local/lib/python2.7/site-packages:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/lib/python2.7:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/lib/python2.7/site-packages:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/lib/python2.7/lib-dynload:&lt;span class="nv"&gt;$&lt;span class="caps"&gt;PYTHONPATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/lib:&lt;span class="nv"&gt;$LD_LIBRARY_PATH&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;C_INCLUDE_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/include:&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/include/python2.7:&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;C_INCLUDE_PATH&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PYTHON_EXE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;which python&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;CMAKE_MODULE_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/cmake:&lt;span class="nv"&gt;$CMAKE_MODULE_PATH&lt;/span&gt;
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;---- &lt;span class="caps"&gt;INFO&lt;/span&gt; ----&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;pwd&lt;/span&gt;
+ls -lh
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt;
+which &lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -V
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import sys; print &amp;#39;sys.path =\n &amp;#39; + &amp;#39;\n &amp;#39;.join(sys.path)&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import numpy; print &amp;#39;numpy version:&amp;#39;, numpy.__version__&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import scipy; print &amp;#39;scipy version:&amp;#39;, scipy.__version__&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import Cython; print &amp;#39;cython version:&amp;#39;, Cython.__version__&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import numexpr; print &amp;#39;numexpr version:&amp;#39;, numexpr.__version__&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; -c &lt;span class="s2"&gt;&amp;quot;import tables; print &amp;#39;pytables version:&amp;#39;, tables.__version__&amp;quot;&lt;/span&gt;
+cmake --version
+&lt;span class="nb"&gt;echo&lt;/span&gt;
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;---- &lt;span class="caps"&gt;BUILD&lt;/span&gt; ----&amp;#39;&lt;/span&gt;
+rm -rf build build_nuc_data &lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/.local/lib/python2.7/site-packages
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; setup.py install --user -- &lt;span class="se"&gt;\&lt;/span&gt;
+ -DIS_CI&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="caps"&gt;TRUE&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+ -DPYTHON_EXECUTABLE&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+ -DPYTHON_PREFIX&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda &lt;span class="se"&gt;\&lt;/span&gt;
+ -DPYTHON_LIBRARY&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/lib/libpython2.7.so &lt;span class="se"&gt;\&lt;/span&gt;
+ -DPYTHON_INCLUDE_DIR&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;&lt;span class="caps"&gt;HOME&lt;/span&gt;&lt;/span&gt;&lt;span class="k"&gt;}&lt;/span&gt;/anaconda/include/python2.7
+&lt;span class="nv"&gt;$PYTHON_EXE&lt;/span&gt; scripts/nuc_data_make
+&lt;span class="nb"&gt;cd &lt;/span&gt;pyne/tests
+nosetests
+&lt;span class="nb"&gt;cd&lt;/span&gt; ../xs/tests
+nosetests
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Finally, everything works.  Shining Panda has already helped uncover a few bugs in our test suite.  So yippee for that!  But given how difficult this whole process was (as say compared to installing and running nosetests), continuous integration is ironically the least stable part of PyNE.  For&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;Here is to hoping these tools keep getting&amp;nbsp;better!&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;[1] From my point of view the C++ &lt;span class="caps"&gt;API&lt;/span&gt; is a carrot to get more people using&amp;nbsp;Python.&lt;/p&gt;
+&lt;p&gt;[2] I don’t think that this is Shining Panda’s fault.  I think it is a limitation of the underlying&amp;nbsp;tools.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry></feed>
