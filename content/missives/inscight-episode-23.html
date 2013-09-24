@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>inSCIght Episode 23: git-svn, one tool to rule them all!</title>
+  <meta name="tags" contents="inscight" />
+  <meta name="date" contents="2012-01-29" />
+  <meta name="author" contents="Anthony Scopatz" />
+</head>
+<body>
+
+<p><i>
+This was originally published at 
+<a href="http://inscight.org/2012/01/29/episode_23/">inSCIght</a>.
+</i></p>
+
+<a href="http://s3.amazonaws.com/inscight/episodes/inscight_23_2012_01_29.mp3">
+<img class="aligncenter" src="http://github.com/inscight/inscight/raw/master/img/icons/InSciGHT.jpg" alt="" width="168" height="136" />
+</a>
+<h2><a href="http://s3.amazonaws.com/inscight/episodes/inscight_23_2012_01_29.mp3">Listen to the podcast</a></h2>
+<p style="text-align:justify;">On episode 23, we discuss the ever important subject of version control.  We talk about distributed vs centralized version control systems through two popular implementation: git and subversion (svn).  More specifically, we go over how to partially or fully convert existing repositories to the more modern distributed paradigm.  While you listen to this episode, it may be helpful to keep the following figure in your mind.</p>
+<p style="text-align:center;"><a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/"><img class="aligncenter" title="Distributed Version Control" src="http://betterexplained.com/wp-content/uploads/version_control/distributed/distributed_example.png" alt="" width="312" height="243" /></a></p>
+<p style="text-align:justify;">Our committed hosts tonight include:</p>
+
+<ul style="text-align:justify;">
+  <li>Milad Fatenejad</li>
+  <li>Brad King (special guest)</li>
+  <li>Jeff Ramnani</li>
+  <li>Anthony Scopatz (moderator)</li>
+</ul>
+<p style="text-align:justify;">This week we have a lone special guest.</p>
+<p style="text-align:justify;"><strong>Brad King</strong> joined Kitware in June 2000 and became a founding member of the Software Process group focusing on methods and tools for open source software (OSS) development. While working for Kitware he simultaneously conducted graduate research at Rensselaer Polytechnic Institute. His research focused on 3D modeling and change detection in real-world scenes, using both range and intensity sensors. Dr. King received his Ph.D. in Computer Science from Rensselaer in December 2008.</p>
+
+<h3>Show Links:</h3>
+<ol>
+  <li style="text-align:justify;"><a href="http://progit.org/book/">Pro Git</a> - Provides good coverage of how to use git. Also provides visual aids for those new to git or version control in general.  The author, Scott Chacon, works at Github.</li>
+  <li style="text-align:justify;"><a href="https://www.youtube.com/watch?v=4XpnKHJAok8">Linus Torvalds Google Techtalk on git</a></li>
+  <li style="text-align:justify;"><a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Intro to DVCS Illustrated</a> - A helpful resource when learning DVCS.</li>
+  <li style="text-align:justify;"><a href="https://github.com/nirvdrum/svn2git">svn2git</a> - Program which helps with my subversion to git migrations. It automates some tasks to make your repository cleaner after a git-svn import.  For example, it will create proper git branches and tags from your subversion equivalents.</li>
+</ol>
+<h3>Corrections:</h3>
+<p style="text-align:justify;"><span style="text-decoration:underline;">From Brad King</span> - The episode includes a brief monologue on the nature of git's storage model claiming that it holds differences between versions.  In fact an important distinction of git from other DVCS tools is that its object model holds a complete representation of the content at every version. As an implementation detail it does "pack" objects efficiently by storing deltas, but this is not visible to the user.  Any user-level presentation of a "diff" is constructed on the fly.</p>
+
+</body>
+</html>
