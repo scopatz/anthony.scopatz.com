@@ -6,6 +6,8 @@ The Shining: Panda Edition
 
 Or, Adventures in CI Py
 -----------------------
+*This was originally published at* `inSCIght <http://inscight.org/2013/01/19/the-shining-panda-edition/>`_.
+
 As some of you may know I help run an open source nuclear engineering project called 
 `PyNE <http://www.pynesim.org/>`_.  It is awesome, and complicated.  It isn’t 
 complicated because it is nuclear related.  It is complicated because we provide 
