@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>A Note on Replication</title>
+  <meta name="date" contents="2012-07-22" />
+  <meta name="author" contents="Anthony Scopatz" />
+</head>
+<body>
+
+<p><i>
+This was originally published at 
+<a href="http://inscight.org/2012/07/22/a-note-on-replication/">inSCIght</a>.
+</i></p>
+
+<p>
+<strong>SciPy 2012 Postview:</strong> <em>The following is a section taken from my <a href="http://conference.scipy.org/scipy2012/">SciPy 2012</a> proceeding from the conference last week.   You can see <a href="https://github.com/scopatz/scipy_proceedings/blob/2012/papers/anthony_scopatz_flmake/anthony_scopatz_flmake.rst">the paper at github</a>.  This post is a follow up to <a href="http://inscight.org/2012/07/13/why-reproducibility-is-important/">the "Why Reproducibility is Important" post</a>.  I hope to do a recap of the conference itself next week!  (NOTE: flmake is a specific CLI utility for workflow management in the FLASH code.)</em>
+</p>
+
+<p>
+A weaker form of reproducibility is known as replication [SCHMIDT]. Replication is the process of recreating a result when “you take all the same data and all the same tools” [GRAHAM] which were used in the original determination. Replication is a weaker determination than reproduction because at minimum the original scientist should be able to replicate their own work. Without replication, the same code executed twice will produce distinct results. In this case no trust may be placed in the conclusions whatsoever.
+</p>
+
+<p>
+Much as version control has given developers greater control over reproducibility, other modern tools are powerful instruments of replicability. Foremost among these are hypervisors. The ease-of-use and ubiquity of virtual machines (VM) in the software ecosystem allows for the total capture and persistence of the environment in which any computation was performed. Such environments may be hosted and shared with collaborators, editors, reviewers, or the public at large. If the original analysis was performed in a VM context, shared, and rerun by other scientists then this is replicability. Such a strategy has been proposed by C. T. Brown as a stop-gap measure until diacomputational science is realized [BROWN].
+</p>
+
+<p>
+However, as Brown admits (see comments), the delineation between replication and reproduction is fuzzy. Consider these questions which have no clear answers:
+<ul>
+  <li>Are bit-identical results needed for replication?</li>
+  <li>How much of the environment must be reinstated for replication versus reproduction?</li>
+  <li>How much of the hardware and software stack must be recreated?</li>
+  <li>What precisely is meant by ‘the environment’ and how large is it?</li>
+  <li>For codes depending on stochastic processes, is reusing the same random seed replication or reproduction?</li>
+</ul>
+Without justifiable answers to the above, ad hoc definitions have governed the use of replicability and reproducibility. Yet to the quantitatively minded, an I-know-reproducibility-when-I-see-it approach falls short. Thus the science of science, at least in the computational sphere, has much work remaining.
+</p>
+
+<p>
+Even with the reproduction/replication dilemma, the flmake reproduce command is a reproducibility tool. This is because it takes the opposite approach to Brown’s VM-based replication. Though the environment is captured within the description file, flmake reproduce does not attempt to recreate this original environment at all. The previous environment information is simply there for posterity, helping to uncover any discrepancies which may arise. User specific settings on the reproducing machine are maintained. This includes but is not limited to which compiler is used.
+</p>
+
+<p>
+The claim that Brown’s work and flmake reproduce represent paragons of replicability and reproducibility respectively may be easily challenged. The author, like Brown himself, does not presuppose to have all - or even partially satisfactory - answers. What is presented here is an attempt to frame the discussion and bound the option space of possible meanings for these terms. Doing so with concrete code examples is preferable to debating this issue in the abstract.
+</p>
+
+<h4>References</h4>
+
+<p>
+[BROWN]  C. Titus Brown, “Our approach to replication in computational science,” Living in an Ivory Basement, April 2012, http://ivory.idyll.org/blog/replication-i.html.
+</p>
+
+<p>
+[GRAHAM] Jim Graham, “What is ‘Reproducibility,’ Anyway?”, Scimatic, April 2010, http://www.scimatic.com/node/361.
+</p>
+
+<p>
+[SCHMIDT] Gavin A. Schmidt, “On replication,” RealClimate, Feb 2009, http://www.realclimate.org/index.php/archives/2009/02/on-replication/langswitch_lang/in/.
+</p>
+</body>
+</html>
