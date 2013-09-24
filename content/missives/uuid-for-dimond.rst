@@ -17,9 +17,12 @@ Basically you can't have the same binary include the same header file twice,
 even if that include is implicit and somewhere father up the build tree 
 (see the below figure).
 
-.. raw:: html
+.. figure:: http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png
+    :width: 200
+    :height: 300
+    :align: center
 
-    <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png"><img title="The Diamond Problem" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" alt="" width="200" height="300" /></a> 
+    via wikipedia
 
 The way many get around this is by creating #ifndef XXX - #def XXX - #endif 
 blocks around all of their header files.  The prevents the XXX from being 
