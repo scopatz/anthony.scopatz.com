@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Anthony Scopatz</title>
+  <title>UUID for #include Diamond Problem</title>
   <meta name="author" content="Anthony Scopatz">
 
     
@@ -54,10 +54,46 @@
   </ul></nav>
   <div id="main">
     <div id="content">
-      <ul>
-    <li><a href="./category/missives.html">missives</a></li>
-    <li><a href="./category/null.html">null</a></li>
-</ul>
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">UUID for #include Diamond Problem</h1>
+          <p class="meta"><time datetime="2012-06-22T00:00:00" pubdate>Fri 22 June 2012</time></p>
+</header>
+
+  <div class="entry-content"><p><em>This was originally published at</em> <a class="reference external" href="http://inscight.org/2012/06/22/uuid-for-diamond/">inSCIght</a>.</p>
+<p>Hello scientists! &nbsp;Sorry it has been a while since we posted.
+We promise that there are episodes in the pipeline, coming soon to
+an eardrum near&nbsp;you!</p>
+<p>In the meantime, if you have ever&nbsp;programmed&nbsp;in C/C++ you are well aware of the &lt;a href=&#8221;<a class="reference external" href="http://en.wikipedia.org/wiki/Diamond_problem">http://en.wikipedia.org/wiki/Diamond_problem</a>&#8220;&gt;#include diamond problem&lt;/a&gt;. &nbsp;Basically you can&#8217;t have the same binary include the same header file twice, even if that include is&nbsp;implicit and somewhere father&nbsp;up the build tree (see the below&nbsp;figure).</p>
+<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png"><img title="The Diamond Problem" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" alt="" width="200" height="300" /></a><p>The way many get around this is by creating #ifndef <span class="caps">XXX</span> - #def <span class="caps">XXX</span> - #endif
+blocks around all of their header files. &nbsp;The prevents the <span class="caps">XXX</span> from being
+included more than once no matter what. &nbsp;Most people use a system for naming
+<span class="caps">XXX</span> that is based on the project name and the file name. &nbsp;However, the value of
+<span class="caps">XXX</span> could be anything.&nbsp;&nbsp;&lt;em&gt;Anything&lt;/em&gt;.</p>
+<p>So my good friend, coworker at the <span class="caps">FLASH</span> center, and brilliant programmer John Bachan&nbsp;apparently just started using&nbsp;universally unique identifiers (UUIDs) for <span class="caps">XXX</span> years ago. &nbsp;This is brilliant on so many levels. &nbsp;He even has a bash one-liner for helping him out here. &nbsp;For your aliasing&nbsp;pleasure:</p>
+<div class="highlight"><pre><span class="o">(</span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;_$(uuidgen|tr \\- _)&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#ifndef $id&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#define $id&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#endif&quot;</span><span class="o">)</span>
+</pre></div>
+<p>will return, for&nbsp;example,</p>
+<div class="highlight"><pre><span class="c">#ifndef _7db3e753_0d81_43ea_beca_68a77189e28d</span>
+<span class="c">#define _7db3e753_0d81_43ea_beca_68a77189e28d</span>
+<span class="c">#endif</span>
+</pre></div>
+<p>Feel free to thank me&nbsp;later&#8230;</p>
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2012-06-22T00:00:00" pubdate>Fri 22 June 2012</time>  </p>    </footer>
+  </article>
+
+    <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+  </div>
       <aside class="sidebar">
   <section>
     <h1>Recent Posts</h1>
@@ -113,6 +149,9 @@
 </p></footer>
   	<script type="text/javascript">
 	  var disqus_shortname = 'anthonyscopatz';
+                var disqus_identifier = '/uuid-fordimond.html';
+          var disqus_url = './uuid-fordimond.html';
+          var disqus_title = '<span class="caps">UUID</span> for #include Diamond&nbsp;Problem';
       	  (function() {
 	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';

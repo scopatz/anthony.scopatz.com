@@ -676,4 +676,23 @@ This was originally published at
 
 You may recall that a few months ago I wrote &lt;a href="http://inscight.org/2012/03/09/binary-in-a-coalmine/"&gt;a post&lt;/a&gt; about how open source is a continuum and that free and open are orthogonal concepts.  Well, the nice people at the American Nuclear Society invited me to a round table discussion on software licences on Monday where I presented this material.  I figured I&amp;#8217;d &lt;a href="https://s3.amazonaws.com/inscight/pres/scopatz_ans-annual2012_roundtable.pdf"&gt;post my slides here&lt;/a&gt; in case you are interested.&amp;nbsp; Enjoy!
 
+</summary></entry><entry><title>UUID for #include Diamond Problem</title><link href="http://anthony.scopatz.com/uuid-fordimond.html" rel="alternate"></link><updated>2012-06-22T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-06-22:uuid-fordimond.html</id><summary type="html">&lt;p&gt;&lt;em&gt;This was originally published at&lt;/em&gt; &lt;a class="reference external" href="http://inscight.org/2012/06/22/uuid-for-diamond/"&gt;inSCIght&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hello scientists! &amp;nbsp;Sorry it has been a while since we posted.
+We promise that there are episodes in the pipeline, coming soon to
+an eardrum near&amp;nbsp;you!&lt;/p&gt;
+&lt;p&gt;In the meantime, if you have ever&amp;nbsp;programmed&amp;nbsp;in C/C++ you are well aware of the &amp;lt;a href=&amp;#8221;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Diamond_problem"&gt;http://en.wikipedia.org/wiki/Diamond_problem&lt;/a&gt;&amp;#8220;&amp;gt;#include diamond problem&amp;lt;/a&amp;gt;. &amp;nbsp;Basically you can&amp;#8217;t have the same binary include the same header file twice, even if that include is&amp;nbsp;implicit and somewhere father&amp;nbsp;up the build tree (see the below&amp;nbsp;figure).&lt;/p&gt;
+&lt;a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png"&gt;&lt;img title="The Diamond Problem" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" alt="" width="200" height="300" /&gt;&lt;/a&gt;&lt;p&gt;The way many get around this is by creating #ifndef &lt;span class="caps"&gt;XXX&lt;/span&gt; - #def &lt;span class="caps"&gt;XXX&lt;/span&gt; - #endif
+blocks around all of their header files. &amp;nbsp;The prevents the &lt;span class="caps"&gt;XXX&lt;/span&gt; from being
+included more than once no matter what. &amp;nbsp;Most people use a system for naming
+&lt;span class="caps"&gt;XXX&lt;/span&gt; that is based on the project name and the file name. &amp;nbsp;However, the value of
+&lt;span class="caps"&gt;XXX&lt;/span&gt; could be anything.&amp;nbsp;&amp;nbsp;&amp;lt;em&amp;gt;Anything&amp;lt;/em&amp;gt;.&lt;/p&gt;
+&lt;p&gt;So my good friend, coworker at the &lt;span class="caps"&gt;FLASH&lt;/span&gt; center, and brilliant programmer John Bachan&amp;nbsp;apparently just started using&amp;nbsp;universally unique identifiers (UUIDs) for &lt;span class="caps"&gt;XXX&lt;/span&gt; years ago. &amp;nbsp;This is brilliant on so many levels. &amp;nbsp;He even has a bash one-liner for helping him out here. &amp;nbsp;For your aliasing&amp;nbsp;pleasure:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;_$(uuidgen|tr \\- _)&amp;quot;&lt;/span&gt;;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;#ifndef $id&amp;quot;&lt;/span&gt;;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;#define $id&amp;quot;&lt;/span&gt;;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;#endif&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will return, for&amp;nbsp;example,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#ifndef _7db3e753_0d81_43ea_beca_68a77189e28d&lt;/span&gt;
+&lt;span class="c"&gt;#define _7db3e753_0d81_43ea_beca_68a77189e28d&lt;/span&gt;
+&lt;span class="c"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Feel free to thank me&amp;nbsp;later&amp;#8230;&lt;/p&gt;
 </summary></entry></feed>
