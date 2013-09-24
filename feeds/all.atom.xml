@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-23T00:00:00-05:00</updated><entry><title>About</title><link href="http://anthony.scopatz.com/about.html" rel="alternate"></link><updated>2013-09-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-23:about.html</id><summary type="html">&lt;p&gt;Anthony Scopatz is a computational scientist and long time Python developer,
+Anthony holds his &lt;span class="caps"&gt;BS&lt;/span&gt; in Physics from &lt;span class="caps"&gt;UC&lt;/span&gt;, Santa Barbara and a Ph.D. in
+Mechanical / Nuclear Engineering from &lt;span class="caps"&gt;UT&lt;/span&gt; Austin. A former Enthought employee,
+he spent his post-doctoral studies at the &lt;span class="caps"&gt;FLASH&lt;/span&gt; Center at the University of
+Chicago in the Astrophysics Department. He is currently a Staff Scientist at
+the University of Wisconsin-Maidson in Engineering Physics. Anthony’s research
+interests revolve around essential physics modeling of the nuclear fuel cycle,
+and information theory &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; entropy. Anthony is proudly a fellow of the Python
+Software Foundation and has published and spoken at numerous conferences on
+a variety of science &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; software development&amp;nbsp;topics.&lt;/p&gt;
+</summary></entry><entry><title>Contact</title><link href="http://anthony.scopatz.com/contact.html" rel="alternate"></link><updated>2013-09-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-23:contact.html</id><summary type="html">&lt;p&gt;Please contact me via email: scopatz _at_ gmail -.-&amp;nbsp;com&lt;/p&gt;
+&lt;p&gt;Screaming from the mountains tops does not work as often as it&amp;nbsp;should.&lt;/p&gt;
+</summary></entry><entry><title>Scientific Computing at AIMS</title><link href="http://anthony.scopatz.com/scientific-computing-at-aims.html" rel="alternate"></link><updated>2013-09-15T09:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-15:scientific-computing-at-aims.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://software-carpentry.org/blog/2013/09/scientific-computing-at-aims.html"&gt;Software Carpentry&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+Close on the heels of
+&lt;a href="{{page.root}}/bootcamps/2013-08-28-wisc/index.html"&gt;another bootcamp in Madison, &lt;span class="caps"&gt;WI&lt;/span&gt;&lt;/a&gt;, 
+for the past two weeks I had the pleasure of teaching a 30 hour scientific 
+computing course at the 
+&lt;a href="http://aims.ac.za/"&gt;African Institute for Mathematical Sciences&lt;/a&gt; 
+(&lt;span class="caps"&gt;AIMS&lt;/span&gt;) in Cape Town, South Africa.  The course was an 
+expansion and refactor of Software Carpentry material to fit the &lt;span class="caps"&gt;AIMS&lt;/span&gt; need.
+You can find 
+&lt;a href="https://bitbucket.org/scopatz/aims-scicomp.git"&gt;the repository of source material here&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+I could gush about how I fell in love with Cape Town, the 
+unexpected preponderance of vegan cafes in Muizenberg, the sea, the sand, 
+the mountains, and &lt;i&gt;la dolce vita&lt;/i&gt; I am otherwise 
+used to from Santa Barbara. I will not.  &lt;span class="caps"&gt;AIMS&lt;/span&gt; is about the students.  Let&amp;#8217;s examine
+them after a brief tour of &lt;span class="caps"&gt;AIMS&lt;/span&gt;&amp;nbsp;itself.
+&lt;/p&gt;
+
+&lt;h3&gt;&lt;span class="caps"&gt;AIMS&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;
+&lt;span class="caps"&gt;AIMS&lt;/span&gt;, in association with 
+&lt;a href="http://www.aims.ac.za/en/about/about-aims/our-partners"&gt;its partner universities&lt;/a&gt;, provides a one year structured masters degree to exceptional 
+students from all over Africa.  This provides a needed
+stepping stone for many its students to pursue other universities across Africa 
+and across the world that they would otherwise likely not have to opportunity to 
+attend. The social goals at &lt;span class="caps"&gt;AIMS&lt;/span&gt; go hand in hand with the technical&amp;nbsp;mission.  
+&lt;/p&gt;
+
+&lt;p&gt;
+The Cape Town &lt;span class="caps"&gt;AIMS&lt;/span&gt; is the first such center and was opened in 2003.  However, other 
+&lt;span class="caps"&gt;AIMS&lt;/span&gt; centers are springing up in various other countries on what seems like an annual
+basis.  There is also an associated &lt;span class="caps"&gt;AIMS&lt;/span&gt; research center in Cape Town which houses 
+some doctoral and post-doctoral students as well as a related center dedicated 
+to improving the educational methods of secondary school teachers&amp;nbsp;(&lt;span class="caps"&gt;AIMSSEC&lt;/span&gt;).
+&lt;/p&gt;
+
+&lt;p&gt;
+The complex itself is a 4 story, 0 indexed building less than 100 meters from 
+the ocean.  Floor 0 contains a lecture hall, offices, kitchen and dining area.  
+Floor 1 has more offices, the library, and a world class computer lab.  Floor 2 
+houses the student dormitories.  Floor 3 houses rooms for some staff and visitors, 
+such as myself. In short &lt;span class="caps"&gt;AIMS&lt;/span&gt; is a mathematics monastery straight from my undergraduate 
+physics major&amp;nbsp;dreams.
+&lt;/p&gt;
+
+&lt;div style="text-align:center"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-view.jpg" width="60%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;The view from my room at &lt;span class="caps"&gt;AIMS&lt;/span&gt;, no&amp;nbsp;fooling.&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;The&amp;nbsp;Students&lt;/h3&gt;
+
+&lt;p&gt;
+This year&amp;#8217;s class is approximately 50 students and hail from Egypt to Chad to Nairobi
+to South  Africa itself.  In the neighborhood of 20 countries were represented in 
+the student body. As William, a student, put it &amp;#8220;by visiting &lt;span class="caps"&gt;AIMS&lt;/span&gt; I visited all of 
+Africa.&amp;#8221;  However, national origin is only where the diversity&amp;nbsp;starts.
+&lt;/p&gt;
+
+&lt;p&gt;
+40% - 50% of the students were women. Furthermore, It seemed that the age 
+distribution ranged from mid-twenties to mid-forties. Additionally, though the 
+ability to read and understand English was generally quite high, the ability to 
+speak or understand spoken English varied from fluent to&amp;nbsp;novice.
+&lt;/p&gt;
+
+&lt;p&gt;
+Technical ability was also all over the map.  Some of the students it seemed had been
+professional Java developers in a past life.  On the other hand there were some 
+students who had learned to program Pascal out of a book and arriving at &lt;span class="caps"&gt;AIMS&lt;/span&gt; the 
+week before was their first time ever using a&amp;nbsp;computer.  
+&lt;/p&gt;
+
+&lt;p&gt;
+Still, the students themselves were incredibly enthusiastic.  
+Far more so than their Western counterparts 
+I have taught.  The computer lab at &lt;span class="caps"&gt;AIMS&lt;/span&gt; is open 24/7.  I would often pop in 
+between 11 pm and midnight and categorically I found 20 - 30 students
+&lt;i&gt;still&lt;/i&gt; at their machines, working through 
+the day&amp;#8217;s material, and discussing what they were learning in small&amp;nbsp;groups.
+&lt;/p&gt;
+
+&lt;p&gt;
+A cynical person would claim that this phenomenon is due to the students
+having nothing else to do in sleepy Muizenberg.  Naturally, they gravitated to 
+the place where they have internet activity.  I claim instead that the students acted 
+with the purpose of  learning.  No one sits in lectures for six hours a day, 
+day in and day out, in a 
+language they are still acquiring, and then hits the books for another six hours 
+afterwards if they do not feel that what they are doing is important and valuable. 
+Perhaps this mathematical monastery should more rightly be denoted &lt;span class="caps"&gt;AIMS&lt;/span&gt;: Academics 
+Inconsequent of Mortal&amp;nbsp;Stamina.
+&lt;/p&gt;
+
+&lt;h3&gt;The Software&amp;nbsp;Stack&lt;/h3&gt;
+
+&lt;p&gt;
+Throughout all of &lt;span class="caps"&gt;AIMS&lt;/span&gt;, including the staff and administration, the software 
+distribution is a model for how other, similar centers around the world 
+should operate.  Their stack is set up and managed by the preeminent 
+&lt;a href="https://plus.google.com/106441031204413066119/posts"&gt;Jan Groenewald&lt;/a&gt;
+who I know through the 
+illustrious 
+&lt;a href="https://plus.google.com/105944382060485784655/posts"&gt;Katy Huff&lt;/a&gt;.
+The operating system is Ubuntu, the mail client is GMail, 
+and courses are taught only with open source scientific software such as Python, 
+SciPy, R, Octave, LaTeX, and Sage. &lt;i&gt;This is my&amp;nbsp;stack.&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+One of the neatest teaching aids that Jan and I ended up test driving and deploying 
+is an application called &lt;a href="http://www.epoptes.org/"&gt;epoptes&lt;/a&gt;.  
+This is basically a screen sharing program 
+with some extra bells and whistles that allow you to take over the student&amp;#8217;s computer
+as well.  It was incredibly effective as long as you did not accidentally hit the
+button to shut down all of the student&amp;#8217;s&amp;nbsp;machines.
+&lt;/p&gt;
+
+&lt;p&gt;
+If there was any lingering doubt, it has now been scrubbed away.
+The open scientific software stack is 
+completely ready for prime time in the classroom. Anyone who is trying to sell 
+you something is doing exactly&amp;nbsp;that.  
+&lt;/p&gt;
+
+&lt;h3&gt;The&amp;nbsp;Course&lt;/h3&gt;
+
+&lt;p&gt;
+I taught the entire course from a series of IPython notebooks cribbed from 
+Software Carpentry.  Some of these were tutorials I had originally written 
+a couple of years ago.  Humorously, I found that the documentation lesson 
+had not been significantly altered in that&amp;nbsp;time.  
+&lt;/p&gt;
+
+&lt;p&gt;
+However, forking from Software Carpentry required significant amounts of extra
+effort in some cases to make the lectures complete for my &lt;span class="caps"&gt;AIMS&lt;/span&gt; needs. (I have since
+pull requested these updates back though they are waiting for a merge.)  I was
+very tempted to use some material from &lt;a href="http://www.pythonbootcamp.info/"&gt;the 
+Python Bootcamp at &lt;span class="caps"&gt;UC&lt;/span&gt; Berkeley&lt;/a&gt;.  I did not because of licenses.  
+Software Carpentry material is 
+&lt;a href="https://github.com/swcarpentry/bc/blob/gh-pages/LICENSE.md"&gt;&lt;span class="caps"&gt;CC&lt;/span&gt; &lt;span class="caps"&gt;BY&lt;/span&gt; v3.0 licensed&lt;/a&gt;. The Berkeley Python material is 
+&lt;a href="https://github.com/profjsb/python-bootcamp/blob/master/LICENSE"&gt;&lt;span class="caps"&gt;CC&lt;/span&gt; &lt;span class="caps"&gt;BY&lt;/span&gt;-&lt;span class="caps"&gt;NC&lt;/span&gt;-&lt;span class="caps"&gt;SA&lt;/span&gt; v3.0 licensed&lt;/a&gt;.  
+Even though I am not 
+currently planning on reusing this material, the threat that I would be forbidden 
+from doing so in some circumstances was enough to drive me away from the 
+non-commercial copyleft terms. 
+Ironically, on the first Tuesday I was at &lt;span class="caps"&gt;AIMS&lt;/span&gt;, the class took a field trip to the 
+University of Cape Town to see Richard Stallman speak.  He convinced&amp;nbsp;me.
+&lt;/p&gt;
+
+&lt;p&gt;
+In terms of the instruction, I had the incidental privilege of giving the first 
+lecture of the academic year. It became clear after a few lessons - introduction to 
+scientific computing, &lt;span class="caps"&gt;BASH&lt;/span&gt;, git - that I would have to adapt my teaching style. 
+Luckily, the students shared an advanced mathematics background.  I could assume that 
+they all knew linear algebra, differential equations, and set&amp;nbsp;theory.
+&lt;/p&gt;
+
+&lt;p&gt;
+Teaching to the middle 80% at &lt;span class="caps"&gt;AIMS&lt;/span&gt; would not have worked.  The students were too 
+diverse of a group in too many ways.  Focusing on the mythical middle 80% would 
+have meant leaving everyone behind in some way all of the time rather than leaving 
+some people out most of the time.  I felt that if I had chosen to teach to the
+middle 80% I would be ignoring the core missions of both &lt;span class="caps"&gt;AIMS&lt;/span&gt; and Software&amp;nbsp;Carpentry.
+&lt;/p&gt;
+
+&lt;p&gt;
+So what changed?  Linguistically, I tried to teach to the bottom 10%.  The students
+who already knew English did not mind that I spoke slowly and directly and repeated 
+myself often and it made a world of difference to those who did not know English as 
+well.  I did not always hit my 10% goal but it was certainly worth trying to get&amp;nbsp;there.
+&lt;/p&gt;
+
+&lt;p&gt;
+At the tutors&amp;#8217; (teaching assistants) request, we also instituted brief reviews of 
+previous material.  Since I taught the shell on the first day we went over 
+useful commands on second and third.  This gradually morphed into a generic 
+question and answer session at the beginning of every class that would last up to 
+30 minutes of a two hour block. For many students, the multi-day reinforcement was&amp;nbsp;critical.
+&lt;/p&gt;
+
+&lt;p&gt;
+That said, the most fundamental change was that I taught as much as I could in analogy
+to mathematical principles.  Functions are functions, operators are operators, 
+and sets are sets.  This made certain topics, such as slicing and 
+recursion much easier, but other topics, such as decorators and scoping, a little 
+more&amp;nbsp;difficult.
+&lt;/p&gt;
+
+&lt;p&gt;
+Overall, after I made these adjustments, the course went smoothly.  I would love to 
+have the opportunity to go back and restructure the entire course with &lt;span class="caps"&gt;AIMS&lt;/span&gt; students
+in mind now that I know who they are and how they differ from the standard 
+research-distracted Western graduate&amp;nbsp;student.
+&lt;/p&gt;
+
+&lt;h3&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;
+As any good instructor would do, I ran assessment surveys before and after the 
+course.  This is as much to gauge the students as my teaching ability.  Since
+the course was derived from Software Carpentry I used the official
+&lt;a href="http://software-carpentry.org/bootcamps/index.html#assessment"&gt;pre- and post-assessment surveys&lt;/a&gt;.  
+Since the raw data is not anonymized, if you would like access to it please contact&amp;nbsp;me.
+&lt;/p&gt;
+
+&lt;p&gt;
+On the subject of programming to do basic data analysis tasks, a huge leap was 
+made over the course of the two weeks.  &lt;a href="#fig1"&gt;Figure 1&lt;/a&gt; shows a 
+comparison for tasks involving opening a plaintext file, reading in data, and 
+computing summary statistics.  Most students went from not knowing where to start 
+to feeling that they could successfully accomplish this task given enough&amp;nbsp;time.
+&lt;/p&gt;
+
+&lt;div style="text-align:center" id="fig1"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-fig1.svg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Figure 1:&lt;/b&gt; (a) Pre-assessment question, &lt;i&gt;&amp;#8220;Write a short program to read a 
+file containing columns of numbers separated by commas, average the non-negative 
+values in the second and fifth columns, and print the results.&amp;#8221;&lt;/i&gt; 
+(b) Post-assessment question, &lt;i&gt;&amp;#8220;A comma-delimited file has two columns showing 
+the date and the number of sun spots recorded for that day. Write a program to 
+produce a graph showing the average number of sun spots for each&amp;nbsp;month.&amp;#8221;&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+However, the most staggering advancement was with respect to the shell.  
+This makes a certain amount of sense as &lt;span class="caps"&gt;BASH&lt;/span&gt; was the first technical subject we 
+discussed.  Consequently, the shell was the most reinforced material. It was 
+reviewed at least once per day.  &lt;a href="#fig2"&gt;Figure 2&lt;/a&gt; shows that the 
+distribution in ability basically&amp;nbsp;flipped.
+&lt;/p&gt;
+
+&lt;div style="text-align:center" id="fig2"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-fig2.svg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Figure 2:&lt;/b&gt; (a) Pre-assessment question, &lt;i&gt;&amp;#8220;In a directory with 1000 text files, 
+create a list of all files that contain the word Drosophila, and redirect the output 
+to a file called results.txt.&amp;#8221;&lt;/i&gt; (b) Post-assessment question, &lt;i&gt;&amp;#8220;How familiar do 
+you think you are with the command line&amp;nbsp;shell?&amp;#8221;&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Lastly, I made an unorthodox decision to try to teach version control as early as
+possible.  So the second day, right after the shell lectures, we spent 4 hours on 
+the details of how to use git.  I mostly received blank stares.  However since 
+I ran the course from a bitbucket repository the students had ample opportunity 
+to reinforce what they learned.  &lt;a href="#fig3"&gt;Figure 3&lt;/a&gt; displays an 
+advancement that, while not quite as staggering as those above, is great to 
+see given the importance of the topic.  I doubt that any of the students would now 
+say that they do not know what version control is and what it is useful for, even 
+if they claim to not know how to use&amp;nbsp;git.
+&lt;/p&gt;
+
+&lt;div style="text-align:center" id="fig3"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-fig3.svg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Figure 3:&lt;/b&gt; (a) Pre-assessment question, &lt;i&gt;&amp;#8220;Check out a working copy of a 
+project from version control, add a file called paper.txt, and commit the 
+change.&amp;#8221;&lt;/i&gt; (b) Post-assessment question, &lt;i&gt;&amp;#8220;How familiar do you think you are 
+with the version control stem used in your&amp;nbsp;bootcamp?&amp;#8221;&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Overall, I find these results very encouraging.  I was able to seed some fundamental
+best practices.  However, it is now up to the &lt;span class="caps"&gt;AIMS&lt;/span&gt; staff and tutors to shore up
+these ideas with continued education and practice.  As this was a self assessment, 
+and not a competency assessment per-say, the students definitely seemed to take 
+something away&amp;nbsp;themselves. 
+&lt;/p&gt;
+
+&lt;h3&gt;Parting&lt;/h3&gt;
+
+&lt;p&gt;
+At the end of the two weeks, the students sat me down in a chair at the front of 
+the class and presented me with a thank you card. Along with this they read 
+a statement prepared by the class.  This was definitely one of the most rewarding
+moments of the course - and possibly of my life to date.  I wanted to laugh and 
+cry at the same time.  The statement went as&amp;nbsp;follows:
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+We are so grateful for teaching us the course Scientific Computing, 
+the Python language especially. We are also grateful to your style of lecturing in 
+that you welcomed questions and you were so patient with everyone despite our 
+variety of accents. You answers every question by first saying, and I quote 
+&amp;#8220;Aaaah, Okaaaay, that&amp;#8217;s a very good question.&amp;#8221; This encouraged all of us to ask 
+question and we benefited - we are really grateful.
+&lt;/blockquote&gt;
+
+&lt;div style="text-align:center"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-farewell.jpg" width="60%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Taken while I listen to the goodbye speech from the&amp;nbsp;students.&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+The student William from before also got up and said a few words, some of 
+which were, &amp;#8220;Anthony, you are not a trained teacher, but a born teacher.&amp;#8221;
+I really appreciate this comment on all&amp;nbsp;levels.
+&lt;/p&gt;
+
+&lt;p&gt;
+However, the real showcase of the impact that this course had is 
+in what the students wrote in the card.  My favorite and most telling inscriptions&amp;nbsp;were: 
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+audrey = &amp;#8220;thank you Anthony&amp;#8221;
+&lt;br /&gt;
+print audrey
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+keep in touch - git pull
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+I may forget Python, but not you.  Thank you!!
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Final&amp;nbsp;Thanks&lt;/h3&gt;
+
+&lt;p&gt;
+Personally, I would like to thank Barry Green, Jeff Sanders, and Jan Groenewald for
+giving &lt;span class="caps"&gt;AIMS&lt;/span&gt; its superior environment and extending to me the opportunity to come
+and lecture about some of my favorite topics.  Additionally, I&amp;#8217;d like to thanks
+the class tutors, Adriaan van Vuuren, Antonio Cardoso, Eva Ujeneza, 
+Evans Ocansey, Markus Kruger, Mekdes Tessema, and Morgan Magloire Pene, 
+there is no doubt in my mind that the class would not have run half as&amp;nbsp;well.
+&lt;/p&gt;
+
+&lt;p&gt;
+In closing, &lt;span class="caps"&gt;AIMS&lt;/span&gt; is an incredibly special place.  If you ever have and opportunity
+to visit the Cape Town campus or another location I highly encourage you to take it.
+I promise that you will not regret&amp;nbsp;it!
+&lt;/p&gt;
+
+&lt;div style="text-align:center"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/aims/aims-end.jpg" width="60%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Jubilant photograph with the students after the final&amp;nbsp;lecture.&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+</summary><category term="teaching"></category></entry></feed>

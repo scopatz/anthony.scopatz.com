@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Scientific Computing at AIMS</title>
+  <meta name="author" content="Anthony Scopatz">
+
+    
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./favicon.png" rel="icon">
+  <link href="./theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+  <script src="./theme/js/modernizr-2.0.js"></script>
+  <script src="./theme/js/ender.js"></script>
+  <script src="./theme/js/octopress.js" type="text/javascript"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="./">Anthony Scopatz</a></h1>
+      <h2>I think, therefore I amino acid.</h2>
+  </hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://anthony.scopatz.com/" rel="subscribe-rss">RSS</a></li>
+  </ul>
+
+<!-- TODO: add search here
+<form action="" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:." />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+-->
+
+<ul class="main-navigation">
+      <li><a href="category/missives.html">Missives</a></li>
+      <li><a href="archives.html">Archives</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+            <!-- TODO: add categories here? -->
+  </ul></nav>
+  <div id="main">
+    <div id="content">
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">Scientific Computing at AIMS</h1>
+          <p class="meta"><time datetime="2013-09-15T09:00:00" pubdate>Sun 15 September 2013</time></p>
+</header>
+
+  <div class="entry-content">
+
+<p><i>
+This was originally published at 
+<a href="http://software-carpentry.org/blog/2013/09/scientific-computing-at-aims.html">Software Carpentry</a>.
+</i></p>
+
+<p>
+Close on the heels of
+<a href="{{page.root}}/bootcamps/2013-08-28-wisc/index.html">another bootcamp in Madison, <span class="caps">WI</span></a>, 
+for the past two weeks I had the pleasure of teaching a 30 hour scientific 
+computing course at the 
+<a href="http://aims.ac.za/">African Institute for Mathematical Sciences</a> 
+(<span class="caps">AIMS</span>) in Cape Town, South Africa.  The course was an 
+expansion and refactor of Software Carpentry material to fit the <span class="caps">AIMS</span> need.
+You can find 
+<a href="https://bitbucket.org/scopatz/aims-scicomp.git">the repository of source material here</a>.
+</p>
+
+<p>
+I could gush about how I fell in love with Cape Town, the 
+unexpected preponderance of vegan cafes in Muizenberg, the sea, the sand, 
+the mountains, and <i>la dolce vita</i> I am otherwise 
+used to from Santa Barbara. I will not.  <span class="caps">AIMS</span> is about the students.  Let&#8217;s examine
+them after a brief tour of <span class="caps">AIMS</span>&nbsp;itself.
+</p>
+
+<h3><span class="caps">AIMS</span></h3>
+
+<p>
+<span class="caps">AIMS</span>, in association with 
+<a href="http://www.aims.ac.za/en/about/about-aims/our-partners">its partner universities</a>, provides a one year structured masters degree to exceptional 
+students from all over Africa.  This provides a needed
+stepping stone for many its students to pursue other universities across Africa 
+and across the world that they would otherwise likely not have to opportunity to 
+attend. The social goals at <span class="caps">AIMS</span> go hand in hand with the technical&nbsp;mission.  
+</p>
+
+<p>
+The Cape Town <span class="caps">AIMS</span> is the first such center and was opened in 2003.  However, other 
+<span class="caps">AIMS</span> centers are springing up in various other countries on what seems like an annual
+basis.  There is also an associated <span class="caps">AIMS</span> research center in Cape Town which houses 
+some doctoral and post-doctoral students as well as a related center dedicated 
+to improving the educational methods of secondary school teachers&nbsp;(<span class="caps">AIMSSEC</span>).
+</p>
+
+<p>
+The complex itself is a 4 story, 0 indexed building less than 100 meters from 
+the ocean.  Floor 0 contains a lecture hall, offices, kitchen and dining area.  
+Floor 1 has more offices, the library, and a world class computer lab.  Floor 2 
+houses the student dormitories.  Floor 3 houses rooms for some staff and visitors, 
+such as myself. In short <span class="caps">AIMS</span> is a mathematics monastery straight from my undergraduate 
+physics major&nbsp;dreams.
+</p>
+
+<div style="text-align:center">
+<p><img src="./static/images/aims/aims-view.jpg" width="60%" /></p>
+<p><i>The view from my room at <span class="caps">AIMS</span>, no&nbsp;fooling.</i></p>
+</div>
+
+<h3>The&nbsp;Students</h3>
+
+<p>
+This year&#8217;s class is approximately 50 students and hail from Egypt to Chad to Nairobi
+to South  Africa itself.  In the neighborhood of 20 countries were represented in 
+the student body. As William, a student, put it &#8220;by visiting <span class="caps">AIMS</span> I visited all of 
+Africa.&#8221;  However, national origin is only where the diversity&nbsp;starts.
+</p>
+
+<p>
+40% - 50% of the students were women. Furthermore, It seemed that the age 
+distribution ranged from mid-twenties to mid-forties. Additionally, though the 
+ability to read and understand English was generally quite high, the ability to 
+speak or understand spoken English varied from fluent to&nbsp;novice.
+</p>
+
+<p>
+Technical ability was also all over the map.  Some of the students it seemed had been
+professional Java developers in a past life.  On the other hand there were some 
+students who had learned to program Pascal out of a book and arriving at <span class="caps">AIMS</span> the 
+week before was their first time ever using a&nbsp;computer.  
+</p>
+
+<p>
+Still, the students themselves were incredibly enthusiastic.  
+Far more so than their Western counterparts 
+I have taught.  The computer lab at <span class="caps">AIMS</span> is open 24/7.  I would often pop in 
+between 11 pm and midnight and categorically I found 20 - 30 students
+<i>still</i> at their machines, working through 
+the day&#8217;s material, and discussing what they were learning in small&nbsp;groups.
+</p>
+
+<p>
+A cynical person would claim that this phenomenon is due to the students
+having nothing else to do in sleepy Muizenberg.  Naturally, they gravitated to 
+the place where they have internet activity.  I claim instead that the students acted 
+with the purpose of  learning.  No one sits in lectures for six hours a day, 
+day in and day out, in a 
+language they are still acquiring, and then hits the books for another six hours 
+afterwards if they do not feel that what they are doing is important and valuable. 
+Perhaps this mathematical monastery should more rightly be denoted <span class="caps">AIMS</span>: Academics 
+Inconsequent of Mortal&nbsp;Stamina.
+</p>
+
+<h3>The Software&nbsp;Stack</h3>
+
+<p>
+Throughout all of <span class="caps">AIMS</span>, including the staff and administration, the software 
+distribution is a model for how other, similar centers around the world 
+should operate.  Their stack is set up and managed by the preeminent 
+<a href="https://plus.google.com/106441031204413066119/posts">Jan Groenewald</a>
+who I know through the 
+illustrious 
+<a href="https://plus.google.com/105944382060485784655/posts">Katy Huff</a>.
+The operating system is Ubuntu, the mail client is GMail, 
+and courses are taught only with open source scientific software such as Python, 
+SciPy, R, Octave, LaTeX, and Sage. <i>This is my&nbsp;stack.</i>
+</p>
+
+<p>
+One of the neatest teaching aids that Jan and I ended up test driving and deploying 
+is an application called <a href="http://www.epoptes.org/">epoptes</a>.  
+This is basically a screen sharing program 
+with some extra bells and whistles that allow you to take over the student&#8217;s computer
+as well.  It was incredibly effective as long as you did not accidentally hit the
+button to shut down all of the student&#8217;s&nbsp;machines.
+</p>
+
+<p>
+If there was any lingering doubt, it has now been scrubbed away.
+The open scientific software stack is 
+completely ready for prime time in the classroom. Anyone who is trying to sell 
+you something is doing exactly&nbsp;that.  
+</p>
+
+<h3>The&nbsp;Course</h3>
+
+<p>
+I taught the entire course from a series of IPython notebooks cribbed from 
+Software Carpentry.  Some of these were tutorials I had originally written 
+a couple of years ago.  Humorously, I found that the documentation lesson 
+had not been significantly altered in that&nbsp;time.  
+</p>
+
+<p>
+However, forking from Software Carpentry required significant amounts of extra
+effort in some cases to make the lectures complete for my <span class="caps">AIMS</span> needs. (I have since
+pull requested these updates back though they are waiting for a merge.)  I was
+very tempted to use some material from <a href="http://www.pythonbootcamp.info/">the 
+Python Bootcamp at <span class="caps">UC</span> Berkeley</a>.  I did not because of licenses.  
+Software Carpentry material is 
+<a href="https://github.com/swcarpentry/bc/blob/gh-pages/LICENSE.md"><span class="caps">CC</span> <span class="caps">BY</span> v3.0 licensed</a>. The Berkeley Python material is 
+<a href="https://github.com/profjsb/python-bootcamp/blob/master/LICENSE"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> v3.0 licensed</a>.  
+Even though I am not 
+currently planning on reusing this material, the threat that I would be forbidden 
+from doing so in some circumstances was enough to drive me away from the 
+non-commercial copyleft terms. 
+Ironically, on the first Tuesday I was at <span class="caps">AIMS</span>, the class took a field trip to the 
+University of Cape Town to see Richard Stallman speak.  He convinced&nbsp;me.
+</p>
+
+<p>
+In terms of the instruction, I had the incidental privilege of giving the first 
+lecture of the academic year. It became clear after a few lessons - introduction to 
+scientific computing, <span class="caps">BASH</span>, git - that I would have to adapt my teaching style. 
+Luckily, the students shared an advanced mathematics background.  I could assume that 
+they all knew linear algebra, differential equations, and set&nbsp;theory.
+</p>
+
+<p>
+Teaching to the middle 80% at <span class="caps">AIMS</span> would not have worked.  The students were too 
+diverse of a group in too many ways.  Focusing on the mythical middle 80% would 
+have meant leaving everyone behind in some way all of the time rather than leaving 
+some people out most of the time.  I felt that if I had chosen to teach to the
+middle 80% I would be ignoring the core missions of both <span class="caps">AIMS</span> and Software&nbsp;Carpentry.
+</p>
+
+<p>
+So what changed?  Linguistically, I tried to teach to the bottom 10%.  The students
+who already knew English did not mind that I spoke slowly and directly and repeated 
+myself often and it made a world of difference to those who did not know English as 
+well.  I did not always hit my 10% goal but it was certainly worth trying to get&nbsp;there.
+</p>
+
+<p>
+At the tutors&#8217; (teaching assistants) request, we also instituted brief reviews of 
+previous material.  Since I taught the shell on the first day we went over 
+useful commands on second and third.  This gradually morphed into a generic 
+question and answer session at the beginning of every class that would last up to 
+30 minutes of a two hour block. For many students, the multi-day reinforcement was&nbsp;critical.
+</p>
+
+<p>
+That said, the most fundamental change was that I taught as much as I could in analogy
+to mathematical principles.  Functions are functions, operators are operators, 
+and sets are sets.  This made certain topics, such as slicing and 
+recursion much easier, but other topics, such as decorators and scoping, a little 
+more&nbsp;difficult.
+</p>
+
+<p>
+Overall, after I made these adjustments, the course went smoothly.  I would love to 
+have the opportunity to go back and restructure the entire course with <span class="caps">AIMS</span> students
+in mind now that I know who they are and how they differ from the standard 
+research-distracted Western graduate&nbsp;student.
+</p>
+
+<h3>Results</h3>
+
+<p>
+As any good instructor would do, I ran assessment surveys before and after the 
+course.  This is as much to gauge the students as my teaching ability.  Since
+the course was derived from Software Carpentry I used the official
+<a href="http://software-carpentry.org/bootcamps/index.html#assessment">pre- and post-assessment surveys</a>.  
+Since the raw data is not anonymized, if you would like access to it please contact&nbsp;me.
+</p>
+
+<p>
+On the subject of programming to do basic data analysis tasks, a huge leap was 
+made over the course of the two weeks.  <a href="#fig1">Figure 1</a> shows a 
+comparison for tasks involving opening a plaintext file, reading in data, and 
+computing summary statistics.  Most students went from not knowing where to start 
+to feeling that they could successfully accomplish this task given enough&nbsp;time.
+</p>
+
+<div style="text-align:center" id="fig1">
+<p><img src="./static/images/aims/aims-fig1.svg" /></p>
+<p><b>Figure 1:</b> (a) Pre-assessment question, <i>&#8220;Write a short program to read a 
+file containing columns of numbers separated by commas, average the non-negative 
+values in the second and fifth columns, and print the results.&#8221;</i> 
+(b) Post-assessment question, <i>&#8220;A comma-delimited file has two columns showing 
+the date and the number of sun spots recorded for that day. Write a program to 
+produce a graph showing the average number of sun spots for each&nbsp;month.&#8221;</i></p>
+</div>
+
+<p>
+However, the most staggering advancement was with respect to the shell.  
+This makes a certain amount of sense as <span class="caps">BASH</span> was the first technical subject we 
+discussed.  Consequently, the shell was the most reinforced material. It was 
+reviewed at least once per day.  <a href="#fig2">Figure 2</a> shows that the 
+distribution in ability basically&nbsp;flipped.
+</p>
+
+<div style="text-align:center" id="fig2">
+<p><img src="./static/images/aims/aims-fig2.svg" /></p>
+<p><b>Figure 2:</b> (a) Pre-assessment question, <i>&#8220;In a directory with 1000 text files, 
+create a list of all files that contain the word Drosophila, and redirect the output 
+to a file called results.txt.&#8221;</i> (b) Post-assessment question, <i>&#8220;How familiar do 
+you think you are with the command line&nbsp;shell?&#8221;</i></p>
+</div>
+
+<p>
+Lastly, I made an unorthodox decision to try to teach version control as early as
+possible.  So the second day, right after the shell lectures, we spent 4 hours on 
+the details of how to use git.  I mostly received blank stares.  However since 
+I ran the course from a bitbucket repository the students had ample opportunity 
+to reinforce what they learned.  <a href="#fig3">Figure 3</a> displays an 
+advancement that, while not quite as staggering as those above, is great to 
+see given the importance of the topic.  I doubt that any of the students would now 
+say that they do not know what version control is and what it is useful for, even 
+if they claim to not know how to use&nbsp;git.
+</p>
+
+<div style="text-align:center" id="fig3">
+<p><img src="./static/images/aims/aims-fig3.svg" /></p>
+<p><b>Figure 3:</b> (a) Pre-assessment question, <i>&#8220;Check out a working copy of a 
+project from version control, add a file called paper.txt, and commit the 
+change.&#8221;</i> (b) Post-assessment question, <i>&#8220;How familiar do you think you are 
+with the version control stem used in your&nbsp;bootcamp?&#8221;</i></p>
+</div>
+
+<p>
+Overall, I find these results very encouraging.  I was able to seed some fundamental
+best practices.  However, it is now up to the <span class="caps">AIMS</span> staff and tutors to shore up
+these ideas with continued education and practice.  As this was a self assessment, 
+and not a competency assessment per-say, the students definitely seemed to take 
+something away&nbsp;themselves. 
+</p>
+
+<h3>Parting</h3>
+
+<p>
+At the end of the two weeks, the students sat me down in a chair at the front of 
+the class and presented me with a thank you card. Along with this they read 
+a statement prepared by the class.  This was definitely one of the most rewarding
+moments of the course - and possibly of my life to date.  I wanted to laugh and 
+cry at the same time.  The statement went as&nbsp;follows:
+</p>
+
+<blockquote>
+We are so grateful for teaching us the course Scientific Computing, 
+the Python language especially. We are also grateful to your style of lecturing in 
+that you welcomed questions and you were so patient with everyone despite our 
+variety of accents. You answers every question by first saying, and I quote 
+&#8220;Aaaah, Okaaaay, that&#8217;s a very good question.&#8221; This encouraged all of us to ask 
+question and we benefited - we are really grateful.
+</blockquote>
+
+<div style="text-align:center">
+<p><img src="./static/images/aims/aims-farewell.jpg" width="60%" /></p>
+<p><i>Taken while I listen to the goodbye speech from the&nbsp;students.</i></p>
+</div>
+
+<p>
+The student William from before also got up and said a few words, some of 
+which were, &#8220;Anthony, you are not a trained teacher, but a born teacher.&#8221;
+I really appreciate this comment on all&nbsp;levels.
+</p>
+
+<p>
+However, the real showcase of the impact that this course had is 
+in what the students wrote in the card.  My favorite and most telling inscriptions&nbsp;were: 
+</p>
+
+<blockquote>
+audrey = &#8220;thank you Anthony&#8221;
+<br />
+print audrey
+</blockquote>
+
+<blockquote>
+keep in touch - git pull
+</blockquote>
+
+<blockquote>
+I may forget Python, but not you.  Thank you!!
+</blockquote>
+
+<h3>Final&nbsp;Thanks</h3>
+
+<p>
+Personally, I would like to thank Barry Green, Jeff Sanders, and Jan Groenewald for
+giving <span class="caps">AIMS</span> its superior environment and extending to me the opportunity to come
+and lecture about some of my favorite topics.  Additionally, I&#8217;d like to thanks
+the class tutors, Adriaan van Vuuren, Antonio Cardoso, Eva Ujeneza, 
+Evans Ocansey, Markus Kruger, Mekdes Tessema, and Morgan Magloire Pene, 
+there is no doubt in my mind that the class would not have run half as&nbsp;well.
+</p>
+
+<p>
+In closing, <span class="caps">AIMS</span> is an incredibly special place.  If you ever have and opportunity
+to visit the Cape Town campus or another location I highly encourage you to take it.
+I promise that you will not regret&nbsp;it!
+</p>
+
+<div style="text-align:center">
+<p><img src="./static/images/aims/aims-end.jpg" width="60%" /></p>
+<p><i>Jubilant photograph with the students after the final&nbsp;lecture.</i></p>
+</div>
+
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2013-09-15T09:00:00" pubdate>Sun 15 September 2013</time>    <span class="categories">
+        <a class="category" href="./tag/teaching.html">teaching</a>
+      </span>
+  </p>    </footer>
+  </article>
+
+  </div>
+      <aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+            <li class="post">
+          <a href="./about.html">About</a>
+      </li>
+            <li class="post">
+          <a href="./contact.html">Contact</a>
+      </li>
+            <li class="post">
+          <a href="./scientific-computing-at-aims.html">Scientific Computing at AIMS</a>
+      </li>
+          </ul>
+  </section>
+    <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+              <li><a href="./category/missives.html">missives</a></li>
+              <li><a href="./category/null.html">null</a></li>
+          </ul>
+  </section>
+   
+
+  <section>
+  <h1>Tags</h1>
+      <a href="./tag/teaching.html">teaching</a>    </section>
+
+    
+    <section>
+        <h1>Social</h2>
+        <ul>
+            <li><a href="http://anthony.scopatz.com/" type="application/rss+xml" rel="alternate">RSS</a></li>
+                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
+                    <li><a href="https://twitter.com/scopatz" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/scopatz" target="_blank">LinkedIn</a></li>
+                </ul>
+    </section>
+  </aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; Anthony Scopatz
+</p></footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/null.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-23T00:00:00-05:00</updated><entry><title>About</title><link href="http://anthony.scopatz.com/about.html" rel="alternate"></link><updated>2013-09-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-23:about.html</id><summary type="html">&lt;p&gt;Anthony Scopatz is a computational scientist and long time Python developer,
+Anthony holds his &lt;span class="caps"&gt;BS&lt;/span&gt; in Physics from &lt;span class="caps"&gt;UC&lt;/span&gt;, Santa Barbara and a Ph.D. in
+Mechanical / Nuclear Engineering from &lt;span class="caps"&gt;UT&lt;/span&gt; Austin. A former Enthought employee,
+he spent his post-doctoral studies at the &lt;span class="caps"&gt;FLASH&lt;/span&gt; Center at the University of
+Chicago in the Astrophysics Department. He is currently a Staff Scientist at
+the University of Wisconsin-Maidson in Engineering Physics. Anthony’s research
+interests revolve around essential physics modeling of the nuclear fuel cycle,
+and information theory &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; entropy. Anthony is proudly a fellow of the Python
+Software Foundation and has published and spoken at numerous conferences on
+a variety of science &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; software development&amp;nbsp;topics.&lt;/p&gt;
+</summary></entry><entry><title>Contact</title><link href="http://anthony.scopatz.com/contact.html" rel="alternate"></link><updated>2013-09-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-23:contact.html</id><summary type="html">&lt;p&gt;Please contact me via email: scopatz _at_ gmail -.-&amp;nbsp;com&lt;/p&gt;
+&lt;p&gt;Screaming from the mountains tops does not work as often as it&amp;nbsp;should.&lt;/p&gt;
+</summary></entry></feed>
