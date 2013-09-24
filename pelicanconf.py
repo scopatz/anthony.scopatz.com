@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Anthony Scopatz'
 SITENAME = u'Anthony Scopatz'
 SITESUBTITLE = "I think, therefore I amino acid."
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'America/Central'
 
@@ -39,7 +39,7 @@ GITHUB_URL = 'https://github.com/scopatz'
 TWITTER_URL = 'https://twitter.com/scopatz'
 GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
 
-MENUITEMS = [('Missives', 'missives.html'),
+MENUITEMS = [('Missives', 'category/missives.html'),
              ('Archives', 'archives.html'),
              ('About', 'about.html'),
              ('Contact', 'contact.html'),
