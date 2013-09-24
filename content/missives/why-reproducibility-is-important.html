@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Why Reproducibility is Important</title>
+  <meta name="date" contents="2012-07-13" />
+  <meta name="author" contents="Anthony Scopatz" />
+</head>
+<body>
+
+<p><i>
+This was originally published at 
+<a href="http://inscight.org/2012/07/13/why-reproducibility-is-important/">inSCIght</a>.
+</i></p>
+
+<p>
+<em><strong>SciPy 2012 Preview:</strong> The following is a section taken from my <a href="http://conference.scipy.org/scipy2012/">SciPy 2012</a> proceeding for the conference next week.   You can see a preview of <a href="https://github.com/scopatz/scipy_proceedings/blob/2012/papers/anthony_scopatz_flmake/anthony_scopatz_flmake.rst">the paper at github</a>.  I hope to see you at the conference (and my talk)!</em>
+</p>
+
+<p>
+True to its part of speech, much of 'scientific computing' has the trappings of science in that it is code produced to solve problems in (big-'S') Science. However, the process by which said programs are written is not typically itself subject to the rigors of the scientific method. The vaulted method contains components of prediction, experimentation, duplication, analysis, and openness [GODFREY-SMITH]. While software engineers often engage in such activities when programming, scientific developers usually forgo these methods, often to their detriment [WILSON].
+</p>
+
+<p>
+Whatever the reason for this may be - ignorance, sloth, or other deadly sins - the impetus for adopting modern software development practices only increases every year. The evolution of tools such as version control and environment capturing mechanisms (such as virtual machines/hypervisors) enable researchers to more easily retain information about software during and after production. Furthermore, the apparent end of Silicon-based Moore's Law has necessitated a move to more exotic architectures and increased parallelism to see further speed increases [MIMS]. This implies that code that runs on machines now may not be able to run on future processors without significant refactoring.
+</p>
+
+<p>
+Therefore the scientific computing landscape is such that there are presently the tools and the need to have fully reproducible simulations. However, most scientists choose to not utilize these technologies. This is akin to a chemist not keeping a lab notebook. The lack of reproducibility means that many solutions to science problems garnered through computational means are relegated to the realm of technical achievements. Irreproducible results may be novel and interesting but they are not science. Unlike the current paradigm of computing-about-science, or <em>periscientific computing</em>, reproducibility is a keystone of <em>diacomputational science</em>(computing-throughout-science).
+</p>
+
+<p>
+In periscientific computing there may exist a partition between expert software developers and expert scientists, each of whom must learn to partially speak the language of the other camp. Alternatively, when expert software engineers are not available, canonically ill-equipped scientists perform only the bare minimum development to solve computing problems.
+</p>
+
+<p>
+On the other hand, in diacomputational science, software exists as a substrate on top of which science and engineering problems are solved. Whether theoretical, simulation, or experimental problems are at hand the scientist has a working knowledge of computing tools available and an understanding of how to use them responsibly. While the level of education required for diacomputational science may seem extreme in a constantly changing software ecosystem, this is in fact no greater than what is currently expect from scientists with regard to Statistics [WILSON].
+</p>
+
+<p>
+With the extreme cases illustrated above, there are some notable exceptions. The first is that there are researchers who are cognizant and respectful of these reproducibility issues. The efforts of these scientists help paint a less dire picture than the one framed here.
+</p>
+
+<p>
+The second exception is that while reproducibility is a key feature of fundamental science it is not the only one. For example, openness is another point whereby the statement "If a result is not produced openly then it is not science" holds. Open access to results - itself is a hotly contested issue [VRIEZE] - is certainly a component of computational science. Though having open and available code is likely critical for pure science, it often lies outside the scope of normal research practice. This is for a variety of reasons, including the fear that releasing code too early or at all will negatively impact personal publication records. Tackling the openness issue must be left for another paper.
+</p>
+
+<p>
+In summary, reproducibility is important because without it any results generated are periscientific. To achieve diacomputational science there exist computational tools to aid in this endeavor, as in analogue science there are physical solutions. Though it is not the only criticism to be levied against modern research practices, irreproducibility is one that affects computation acutely and uniquely as compared to other spheres.
+</p>
+
+<h4>References</h4>
+
+<p>
+[GODFREY-SMITH] Godfrey-Smith, Peter (2003), <em>Theory and Reality: An introduction to the philosophy of science</em>, University of Chicago Press, ISBN 0-226-30063-3.
+</p>
+
+<p>
+[MIMS] C. Mims, <em>Moore's Law Over, Supercomputing "In Triage," Says Expert,</em> http://www.technologyreview.com/view/427891/moores-law-over-supercomputing-in-triage-says/ May 2012, Technology Review, MIT.
+</p>
+
+<p>
+[VRIEZE] Jop de Vrieze, <em>Thousands of Scientists Vow to Boycott Elsevier to Protest Journal Prices</em>, Science Insider, February 2012.
+</p>
+
+<p>
+[WILSON] G.V. Wilson, <em>Where's the real bottleneck in scientific computing?</em> Am Sci. 2005;94:5.
+</p>
+</body>
+</html>
