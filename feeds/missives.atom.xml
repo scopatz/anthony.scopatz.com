@@ -615,4 +615,65 @@ In summary, reproducibility is important because without it any results generate
 &lt;p&gt;
 [&lt;span class="caps"&gt;WILSON&lt;/span&gt;] &lt;span class="caps"&gt;G.V.&lt;/span&gt; Wilson, &lt;em&gt;Where&amp;#8217;s the real bottleneck in scientific computing?&lt;/em&gt; Am Sci.&amp;nbsp;2005;94:5.
 &lt;/p&gt;
+</summary></entry><entry><title>inSCIght Episode 28: R We Not Statisticians?</title><link href="http://anthony.scopatz.com/inscight-episode-28-r-we-not-statisticians.html" rel="alternate"></link><updated>2012-07-06T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-07-06:inscight-episode-28-r-we-not-statisticians.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2012/07/06/episode-28-r/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href="http://s3.amazonaws.com/inscight/episodes/inscight_25_2012_02_29.mp3"&gt;
+&lt;/a&gt;&lt;img class="aligncenter" src="http://github.com/inscight/inscight/raw/master/img/icons/InSciGHT.jpg" alt="" width="168" height="136" /&gt;&lt;a href="http://s3.amazonaws.com/inscight/episodes/inscight_25_2012_02_29.mp3"&gt;
+&lt;/a&gt;
+&lt;h2&gt;&lt;a href="http://s3.amazonaws.com/inscight/episodes/inscight_28_2012_05_11.mp3" target="_blank"&gt;Listen to the&amp;nbsp;podcast&lt;/a&gt;&lt;/h2&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+On episode 28, we finally get around to tackling R, a language for statistical computing.  R has a storied history as an &lt;span class="caps"&gt;LGPL&lt;/span&gt; code related to the S language which came out of Bell labs which itself was influenced by Scheme.  R is the go-to tool for many statisticians, analysts, and data scientists.   It comes with the full suite of plotting, array, and math libraries that computational scientists have come to know and expect.  As a high-level, dynamic, and extensible language, R is definitely worth knowing about - even if you aren&amp;#8217;t a&amp;nbsp;statistician!
+&lt;/p&gt;
+
+&lt;p&gt;
+Today&amp;#8217;s useRs include:
+&lt;ul&gt;
+  &lt;li&gt;Geraldine van der&amp;nbsp;Auwera&lt;/li&gt;
+  &lt;li&gt;Phillip Keung (special&amp;nbsp;guest)&lt;/li&gt;
+  &lt;li&gt;Christopher Jordan-Squire (special&amp;nbsp;guest)&lt;/li&gt;
+  &lt;li&gt;Anthony Scopatz&amp;nbsp;(moderator)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;strong&gt;Phillip Keung&lt;/strong&gt; is a biostatistics graduate student and works in statistical genetics at the University of Washington in Seattle,&amp;nbsp;&lt;span class="caps"&gt;WA&lt;/span&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;strong&gt;Christopher Jordan-Squire&lt;/strong&gt; is a mathematics graduate student at the University of Washington in Seattle, &lt;span class="caps"&gt;WA&lt;/span&gt;. His love of applied problems has overcome his original training in pure mathematics and deep love of the Fourier transform. With training in both pure mathematics and applied statistics, he now works in the intersection of the two fields. He is currently researching non-parametric mixture model estimation, and also does statistics consulting and python coding in his not-so-ample spare&amp;nbsp;time.
+&lt;/p&gt;
+
+&lt;p&gt;
+Intro Music: Batman&amp;nbsp;Theme
+&lt;/p&gt;
+
+&lt;p&gt;
+Outro Music: X-Men&amp;nbsp;Theme
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;h3&gt;Show&amp;nbsp;Links:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href="http://www.r-project.org/"&gt;The R&amp;nbsp;Project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/R_(programming_language)"&gt;R on&amp;nbsp;Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+
+</summary><category term="inscight"></category></entry><entry><title>Open, Free, or Me: Return of the Binary in the Coalmine</title><link href="http://anthony.scopatz.com/open-free-or-me-return-of-the-binary-in-the-coalmine.html" rel="alternate"></link><updated>2012-06-28T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2012-06-28:open-free-or-me-return-of-the-binary-in-the-coalmine.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2012/06/28/open-free-or-me-return-of-the-binary-in-the-coalmine/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+You may recall that a few months ago I wrote &lt;a href="http://inscight.org/2012/03/09/binary-in-a-coalmine/"&gt;a post&lt;/a&gt; about how open source is a continuum and that free and open are orthogonal concepts.  Well, the nice people at the American Nuclear Society invited me to a round table discussion on software licences on Monday where I presented this material.  I figured I&amp;#8217;d &lt;a href="https://s3.amazonaws.com/inscight/pres/scopatz_ans-annual2012_roundtable.pdf"&gt;post my slides here&lt;/a&gt; in case you are interested.&amp;nbsp; Enjoy!
+
 </summary></entry></feed>
