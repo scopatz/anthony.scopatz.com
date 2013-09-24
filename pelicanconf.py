@@ -34,7 +34,7 @@ SOCIAL = (('Other Website', 'http://scopatz.com/'),
           ('LinkedIn', 'http://www.linkedin.com/in/scopatz'),
           )
 
-DISQUS_SITENAME = "anthonyscopatz"
+#DISQUS_SITENAME = "anthonyscopatz"
 GITHUB_URL = 'https://github.com/scopatz'
 TWITTER_URL = 'https://twitter.com/scopatz'
 GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
