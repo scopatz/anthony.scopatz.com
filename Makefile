@@ -17,14 +17,14 @@ SSH_PORT=22
 SSH_USER=root
 SSH_TARGET_DIR=/var/www
 
-TOP_LEVEL_DOMAIN?=numfocus.org
+TOP_LEVEL_DOMAIN?=anthony.scopatz.com
 
 S3_BUCKET=my_s3_bucket
 
 DROPBOX_DIR=~/Dropbox/Public/
 
 # The github remote that the main website is hosted from
-GITHUB_DEPLOY_REMOTE?=upstream
+GITHUB_DEPLOY_REMOTE?=origin
 
 # The remote you'd like to push to
 GITHUB_REMOTE?=$(GITHUB_DEPLOY_REMOTE)
