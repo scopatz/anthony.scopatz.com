@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Evolution of a Solution</title>
+  <meta name="author" content="Anthony Scopatz">
+
+    
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./favicon.png" rel="icon">
+  <link href="./theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+  <script src="./theme/js/modernizr-2.0.js"></script>
+  <script src="./theme/js/ender.js"></script>
+  <script src="./theme/js/octopress.js" type="text/javascript"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="./">Anthony Scopatz</a></h1>
+      <h2>I think, therefore I amino acid.</h2>
+  </hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://anthony.scopatz.com/" rel="subscribe-rss">RSS</a></li>
+  </ul>
+
+<!-- TODO: add search here
+<form action="" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:." />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+-->
+
+<ul class="main-navigation">
+      <li><a href="category/missives.html">Missives</a></li>
+      <li><a href="archives.html">Archives</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+            <!-- TODO: add categories here? -->
+  </ul></nav>
+  <div id="main">
+    <div id="content">
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">Evolution of a Solution</h1>
+          <p class="meta"><time datetime="2012-03-31T00:00:00" pubdate>Sat 31 March 2012</time></p>
+</header>
+
+  <div class="entry-content"><div class="section" id="the-thought-process-of-a-computational-scientist">
+<h2>The Thought Process of a Computational&nbsp;Scientist</h2>
+<p><em>This was originally published at</em> <a class="reference external" href="http://inscight.org/2012/03/31/evolution_of_a_solution/">inSCIght</a>.</p>
+<p>To appease the <span class="caps">PI</span>, our hero - the dashing, young scientist - faces down the
+following problem with moxie normally reserved for Marie&nbsp;Curie.</p>
+<p>In 2D or 3D, we have two points (<em>p1</em> and <em>p2</em>) which define a line segment.
+Additionally there exists experimental data which can be anywhere in the domain.
+<strong>Find the data point which is closest to the line segment.</strong> &nbsp;Please see Figure&nbsp;1.</p>
+<div class="figure align-center">
+<img alt="http://s3.amazonaws.com/inscight/img/blog/evo_sol1.png" src="http://s3.amazonaws.com/inscight/img/blog/evo_sol1.png" style="width: 325px;" />
+<p class="caption">Figure 1: The&nbsp;Problem</p>
+</div>
+<div class="section" id="attempt-1">
+<h3>attempt&nbsp;1</h3>
+<p>Instinctually, our code-slinger reaches for an off-the-shelf solution.
+<a class="reference external" href="http://www.codinghorror.com/blog/2009/02/dont-reinvent-the-wheel-unless-you-plan-on-learning-more-about-wheels.html">Most of the time this is the correct thing to do.</a>.
+&nbsp;This is essentially a&nbsp;minimization problem and we know that SciPy
+(and other similar packages)&nbsp;has an <span class="caps">API</span> that should be able to help us out.
+With about 2 minutes and Google, our hero finds the
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html">scipy.optimize.fmin()</a>
+function and tries a solution like the&nbsp;following:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fmin</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">]])</span>
+
+<span class="k">def</span> <span class="nf">point_on_line</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">dist_from_line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdata</span><span class="p">):</span>
+    <span class="n">pline</span> <span class="o">=</span> <span class="n">point_on_line</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">pline</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">closest_data_to_line</span><span class="p">():</span>
+    <span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pdata</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">fmin</span><span class="p">(</span><span class="n">dist_from_line</span><span class="p">,</span> <span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">pdata</span><span class="p">,),</span> <span class="n">disp</span><span class="o">=</span><span class="bp">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_from_line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdata</span><span class="p">)</span>
+    <span class="n">imin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">imin</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">imin</span><span class="p">]</span>
+
+<span class="k">print</span> <span class="n">closest_data_to_line</span><span class="p">()</span>
+</pre></div>
+<p>While this approach certainly works it is a little like swatting a fly with a tank.
+In some sense, this solution is order O(n^2) because for every data point we perform
+and optimization. Then we have to solve for the minimum-distance data point
+afterwards. &nbsp;For a large number of data points, all of the calls to
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html">fmin()</a>
+can get quite expensive. &nbsp;So while this solution works it lacks&nbsp;grace.</p>
+</div>
+<div class="section" id="attempt-2">
+<h3>attempt&nbsp;2</h3>
+<p>At this point the plucky researcher notices that minimum the distance from the
+data point to the line has an analytic solution. &nbsp;This is great! &nbsp;It means that all
+of those nasty fmin()
+calls can go away and we can make this problem O(n). &nbsp;But what is the equation?
+Recalling back to trigonometry, the stalwart champion notes that in general 3 points
+(p1, p2, pdata) form a&nbsp;triangle.</p>
+<div class="figure align-center">
+<img alt="http://s3.amazonaws.com/inscight/img/blog/triangle-with-cosines.png" src="http://s3.amazonaws.com/inscight/img/blog/triangle-with-cosines.png" style="width: 200px;" />
+<p class="caption">Figure 2: Law of Cosines Diagram, From&nbsp;Wikipedia</p>
+</div>
+<p>From Figure 2, <em>a</em> may be calculated from the distance between&nbsp;<em>p1</em> <span class="amp">&amp;</span> <em>pdata</em>,
+<em>b</em> from <em>p2</em> <span class="amp">&amp;</span> <em>pdata</em>, and <em>c</em> from <em>p1</em> <span class="amp">&amp;</span> <em>p2</em>. &nbsp; Therefore shortest distance
+between the data point and the line is just the height of the triangle, which is
+given by <em>h = a sin(beta)</em>. &nbsp;To calculate any of the angles&nbsp;the
+<a class="reference external" href="http://mathworld.wolfram.com/LawofCosines.html">Law of Cosines</a>
+can be used. &nbsp;For instance, <em>beta = arccos((a^2 + c^2 - b^2)/(2ac))</em>.
+Furthermore, note the inverse&nbsp;identity&nbsp;<em>sin(arccos(w)) = sqrt(1 - w^2)</em>.
+Therefore, the new closest point and line distance functions would look&nbsp;like:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">dist_from_line</span><span class="p">(</span><span class="n">pdata</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">p1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">((</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span>
+
+<span class="k">def</span> <span class="nf">closest_data_to_line</span><span class="p">():</span>
+    <span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pdata</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">dists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_from_line</span><span class="p">(</span><span class="n">pdata</span><span class="p">)</span>
+    <span class="n">imin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">imin</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">imin</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="attempt-3">
+<h3>attempt&nbsp;3</h3>
+<p>Unfortunately, attempt 2 is not quite right either. &nbsp;The points circled in blue in
+Figure 3 lie closer to the line defined by <em>p1</em> <span class="amp">&amp;</span> <em>p2</em> but
+<strong>do not lie closer to the line&nbsp;segment!</strong></p>
+<div class="figure align-center">
+<img alt="http://s3.amazonaws.com/inscight/img/blog/evo_sol3.png" src="http://s3.amazonaws.com/inscight/img/blog/evo_sol3.png" style="width: 325px;" />
+<p class="caption">Figure 3: Close to the line, but not the line&nbsp;segment.</p>
+</div>
+<p>These points have a very small height as compared to other data points but
+the triangles formed by them have a very large perimeter. &nbsp;This leads us to
+the third and simplest implementation: minimize the&nbsp;perimeters!</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="n">pdata</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">p1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">closest_data_to_line</span><span class="p">():</span>
+    <span class="n">peris</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pdata</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">peris</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">perimeter</span><span class="p">(</span><span class="n">pdata</span><span class="p">)</span>
+    <span class="n">imin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">peris</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">imin</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">imin</span><span class="p">]</span>
+</pre></div>
+<p>This has the advantage of&nbsp;performing fewer floating point operations than
+using the trig functions in option 2. &nbsp;Moreover, it is conceptually simpler
+to understand what is happening just by looking at the code. &nbsp;By&nbsp;minimizing
+the&nbsp;perimeter we are&nbsp;minimizing&nbsp;the area of the triangle which happens to
+minimize the height of the triangle for the data points we care&nbsp;about.</p>
+</div>
+<div class="section" id="attempt-4">
+<h3>attempt&nbsp;4</h3>
+<p>Up until now, our hero has shied away from trying to do any code&nbsp;optimization.
+We were just trying to get to a solutions that works without&nbsp;excessive computation
+times. &nbsp;&nbsp;However, almost&nbsp;immediately from attempt 3 we can see that the length <em>c</em>
+(between <em>p1</em> <span class="amp">&amp;</span> <em>p2</em>) is the same for all data points. &nbsp;Therefore this calculation
+is redundant for minimization. We can thus replace the&nbsp;perimeter function with
+something that is sufficiently&nbsp;perimeter-esque but requires even less floating
+point&nbsp;arithmetic.</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">like_a_perimeter</span><span class="p">(</span><span class="n">pdata</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">pdata</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+<p>While this only works if&nbsp;<em>p1</em>&nbsp;<span class="amp">&amp;</span>&nbsp;<em>p2</em>&nbsp;do not change, it will outperform any
+of the other options. &nbsp;This makes it suitable to use on a large number of data
+points. &nbsp;Finally because the above is so simple, we can use NumPy&#8217;s vectorization
+capabilities&nbsp;to reduce this whole problem to a single&nbsp;line:</p>
+<div class="highlight"><pre><span class="n">data</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p1</span> <span class="o">-</span> <span class="n">data</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p2</span> <span class="o">-</span> <span class="n">data</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)))]</span>
+</pre></div>
+</div>
+<div class="section" id="summary">
+<h3>summary</h3>
+<p>By continuing to think about the problem we end up with the simplest and quickest
+solution which also happens to be the most concise to write. &nbsp;We could have stopped
+at any point and had a solution that would have worked.
+<strong>We went from a 25 line version to a single expression.</strong>
+What is more, is that this solution works for any number of
+dimensions since three points always form a&nbsp;triangle.</p>
+<p>Having the simplest, most general solution has&nbsp;distinct advantages.
+This code will not often need to modified in the&nbsp;future because of the
+variety&nbsp;of&nbsp;&nbsp;cases it satisfies. &nbsp;Moreover, should the code ever need to
+be&nbsp;revisited it is possible to look at the whole thing in a single&nbsp;glance.</p>
+<p>Much of good software development - and scientific code in particular - must
+make the trade off between human time and computer time. &nbsp;In general, human
+time always wins. &nbsp;At any of the checkpoints in this evolution we could have
+stopped. &nbsp; Thus they key engineering decision to make was at what attempt the
+code is &#8220;good enough&#8221; to satisfy the vast array of other&nbsp;requirements:</p>
+<ul class="simple">
+<li>easy to&nbsp;ready,</li>
+<li>easy to&nbsp;understand,</li>
+<li>easy to&nbsp;test,</li>
+<li>easy to&nbsp;maintain,</li>
+<li>speed,</li>
+<li>and making the <span class="caps">PI</span>&nbsp;happy.</li>
+</ul>
+<p>With that, the triumphant hero returns home from the lonely cafe to have a
+delicious vegan victory&nbsp;cookie!</p>
+</div>
+</div>
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2012-03-31T00:00:00" pubdate>Sat 31 March 2012</time>  </p>    </footer>
+  </article>
+
+    <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+  </div>
+      <aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+            <li class="post">
+          <a href="./about.html">About</a>
+      </li>
+            <li class="post">
+          <a href="./contact.html">Contact</a>
+      </li>
+            <li class="post">
+          <a href="./scientific-computing-at-aims.html">Scientific Computing at AIMS</a>
+      </li>
+            <li class="post">
+          <a href="./thence-flash-thither-uw.html">Thence FLASH, Thither UW</a>
+      </li>
+            <li class="post">
+          <a href="./the-shining-panda-edition.html">The Shining: Panda Edition</a>
+      </li>
+          </ul>
+  </section>
+    <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+              <li><a href="./category/missives.html">missives</a></li>
+              <li><a href="./category/null.html">null</a></li>
+          </ul>
+  </section>
+   
+
+  <section>
+  <h1>Tags</h1>
+      <a href="./tag/undermythumb.html">undermythumb</a>,      <a href="./tag/finespecimen.html">finespecimen</a>,      <a href="./tag/butsaliwanaplayarya.html">butsaliwanaplayarya!</a>,      <a href="./tag/abwhofsabab.html">(a||b)whof***s(a||b||a&amp;b)</a>,      <a href="./tag/bothflamingandhot.html">bothflamingandhot</a>,      <a href="./tag/goingtwosiesonapadravya.html">goingtwosiesonapadravya</a>,      <a href="./tag/inscight.html">inscight</a>,      <a href="./tag/totallydisillusionedwithstraightmalehood.html">totallydisillusionedwithstraightmalehood</a>,      <a href="./tag/northofthewall.html">northofthewall</a>,      <a href="./tag/onatotallyunrelatednote.html">onatotallyunrelatednote</a>,      <a href="./tag/caith.html">caith</a>,      <a href="./tag/southside.html">southside</a>,      <a href="./tag/ifiwasgoingtokillmyselfiwouldnttellyou.html">ifiwasgoingtokillmyselfiwouldn'ttellyou</a>,      <a href="./tag/onedoesnotsimplyjumpingstilitsintomordor.html">onedoesnotsimplyjumpingstilitsintomordor</a>,      <a href="./tag/evilloknarisevil.html">evilloknarisevil</a>,      <a href="./tag/kdlang.html">kdlang</a>,      <a href="./tag/doyouhaveadorsalfin.html">doyouhaveadorsalfin?</a>,      <a href="./tag/paris.html">paris</a>,      <a href="./tag/forgottenfilmfriday.html">forgottenfilmfriday</a>,      <a href="./tag/kernelravego.html">kernelravego!</a>,      <a href="./tag/notmybrother.html">notmybrother</a>,      <a href="./tag/lolstice.html">lolstice</a>,      <a href="./tag/whatevs-oldladyhat.html">whatevs-oldladyhat</a>,      <a href="./tag/teaching.html">teaching</a>,      <a href="./tag/physor.html">physor</a>,      <a href="./tag/onlyonemanwoulddaregivemetheraspberry.html">onlyonemanwoulddaregivemetheraspberry</a>,      <a href="./tag/hardkour.html">hardkour</a>,      <a href="./tag/iheartvaginas.html">iheartvaginas</a>,      <a href="./tag/picsoritdidnthappen.html">picsoritdidnthappen</a>,      <a href="./tag/exodus.html">exodus</a>,      <a href="./tag/joinmyharem.html">joinmyharem</a>,      <a href="./tag/ladyjessica.html">ladyjessica</a>,      <a href="./tag/iamclearlynotdoingsomethingright.html">iamclearlynotdoingsomethingright</a>,      <a href="./tag/oldladyhat.html">oldladyhat</a>,      <a href="./tag/ssp.html">ssp</a>,      <a href="./tag/waitireallydolikeit.html">waitireallydolikeit</a>,      <a href="./tag/feyd.html">feyd</a>,      <a href="./tag/enigma.html">enigma</a>,      <a href="./tag/unicorn.html">unicorn</a>,      <a href="./tag/sequoia.html">sequoia</a>,      <a href="./tag/ssp2.html">ssp2</a>,      <a href="./tag/lollipop.html">lollipop</a>,      <a href="./tag/shebecrying.html">shebecrying</a>,      <a href="./tag/argentiniancowboys.html">argentiniancowboys</a>,      <a href="./tag/zomgspaceisradioactive.html">zOMGspaceisradioactive!</a>,      <a href="./tag/table4one.html">table4one</a>,      <a href="./tag/gundamisntfree.html">gundamisn'tfree</a>,      <a href="./tag/relenasbutler.html">relena'sbutler</a>,      <a href="./tag/unlessiaminasutriawhereitispunchandpie.html">unlessiaminasutriawhereitispunchandpie</a>,      <a href="./tag/duncanidaho.html">duncanidaho</a>,      <a href="./tag/peoplechangenawtheydont.html">peoplechangenawtheydont</a>,      <a href="./tag/lawlsadventure.html">lawlsadventure</a>,      <a href="./tag/no-utube.html">no-utube</a>,      <a href="./tag/ifoughtthelawandthelawanallyrapedme.html">ifoughtthelawandthelawanallyrapedme</a>,      <a href="./tag/5.html">+5</a>,      <a href="./tag/switzerland.html">switzerland</a>,      <a href="./tag/idontlikeitbecauseitispopular.html">idontlikeitbecauseitispopular</a>,      <a href="./tag/alittlebirdtoldme.html">alittlebirdtoldme</a>,      <a href="./tag/global.html">global</a>,      <a href="./tag/chc-everywhere.html">chc-everywhere!</a>    </section>
+
+    
+    <section>
+        <h1>Social</h2>
+        <ul>
+            <li><a href="http://anthony.scopatz.com/" type="application/rss+xml" rel="alternate">RSS</a></li>
+                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
+                    <li><a href="https://twitter.com/scopatz" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/scopatz" target="_blank">LinkedIn</a></li>
+                </ul>
+    </section>
+  </aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; Anthony Scopatz
+</p></footer>
+  	<script type="text/javascript">
+	  var disqus_shortname = 'anthonyscopatz';
+                var disqus_identifier = '/evolution-of-a-solution.html';
+          var disqus_url = './evolution-of-a-solution.html';
+          var disqus_title = 'Evolution of a&nbsp;Solution';
+      	  (function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	   })();
+	</script>
+</body>
+</html>

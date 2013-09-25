@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Discharge Reactivity of the Nuclear Fuel Cycle</title>
+  <meta name="author" content="Anthony Scopatz">
+
+    
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./favicon.png" rel="icon">
+  <link href="./theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+  <script src="./theme/js/modernizr-2.0.js"></script>
+  <script src="./theme/js/ender.js"></script>
+  <script src="./theme/js/octopress.js" type="text/javascript"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="./">Anthony Scopatz</a></h1>
+      <h2>I think, therefore I amino acid.</h2>
+  </hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://anthony.scopatz.com/" rel="subscribe-rss">RSS</a></li>
+  </ul>
+
+<!-- TODO: add search here
+<form action="" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:." />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+-->
+
+<ul class="main-navigation">
+      <li><a href="category/missives.html">Missives</a></li>
+      <li><a href="archives.html">Archives</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+            <!-- TODO: add categories here? -->
+  </ul></nav>
+  <div id="main">
+    <div id="content">
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">Discharge Reactivity of the Nuclear Fuel Cycle</h1>
+          <p class="meta"><time datetime="2010-11-14T23:54:00" pubdate>Sun 14 November 2010</time></p>
+</header>
+
+  <div class="entry-content"><p>Was Energy Ant was not technical enough for you? Well, have I got a post
+for&nbsp;you&#8230;</p>
+<p>The <span class="caps">EIA</span>, as mentioned before, houses monolithic databases on energy
+generation and consumption in this country. One of them goes by the
+affectionate name Form <span class="caps">RW</span>-859 , or the Nuclear Fuel Data&nbsp;Survey.</p>
+<p>Essentially, this database is a record of every fuel assembly to ever
+come out of a commercial nuclear reactor in the <span class="caps">US</span>. It contains
+information such as where the fuel is being stored, if the fuel form
+failed, the mass of the assembly, and when the reactor was operating.
+&nbsp;(Unfortunately, my version of the survey contains data only up until
+2002, so I am missing eight years of&nbsp;history.)</p>
+<p>However, good ol&#8217; <span class="caps">RW</span>-895 also contains some interesting neutronic data,
+such as the inital U-235 enrichment [w/o, weight percent] of each
+assembly as well as the burnup [MWd/kg]. &nbsp;In some sense, the enrichment
+is a measure of how much energy you <strong>*expect*</strong> to get out of the fuel
+and the burnup is a measure of how much energy you <strong>*did*</strong> get out of
+the&nbsp;fuel.</p>
+<p>Using the above two pieces of information and my burnup-criticality
+model, <a class="reference external" href="http://nukestar.me.utexas.edu/scopatz/Bright/">Bright</a>, I calculated the isotopic composition and
+multiplication factor of every fuel assembly at discharge (the time when
+the fuel is&nbsp;permanently&nbsp;removed from the reactor). &nbsp;This data was then
+stored in a couple of different databases: one for immediately after
+discharge and one for time &#8216;now&#8217; in which the fuel was allowed to cool
+down since it was&nbsp;removed.</p>
+<p>If you really want, you can take a peak at <a class="reference external" href="http://nukestar.me.utexas.edu/scopatz/FuelLearning/">my databases</a> and <a class="reference external" href="https://github.com/scopatz/FuelLearning">the code
+that generated them</a>. (As you may have guessed by the directory names
+here, this was done for a collaborator to try and apply machine learning
+algorithms to used fuel&nbsp;assemblies.)</p>
+<p>Before I rant too much further, I should define the reactivity of a fuel
+assembly. &nbsp;If &#8216;k&#8217; is the <a class="reference external" href="http://en.wikipedia.org/wiki/Neutron_multiplication_factor">multiplication factor</a>, then the reactivity
+&#8216;rho&#8217;&nbsp;is:</p>
+<p><img alt="image0" src="http://latex.codecogs.com/gif.latex?\huge&amp;space;\rho&amp;space;=&amp;space;\frac{k-1}{k}" />Thus, reactivities greater than one mean that the fuel still
+has some &#8216;juice&#8217; in it, while values less than one mean that the fuel
+has to rely on the sweet juice of other fuel&nbsp;elements.</p>
+<p>If you are anything like me, you may idly wonder what the mass-weighted
+reactivity of the whole of the nuclear fuel cycle over the past 40 years
+has been. &nbsp;This would give you, Oh Intuitive Reader, some idea of how
+efficient our system is at actually generating the energy it says it is
+going to. &nbsp;Look. No.&nbsp;Further.</p>
+<p><strong>The mass-weighted average discharge reactivity is:&nbsp;-0.1083</strong></p>
+<p>Great! The above number is negative. &nbsp;If it was positive, this would be
+like throwing out batteries after only using them part&nbsp;way.</p>
+<p><em><span class="dquo">&#8220;</span>But how can this number be negative? Zero charge seems like it would
+be the lowest you could go&#8230;&#8221;</em> I hear your cries. &nbsp;This is where the
+battery analogy falls apart. &nbsp;The answer lies in the secret of
+batch-averaging, which deserves its own&nbsp;post.</p>
+<p>But really, isn&#8217;t the distribution of these&nbsp;reactivities useful to know
+too? &nbsp;I can&#8217;t deny you, Friendly&nbsp;Reader:</p>
+<p><img alt="image1" src="http://lh4.ggpht.com/_KFdIKJVlj1w/TOAgjQBKL5I/AAAAAAAAF0U/ufqsJW_Xw5o/discharge_reactivity.png" /></p>
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2010-11-14T23:54:00" pubdate>Sun 14 November 2010</time>  </p>    </footer>
+  </article>
+
+    <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+  </div>
+      <aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+            <li class="post">
+          <a href="./about.html">About</a>
+      </li>
+            <li class="post">
+          <a href="./contact.html">Contact</a>
+      </li>
+            <li class="post">
+          <a href="./scientific-computing-at-aims.html">Scientific Computing at AIMS</a>
+      </li>
+            <li class="post">
+          <a href="./thence-flash-thither-uw.html">Thence FLASH, Thither UW</a>
+      </li>
+            <li class="post">
+          <a href="./the-shining-panda-edition.html">The Shining: Panda Edition</a>
+      </li>
+          </ul>
+  </section>
+    <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+              <li><a href="./category/missives.html">missives</a></li>
+              <li><a href="./category/null.html">null</a></li>
+          </ul>
+  </section>
+   
+
+  <section>
+  <h1>Tags</h1>
+      <a href="./tag/undermythumb.html">undermythumb</a>,      <a href="./tag/finespecimen.html">finespecimen</a>,      <a href="./tag/butsaliwanaplayarya.html">butsaliwanaplayarya!</a>,      <a href="./tag/abwhofsabab.html">(a||b)whof***s(a||b||a&amp;b)</a>,      <a href="./tag/bothflamingandhot.html">bothflamingandhot</a>,      <a href="./tag/goingtwosiesonapadravya.html">goingtwosiesonapadravya</a>,      <a href="./tag/inscight.html">inscight</a>,      <a href="./tag/totallydisillusionedwithstraightmalehood.html">totallydisillusionedwithstraightmalehood</a>,      <a href="./tag/northofthewall.html">northofthewall</a>,      <a href="./tag/onatotallyunrelatednote.html">onatotallyunrelatednote</a>,      <a href="./tag/caith.html">caith</a>,      <a href="./tag/southside.html">southside</a>,      <a href="./tag/ifiwasgoingtokillmyselfiwouldnttellyou.html">ifiwasgoingtokillmyselfiwouldn'ttellyou</a>,      <a href="./tag/onedoesnotsimplyjumpingstilitsintomordor.html">onedoesnotsimplyjumpingstilitsintomordor</a>,      <a href="./tag/evilloknarisevil.html">evilloknarisevil</a>,      <a href="./tag/kdlang.html">kdlang</a>,      <a href="./tag/doyouhaveadorsalfin.html">doyouhaveadorsalfin?</a>,      <a href="./tag/paris.html">paris</a>,      <a href="./tag/forgottenfilmfriday.html">forgottenfilmfriday</a>,      <a href="./tag/kernelravego.html">kernelravego!</a>,      <a href="./tag/notmybrother.html">notmybrother</a>,      <a href="./tag/lolstice.html">lolstice</a>,      <a href="./tag/whatevs-oldladyhat.html">whatevs-oldladyhat</a>,      <a href="./tag/teaching.html">teaching</a>,      <a href="./tag/physor.html">physor</a>,      <a href="./tag/onlyonemanwoulddaregivemetheraspberry.html">onlyonemanwoulddaregivemetheraspberry</a>,      <a href="./tag/hardkour.html">hardkour</a>,      <a href="./tag/iheartvaginas.html">iheartvaginas</a>,      <a href="./tag/picsoritdidnthappen.html">picsoritdidnthappen</a>,      <a href="./tag/exodus.html">exodus</a>,      <a href="./tag/joinmyharem.html">joinmyharem</a>,      <a href="./tag/ladyjessica.html">ladyjessica</a>,      <a href="./tag/iamclearlynotdoingsomethingright.html">iamclearlynotdoingsomethingright</a>,      <a href="./tag/oldladyhat.html">oldladyhat</a>,      <a href="./tag/ssp.html">ssp</a>,      <a href="./tag/waitireallydolikeit.html">waitireallydolikeit</a>,      <a href="./tag/feyd.html">feyd</a>,      <a href="./tag/enigma.html">enigma</a>,      <a href="./tag/unicorn.html">unicorn</a>,      <a href="./tag/sequoia.html">sequoia</a>,      <a href="./tag/ssp2.html">ssp2</a>,      <a href="./tag/lollipop.html">lollipop</a>,      <a href="./tag/shebecrying.html">shebecrying</a>,      <a href="./tag/argentiniancowboys.html">argentiniancowboys</a>,      <a href="./tag/zomgspaceisradioactive.html">zOMGspaceisradioactive!</a>,      <a href="./tag/table4one.html">table4one</a>,      <a href="./tag/gundamisntfree.html">gundamisn'tfree</a>,      <a href="./tag/relenasbutler.html">relena'sbutler</a>,      <a href="./tag/unlessiaminasutriawhereitispunchandpie.html">unlessiaminasutriawhereitispunchandpie</a>,      <a href="./tag/duncanidaho.html">duncanidaho</a>,      <a href="./tag/peoplechangenawtheydont.html">peoplechangenawtheydont</a>,      <a href="./tag/lawlsadventure.html">lawlsadventure</a>,      <a href="./tag/no-utube.html">no-utube</a>,      <a href="./tag/ifoughtthelawandthelawanallyrapedme.html">ifoughtthelawandthelawanallyrapedme</a>,      <a href="./tag/5.html">+5</a>,      <a href="./tag/switzerland.html">switzerland</a>,      <a href="./tag/idontlikeitbecauseitispopular.html">idontlikeitbecauseitispopular</a>,      <a href="./tag/alittlebirdtoldme.html">alittlebirdtoldme</a>,      <a href="./tag/global.html">global</a>,      <a href="./tag/chc-everywhere.html">chc-everywhere!</a>    </section>
+
+    
+    <section>
+        <h1>Social</h2>
+        <ul>
+            <li><a href="http://anthony.scopatz.com/" type="application/rss+xml" rel="alternate">RSS</a></li>
+                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
+                    <li><a href="https://twitter.com/scopatz" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/scopatz" target="_blank">LinkedIn</a></li>
+                </ul>
+    </section>
+  </aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; Anthony Scopatz
+</p></footer>
+  	<script type="text/javascript">
+	  var disqus_shortname = 'anthonyscopatz';
+                var disqus_identifier = '/discharge-reactivity-of-the-nuclear-fuel-cycle.html';
+          var disqus_url = './discharge-reactivity-of-the-nuclear-fuel-cycle.html';
+          var disqus_title = 'Discharge Reactivity of the Nuclear Fuel&nbsp;Cycle';
+      	  (function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	   })();
+	</script>
+</body>
+</html>

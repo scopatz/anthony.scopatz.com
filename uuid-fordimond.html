@@ -65,19 +65,27 @@
 <p>Hello scientists! &nbsp;Sorry it has been a while since we posted.
 We promise that there are episodes in the pipeline, coming soon to
 an eardrum near&nbsp;you!</p>
-<p>In the meantime, if you have ever&nbsp;programmed&nbsp;in C/C++ you are well aware of the &lt;a href=&#8221;<a class="reference external" href="http://en.wikipedia.org/wiki/Diamond_problem">http://en.wikipedia.org/wiki/Diamond_problem</a>&#8220;&gt;#include diamond problem&lt;/a&gt;. &nbsp;Basically you can&#8217;t have the same binary include the same header file twice, even if that include is&nbsp;implicit and somewhere father&nbsp;up the build tree (see the below&nbsp;figure).</p>
-<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png"><img title="The Diamond Problem" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" alt="" width="200" height="300" /></a><p>The way many get around this is by creating #ifndef <span class="caps">XXX</span> - #def <span class="caps">XXX</span> - #endif
+<p>In the meantime, if you have ever&nbsp;programmed&nbsp;in C/C++ you are well aware of the
+<a class="reference external" href="href=&quot;http://en.wikipedia.org/wiki/Diamond_problem">#include diamond problem</a>.
+Basically you can&#8217;t have the same binary include the same header file twice,
+even if that include is&nbsp;implicit and somewhere father&nbsp;up the build tree
+(see the below&nbsp;figure).</p>
+<div class="figure align-center">
+<img alt="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/200px-Diamond_inheritance.svg.png" style="width: 200px; height: 300px;" />
+<p class="caption">via&nbsp;wikipedia</p>
+</div>
+<p>The way many get around this is by creating #ifndef <span class="caps">XXX</span> - #def <span class="caps">XXX</span> - #endif
 blocks around all of their header files. &nbsp;The prevents the <span class="caps">XXX</span> from being
 included more than once no matter what. &nbsp;Most people use a system for naming
 <span class="caps">XXX</span> that is based on the project name and the file name. &nbsp;However, the value of
-<span class="caps">XXX</span> could be anything.&nbsp;&nbsp;&lt;em&gt;Anything&lt;/em&gt;.</p>
+<span class="caps">XXX</span> could be anything. &nbsp;<em>Anything</em>.</p>
 <p>So my good friend, coworker at the <span class="caps">FLASH</span> center, and brilliant programmer John Bachan&nbsp;apparently just started using&nbsp;universally unique identifiers (UUIDs) for <span class="caps">XXX</span> years ago. &nbsp;This is brilliant on so many levels. &nbsp;He even has a bash one-liner for helping him out here. &nbsp;For your aliasing&nbsp;pleasure:</p>
 <div class="highlight"><pre><span class="o">(</span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;_$(uuidgen|tr \\- _)&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#ifndef $id&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#define $id&quot;</span>;<span class="nb">echo</span> <span class="s2">&quot;#endif&quot;</span><span class="o">)</span>
 </pre></div>
 <p>will return, for&nbsp;example,</p>
-<div class="highlight"><pre><span class="c">#ifndef _7db3e753_0d81_43ea_beca_68a77189e28d</span>
-<span class="c">#define _7db3e753_0d81_43ea_beca_68a77189e28d</span>
-<span class="c">#endif</span>
+<div class="highlight"><pre>#ifndef _7db3e753_0d81_43ea_beca_68a77189e28d
+#define _7db3e753_0d81_43ea_beca_68a77189e28d
+#endif
 </pre></div>
 <p>Feel free to thank me&nbsp;later&#8230;</p>
 </div>
@@ -127,7 +135,7 @@ included more than once no matter what. &nbsp;Most people use a system for namin
 
   <section>
   <h1>Tags</h1>
-      <a href="./tag/teaching.html">teaching</a>,      <a href="./tag/inscight.html">inscight</a>    </section>
+      <a href="./tag/undermythumb.html">undermythumb</a>,      <a href="./tag/finespecimen.html">finespecimen</a>,      <a href="./tag/butsaliwanaplayarya.html">butsaliwanaplayarya!</a>,      <a href="./tag/abwhofsabab.html">(a||b)whof***s(a||b||a&amp;b)</a>,      <a href="./tag/bothflamingandhot.html">bothflamingandhot</a>,      <a href="./tag/goingtwosiesonapadravya.html">goingtwosiesonapadravya</a>,      <a href="./tag/inscight.html">inscight</a>,      <a href="./tag/totallydisillusionedwithstraightmalehood.html">totallydisillusionedwithstraightmalehood</a>,      <a href="./tag/northofthewall.html">northofthewall</a>,      <a href="./tag/onatotallyunrelatednote.html">onatotallyunrelatednote</a>,      <a href="./tag/caith.html">caith</a>,      <a href="./tag/southside.html">southside</a>,      <a href="./tag/ifiwasgoingtokillmyselfiwouldnttellyou.html">ifiwasgoingtokillmyselfiwouldn'ttellyou</a>,      <a href="./tag/onedoesnotsimplyjumpingstilitsintomordor.html">onedoesnotsimplyjumpingstilitsintomordor</a>,      <a href="./tag/evilloknarisevil.html">evilloknarisevil</a>,      <a href="./tag/kdlang.html">kdlang</a>,      <a href="./tag/doyouhaveadorsalfin.html">doyouhaveadorsalfin?</a>,      <a href="./tag/paris.html">paris</a>,      <a href="./tag/forgottenfilmfriday.html">forgottenfilmfriday</a>,      <a href="./tag/kernelravego.html">kernelravego!</a>,      <a href="./tag/notmybrother.html">notmybrother</a>,      <a href="./tag/lolstice.html">lolstice</a>,      <a href="./tag/whatevs-oldladyhat.html">whatevs-oldladyhat</a>,      <a href="./tag/teaching.html">teaching</a>,      <a href="./tag/physor.html">physor</a>,      <a href="./tag/onlyonemanwoulddaregivemetheraspberry.html">onlyonemanwoulddaregivemetheraspberry</a>,      <a href="./tag/hardkour.html">hardkour</a>,      <a href="./tag/iheartvaginas.html">iheartvaginas</a>,      <a href="./tag/picsoritdidnthappen.html">picsoritdidnthappen</a>,      <a href="./tag/exodus.html">exodus</a>,      <a href="./tag/joinmyharem.html">joinmyharem</a>,      <a href="./tag/ladyjessica.html">ladyjessica</a>,      <a href="./tag/iamclearlynotdoingsomethingright.html">iamclearlynotdoingsomethingright</a>,      <a href="./tag/oldladyhat.html">oldladyhat</a>,      <a href="./tag/ssp.html">ssp</a>,      <a href="./tag/waitireallydolikeit.html">waitireallydolikeit</a>,      <a href="./tag/feyd.html">feyd</a>,      <a href="./tag/enigma.html">enigma</a>,      <a href="./tag/unicorn.html">unicorn</a>,      <a href="./tag/sequoia.html">sequoia</a>,      <a href="./tag/ssp2.html">ssp2</a>,      <a href="./tag/lollipop.html">lollipop</a>,      <a href="./tag/shebecrying.html">shebecrying</a>,      <a href="./tag/argentiniancowboys.html">argentiniancowboys</a>,      <a href="./tag/zomgspaceisradioactive.html">zOMGspaceisradioactive!</a>,      <a href="./tag/table4one.html">table4one</a>,      <a href="./tag/gundamisntfree.html">gundamisn'tfree</a>,      <a href="./tag/relenasbutler.html">relena'sbutler</a>,      <a href="./tag/unlessiaminasutriawhereitispunchandpie.html">unlessiaminasutriawhereitispunchandpie</a>,      <a href="./tag/duncanidaho.html">duncanidaho</a>,      <a href="./tag/peoplechangenawtheydont.html">peoplechangenawtheydont</a>,      <a href="./tag/lawlsadventure.html">lawlsadventure</a>,      <a href="./tag/no-utube.html">no-utube</a>,      <a href="./tag/ifoughtthelawandthelawanallyrapedme.html">ifoughtthelawandthelawanallyrapedme</a>,      <a href="./tag/5.html">+5</a>,      <a href="./tag/switzerland.html">switzerland</a>,      <a href="./tag/idontlikeitbecauseitispopular.html">idontlikeitbecauseitispopular</a>,      <a href="./tag/alittlebirdtoldme.html">alittlebirdtoldme</a>,      <a href="./tag/global.html">global</a>,      <a href="./tag/chc-everywhere.html">chc-everywhere!</a>    </section>
 
     
     <section>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>inSCIght Episode 23: git-svn, one tool to rule them all!</title>
+  <meta name="author" content="Anthony Scopatz">
+
+    
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./favicon.png" rel="icon">
+  <link href="./theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+  <script src="./theme/js/modernizr-2.0.js"></script>
+  <script src="./theme/js/ender.js"></script>
+  <script src="./theme/js/octopress.js" type="text/javascript"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="./">Anthony Scopatz</a></h1>
+      <h2>I think, therefore I amino acid.</h2>
+  </hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://anthony.scopatz.com/" rel="subscribe-rss">RSS</a></li>
+  </ul>
+
+<!-- TODO: add search here
+<form action="" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:." />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+-->
+
+<ul class="main-navigation">
+      <li><a href="category/missives.html">Missives</a></li>
+      <li><a href="archives.html">Archives</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+            <!-- TODO: add categories here? -->
+  </ul></nav>
+  <div id="main">
+    <div id="content">
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">inSCIght Episode 23: git-svn, one tool to rule them all!</h1>
+          <p class="meta"><time datetime="2012-01-29T00:00:00" pubdate>Sun 29 January 2012</time></p>
+</header>
+
+  <div class="entry-content">
+
+<p><i>
+This was originally published at 
+<a href="http://inscight.org/2012/01/29/episode_23/">inSCIght</a>.
+</i></p>
+
+<a href="http://s3.amazonaws.com/inscight/episodes/inscight_23_2012_01_29.mp3">
+<img class="aligncenter" src="http://github.com/inscight/inscight/raw/master/img/icons/InSciGHT.jpg" alt="" width="168" height="136" />
+</a>
+<h2><a href="http://s3.amazonaws.com/inscight/episodes/inscight_23_2012_01_29.mp3">Listen to the&nbsp;podcast</a></h2>
+<p style="text-align:justify;">On episode 23, we discuss the ever important subject of version control.  We talk about distributed vs centralized version control systems through two popular implementation: git and subversion (svn).  More specifically, we go over how to partially or fully convert existing repositories to the more modern distributed paradigm.  While you listen to this episode, it may be helpful to keep the following figure in your&nbsp;mind.</p>
+<p style="text-align:center;"><a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/"><img class="aligncenter" title="Distributed Version Control" src="http://betterexplained.com/wp-content/uploads/version_control/distributed/distributed_example.png" alt="" width="312" height="243" /></a></p>
+<p style="text-align:justify;">Our committed hosts tonight&nbsp;include:</p>
+
+<ul style="text-align:justify;">
+  <li>Milad&nbsp;Fatenejad</li>
+  <li>Brad King (special&nbsp;guest)</li>
+  <li>Jeff&nbsp;Ramnani</li>
+  <li>Anthony Scopatz&nbsp;(moderator)</li>
+</ul>
+<p style="text-align:justify;">This week we have a lone special&nbsp;guest.</p>
+<p style="text-align:justify;"><strong>Brad King</strong> joined Kitware in June 2000 and became a founding member of the Software Process group focusing on methods and tools for open source software (<span class="caps">OSS</span>) development. While working for Kitware he simultaneously conducted graduate research at Rensselaer Polytechnic Institute. His research focused on 3D modeling and change detection in real-world scenes, using both range and intensity sensors. Dr. King received his Ph.D. in Computer Science from Rensselaer in December&nbsp;2008.</p>
+
+<h3>Show&nbsp;Links:</h3>
+<ol>
+  <li style="text-align:justify;"><a href="http://progit.org/book/">Pro Git</a> - Provides good coverage of how to use git. Also provides visual aids for those new to git or version control in general.  The author, Scott Chacon, works at&nbsp;Github.</li>
+  <li style="text-align:justify;"><a href="https://www.youtube.com/watch?v=4XpnKHJAok8">Linus Torvalds Google Techtalk on&nbsp;git</a></li>
+  <li style="text-align:justify;"><a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Intro to <span class="caps">DVCS</span> Illustrated</a> - A helpful resource when learning&nbsp;<span class="caps">DVCS</span>.</li>
+  <li style="text-align:justify;"><a href="https://github.com/nirvdrum/svn2git">svn2git</a> - Program which helps with my subversion to git migrations. It automates some tasks to make your repository cleaner after a git-svn import.  For example, it will create proper git branches and tags from your subversion&nbsp;equivalents.</li>
+</ol>
+<h3>Corrections:</h3>
+<p style="text-align:justify;"><span style="text-decoration:underline;">From Brad King</span> - The episode includes a brief monologue on the nature of git&#8217;s storage model claiming that it holds differences between versions.  In fact an important distinction of git from other <span class="caps">DVCS</span> tools is that its object model holds a complete representation of the content at every version. As an implementation detail it does &#8220;pack&#8221; objects efficiently by storing deltas, but this is not visible to the user.  Any user-level presentation of a &#8220;diff&#8221; is constructed on the&nbsp;fly.</p>
+
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2012-01-29T00:00:00" pubdate>Sun 29 January 2012</time>    <span class="categories">
+        <a class="category" href="./tag/inscight.html">inscight</a>
+      </span>
+  </p>    </footer>
+  </article>
+
+    <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+  </div>
+      <aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+            <li class="post">
+          <a href="./about.html">About</a>
+      </li>
+            <li class="post">
+          <a href="./contact.html">Contact</a>
+      </li>
+            <li class="post">
+          <a href="./scientific-computing-at-aims.html">Scientific Computing at AIMS</a>
+      </li>
+            <li class="post">
+          <a href="./thence-flash-thither-uw.html">Thence FLASH, Thither UW</a>
+      </li>
+            <li class="post">
+          <a href="./the-shining-panda-edition.html">The Shining: Panda Edition</a>
+      </li>
+          </ul>
+  </section>
+    <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+              <li><a href="./category/missives.html">missives</a></li>
+              <li><a href="./category/null.html">null</a></li>
+          </ul>
+  </section>
+   
+
+  <section>
+  <h1>Tags</h1>
+      <a href="./tag/undermythumb.html">undermythumb</a>,      <a href="./tag/finespecimen.html">finespecimen</a>,      <a href="./tag/butsaliwanaplayarya.html">butsaliwanaplayarya!</a>,      <a href="./tag/abwhofsabab.html">(a||b)whof***s(a||b||a&amp;b)</a>,      <a href="./tag/bothflamingandhot.html">bothflamingandhot</a>,      <a href="./tag/goingtwosiesonapadravya.html">goingtwosiesonapadravya</a>,      <a href="./tag/inscight.html">inscight</a>,      <a href="./tag/totallydisillusionedwithstraightmalehood.html">totallydisillusionedwithstraightmalehood</a>,      <a href="./tag/northofthewall.html">northofthewall</a>,      <a href="./tag/onatotallyunrelatednote.html">onatotallyunrelatednote</a>,      <a href="./tag/caith.html">caith</a>,      <a href="./tag/southside.html">southside</a>,      <a href="./tag/ifiwasgoingtokillmyselfiwouldnttellyou.html">ifiwasgoingtokillmyselfiwouldn'ttellyou</a>,      <a href="./tag/onedoesnotsimplyjumpingstilitsintomordor.html">onedoesnotsimplyjumpingstilitsintomordor</a>,      <a href="./tag/evilloknarisevil.html">evilloknarisevil</a>,      <a href="./tag/kdlang.html">kdlang</a>,      <a href="./tag/doyouhaveadorsalfin.html">doyouhaveadorsalfin?</a>,      <a href="./tag/paris.html">paris</a>,      <a href="./tag/forgottenfilmfriday.html">forgottenfilmfriday</a>,      <a href="./tag/kernelravego.html">kernelravego!</a>,      <a href="./tag/notmybrother.html">notmybrother</a>,      <a href="./tag/lolstice.html">lolstice</a>,      <a href="./tag/whatevs-oldladyhat.html">whatevs-oldladyhat</a>,      <a href="./tag/teaching.html">teaching</a>,      <a href="./tag/physor.html">physor</a>,      <a href="./tag/onlyonemanwoulddaregivemetheraspberry.html">onlyonemanwoulddaregivemetheraspberry</a>,      <a href="./tag/hardkour.html">hardkour</a>,      <a href="./tag/iheartvaginas.html">iheartvaginas</a>,      <a href="./tag/picsoritdidnthappen.html">picsoritdidnthappen</a>,      <a href="./tag/exodus.html">exodus</a>,      <a href="./tag/joinmyharem.html">joinmyharem</a>,      <a href="./tag/ladyjessica.html">ladyjessica</a>,      <a href="./tag/iamclearlynotdoingsomethingright.html">iamclearlynotdoingsomethingright</a>,      <a href="./tag/oldladyhat.html">oldladyhat</a>,      <a href="./tag/ssp.html">ssp</a>,      <a href="./tag/waitireallydolikeit.html">waitireallydolikeit</a>,      <a href="./tag/feyd.html">feyd</a>,      <a href="./tag/enigma.html">enigma</a>,      <a href="./tag/unicorn.html">unicorn</a>,      <a href="./tag/sequoia.html">sequoia</a>,      <a href="./tag/ssp2.html">ssp2</a>,      <a href="./tag/lollipop.html">lollipop</a>,      <a href="./tag/shebecrying.html">shebecrying</a>,      <a href="./tag/argentiniancowboys.html">argentiniancowboys</a>,      <a href="./tag/zomgspaceisradioactive.html">zOMGspaceisradioactive!</a>,      <a href="./tag/table4one.html">table4one</a>,      <a href="./tag/gundamisntfree.html">gundamisn'tfree</a>,      <a href="./tag/relenasbutler.html">relena'sbutler</a>,      <a href="./tag/unlessiaminasutriawhereitispunchandpie.html">unlessiaminasutriawhereitispunchandpie</a>,      <a href="./tag/duncanidaho.html">duncanidaho</a>,      <a href="./tag/peoplechangenawtheydont.html">peoplechangenawtheydont</a>,      <a href="./tag/lawlsadventure.html">lawlsadventure</a>,      <a href="./tag/no-utube.html">no-utube</a>,      <a href="./tag/ifoughtthelawandthelawanallyrapedme.html">ifoughtthelawandthelawanallyrapedme</a>,      <a href="./tag/5.html">+5</a>,      <a href="./tag/switzerland.html">switzerland</a>,      <a href="./tag/idontlikeitbecauseitispopular.html">idontlikeitbecauseitispopular</a>,      <a href="./tag/alittlebirdtoldme.html">alittlebirdtoldme</a>,      <a href="./tag/global.html">global</a>,      <a href="./tag/chc-everywhere.html">chc-everywhere!</a>    </section>
+
+    
+    <section>
+        <h1>Social</h2>
+        <ul>
+            <li><a href="http://anthony.scopatz.com/" type="application/rss+xml" rel="alternate">RSS</a></li>
+                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
+                    <li><a href="https://twitter.com/scopatz" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/scopatz" target="_blank">LinkedIn</a></li>
+                </ul>
+    </section>
+  </aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; Anthony Scopatz
+</p></footer>
+  	<script type="text/javascript">
+	  var disqus_shortname = 'anthonyscopatz';
+                var disqus_identifier = '/inscight-episode-23-git-svn-one-tool-to-rule-them-all.html';
+          var disqus_url = './inscight-episode-23-git-svn-one-tool-to-rule-them-all.html';
+          var disqus_title = 'inSCIght Episode 23: git-svn, one tool to rule them&nbsp;all!';
+      	  (function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	   })();
+	</script>
+</body>
+</html>
