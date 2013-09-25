@@ -1,5 +1,5 @@
-No title [55]
-#############
+Anarchists should leave my country
+##################################
 :date: 2006-12-24 11:43
 :author: Anthony Scopatz
 :category: missives

@@ -1,11 +1,11 @@
-No title [40]
+Sontag
 #############
 :date: 2006-11-14 01:35
 :author: Anthony Scopatz
 :category: missives
 :slug: 40
 
-If you are unaware who Suan Sontag is then I will offer a brief
+If you are unaware who Susan Sontag is then I will offer a brief
 explanation here before moving on the the dare-I-say content of this
 post. She was an eminant scholar and otherwise academic person in the
 1950s and 1960s. I found out about her a couple of months ago from Kerry

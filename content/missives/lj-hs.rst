@@ -1,4 +1,4 @@
-No title [58]
+LJ HS
 #############
 :date: 2007-01-20 01:32
 :author: Anthony Scopatz

@@ -1,5 +1,5 @@
-No title [60]
-#############
+Rust the World
+##############
 :date: 2007-01-26 00:19
 :author: Anthony Scopatz
 :category: missives

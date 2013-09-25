@@ -1,5 +1,5 @@
-No title [306]
-##############
+Not that we followed them
+#########################
 :date: 2006-10-06 09:22
 :author: Anthony Scopatz
 :category: missives

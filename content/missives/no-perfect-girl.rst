@@ -1,5 +1,5 @@
-No title [51]
-#############
+No Perfect Girl
+################
 :date: 2006-12-13 20:13
 :author: Anthony Scopatz
 :category: missives
