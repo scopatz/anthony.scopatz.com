@@ -1,9 +1,8 @@
-No title [107]
+Nightwish
 ##############
 :date: 2007-06-13 19:49
 :author: Anthony Scopatz
 :category: missives
-:slug: 107
 
 | To the ancient Greek writer, Herodotus,
 |  Said a pretty young thing, "My how hard it is!"

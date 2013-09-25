@@ -1,9 +1,8 @@
-No title [89]
-#############
+My Awesome Table
+#################
 :date: 2007-04-16 13:17
 :author: Anthony Scopatz
 :category: missives
-:slug: 89
 
 I am now in the home stretch here. This semester has been largely
 positive. I have luckily been afforded a good deal of time to learn a

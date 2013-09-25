@@ -1,9 +1,8 @@
-No title [88]
+Warcraft 3
 #############
 :date: 2007-04-14 23:25
 :author: Anthony Scopatz
 :category: missives
-:slug: 88
 
 I am rebuilding tables.
 

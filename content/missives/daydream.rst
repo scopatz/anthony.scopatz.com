@@ -1,9 +1,8 @@
-No title [98]
+Daydream
 #############
 :date: 2007-05-17 02:44
 :author: Anthony Scopatz
 :category: missives
-:slug: 98
 
 I saw a really cool pink film called Daydream. It is a Japanese flick
 from 1964.

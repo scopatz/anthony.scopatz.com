@@ -1,9 +1,8 @@
-No title [92]
-#############
+I don't have to be Vegan anymore...
+####################################
 :date: 2007-04-26 00:29
 :author: Anthony Scopatz
 :category: missives
-:slug: 92
 
 I don't \*have\* to be Vegan anymore, But do I want to be?
 

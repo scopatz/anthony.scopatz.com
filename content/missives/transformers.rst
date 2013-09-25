@@ -1,9 +1,8 @@
-No title [122]
+Transformers
 ##############
 :date: 2007-07-04 07:48
 :author: Anthony Scopatz
 :category: missives
-:slug: 122
 
 | Why does Michael Bay get to keep on making movies?
 |  --Trey Parker & Matt Stone, Pearl Harbor Song, Team America: World
