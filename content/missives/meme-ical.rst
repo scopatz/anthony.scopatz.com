@@ -1,9 +1,8 @@
-No title [169]
+MEME-ical
 ##############
 :date: 2007-12-07 01:00
 :author: Anthony Scopatz
 :category: missives
-:slug: 169
 
 So it is that MEME-ical time of year...You know where you light things
 on fire, break out the latkes, dance the hora...

@@ -1,9 +1,8 @@
-No title [152]
+All Emo
 ##############
 :date: 2007-09-22 09:29
 :author: Anthony Scopatz
 :category: missives
-:slug: 152
 
 Sorry for being all emo and shit last night.
 

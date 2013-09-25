@@ -1,9 +1,8 @@
-No title [142]
-##############
+Half-Way Recovered
+##################
 :date: 2007-08-28 19:35
 :author: Anthony Scopatz
 :category: missives
-:slug: 142
 
 Well my web server went down last night. So anyone who tried to check my
 website while I was asleep then it would have totally failed.

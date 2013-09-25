@@ -1,9 +1,8 @@
-No title [143]
+Moebius Dick
 ##############
 :date: 2007-08-29 17:28
 :author: Anthony Scopatz
 :category: missives
-:slug: 143
 
 | What is Non-Orientable and lives in the sea?
 |  Moebius Dick!
