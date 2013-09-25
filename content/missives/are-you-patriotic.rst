@@ -1,5 +1,5 @@
-No title [14]
-#############
+Are You Patriotic?
+##################
 :date: 2006-08-28 02:00
 :author: Anthony Scopatz
 :category: missives
