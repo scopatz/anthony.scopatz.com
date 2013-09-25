@@ -1,10 +1,9 @@
-12.5+
+DTWOF
 #####
 :date: 2008-12-17 02:04
 :author: Anthony Scopatz
 :category: missives
 :tags: (a||b)whof***s(a||b||a&amp;b), +5, argentiniancowboys, bothflamingandhot, caith, duncanidaho, idontlikeitbecauseitispopular, peoplechangenawtheydont
-:slug: 12-5
 
 It has been a while in coming, but here is my review of `*The Essential*
 Dykes to Watch Out For`_ (DTWOF) by Alison Bechdel.

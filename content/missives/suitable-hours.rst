@@ -1,10 +1,9 @@
-5++
-###
+Suitable Hours
+##############
 :date: 2008-06-10 01:15
 :author: Anthony Scopatz
 :category: missives
 :tags: +5, bothflamingandhot, totallydisillusionedwithstraightmalehood
-:slug: 5-2
 
 Amazingly, I went to my first coffee shop in Raleigh tonight. (Huge
 shock I know...)

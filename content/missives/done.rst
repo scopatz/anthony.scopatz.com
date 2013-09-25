@@ -1,8 +1,7 @@
-No title [165]
+Done
 ##############
 :date: 2007-11-19 21:20
 :author: Anthony Scopatz
 :category: missives
-:slug: 165
 
 done.

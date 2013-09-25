@@ -1,10 +1,9 @@
-5
-#
+Ahhh la Taz
+###########
 :date: 2008-05-09 15:32
 :author: Anthony Scopatz
 :category: missives
 :tags: +5, bothflamingandhot, totallydisillusionedwithstraightmalehood
-:slug: 5
 
 Ahhh la Taz! Why do you taunt me so?
 

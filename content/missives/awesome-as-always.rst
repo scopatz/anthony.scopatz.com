@@ -1,9 +1,8 @@
-No title [101]
-##############
+Awesome as always
+####################
 :date: 2007-05-27 03:22
 :author: Anthony Scopatz
 :category: missives
-:slug: 101
 
 So I went and saw the Red Elvises again tonight. Awesome as always.
 Their Synth player rocks hardcore as well.

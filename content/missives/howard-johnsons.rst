@@ -1,9 +1,8 @@
-No title [102]
-##############
+Howard Johnson's
+################
 :date: 2007-06-02 20:16
 :author: Anthony Scopatz
 :category: missives
-:slug: 102
 
 I had a fun day; I'll tell you all about it later.
 
