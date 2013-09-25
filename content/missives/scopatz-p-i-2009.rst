@@ -6,8 +6,7 @@ Scopatz P.I. 2009
 :tags: finespecimen, onatotallyunrelatednote, totallydisillusionedwithstraightmalehood
 :slug: scopatz-p-i-2009
 
-    *
-     Is Elvis Dead?*
+*Is Elvis Dead?*
 
     -  Yes
     -  No
