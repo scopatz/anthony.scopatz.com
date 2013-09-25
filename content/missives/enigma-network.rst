@@ -26,12 +26,12 @@ permanent homes. But the places were they are become similar to one
 another to provide them with the illusion of home. I wish I could say
 that this did not resonate.
 
-| As the applied physicist of social theory, knowing this isn't
+As the applied physicist of social theory, knowing this isn't
 meaningful unless empirically tested. Real rigor is left to the experts
 and those with funding. But backyard experimentation is top shelf of
 those waxing natural philosophic. Thus here is my abstract.
-| ***
-At least half of the stories in "The Game" by Neil Strauss are likely
+
+***At least half of the stories in "The Game" by Neil Strauss are likely
 outright lies. However, the analogy between cybercultural networks and
 that of interpersonal sexual networks is not unfounded. Relationship
 culture is highly networked. Furthermore, there is a large portion of
@@ -45,7 +45,7 @@ within the relationship network, analogous tools should allow me access
 to this sphere as well. In other words, social engineering at the
 relationship level is possible through cybernetic parallels in
 combination with the interpersonal social group tools developed on my
-friends. ***
+friends.***
 
 All of this really only serves to get me more ass, which is truly what
 it is all about. Some proof of concept work is clearly apparent with the

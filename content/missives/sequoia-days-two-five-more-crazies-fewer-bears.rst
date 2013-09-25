@@ -34,11 +34,13 @@ off!" They inform us that it would be well worth the 45 minutes to push
 over Kaweah Gap that night. We thank them and continue on. This was our
 second sign.
 
-| We loose the trail several times on our way up to the lake because of
+We loose the trail several times on our way up to the lake because of
 vast snow cover. This was our third sign. But we make it to Precipice
 and this is what we see...
-|  |image0|
-|  So Shane gets the question again!
+
+|image0|
+
+So Shane gets the question again!
 
 "Do we press on or do we turn back and go to Hamilton?" It is 5:30 pm.
 Light is no longer a luxury. We need to make for a place to camp. Not
@@ -124,12 +126,14 @@ hands-and-knees on jagged rocks steep. Somewhere between this, ~65 lbs
 on his back, and an elevation of close to 12,000 feet, Shane started
 complaining that he wasn't feeling well.
 
-| Crap. We \*have\* to get over this thing! Tonight! I give him the pep
+Crap. We \*have\* to get over this thing! Tonight! I give him the pep
 talk about no trail being hard if you are willing to spend the proper
 amount of time on it. We take frequent breaks. At long last we make it.
 It is very very windy at the top.
-|  |image1|
-|  Worth every gust.
+
+|image1|
+
+Worth every gust.
 
 That night we hike down to the Kaweah Middle Fork Valley giddy at our
 accomplishment. Oh, and the ability to walk downhill. We make camp at
@@ -168,7 +172,7 @@ freaked the hell out.
 
 It really is amazing what will keep you awake when you are that tired!
 
-**Day 5**\ The next morning which hitched a ride back to our car, as
+**Day 5:** The next morning which hitched a ride back to our car, as
 planned. We went to Three Rivers, took a shower and then drove back to
 Santa Ynez.
 

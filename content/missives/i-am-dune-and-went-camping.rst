@@ -5,8 +5,8 @@ I am Dune and went Camping.
 :category: missives
 :slug: i-am-dune-and-went-camping
 
-| More Graphphitti Phun:
-|  In response to other tagging: If you always spell always "allways"
+More Graphphitti Phun: 
+In response to other tagging: If you always spell always "allways"
 you will always be a retard.
 
 So I went camping this weekend in the Grand Teton and Yellowstone

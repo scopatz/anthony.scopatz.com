@@ -8,13 +8,14 @@ Almost Sex, Almost Normal
 
 **Hey Cowboy, This post ain't for the weak of heart!**
 
-| I had the most incredible weekend!
-|  |image0|
+I had the most incredible weekend!
+
+|image0|
 
 So it started off of Friday night with me sending out my PhD Proposal.
 This, of course, left me a stringless, dessicated husk of a man.
-Therefore I proceeded to go to a show at the Vortex called `Mr. Z Loves
-Company`_. I went with my friend Jayme. It was amazing. I guess the show
+Therefore I proceeded to go to a show at the Vortex called `Mr. Z Loves Company`_. 
+I went with my friend Jayme. It was amazing. I guess the show
 was about Mr. Z's repressed homosexuality.
 
 As the Austin Chronicle points out, it wasn't necessarily amazing
@@ -31,12 +32,13 @@ a big hippie bash where people come all dressed up with their freak
 kids. Fucking Incredible. The picture above is of the drum circle that I
 jumped in and out of many times. Dancing = Hardcore.
 
-| How the hell I missed this the previous two years I have no idea! It
+How the hell I missed this the previous two years I have no idea! It
 takes place in the park right down the street from me. With thousands of
 people! I only knew about it this year because of Jayme told me the
 night before after Mr. Z's (See how this all ties in?) Next year,
 everyone? Seriously, I took a picture with Twinky Freidman!
-|  |image1|
+
+|image1|
 
 And my sweet lord, the women! You know how I get excitable when I find
 one girl who outwardly breaks enough norms for me to be interested in

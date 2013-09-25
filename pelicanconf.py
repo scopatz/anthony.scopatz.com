@@ -37,6 +37,7 @@ SOCIAL = (('Other Website', 'http://scopatz.com/'),
 #DISQUS_SITENAME = "anthonyscopatz"
 GITHUB_URL = 'https://github.com/scopatz'
 TWITTER_URL = 'https://twitter.com/scopatz'
+TWITTER_USERNAME = 'scopatz'
 GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
 
 MENUITEMS = [('Missives', 'category/missives.html'),
@@ -64,3 +65,7 @@ MARKUP = ('rst', 'md', 'html')
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 #RELATIVE_URLS = False
+
+PYGMENTS_RST_OPTIONS = ['nobackground']
+
+
