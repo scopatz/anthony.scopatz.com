@@ -5,8 +5,7 @@ Transformers
 :category: missives
 
 | Why does Michael Bay get to keep on making movies?
-|  --Trey Parker & Matt Stone, Pearl Harbor Song, Team America: World
-Police
+|  --Trey Parker & Matt Stone, Pearl Harbor Song, Team America: World Police
 
 The quote above, as funny as it is, is Completely true!
 
@@ -26,11 +25,10 @@ Die Hard".
 Ok, "Transformers" was terrible. There I said it. Now this doesn't mean
 you shouldn't go see it.
 
-| Still, if they did everything else in the movie wrong what was done
+Still, if they did everything else in the movie wrong what was done
 correctly with an amazing clarity of purpose was movement. The
 filmmakers captured the fluidity of movement of the autobots superbly.
-In some
-|  sense, this is the entire point of the Transformers story. The whole
+In some sense, this is the entire point of the Transformers story. The whole
 point is that there are these huge mechanical constructs but these ease
 with which the artefacts are able to alter their very shape is
 astonishing. It is even more impressive and shocking since they take the
@@ -51,9 +49,8 @@ house, The main female lead was as amazing as all get out. The US Air
 Force squad were the most badass humans in the movie as they took down
 Two (2) Decepticons without any help.
 
-| This actually brings me to an interesting point. Almost all stories
-have the coolest characters take a
-|  backseat or adversarial role. This is because there is a perceived
+This actually brings me to an interesting point. Almost all stories
+have the coolest characters take a backseat or adversarial role. This is because there is a perceived
 method by which the coolest people somehow take away from having a main
 character who has some hardship to overcome.
 
