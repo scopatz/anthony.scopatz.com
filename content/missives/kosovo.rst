@@ -1,8 +1,7 @@
-No title [187]
+Kosovo
 ##############
 :date: 2008-02-17 16:12
 :author: Anthony Scopatz
 :category: missives
-:slug: 187
 
 Kosovo declared independence.

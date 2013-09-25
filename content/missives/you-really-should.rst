@@ -1,9 +1,8 @@
-No title [200]
-##############
+You really should
+#################
 :date: 2008-03-14 22:42
 :author: Anthony Scopatz
 :category: missives
-:slug: 200
 
 I saw White Ghost Shivers again this evening.
 

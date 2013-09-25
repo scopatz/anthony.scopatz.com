@@ -1,9 +1,8 @@
-No title [197]
+srs bzn
 ##############
 :date: 2008-03-07 02:49
 :author: Anthony Scopatz
 :category: missives
-:slug: 197
 
 `Melinda Snodgrass`_ is srs bzns.
 

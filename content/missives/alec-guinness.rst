@@ -1,9 +1,8 @@
-No title [302]
+Alec Guinness
 ##############
 :date: 2008-10-27 03:22
 :author: Anthony Scopatz
 :category: missives
-:slug: 302
 
 `Alec Guinness is the shit!`_ `Unfortunately...`_
 

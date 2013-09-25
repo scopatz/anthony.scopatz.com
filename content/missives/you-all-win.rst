@@ -1,10 +1,9 @@
-No title [193]
+You all win
 ##############
 :date: 2008-03-03 22:30
 :author: Anthony Scopatz
 :category: missives
 :tags: idontlikeitbecauseitispopular
-:slug: 193
 
 Fine. You all win.
 

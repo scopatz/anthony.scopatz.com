@@ -1,8 +1,7 @@
-No title [340]
+Clearly Still
 ##############
 :date: 2009-01-31 03:59
 :author: Anthony Scopatz
 :category: missives
-:slug: 340
 
 someone is clearly still a twisted mass of emotions

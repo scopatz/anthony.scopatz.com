@@ -1,9 +1,8 @@
-No title [196]
-##############
+Intelligent Zombies
+###################
 :date: 2008-03-06 12:59
 :author: Anthony Scopatz
 :category: missives
-:slug: 196
 
 The past couple of night I have those special, less dry dreams that
 leave one covered in fuzz and good will for the world when the sleep

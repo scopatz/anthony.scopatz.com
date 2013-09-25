@@ -1,9 +1,8 @@
-No title [186]
+You win
 ##############
 :date: 2008-02-11 04:39
 :author: Anthony Scopatz
 :category: missives
-:slug: 186
 
 Fine. I get it. You win; I lose.
 

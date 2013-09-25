@@ -1,9 +1,8 @@
-No title [265]
-##############
+Still Situations
+###################
 :date: 2008-08-15 10:09
 :author: Anthony Scopatz
 :category: missives
 :tags: iamclearlynotdoingsomethingright
-:slug: 265
 
 There are still situations I can't think my way out of.
