@@ -1,9 +1,8 @@
-No title [78]
+Recalculating
 #############
 :date: 2007-03-07 01:21
 :author: Anthony Scopatz
 :category: missives
-:slug: 78
 
 So the highlight of my day today was this test I did not take. To be
 more illuminating I proctored this exam today for a graduate class I

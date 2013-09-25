@@ -1,9 +1,8 @@
-No title [76]
+Elusive
 #############
 :date: 2007-03-05 01:02
 :author: Anthony Scopatz
 :category: missives
-:slug: 76
 
 Yay! I am elusive!
 

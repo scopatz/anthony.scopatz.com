@@ -1,9 +1,8 @@
-No title [79]
+Outdoorness
 #############
 :date: 2007-03-18 23:37
 :author: Anthony Scopatz
 :category: missives
-:slug: 79
 
 So I just got back from a nine day long extravaganza of outdoorness. I
 managed to visit three of our glorious National Parks in this time,

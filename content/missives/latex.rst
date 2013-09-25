@@ -1,9 +1,8 @@
-No title [85]
+LaTeX
 #############
 :date: 2007-04-08 19:21
 :author: Anthony Scopatz
 :category: missives
-:slug: 85
 
 It was cold today in Austin. I didn't go outside at all. Instead I have
 dedicated this day to hedonism and science. I finished writing up a lab

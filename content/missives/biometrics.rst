@@ -1,9 +1,8 @@
-No title [87]
+Biometrics
 #############
 :date: 2007-04-10 20:47
 :author: Anthony Scopatz
 :category: missives
-:slug: 87
 
 One can measure the civilization/wild-ness of another by hair.
 

@@ -1,9 +1,8 @@
-No title [77]
-#############
+Not Quite Modern
+#################
 :date: 2007-03-05 22:24
 :author: Anthony Scopatz
 :category: missives
-:slug: 77
 
 | In the list of books below:
 | - bold the ones you’ve read

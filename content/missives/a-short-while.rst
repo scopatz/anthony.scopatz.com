@@ -1,9 +1,8 @@
-No title [68]
+A short while
 #############
 :date: 2007-02-12 21:30
 :author: Anthony Scopatz
 :category: missives
-:slug: 68
 
 So Tomorrow I give my presentation. I may have finally earned a respite
 at least for a short while. I need a break as this work has taxed my

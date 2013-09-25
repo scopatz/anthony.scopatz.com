@@ -1,9 +1,8 @@
-No title [71]
+Eventually
 #############
 :date: 2007-02-17 02:40
 :author: Anthony Scopatz
 :category: missives
-:slug: 71
 
 Movies are hard to watch. Is there no joy left in my heart? (<--Not a
 Rhetorical Question, just tough to answer due to double negative

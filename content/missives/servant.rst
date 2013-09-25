@@ -1,9 +1,8 @@
-No title [75]
+Servant
 #############
 :date: 2007-03-04 19:02
 :author: Anthony Scopatz
 :category: missives
-:slug: 75
 
 Through a meadow opening in the pine woods I see snowy peaks about the
 head-waters of the Merced above Yosemite. How near they seem and how
