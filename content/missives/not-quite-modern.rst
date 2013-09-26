@@ -31,12 +31,12 @@ Not Quite Modern
 | 18. \*The Stand (Stephen King)
 | 19. \*Harry Potter and the Prisoner of Azkaban(Rowling)
 | 20. Jane Eyre (Charlotte Bronte)
-| **[STRIKEOUT:21. The Hobbit (Tolkien)]
+| **[STRIKEOUT:21. The Hobbit (Tolkien)]**
 | 22. The Catcher in the Rye (J. D. Salinger)
 | 23. Little Women (Louisa May Alcott)**
 | 24. \*The Lovely Bones (Alice Sebold)
 | 25. Life of Pi (Yann Martel)
-| **26. The Hitchhiker’s Guide to the Galaxy (Douglas Adams)
+| **26. The Hitchhiker’s Guide to the Galaxy (Douglas Adams)**
 | 27. Wuthering Heights (Emily Bronte)
 | 28. The Lion, The Witch, and the Wardrobe (C. S. Lewis)**
 | 29. East of Eden (John Steinbeck)
@@ -44,7 +44,7 @@ Not Quite Modern
 | **31. Dune (Frank Herbert)**
 | 32. The Notebook (Nicholas Sparks)
 | 33. Atlas Shrugged (Ayn Rand)
-| **34. 1984 (Orwell)
+| **34. 1984 (Orwell)**
 | 35. The Mists of Avalon (Marion Zimmer Bradley)**
 | 36. \*The Pillars of the Earth (Ken Follett)
 | 37. \*The Power of One (Bryce Courtenay)
@@ -62,7 +62,7 @@ Not Quite Modern
 | 49. The Grapes of Wrath (John Steinbeck)
 | 50. \*She’s Come Undone (Wally Lamb)
 | 51. The Poisonwood Bible (Barbara Kingsolver)
-| **[STRIKEOUT:52. A Tale of Two Cities (Dickens)]
+| **[STRIKEOUT:52. A Tale of Two Cities (Dickens)]**
 | 53. +Ender’s Game (Orson Scott Card)
 | [STRIKEOUT:54. Great Expectations (Dickens)]**
 | **55. The Great Gatsby (Fitzgerald)**
@@ -102,7 +102,7 @@ Not Quite Modern
 | 89. \*Blindness (Jose Saramago)
 | 90. \*Kane and Abel (Jeffrey Archer)
 | 91. \*In The Skin Of A Lion (Ondaatje)
-| **92. Lord of the Flies (Golding)
+| **92. Lord of the Flies (Golding)**
 | 93. The Good Earth (Pearl S. Buck)**
 | 94. \*The Secret Life of Bees (Sue Monk Kidd)
 | 95. The Bourne Identity (Robert Ludlum)

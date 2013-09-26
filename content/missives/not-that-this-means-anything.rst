@@ -24,8 +24,7 @@ conversation and I'm sure that you are as loveable as you are beautiful.
 
 `Take The What Kind of Girl are You Test`_ at `**HelloQuizzy**`_
 
-.. _
- Take The What Kind of Girl are You Test: http://www.helloquizzy.com/tests/the-what-kind-of-girl-are-you-test
+.. _Take The What Kind of Girl are You Test: http://www.helloquizzy.com/tests/the-what-kind-of-girl-are-you-test
 .. _**HelloQuizzy**: http://www.helloquizzy.com/
 
 .. |image0| image:: http://cdn.okcimg.com/php/load_okc_image.php/images/0x0/0x0/0/10314478588481281491.jpeg

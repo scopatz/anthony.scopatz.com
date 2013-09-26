@@ -61,7 +61,5 @@ that she is no longer working at Wheatsville.
 Someday the pieces will fit together.
 
 | How many Bene Gesserit does it take to screw in a light bulb?
-|  One to screw it in and 400,000,000 to have bred the right bulb to be
-able to screw into many sockets at once. What's more it is screwed in a
-generation early!
-|  Caveat: Thomas Edison was Greek and Fought in the Trojan war.
+| One to screw it in and 400,000,000 to have bred the right bulb to be able to screw into many sockets at once. What's more it is screwed in a generation early!
+| Caveat: Thomas Edison was Greek and Fought in the Trojan war.

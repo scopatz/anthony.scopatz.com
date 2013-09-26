@@ -17,8 +17,7 @@ Rather than explain in detail the joyous occasions I had in the Bay Area
 further BA travel by recounting this conversion between Kerry Prime and
 I.
 
-| Me: It seems to me that the type of people into watersports are also
-the type of people into watersports.
+| Me: It seems to me that the type of people into watersports are also the type of people into watersports.
 | Kerry: You really need to be around more.
 
 Kerry also had some amusing anecdotes about Asians in the woods, but

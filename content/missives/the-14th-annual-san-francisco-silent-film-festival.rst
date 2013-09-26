@@ -79,7 +79,7 @@ policemen and criminals. The movie is dark and funny, but never both at
 the same time. Rather than trying to describe the movie further, here is
 a poem I wrote about "Underworld":
 
-| *I saw a girl named Evelyn yesterday.
+| I saw a girl named Evelyn yesterday.
 | She's dead now.
 | She died in 1975 and there is no going back.
 | Her skin turned black and white,
@@ -97,7 +97,7 @@ a poem I wrote about "Underworld":
 | Her head,
 | Evelyn's head, is too big. Was too big.
 | But maybe I am projecting.
-| I am no more interested in women than a fancy car.*
+| I am no more interested in women than a fancy car.
 |
 
 You really should try and find a way to see this movie. Without
