@@ -7,7 +7,11 @@
   <title>Anthony Scopatz - Articles by Anthony Scopatz</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -63,18 +70,12 @@
           <p class="meta"><time datetime="2006-08-28T02:00:00" pubdate>Mon 28 August 2006</time></p>
 </header>
 
-  <div class="entry-content"><table align="center" cellpadding="20"><tbody><tr><td align="center"><div class="line-block">
-<div class="line"><strong>Patriotic</strong></div>
-<div class="line-block">
-<div class="line">You scored 90% <span class="caps">US</span> Philosophy, 21% American Pride, 66% Involvement,</div>
-</div>
-</div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/are-you-patriotic.rst</tt>, line&nbsp;25)</p>
-Line block ends without a blank line.</div>
-<p>and 100% Citizen&nbsp;Status!</p>
+  <div class="entry-content"><table align="center" cellpadding="20"><tbody><tr><td align="center"><p><strong>Patriotic:</strong> You scored 90% <span class="caps">US</span> Philosophy, 21% American Pride, 66% Involvement, and 100% Citizen&nbsp;Status!</p>
 </td></tr><tr><td><p>This test measured you according to four criteria: Philosophy, Pride,
-Involvement and Citizen ...</p></td></tr></tbody></table></div>
+Involvement and Citizen&nbsp;Status.</p>
+</p><p><em>Philosophy</em> reflects whether you agree with the philosophical
+foundations of the United States, such as: liberty, equality, democracy
+(though limited, not ...</p></td></tr></tbody></table></div>
   <footer>
     <a rel="full-article" href="../14.html">Read On &crarr;</a>
   </footer>
@@ -244,8 +245,9 @@ post. She was an eminant scholar and otherwise academic person in the
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

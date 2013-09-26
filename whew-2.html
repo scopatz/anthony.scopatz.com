@@ -7,7 +7,11 @@
   <title>Whew….</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -96,17 +103,10 @@ sent me!!! Maybe this was worth&nbsp;it.</p>
 <p>Lastly, I am thrilled that my life will finally be unpaused. There are
 all these little details I can now worry about again. <span class="caps">AND</span> I can forget
 about all of the big details I can do nothing to change. <span class="caps">THAT</span> was the
-*real* success of the&nbsp;day.</p>
-<div class="line-block">
-<div class="line">&#8211;</div>
-<div class="line-block">
-<div class="line">Needless to say, it takes a village to get through this sort of</div>
-</div>
-</div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/whew-2.rst</tt>, line&nbsp;54)</p>
-Line block ends without a blank line.</div>
-<p>thing. I would like to thank every member of the tribe (local <span class="amp">&amp;</span> virtual)
+<em>real</em> success of the&nbsp;day.</p>
+<hr class="docutils" />
+<p>Needless to say, it takes a village to get through this sort of
+thing. I would like to thank every member of the tribe (local <span class="amp">&amp;</span> virtual)
 that helped me get through this trying time. I know the past 5 months
 have been no easier on you than on me. In any even thank you all for
 your support, especially considering the lack of a sole personage
@@ -164,8 +164,9 @@ dedicated to the task. You did&nbsp;great!</p>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

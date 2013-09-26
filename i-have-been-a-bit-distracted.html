@@ -7,7 +7,11 @@
   <title>I have been a bit distracted…</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -80,21 +87,16 @@ picked up this&nbsp;habit.</p>
 summer and how I would rate them, <span class="caps">WITH</span> A <span class="caps">COMPLETE</span> <span class="caps">LACK</span> <span class="caps">OF</span> <span class="caps">JUSTIFICATION</span>
 (out of&nbsp;100):</p>
 <div class="line-block">
-<div class="line"><strong>97</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Speed Racer</div>
+<div class="line"><strong>97</strong> <em>Speed Racer</em></div>
+<div class="line"><strong>85</strong> <em>Harold and Kumar: Escape from Guantanamo Bay</em></div>
+<div class="line"><strong>83</strong> <em>Read or Die</em></div>
+<div class="line"><strong>80</strong> <em>Iron Man</em></div>
+<div class="line"><strong>76</strong> <em>Re-animator</em></div>
+<div class="line"><strong>66</strong> <em>Hellboy</em></div>
+<div class="line"><strong>64</strong> <em>Indiana Jones</em></div>
+<div class="line"><strong>38</strong> <em>Prince Caspian</em></div>
+<div class="line"><br /></div>
 </div>
-<div class="system-message" id="id1">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/i-have-been-a-bit-distracted.rst</tt>, line 32); <em><a href="#id2">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/i-have-been-a-bit-distracted.rst</tt>, line&nbsp;33)</p>
-Line block ends without a blank line.</div>
-<p><em>**85*</em> <em>Harold and Kumar: Escape from Guantanamo Bay
-***83*</em> <em>Read or Die</em>
-| <strong>80</strong> <em>Iron Man
-***76*</em> <em>Re-animator
-***66*</em> <em>Hellboy</em>
-| <strong>64</strong> <em>Indiana Jones</em>
-| <strong>38</strong> <em>Prince&nbsp;Caspian</em></p>
 </div>
     <footer>
       <p class="meta">
@@ -151,8 +153,9 @@ Line block ends without a blank line.</div>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

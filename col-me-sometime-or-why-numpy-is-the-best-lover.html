@@ -7,7 +7,11 @@
   <title>Col Me Sometime (or Why NumPy is the Best Lover)</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -88,34 +95,23 @@ certain that it could handle a few more orders of&nbsp;magnitude.</p>
 <p>This situation is peculiar since traditional databases are limited by
 disk size, not memory, like NumPy. &nbsp;(HDDs, of course, being much larger
 than&nbsp;<span class="caps">RAM</span>.)</p>
-<p>&#8211; Go to the Source&nbsp;&#8211;</p>
-<p>import numpy as&nbsp;np</p>
-<div class="line-block">
-<div class="line">import uuid</div>
-<div class="line-block">
-<div class="line">from random import sample, randint</div>
-<div class="line">population = [int, float, &#8216;S&#8217;]</div>
-</div>
-</div>
-<p>def&nbsp;rand_dtype(n):</p>
-<div class="line-block">
-<div class="line">dt = []&nbsp;&nbsp; &nbsp;for i in xrange(n):</div>
-<div class="line-block">
-<div class="line">dt.extend( [(str(uuid.uuid1()), np.dtype(d)) for d in</div>
-</div>
-</div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/col-me-sometime-or-why-numpy-is-the-best-lover.rst</tt>, line&nbsp;52)</p>
-Line block ends without a blank line.</div>
-<p>sample(population, 1)] )
-|  dt = np.dtype(dt)
-|  return&nbsp;dt</p>
-<p>if __name__ ==&nbsp;&#8220;__main__&#8221;:</p>
-<div class="line-block">
-<div class="line">dt = rand_dtype(1000000)</div>
-<div class="line-block">
-<div class="line">z = np.zeros(10, dtype=dt)</div>
-</div>
+<div class="section" id="go-to-the-source">
+<h2>Go to the&nbsp;Source</h2>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sample</span><span class="p">,</span> <span class="n">randint</span>
+<span class="n">population</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="s">&#39;S&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">rand</span>\<span class="n">_dtype</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="p">[]</span><span class="err">  </span> <span class="err"> </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">dt</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span> <span class="p">[(</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">()),</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">sample</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dt</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">rand</span>\<span class="n">_dtype</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
     <footer>
@@ -173,8 +169,9 @@ Line block ends without a blank line.</div>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

@@ -7,7 +7,11 @@
   <title>Happy New Year!</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -76,16 +83,14 @@ Ukulele. I gave this man a&nbsp;dollar.</p>
 <p>The other and final thing of note today was that I got to talk to Sean.
 The following is an excerpt as related to the Super-Secret Project&nbsp;(<span class="caps">SSP</span>):</p>
 <div class="line-block">
-<div class="line">Me: So I bought one of those robot kits that you bought Julian for his</div>
+<div class="line">Me: So I bought one of those robot kits that you bought Julian for his Bar Mitzvah.</div>
+<div class="line-block">
+<div class="line">Sean: Oh really? Cool. How far are you? What can it do?</div>
+<div class="line">Me: Well I got to a certain point but&#8230;.I am working on a rather involved subproject that isn&#8217;t in the book.</div>
+<div class="line">Sean: Of Course you are!</div>
+<div class="line"><br /></div>
 </div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/happy-new-year.rst</tt>, line&nbsp;30)</p>
-Line block ends without a blank line.</div>
-<p>Bar Mitzvah.
-|  Sean: Oh really? Cool. How far are you? What can it do?
-|  Me: Well I got to a certain point but&#8230;.I am working on a rather
-involved subproject that isn&#8217;t in the book.
-|  Sean: Of Course you&nbsp;are!</p>
+</div>
 <p>After <span class="caps">SSP</span> is complete I am thinking about trying my hand at writing
 fiction. I wonder if I am any good at it. Maybe I could write a story
 about a brave Nuclear Engineer who stands up to the world and destroys
@@ -150,8 +155,9 @@ Idaho. The clincher is that it would be written as a retelling of&nbsp;Gilgamesh
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

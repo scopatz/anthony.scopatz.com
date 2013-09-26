@@ -7,7 +7,11 @@
   <title>All You Need</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -63,9 +70,7 @@
 
   <div class="entry-content"><div class="line-block">
 <div class="line">What do you call a River Rafting guide without a girlfriend?</div>
-<div class="line-block">
 <div class="line">Homeless.</div>
-</div>
 </div>
 <p>Quite a lot has happened since I last checked in. I believe that the
 last issue was about &#8220;The Godless Girl&#8221; which puts this at a full week&nbsp;ago.</p>
@@ -73,13 +78,9 @@ last issue was about &#8220;The Godless Girl&#8221; which puts this at a full we
 (I am anxious to talk about the juicy <span class="caps">LA</span> tidbits) I will sum up my
 further <span class="caps">BA</span> travel by recounting this conversion between Kerry Prime and&nbsp;I.</p>
 <div class="line-block">
-<div class="line">Me: It seems to me that the type of people into watersports are also</div>
+<div class="line">Me: It seems to me that the type of people into watersports are also the type of people into watersports.</div>
+<div class="line">Kerry: You really need to be around more.</div>
 </div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/all-you-need.rst</tt>, line&nbsp;21)</p>
-Line block ends without a blank line.</div>
-<p>the type of people into watersports.
-|  Kerry: You really need to be around&nbsp;more.</p>
 <p>Kerry also had some amusing anecdotes about Asians in the woods, but
 we&#8217;ll save those for another&nbsp;time.</p>
 <p>Soooooooooooooooooo This weekend was&nbsp;amazing!</p>
@@ -178,8 +179,9 @@ superseded only by where I was undressed later that evening&nbsp;^_-</p>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

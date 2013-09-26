@@ -7,7 +7,11 @@
   <title>Take Me AWAY!</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -86,14 +93,9 @@
 <div class="line">Of your death we&#8217;ll have none.</div>
 <div class="line">&#8211;&#8211;For as soon comes the Fall,</div>
 <div class="line">&#8211;&#8211;It&#8217;s to Texas with Ya&#8217;ll</div>
-<div class="line">But while you&#8217;re here we will have a ton of fun in the sun and I&#8217;ll</div>
+<div class="line">But while you&#8217;re here we will have a ton of fun in the sun and I&#8217;ll shun every pun till your done when I&#8217;ll buy a gun at which point you&#8217;d better start to run.</div>
 </div>
 </div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/take-me-away.rst</tt>, line&nbsp;23)</p>
-Line block ends without a blank line.</div>
-<p>shun every pun till your done when I&#8217;ll buy a gun at which point you&#8217;d
-better start to&nbsp;run.</p>
 <p>So my trip was fantastic, mostly. Basically sans everything that was
 travel related and I rocked it. There is so much to tell I will
 therefore save some for later. I&#8217;ll start with some observations about&nbsp;Idaho.</p>
@@ -194,8 +196,9 @@ focused on high level system studies. Is planetology so far removed?
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

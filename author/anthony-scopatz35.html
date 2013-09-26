@@ -7,7 +7,11 @@
   <title>Anthony Scopatz - Articles by Anthony Scopatz</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -64,21 +71,18 @@
 </header>
 
   <div class="entry-content"><p>Once more&nbsp;now&#8230;</p>
-<dl class="docutils">
-<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>If you&nbsp;knew&#8230;</dt>
-<dd><div class="first system-message" id="id1">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/neutronic-magnetic-fields.rst</tt>, line 14); <em><a href="#id2">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<p class="last">How I longed for you now&#8230;
-You&#8217;d grow wings and fly&#8230;
-Home to me&#8230;
-Home&nbsp;Tonight.*</p>
-</dd>
-</dl>
 <div class="line-block">
+<div class="line">If you knew&#8230;</div>
+<div class="line">How I longed for you now&#8230;</div>
+<div class="line">You&#8217;d grow wings and fly&#8230;</div>
+<div class="line">Home to me&#8230;</div>
+<div class="line">Home Tonight.</div>
+<div class="line"><br /></div>
 <div class="line">&#8211;</div>
-<div class="line-block">
-<div class="line"><span class="caps">PS</span> Thanks, Kerry. Though I really ...</div></div></div></div>
+<div class="line"><span class="caps">PS</span> Thanks, Kerry. Though I really should be asleep right now.</div>
+<div class="line"><br /></div>
+</div>
+</div>
   <footer>
     <a rel="full-article" href="../neutronic-magnetic-fields.html">Read On &crarr;</a>
   </footer>
@@ -249,8 +253,9 @@ the website!</a>) &nbsp;As I write ...</p></div>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

@@ -7,7 +7,11 @@
   <title>G00gle is pretty impressive, so I won’t start with a Dune joke.</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -104,16 +111,9 @@ that she is no longer working at&nbsp;Wheatsville.</p>
 <p>Someday the pieces will fit&nbsp;together.</p>
 <div class="line-block">
 <div class="line">How many Bene Gesserit does it take to screw in a light bulb?</div>
-<div class="line-block">
-<div class="line">One to screw it in and 400,000,000 to have bred the right bulb to be</div>
+<div class="line">One to screw it in and 400,000,000 to have bred the right bulb to be able to screw into many sockets at once. What&#8217;s more it is screwed in a generation early!</div>
+<div class="line">Caveat: Thomas Edison was Greek and Fought in the Trojan war.</div>
 </div>
-</div>
-<div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/g00gle-is-pretty-impressive-so-i-wont-start-with-a-dune-joke.rst</tt>, line&nbsp;64)</p>
-Line block ends without a blank line.</div>
-<p>able to screw into many sockets at once. What&#8217;s more it is screwed in a
-generation early!
-|  Caveat: Thomas Edison was Greek and Fought in the Trojan&nbsp;war.</p>
 </div>
     <footer>
       <p class="meta">
@@ -167,8 +167,9 @@ generation early!
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>

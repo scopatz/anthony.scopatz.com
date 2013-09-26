@@ -7,7 +7,11 @@
   <title>Anthony Scopatz - Articles by Anthony Scopatz</title>
   <meta name="author" content="Anthony Scopatz">
 
-    
+    <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -33,7 +37,10 @@
       <h2>I think, therefore I amino acid.</h2>
   </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://localhost:8000/" rel="subscribe-rss">RSS</a></li>
+  <!--
+  <li><a href="http://localhost:8000/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://localhost:8000/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
   </ul>
 
 <!-- TODO: add search here
@@ -141,26 +148,50 @@ style. Everyone was their current age and in their current relationships
           <p class="meta"><time datetime="2007-01-20T01:32:00" pubdate>Sat 20 January 2007</time></p>
 </header>
 
-  <div class="entry-content"><div></form></div><div><form action="http://www.memegen.net/viewmeme.pl" method="post"><div class="system-message">
-<p class="system-message-title">System Message: <span class="caps">ERROR</span>/3 (<tt class="docutils">/home/scopatz/anthony.scopatz.com/content/missives/lj-hs.rst</tt>, line&nbsp;28)</p>
-<p>Malformed&nbsp;table.</p>
-<pre class="literal-block">
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| If LJ Were a High School by Karen\_Walker   |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Username                                    |                                                                                                                                            |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Your Status                                 | FreshmanSophomoreJuniorSeniorEnglish TeacherHistory TeacherMath TeacherScience TeacherChoir DirectorGym TeacherPrincipalSchool Secretary   |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Lunch Lady                                  | marconius                                                                                                                                  |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Head Cheerleader                            | thesubtleknife                                                                                                                             |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Quarterback                                 | ragingaardvark                                                                                                                             |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Prom Queen                                  | num3472                                                                                                                                    |
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Gang Member ...</pre></div></form></div></div>
+  <div class="entry-content"><div></form></div><div><form action="http://www.memegen.net/viewmeme.pl" method="post"><table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>If <span class="caps">LJ</span> Were a High School by Karen_Walker</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Username</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Your Status</td>
+<td>FreshmanSophomoreJuniorSeniorEnglish TeacherHistory TeacherMath TeacherScience TeacherChoir DirectorGym TeacherPrincipalSchool Secretary</td>
+</tr>
+<tr><td>Lunch Lady</td>
+<td>marconius</td>
+</tr>
+<tr><td>Head Cheerleader</td>
+<td>thesubtleknife</td>
+</tr>
+<tr><td>Quarterback</td>
+<td>ragingaardvark</td>
+</tr>
+<tr><td>Prom Queen</td>
+<td>num3472</td>
+</tr>
+<tr><td>Gang Member</td>
+<td>leadtogold</td>
+</tr>
+<tr><td>Band Geek</td>
+<td>ginlaconic</td>
+</tr>
+<tr><td>Theatre Geek</td>
+<td>mexonxpedestal</td>
+</tr>
+<tr><td>Chess Club Captain</td>
+<td>bscopatz</td>
+</tr>
+<tr><td>Loner Goth Kid</td>
+<td>julie1019</td>
+</tr>
+<tr><td>Class Clown</td>
+<td>salaris ...</td></tr></tbody></table></form></div></div>
   <footer>
     <a rel="full-article" href="../58.html">Read On &crarr;</a>
   </footer>
@@ -245,8 +276,9 @@ feeling&nbsp;it.</p>
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="http://localhost:8000/" type="application/rss+xml" rel="alternate">RSS</a></li>
-                    <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="http://localhost:8000/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
                     <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
                     <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
                     <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
