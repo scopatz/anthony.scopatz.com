@@ -6,7 +6,7 @@ All You Need
 :slug: all-you-need
 
 | What do you call a River Rafting guide without a girlfriend?
-|  Homeless.
+| Homeless.
 
 Quite a lot has happened since I last checked in. I believe that the
 last issue was about "The Godless Girl" which puts this at a full week
@@ -19,7 +19,7 @@ I.
 
 | Me: It seems to me that the type of people into watersports are also
 the type of people into watersports.
-|  Kerry: You really need to be around more.
+| Kerry: You really need to be around more.
 
 Kerry also had some amusing anecdotes about Asians in the woods, but
 we'll save those for another time.

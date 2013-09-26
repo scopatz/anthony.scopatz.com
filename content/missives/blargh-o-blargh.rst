@@ -5,10 +5,9 @@ Blargh-O-Blargh
 :category: missives
 :slug: blargh-o-blargh
 
-| Why do all (read most) of the chicks that are on Penn and Teller's
-Bullshit have to be smokin' hot?
-|  It is such a conundrum to see them in their physical glory while
-being throughly debunked mentally.
+Why do all (read most) of the chicks that are on Penn and Teller's Bullshit 
+have to be smokin' hot?  It is such a conundrum to see them in their physical 
+glory while being throughly debunked mentally.
 
 So I had written this whole huge post this weekend that was amazing. But
 I left it o my main machine at home which has no internet. It is a
@@ -43,6 +42,6 @@ was this pas weekend) they had Four (4) Andrews in a party of Eleven
 (11).
 
 | A melody is like a pretty girl
-|  Who cares if it's the dumbest in the world
-|  It's all about the way that it unfurls
-|  --The Magnetic Fields
+| Who cares if it's the dumbest in the world
+| It's all about the way that it unfurls
+| --The Magnetic Fields

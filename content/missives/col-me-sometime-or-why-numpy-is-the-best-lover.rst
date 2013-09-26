@@ -21,13 +21,13 @@ table and you are in trouble.
 Below is a list of different table structures and their implicit table
 limits:
 
--  `MySQL 5`_: 4,096
--  `MSSQL`_: 1,024
--  `Oracle`_: 1,000
--  `Excel 2003`_: 256
--  `Excel 2007`_: ﻿16,384
--  `HDF5`_: ~1,260
--  NumPy: +inf
+- `MySQL 5`_: 4,096
+- `MSSQL`_: 1,024
+- `Oracle`_: 1,000
+- `Excel 2003`_: 256
+- `Excel 2007`_: ﻿16,384
+- `HDF5`_: ~1,260
+- NumPy: +inf
 
 That's right; NumPy structured (or record) arrays seem to allow as many
 columns as you can fit into memory!  Below is some code that
@@ -38,26 +38,25 @@ This situation is peculiar since traditional databases are limited by
 disk size, not memory, like NumPy.  (HDDs, of course, being much larger
 than RAM.)
 
---- Go to the Source ---
+Go to the Source 
+-----------------
 
-import numpy as np
+.. code-block:: python
 
-| import uuid
-|  from random import sample, randint
-|  population = [int, float, 'S']
+    import numpy as np
+    import uuid
+    from random import sample, randint
+    population = [int, float, 'S']
 
-def rand\_dtype(n):
+    def rand\_dtype(n):
+        dt = []    for i in xrange(n):
+        dt.extend( [(str(uuid.uuid1()), np.dtype(d)) for d in sample(population, 1)] )
+        dt = np.dtype(dt)
+        return dt
 
-| dt = []    for i in xrange(n):
-|  dt.extend( [(str(uuid.uuid1()), np.dtype(d)) for d in
-sample(population, 1)] )
-|  dt = np.dtype(dt)
-|  return dt
-
-if \_\_name\_\_ == "\_\_main\_\_":
-
-| dt = rand\_dtype(1000000)
-|  z = np.zeros(10, dtype=dt)﻿
+    if __name__ == "__main__":
+        dt = rand\_dtype(1000000)
+        z = np.zeros(10, dtype=dt)﻿
 
 .. _MySQL 5: http://dev.mysql.com/doc/refman/5.0/en/column-count-limit.html
 .. _MSSQL: http://msdn.microsoft.com/en-us/library/ms143432.aspx

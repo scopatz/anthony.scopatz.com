@@ -32,15 +32,17 @@ their hosts abode. Guest right was triggered in different ways, but
 breaking it was almost always considered sacrilegious. Here are a couple
 of examples.
 
-| **1)** To the Greeks (and others) it was not permissible to ask your
+**1)** To the Greeks (and others) it was not permissible to ask your
 guest's name or business unless they offered it. A great example of this
 is when Odysseus washes up on an island and is hosted by the Phaeacians.
-|  **2)** A more extreme Greek example occurs in `Book 6 of the Iliad`_.
+
+**2)** A more extreme Greek example occurs in `Book 6 of the Iliad`_.
 Diomedes and Glaucus, mortal enemies on opposing sides realized that
 Diomedes' grandfather once hosted Glaucus' grandfather. They therefore
 just \*have\* to be friends and run off and happily kill other people.
 These seems strange to the modern ear, but sets the stage for when...
-|  **3)** In the Ramayana, the sage Vishwaamitra is given guest right by
+
+**3)** In the Ramayana, the sage Vishwaamitra is given guest right by
 `King Dasaratha`_ (Rama's father). Now the king had to perform an
 amazing and expensive ritual just to have children. This ritual amounted
 to having a horse roam free for a year (while an army followed it,
@@ -49,7 +51,8 @@ walks in when Rama is 15 and is granted a guest right boon. He demands
 Rama to help him kill some Raksasas. The King is reticent but,
 ultimately guest right wins out and Rama leaves with the sage. Puts the
 Abraham-Issac story in perspective...
-|  **4)** Of course, it is possible for a guest to break guest right.
+
+**4)** Of course, it is possible for a guest to break guest right.
 For instance, being a suitor to another man's wife and living off the
 fat of his land for 20 years, like in the Odyssey.
 

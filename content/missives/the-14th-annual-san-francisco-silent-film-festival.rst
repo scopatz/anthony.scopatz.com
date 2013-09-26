@@ -79,25 +79,26 @@ policemen and criminals. The movie is dark and funny, but never both at
 the same time. Rather than trying to describe the movie further, here is
 a poem I wrote about "Underworld":
 
-*I saw a girl named Evelyn yesterday.
- She's dead now.
- She died in 1975 and there is no going back.
- Her skin turned black and white,
- and Feathers were everywhere.
- She had a Rolls Royce,
- but never rode it.
- What did that hour buy you,
- you gregarious overgrowth of a man?
- Did you polish the hard black body?
- Do the ivory dressings now glisten in the night?
- Draw a bad hand.
- Reshuffle the deck.
- The Police are here now
- and Feathers are Everywhere!
- Her head,
- Evelyn's head, is too big. Was too big.
- But maybe I am projecting.
- I am no more interested in women than a fancy car.*
+| *I saw a girl named Evelyn yesterday.
+| She's dead now.
+| She died in 1975 and there is no going back.
+| Her skin turned black and white,
+| and Feathers were everywhere.
+| She had a Rolls Royce,
+| but never rode it.
+| What did that hour buy you,
+| you gregarious overgrowth of a man?
+| Did you polish the hard black body?
+| Do the ivory dressings now glisten in the night?
+| Draw a bad hand.
+| Reshuffle the deck.
+| The Police are here now
+| and Feathers are Everywhere!
+| Her head,
+| Evelyn's head, is too big. Was too big.
+| But maybe I am projecting.
+| I am no more interested in women than a fancy car.*
+|
 
 You really should try and find a way to see this movie. Without
 discussing it to much more, Rolls Royce has this excellent line when

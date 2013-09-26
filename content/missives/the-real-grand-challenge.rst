@@ -36,20 +36,21 @@ effects for years and years to come.  (Thankfully, from experience, they
 seem to recognize this.)
 
 I am also fearful because they are talking about a three-year time frame
-just to build the framework and maybe some sample physics models\*.
- This is the easy part!  And every day that you spend debating whether
+just to build the framework and maybe some sample physics models [1].
+This is the easy part!  And every day that you spend debating whether
 you should be passing an array or a pointer to an array is a day that
-you are not doing new science and engineering\*\*.
+you are not doing new science and engineering [2].
 
 So I am excited because it truly is an excellent idea.  I am just not
 sure that it is as VISIONary as they make it out to be.  Give me three
-months, a coffee-shop, and  \*BAM\* you'll have the architecture that
+months, a coffee-shop, and  *BAM* you'll have the architecture that
 has been proposed.
 
 The real grand challenge is making nuclear engineers into become
 software developers.
 
-| \* Note: It may well take three years to put in meaningful models, but
+**[1]:** It may well take three years to put in meaningful models, but
 that is science not infrastructure.
-|  \*\* Note: I count views as new science, because without the shiny
+
+**[2]:** I count views as new science, because without the shiny
 figure at the end, all you have is a bunch of numbers.

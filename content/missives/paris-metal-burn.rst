@@ -42,17 +42,16 @@ out of his bag and handed it to me. I knew what to do.
 | |image1|
 |  *White dots in sky are bubbles reflecting the camera flash.*
 
-| But knowing only brings further questions. What was this all about?
+But knowing only brings further questions. What was this all about?
 Right as I was about to leave, after the photographs, TV cameras, and
 inquisitive police, I saw her running around speaking perfect English.
-|  "Can I have another bottle?"
+"Can I have another bottle?"
 
-| After Carla got a second serving of the miracle stuff from our
+After Carla got a second serving of the miracle stuff from our
 provider, she ran off blowing with reinvigorated enthusiasm. Carla was
 lithe and hyper-active. She wore classy black cargo pants, a black
 sleeveless top, and a simple gold cross necklace. Her hair was Red. Char
-Aznable
-|  red. The kind of dark/bright red that is in no way natural but cannot
+Aznable red. The kind of dark/bright red that is in no way natural but cannot
 be begrudged on those grounds. It was cropped short and tipped black.
 
 Of course, I asked her what all the bubbles were about. "Who knows?! I
@@ -83,10 +82,10 @@ California taught her what she needed to about what happens in the
 desert. She wants to go, but it is that much more expensive with the
 intercontinental flight.
 
-| But what she does for fun is analogous. She, somewhat obviously, is
+But what she does for fun is analogous. She, somewhat obviously, is
 into Metal. So she goes to all of the big European Metal concerts. So we
 start talking about metal bands we like or have seen. I've seen Tyr;
-|  She has seen Dio; I am jealous.
+She has seen Dio; I am jealous.
 
 This spawned a conversation between her and one of her co-workers about
 what was actually good. If you have never seen two passionate Germans

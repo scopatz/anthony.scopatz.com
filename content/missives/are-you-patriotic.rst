@@ -21,9 +21,7 @@ Are You Patriotic?
 
    <td align="center">
 
-| \ **Patriotic**\ 
-|  You scored 90% US Philosophy, 21% American Pride, 66% Involvement,
-and 100% Citizen Status!
+**Patriotic:** You scored 90% US Philosophy, 21% American Pride, 66% Involvement, and 100% Citizen Status!
 
 .. raw:: html
 
@@ -192,8 +190,7 @@ Thanks Again! -- `THE ARE YOU A PATRIOTIC AMERICAN? TEST`_
 
    <p>
 
-| My test tracked 4 variables How you compared to other people *your age
-and gender*:
+My test tracked 4 variables How you compared to other people *your age and gender*:
 
     .. raw:: html
 

@@ -7,7 +7,8 @@ Which Brother is More Nerdy?
 
 | Gentoo just makes sense.
 |  --Julian, aged 14 years
+|
 
-| A stillsuit actually would be really helpful [if you were walking from
-Austin to Three Rivers].
+| A stillsuit actually would be really helpful [if you were walking from Austin to Three Rivers].
 |  --Shane, aged 18 years
+|

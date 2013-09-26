@@ -38,10 +38,11 @@ marries her, he never speaks to her. Moreover, as Aurthur was simply
 dressed when he saw her, Guinevere has never even seen the good King
 before the marriage. Their vows are magnificent.
 
-*And Aurthur said, "Behold, thy doom is mine.
- Let chance what will, I love thee to the death!"
- To whom the Queen replied with drooping eyes,
- "King and my lord, I love thee to the death!"*
+| *And Aurthur said, "Behold, thy doom is mine.
+| Let chance what will, I love thee to the death!"
+| To whom the Queen replied with drooping eyes,
+| "King and my lord, I love thee to the death!"*
+|
 
 Wow! "Thy doom is mine!" typically forebears someone getting their ass
 handed to them in battle, but it is \*somehow\* more powerful as wedding
@@ -70,8 +71,9 @@ My other favorite quote is about Ser Gareth (Arthur's nephew) being
 forced to work in the Camelot kitchens (by his mother) for a year and a
 day before he may ascend to knighthood.
 
-*So Gareth all for glory underwent
- The sooty yoke of kitchen-vassalage,*
+| *So Gareth all for glory underwent
+| The sooty yoke of kitchen-vassalage,*
+|
 
 So awesome. Gareth is kind of a puss so I am not a huge fan, but the
 brother knows how to take a sooty yoke in stride!

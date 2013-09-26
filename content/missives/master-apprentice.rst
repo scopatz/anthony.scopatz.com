@@ -76,6 +76,8 @@ someone can do to return the world to its otherwise natural state.
 The revolution is coming and I want to live to feel a face that isn't
 mine. Seeya in Three Rivers.
 
-| They were playing frisbee and it was most ungentlemanly how they were
-throwing it
+| They were playing frisbee and it was most ungentlemanly how they were throwing it
 |  -Shaitan
+|
+
+

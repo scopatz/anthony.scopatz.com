@@ -11,17 +11,17 @@ out here was naturally not without its hiccups. I was about as depressed
 as ever when I first got here. Here are the reasons for it that I can
 tell,
 
-| 1) The travel over here had us arrive in town before noon local time.
-I then had to stay up until around 8 pm to get onto a normal schedule.
-The 40+ hours of being awake does things to a man.
-|  2) No Gundam access for a *whole* week! Just the thought has had me
-in pangs. You know you are an addict when...
-|  3) Not to diminish what is going on back home in Texas, but the
-weather here has been awful. We got here on the first day of snow for
-this season. Another data point proving I might have `SAD`_.
-|  4) The ethnic homogeneity of Switzerland.
-|  5) Short hair on women.
-|  6) My eyes are blue.
+1. The travel over here had us arrive in town before noon local time.
+   I then had to stay up until around 8 pm to get onto a normal schedule.
+   The 40+ hours of being awake does things to a man.
+2. No Gundam access for a *whole* week! Just the thought has had me
+   in pangs. You know you are an addict when...
+3. Not to diminish what is going on back home in Texas, but the
+   weather here has been awful. We got here on the first day of snow for
+   this season. Another data point proving I might have `SAD`_.
+4. The ethnic homogeneity of Switzerland.
+5. Short hair on women.
+6. My eyes are blue.
 
 You may have noticed that Disgaea was not on the above list. This is
 because I have been fervently playing my PSP copy, which has sustained

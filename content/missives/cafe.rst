@@ -18,8 +18,7 @@ For Now.
 
 ----------
 
-Did you know that Newman-O's have 65 kilocalories per cookie?!
-::shudder::
+Did you know that Newman-O's have 65 kilocalories per cookie?! *shudder*
 
 I'd still go down on you Paul, but at this point it would mean an extra
 6 feet of digging.

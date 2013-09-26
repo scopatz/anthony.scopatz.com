@@ -19,12 +19,9 @@ conversation.
 | **Boy:** So what do you say to them?
 |  **Girl:** Nothing. I don't feel that way.
 |  **Boy:** ~pause~
-|  **Girl:** I mean, obviously they were G-d's chosen people for
-thousands of years before...
-|  **Boy:** But, I mean, don't you and your friends still think they are
-all going to hell or something?
-|  **Girl:** Maybe. But its not like they are total pagans. I don't feel
-the need to go out and to try to convert them like they do.
+|  **Girl:** I mean, obviously they were G-d's chosen people for thousands of years before...
+|  **Boy:** But, I mean, don't you and your friends still think they are all going to hell or something?
+|  **Girl:** Maybe. But its not like they are total pagans. I don't feel the need to go out and to try to convert them like they do.
 |  **Boy:** But what do you say to your friends then?
 |  **Girl:** Well I have some Jewish friends, and...
 

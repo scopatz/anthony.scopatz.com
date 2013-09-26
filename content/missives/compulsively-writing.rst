@@ -41,9 +41,9 @@ If someone wants to make a point about not impacting their environment,
 then they should become a vegetarian, or stop driving or flying, or just
 let themselves die if they feel that strongly about it. /sigh
 
-| **2)** The other point where G Gundam gets props is that one of the
+**2)** The other point where G Gundam gets props is that one of the
 supporting men isn't. They do a very
-|  good job of covering up the fact that George de Sand (of Neo France)
+good job of covering up the fact that George de Sand (of Neo France)
 is probably a woman. They did name the character after `George Sand`_,
 the male pen name of a famous French woman author. The real person took
 the name to get published; the cartoon character probably took the name

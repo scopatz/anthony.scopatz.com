@@ -27,8 +27,6 @@ are typified by "Doesn't Like to Be Labeled." It is a logical trap.
 Doing anything is probably doing the wrong thing, and doing nothing is
 falling into that trap.
 
-| 'Round on the ouroboros we go. How many sand worms will get to eat me,
-Lady Jessica, Duncan Idaho?
+| 'Round on the ouroboros we go. How many sand worms will get to eat me, Lady Jessica, Duncan Idaho?
 |  -----------
-|  1) Not that such things didn't have associated contexts before, I
-simply failed to realize them. Ostensibly because I am a slow.
+|  1) Not that such things didn't have associated contexts before, I simply failed to realize them. Ostensibly because I am a slow.

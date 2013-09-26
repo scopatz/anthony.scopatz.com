@@ -31,9 +31,8 @@ flat negative and whose positive side is a tree. But the forest is dark
 and finding the right set of branches could leave you hanging for a
 couple of years, waiting for new growth.
 
-| Am I content to hang? Yes, though I might braciate elsewhere. Like to
-Texas.
-|  Am I sad? No, even though the it was understood that this contingency
+Am I content to hang? Yes, though I might braciate elsewhere. Like to Texas.
+Am I sad? No, even though the it was understood that this contingency
 was the most likely, it is still disappointing hear it. However, I am a
 bit proud that I made it this far. Lesser men and women have fallen
 ^\_^.

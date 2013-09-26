@@ -16,9 +16,11 @@ Jessica (Javilina) in other news is back up to 196 stalks/week herself.
 And then there is this guy, who is such a gem he deserves the rest of
 the post.
 
-| \ **Conversation: RE:Subject: 4 or 5-Star Looks Match**
-| **=====flavilin wrote=====**
-|  Hey deizez,
+**Conversation: RE:Subject: 4 or 5-Star Looks Match**
+
+**=====flavilin wrote=====**
+
+Hey d,
 
 You and flavilin both rated each other 4 or 5 stars on looks. Congrats
 on the match!
@@ -26,8 +28,9 @@ on the match!
 We let you both know as a courtesy. You can turn this off if you'd like,
 on your settings page.
 
-| **=====deizez wrote=====**
-|  YES! Hey. Most of my messages like this tell me that I suck because I
+**=====d wrote=====**
+
+YES! Hey. Most of my messages like this tell me that I suck because I
 gave somebody a one just to see the next person- well, cool for you,
 because I rock. Plus, I guess I think you rock, too, therefore the
 awesome message that we gave each other high marks- and everybody needs
@@ -35,10 +38,11 @@ some love-.
 
 Uh, neat... I don't do Texas, but I'd do you.
 
--Trotter
+-T
 
-| **=====flavilin wrote=====**
-|  Ahahaha you had me laughing so hard with "I don't do Texas, but I'd
+**=====flavilin wrote=====**
+
+Ahahaha you had me laughing so hard with "I don't do Texas, but I'd
 do you." In fact I could say the same thing Iowa. (I had an Uncle get
 married there. I was not a fan of the wedding.)
 
@@ -47,11 +51,12 @@ we both rock!
 
 You look pretty cold in some of your pictures.
 
-| Cheers,
-|  Mark
+Cheers,
+M
 
-| **=====deizez wrote=====**
-|  A couple of hours ago, I made the drunken decision to make my first
+**=====d wrote=====**
+
+A couple of hours ago, I made the drunken decision to make my first
 iTunes rent, so I rented the movie 2 Days in Paris... I love Adam
 Goldberg- he's one of my top three Jews. Did you know that in French the
 name Simon sounds like our word for semen? Gross, eh?

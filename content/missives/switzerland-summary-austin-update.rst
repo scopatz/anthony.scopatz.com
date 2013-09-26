@@ -9,23 +9,27 @@ Switzerland Summary & Austin Update
 I'll try to keep this short and snappy, but I have the feeling it will
 run away on me.
 
-| After my last update I headed to Zurich and did a walking tour of the
+After my last update I headed to Zurich and did a walking tour of the
 town. The points of interest are as follows:
-|  **1) Grossmuenster Church:** This was the church that the eminent
+
+**1) Grossmuenster Church:** This was the church that the eminent
 `Zwingli`_ presided in. If I had to pick a Christian hero, tops would
 certainly be Joan of Arc. But a \*very\* close second would be Zwingli.
 His teachings were very much in Jewish Rationalist tradition (eg Rambam,
 Spinoza), if not intentionally. Also, rad statue of Charlemagne (likely
 my 3rd Christian hero) in the crypts.
-|  **2) Fraumuenster Church:** Former abbey that has a a ton of
+
+**2) Fraumuenster Church:** Former abbey that has a a ton of
 beautiful stained class windows done by `Marc Chagall`_. You know, the
 nice Jewish painter...
-|  **3) Zurich Synagogue:** I found it, but it was locked and I couldn't
+
+**3) Zurich Synagogue:** I found it, but it was locked and I couldn't
 go inside. Looked to be more of a Sephardic construction, which
 interested me. Also, the iron work on the outside was a repeating
 pattern of pentagons-inscribed-within-pentagrams. Where's the Mogen
 David, WTF? Kissed the mezuzah and left.
-|  **4) Rietberg Museum:** Zurich has 50 odd museums so I had to be a
+
+**4) Rietberg Museum:** Zurich has 50 odd museums so I had to be a
 little choosy. So I went for the one that was only a moderate hike
 though a park (I kid you not) called the Arboretum. The museum featured
 mostly Ancient Asian works, with a smattering of works by indigenous

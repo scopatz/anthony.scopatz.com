@@ -39,5 +39,5 @@ The other short story in the book and the essay as well were almost as
 good.
 
 | It seemed odd that noone had thought of it before but in general there
-is no accounting for the bovine stupidity of mankind.
+| is no accounting for the bovine stupidity of mankind.
 |  --Odysseus on his plan to hear the Siren's Song.

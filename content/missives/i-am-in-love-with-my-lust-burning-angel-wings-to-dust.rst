@@ -9,10 +9,8 @@ So a black man walking along the beach found a lamp in the sand. He
 picked it up and rubbed it and out popped a Jewish genie. The genie
 said, "I'll grant you two wishes. Anything you desire."
 
-| The black gentleman thought about this for a while and then said,
-"First, I wish to be white. And secondly I wish to be next to some warm,
-wet pussy." So the genie turned him into a tampon.
-|  --From the Truly Tasteless Joke Book
+| The black gentleman thought about this for a while and then said, "First, I wish to be white. And secondly I wish to be next to some warm, wet pussy." So the genie turned him into a tampon.
+| --From the Truly Tasteless Joke Book
 
 I don't know if any one else has ever noticed this, but I have. In
 Austin, walking around campus, I ofen see hot, hawt, or good-looking
@@ -66,10 +64,9 @@ bacteria so now we must kill it.
 Lets hope this works!
 
 | How many punk rockers does it take to change a lightbulb?
-|  Two (2). One to change the bulb and the other to kick the chair out
-from under him.
-|  --Also from TTJB
+| Two (2). One to change the bulb and the other to kick the chair out from under him.
+| --Also from TTJB
 
 | What do call a giggling planetary scientist?
-|  A planetLOLogist
-|  --Another Dune Joke by YT
+| A planetLOLogist
+| --Another Dune Joke by YT

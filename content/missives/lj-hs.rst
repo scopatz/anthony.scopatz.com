@@ -26,7 +26,7 @@ LJ HS
    <form action="http://www.memegen.net/viewmeme.pl" method="post">
 
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| If LJ Were a High School by Karen\_Walker   |
+| If LJ Were a High School by Karen\_Walker   |                                                                                                                                            |
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 | Username                                    |                                                                                                                                            |
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -71,21 +71,12 @@ shall dispense now.
 
 | To say Marco would be a lunch lady because he is Italian, is racist.
 |  Kerry as a cheerleader....hmm.....not seeing it.
-|  While Patrick may have more upper body strength then y.t., him
-playing football, would onlt happen when Texas freezes over, and
-thankfully, it has just thawed.
+|  While Patrick may have more upper body strength then y.t., him playing football, would onlt happen when Texas freezes over, and thankfully, it has just thawed.
 |  Garrick as prom queen, I can actually see this.
-|  Robin, while she might cut you in your sleep, not really gang banger
-material ^\_^
+|  Robin, while she might cut you in your sleep, not really gang banger material ^\_^
 |  The next three work.
 |  We all know how goth Julie is.
-|  And Andrew as the class clown will happen when Paladins start
-sacrificing virgins (they were evil virgins, it's ok) to satisfy their
-deities ritualistic craving for all-male bukkake orgies with all
-participants caked in dried blood (provided by said virgin). True and
-Holy enlightenment can \*only\* be attained through the full mixing of
-humours to show our bodies in addition to our minds and spirits that we
-are all one and we may thus be freed from our mortal bonds to live a
-life of purity and faith in the one we call lord.
+|  And Andrew as the class clown will happen when Paladins start sacrificing virgins (they were evil virgins, it's ok) to satisfy their deities ritualistic craving for all-male bukkake orgies with all participants caked in dried blood (provided by said virgin). True and Holy enlightenment can \*only\* be attained through the full mixing of humours to show our bodies in addition to our minds and spirits that we are all one and we may thus be freed from our mortal bonds to live a life of purity and faith in the one we call lord.
+|
 
 And if you read that last part, I apologize.

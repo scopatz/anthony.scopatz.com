@@ -8,9 +8,7 @@ Not Quite Modern
 | - bold the ones you’ve read
 | - italicize the ones you want to read
 | - strike out the ones you've read but didn't like
-| - put a cross (+) in front of the ones on your book shelf (i'm not
-guaranteeing the accuracy of this, because I'm nowhere near my
-bookshelf.
+| - put a cross (+) in front of the ones on your book shelf (i'm not guaranteeing the accuracy of this, because I'm nowhere near my bookshelf.
 | - and asterisk (\*) the ones you’ve never heard of.
 
 | 1. The Da Vinci Code (Dan Brown)
@@ -18,8 +16,8 @@ bookshelf.
 | **3. To Kill A Mockingbird (Harper Lee)**
 | 4. Gone With The Wind (Margaret Mitchell)--
 | [STRIKEOUT:**5. The Lord of the Rings: Return of the King (Tolkien)
-6. The Lord of the Rings: Fellowship of the Ring (Tolkien)
-7. The Lord of the Rings: Two Towers (Tolkien)**]
+| 6. The Lord of the Rings: Fellowship of the Ring (Tolkien)
+| 7. The Lord of the Rings: Two Towers (Tolkien)**]
 | 8. Anne of Green Gables (L. M. Montgomery)
 | 9. \*Outlander (Diana Gabaldon)
 | 10. \*A Fine Balance (Rohinton Mistry)
@@ -34,20 +32,20 @@ bookshelf.
 | 19. \*Harry Potter and the Prisoner of Azkaban(Rowling)
 | 20. Jane Eyre (Charlotte Bronte)
 | **[STRIKEOUT:21. The Hobbit (Tolkien)]
-22. The Catcher in the Rye (J. D. Salinger)
-23. Little Women (Louisa May Alcott)**
+| 22. The Catcher in the Rye (J. D. Salinger)
+| 23. Little Women (Louisa May Alcott)**
 | 24. \*The Lovely Bones (Alice Sebold)
 | 25. Life of Pi (Yann Martel)
 | **26. The Hitchhiker’s Guide to the Galaxy (Douglas Adams)
-27. Wuthering Heights (Emily Bronte)
-28. The Lion, The Witch, and the Wardrobe (C. S. Lewis)**
+| 27. Wuthering Heights (Emily Bronte)
+| 28. The Lion, The Witch, and the Wardrobe (C. S. Lewis)**
 | 29. East of Eden (John Steinbeck)
 | 30. Tuesdays with Morrie (Mitch Albom)
 | **31. Dune (Frank Herbert)**
 | 32. The Notebook (Nicholas Sparks)
 | 33. Atlas Shrugged (Ayn Rand)
 | **34. 1984 (Orwell)
-35. The Mists of Avalon (Marion Zimmer Bradley)**
+| 35. The Mists of Avalon (Marion Zimmer Bradley)**
 | 36. \*The Pillars of the Earth (Ken Follett)
 | 37. \*The Power of One (Bryce Courtenay)
 | 38. \*I Know This Much is True (Wally Lamb)
@@ -57,8 +55,7 @@ bookshelf.
 | 42. \*The Kite Runner (Khaled Hosseini)
 | 43. \*Confessions of a Shopaholic (Sophie Kinsella)
 | 44. \*The Five People You Meet In Heaven (Mitch Albom)
-| **45. Bible (My Version...which is the only one with all the good
-stuff..Though I did read the book of Mormom too)**
+| **45. Bible (My Version...which is the only one with all the good stuff..Though I did read the book of Mormom too)**
 | 46. Anna Karenina (Tolstoy)
 | 47. The Count of Monte Cristo (Alexandre Dumas)
 | 48. Angela’s Ashes (Frank McCourt)
@@ -66,8 +63,8 @@ stuff..Though I did read the book of Mormom too)**
 | 50. \*She’s Come Undone (Wally Lamb)
 | 51. The Poisonwood Bible (Barbara Kingsolver)
 | **[STRIKEOUT:52. A Tale of Two Cities (Dickens)]
-53. +Ender’s Game (Orson Scott Card)
-[STRIKEOUT:54. Great Expectations (Dickens)]**
+| 53. +Ender’s Game (Orson Scott Card)
+| [STRIKEOUT:54. Great Expectations (Dickens)]**
 | **55. The Great Gatsby (Fitzgerald)**
 | 56. \*The Stone Angel (Margaret Laurence)
 | 57. Harry Potter and the Chamber of Secrets (Rowling)
@@ -106,7 +103,7 @@ stuff..Though I did read the book of Mormom too)**
 | 90. \*Kane and Abel (Jeffrey Archer)
 | 91. \*In The Skin Of A Lion (Ondaatje)
 | **92. Lord of the Flies (Golding)
-93. The Good Earth (Pearl S. Buck)**
+| 93. The Good Earth (Pearl S. Buck)**
 | 94. \*The Secret Life of Bees (Sue Monk Kidd)
 | 95. The Bourne Identity (Robert Ludlum)
 | **96. The Outsiders (S. E. Hinton)**
@@ -114,6 +111,7 @@ stuff..Though I did read the book of Mormom too)**
 | 98. \*A Woman of Substance (Barbara Taylor Bradford)
 | 99. \*The Celestine Prophecy (James Redfield)
 | 100. Ulysses (James Joyce)
+|
 
 So that was certainly aimed at the not-quite-modern cross section
 literature.  There are many and varied other categories of books, to my

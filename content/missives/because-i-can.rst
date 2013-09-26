@@ -11,8 +11,7 @@ anything I write will be incomplete until the weekend is over.
 
 So for those of you who don't know, I passed my PhD Proposal Defense on
 Tuesday. So other than some coursework, this was literally my last
-hurdle before I go up to defend the real deal next May! ::crosses
-fingers::
+hurdle before I go up to defend the real deal next May! *crosses fingers*
 
 The experience left me drained more than excited. But in celebration, I
 ate some things that I knew would hurt my stomach. And they did.

@@ -6,14 +6,14 @@ The Dune Jokes Will Contiune Until I Read Something More Impressive
 :slug: the-dune-jokes-will-contiune-until-i-read-something-more-impressive
 
 | I must drink beer.
-|  Beer is the mind-killer.
-|  Beer is the little buzz that brings total hardcore crunkness.
-|  I will face this beer.
-|  I will permit it to pass into me and through me.
-|  And when it has gone I will turn the barstool to see the rest of the
-bar.
-|  When the beer is gone there will be none left.
-|  Only one Bourbon and one Scotch.
+| Beer is the mind-killer.
+| Beer is the little buzz that brings total hardcore crunkness.
+| I will face this beer.
+| I will permit it to pass into me and through me.
+| And when it has gone I will turn the barstool to see the rest of the bar.
+| When the beer is gone there will be none left.
+| Only one Bourbon and one Scotch.
+|
 
 If you couldn't tell I went drinking last night.
 
@@ -55,9 +55,10 @@ thuggishly tapped me on the shoulder after the music had stopped and the
 floor was clearing.
 
 | “We're leaving.” I said.
-|  “I'm not a bouncer dude...” he responded and I looked at him blankly.
-|  “... That girl over there wants to talk to you dude.”
-|  “What the fuck are you talking about man. Go away.” I left.
+| “I'm not a bouncer dude...” he responded and I looked at him blankly.
+| “... That girl over there wants to talk to you dude.”
+| “What the fuck are you talking about man. Go away.” I left.
+|
 
 The girl was surrounded by a veritable posse of others. I am glad that
 even in my much inebriated state that I could smell the stink on this.
@@ -82,7 +83,8 @@ Last night was amazing. I really enjoyed myself. I guess some fun
 quantum tunneled into Idaho.
 
 | My son found a nice little vixian
-|  He tells me she's a wealthy Ixian.
-|  But for my Jewish boy
-|  Never a Goy.
-|  And besides she is such a shiksian.
+| He tells me she's a wealthy Ixian.
+| But for my Jewish boy
+| Never a Goy.
+| And besides she is such a shiksian.
+|

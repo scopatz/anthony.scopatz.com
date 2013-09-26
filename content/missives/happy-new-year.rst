@@ -26,12 +26,11 @@ The other and final thing of note today was that I got to talk to Sean.
 The following is an excerpt as related to the Super-Secret Project
 (SSP):
 
-| Me: So I bought one of those robot kits that you bought Julian for his
-Bar Mitzvah.
+| Me: So I bought one of those robot kits that you bought Julian for his Bar Mitzvah.
 |  Sean: Oh really? Cool. How far are you? What can it do?
-|  Me: Well I got to a certain point but....I am working on a rather
-involved subproject that isn't in the book.
+|  Me: Well I got to a certain point but....I am working on a rather involved subproject that isn't in the book.
 |  Sean: Of Course you are!
+|
 
 After SSP is complete I am thinking about trying my hand at writing
 fiction. I wonder if I am any good at it. Maybe I could write a story

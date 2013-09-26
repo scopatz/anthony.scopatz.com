@@ -5,9 +5,9 @@ American Aetheists in Film
 :category: missives
 :slug: american-aetheists-in-film
 
-| Judy was a daughter of Godlessness...Bob was a son of the
-Gospel...Intolerance versus Intolerance.
+| Judy was a daughter of Godlessness...Bob was a son of the Gospel...Intolerance versus Intolerance.
 |  --Intertitle for the Godless Girl
+|
 
 This movie was one of the hottest films I have ever seen. So first off
 it was amazing. Last year I also saw a film that became one of my
@@ -58,6 +58,5 @@ project themselves exclusively (or nearly so) as anti-Christians, where
 as in "the Godless Girl" a Christian was portraying them as
 anti-Christian.
 
-| We should all get together and see it at some point. Ryan really like
-it too.
-|  And here I go off on a movies again..
+We should all get together and see it at some point. Ryan really like it too.
+And here I go off on a movies again..

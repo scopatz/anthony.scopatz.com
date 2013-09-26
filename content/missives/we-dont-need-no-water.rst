@@ -66,6 +66,6 @@ satisfying.
 liking Protomen. It is sweetness in my heart to know there are others.
 Let this city burn through the night.
 
-| And I am off to Three Rivers, catch you on the Kaweah or on the Flip
-side!
-|  Peace
+And I am off to Three Rivers, catch you on the Kaweah or on the Flip side!
+
+Peace

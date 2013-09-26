@@ -23,9 +23,7 @@ My belated Mother's day present, delivered at the Bar Mitzvah:
 |  Of your death we'll have none.
 |  ------For as soon comes the Fall,
 |  ------It's to Texas with Ya'll
-|  But while you're here we will have a ton of fun in the sun and I'll
-shun every pun till your done when I'll buy a gun at which point you'd
-better start to run.
+|  But while you're here we will have a ton of fun in the sun and I'll shun every pun till your done when I'll buy a gun at which point you'd better start to run.
 
 So my trip was fantastic, mostly. Basically sans everything that was
 travel related and I rocked it. There is so much to tell I will

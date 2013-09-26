@@ -71,11 +71,13 @@ the UN's condemnation last week).
 
 Peace should be pursued for peace's own sake.
 
-| ---
-|  \*Also, food for thought, why do left-leaning in this country people
+-----
+
+\*Also, food for thought, why do left-leaning in this country people
 support Hamas over the Israelis, yet not the Tamil Tigers of Eelam over
 the Sri Lankans?
-|  \*\*Also, I am a believer in Land-for-Peace and a Two State solution.
+
+\*\*Also, I am a believer in Land-for-Peace and a Two State solution.
 Hopefully within my lifetime or sooner. I do not deny the Palestinians
 their sovereignty.
 

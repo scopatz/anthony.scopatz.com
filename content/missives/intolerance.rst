@@ -36,7 +36,8 @@ between you having an intense disagreement with an idea or belief and
 hating those whom hold that belief.
 
 | Disagree with them: Yes.
-|  Despise them: No.
+| Despise them: No.
+|
 
 Maybe compassion is a virtue, and maybe you don't have the time, but I
 swear you have something to gain by not thinking that half of the world
@@ -44,8 +45,9 @@ hates you because you hate them.
 
 Here are a couple of hot button issues where you can start:
 
-| **1) To the No on `Prop 8`_ People:**
-|  Listen, your cause is fundamentally about the oppression of people.
+**1) To the No on `Prop 8`_ People:**
+
+Listen, your cause is fundamentally about the oppression of people.
 You do your cause a grave injustice by being intolerant of those who
 hold a different opinion. You should try to convince them, not disregard
 them as stupid. Start with basics, like being afforded "life, liberty,
@@ -61,8 +63,9 @@ if you allow lesbians but not gays then that is sexist... Rather than
 hating on people next door/next city/next county you should do what Dan
 Savage says and money to the No on 8 organization. And vote!
 
-| **2) To the Yes on `Prop 8`_ People:**
-|  This is probably a fundamentally intolerant viewpoint. I am not
+**2) To the Yes on `Prop 8`_ People:**
+
+This is probably a fundamentally intolerant viewpoint. I am not
 saying you need to jump into writing homoerotic fan fiction. But what is
 so wrong with people living different than you? Only half of those
 people murdered in Germany's WWII death camps were Jewish, the other
@@ -74,8 +77,9 @@ for civil unions. But I would think that this would fall under the
 movement. Also, don't hate your friendly gay neighbor for their life of
 sin, just donate money to your organization. And vote!
 
-| **3) Atheists:**
-|  This is a big category, so rather than having a lot of qualifiers and
+**3) Atheists:**
+
+This is a big category, so rather than having a lot of qualifiers and
 explaining things for various types of unbelievers, **I am only talking
 about fundamentalist, intolerant atheists**. Let's start with a song,
 huh?

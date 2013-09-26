@@ -30,8 +30,10 @@ Please also note that this is a total group effort (it takes a village).
 If you want in or just have some comments or suggestions, please let me
 know.
 
-| OBSERVATIONS AND IMPLICATIONS:
-|  1) While once I might have been more effeminate in body type than
+OBSERVATIONS AND IMPLICATIONS
+-----------------------------
+
+1) While once I might have been more effeminate in body type than
 masculine, those days are sadly gone.
 
 2) This is soundly the most intense role-playing experience I have ever

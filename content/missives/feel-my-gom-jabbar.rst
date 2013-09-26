@@ -5,8 +5,7 @@ FEEL MY GOM JABBAR
 :category: missives
 :slug: feel-my-gom-jabbar
 
-| What is wrong with this country is that when given the choice more
-people in this country would rather talk about the draft than breasts.
+| What is wrong with this country is that when given the choice more people in this country would rather talk about the draft than breasts.
 |  --Penn Jillette
 
 So I went and walked around the river where the fireworks were held last

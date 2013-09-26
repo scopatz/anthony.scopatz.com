@@ -9,10 +9,8 @@ So in my travels today I managed to hit three capitols.
 
 Austin -> Washington DC -> Raleigh
 
-| Austin had the nicest airport.
-|  DC's was the most corporate and made me feel dirty and had the worst
-layout.
-|  Raleigh's was the oldest and most ghetto.
+Austin had the nicest airport. DC's was the most corporate and made me feel 
+dirty and had the worst layout. Raleigh's was the oldest and most ghetto.
 
 However, while I was walking to my hotel room I met a fellow who used to
 live in Hyde Park and shopped at Wheatsville. Go Figure!

@@ -5,9 +5,8 @@ Oddness with Jokes!
 :category: missives
 :slug: oddness-with-jokes
 
-| Q: Why is having a wife and a mistress better than getting a divorce
-and then remarrying?
-|  A: Atreides never as satisfying.
+| Q: Why is having a wife and a mistress better than getting a divorceand then remarrying?
+| A: Atreides never as satisfying.
 
 I hung out with Jake and Josh last night at Josh's house. This was after
 my crushing defeat at the hands of Google Maps.
@@ -84,6 +83,5 @@ latter.
 
 I apologize is this post was a little too Whiny. Was it?
 
-| Q: Why was the God-Emperor of Dune complacent with the plot to kill
-him by throwing him off of a bridge?
-|  A: Well, you can Leto horse to water....
+| Q: Why was the God-Emperor of Dune complacent with the plot to kill him by throwing him off of a bridge?
+| A: Well, you can Leto horse to water....

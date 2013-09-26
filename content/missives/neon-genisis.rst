@@ -5,15 +5,14 @@ Neon Genisis
 :category: missives
 :slug: neon-genisis
 
-| Ok So, I just got through watching Evangelion in a blitz 2-day run
-movies included. I hadn't seen it since I was 14 or so. For those of you
-who
-|  haven't seen it, there are really three main age categories of the
+Ok So, I just got through watching Evangelion in a blitz 2-day run
+movies included. I hadn't seen it since I was 14 or so. For those of you who
+haven't seen it, there are really three main age categories of the
 characters.
 
 | 1) 14 yro
-|  2) 30-ish yro
-|  3) Those older than 30-ish
+| 2) 30-ish yro
+| 3) Those older than 30-ish
 
 I have changed much since I last saw it and have learned a lot about
 animation and film and psychology since. I found myself stuggling with

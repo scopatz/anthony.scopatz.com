@@ -17,14 +17,12 @@ almost called John by "Julian" a couple of times. That has got to be
 some suppressed memory of somewhere. There are other freaky coincidences
 that only my family members would get ("Sprinkles", anyone?).
 
-| I am more or less contented being out here. Here is an update on my
-possible schedule:
-|  -Leave IA on Wednesday morning, end up somewhere in those nebulous
-inner states.
+| I am more or less contented being out here. Here is an update on my possible schedule:
+|  -Leave IA on Wednesday morning, end up somewhere in those nebulous inner states.
 |  -Thursday continue onto Reno. Meet up with my Mom here for the night.
 |  -Friday hang with my Mom until I go the BA.
 |  -Friday Night to Sunday Morning be in SF/Daly City.
-|  -Sunday Night - Monday or Tuesday be in Morgan Hill and then return
-to Santa Ynez/Santa Barbara.
+|  -Sunday Night - Monday or Tuesday be in Morgan Hill and then return to Santa Ynez/Santa Barbara.
+|
 
 Hope this helps.

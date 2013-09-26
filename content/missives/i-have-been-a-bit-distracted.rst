@@ -30,10 +30,11 @@ summer and how I would rate them, WITH A COMPLETE LACK OF JUSTIFICATION
 (out of 100):
 
 | **97** *Speed Racer
-*\ **85** *Harold and Kumar: Escape from Guantanamo Bay
-*\ **83** *Read or Die*
+| **85** *Harold and Kumar: Escape from Guantanamo Bay
+| **83** *Read or Die*
 | **80** *Iron Man
-*\ **76** *Re-animator
-*\ **66** *Hellboy*
+| **76** *Re-animator
+| **66** *Hellboy*
 | **64** *Indiana Jones*
 | **38** *Prince Caspian*
+|

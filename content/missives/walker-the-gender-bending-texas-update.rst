@@ -18,8 +18,9 @@ more play than the Scopatz.
 Here are some of the creepy messages I got. Enjoy the voyeurism while it
 lasts!
 
-| **#1 to Jessica--------**
-|  *Hi, im 28 in the USAF and happily married to the woman i love and
+**#1 to Jessica--------**
+
+*Hi, im 28 in the USAF and happily married to the woman i love and
 would never think to leave. But lately ive wanted to experiment more
 sexually and she's not into that. I just dont want to get to the end of
 my life and still have regrets you know what i mean? I havnt been with
@@ -29,17 +30,19 @@ me. So if your at all interested in no strings attached casual sex, give
 me a call on my cell. 402 ### ####* [from San Antonio, but Columbus, OH
 area code]
 
-| **#2 to Mark--------**
-|  *so what's up with you? do u want to have alittle fun... yeah, i know
+**#2 to Mark--------**
+
+*so what's up with you? do u want to have alittle fun... yeah, i know
 my profile says straight but i still like to have fun with guys... i
 just keep it low key! :P*
 
-| **#3 to Mark--------**
-|  *you are my new leo crush and i am deeply and powerfully in love with
+**#3 to Mark--------**
+
+*you are my new leo crush and i am deeply and powerfully in love with
 you over the internet. YES. i am smoking hot, a good dancer, very
 attracted to you, and furthermore i'm from nashville tennessee so we can
 have a country-off. or should i say... a cuntry-off?
- i have magical soothsaying abilities, and my inner eye says that i
+i have magical soothsaying abilities, and my inner eye says that i
 would probably vacillate between loving and hating you, and i cannot
 promise that you would not ever be injured by a bottle of wild turkey to
 the head. such is life. my AIM screenname is ~blanked~ - feel free to
@@ -48,9 +51,9 @@ ever get; i sure as hell won't drive 500 miles to see anybody i met on
 the internet, not even if he had a 10-inch dick and a testicle condition
 that required he empty his balls every half hour or die horribly.*
 
-| **#4 to Mark--------**
-|  *your profile is so much better than mine holy crap you have matching
-pictures!*
+**#4 to Mark--------**
+
+*your profile is so much better than mine holy crap you have matching pictures!*
 
 And it is totally fake! Anyways, let me know which is your favorite. I
 think I am going to have to go with either #2 the classic closet case in

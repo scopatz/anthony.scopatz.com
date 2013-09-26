@@ -48,10 +48,11 @@ sent me!!! Maybe this was worth it.
 Lastly, I am thrilled that my life will finally be unpaused. There are
 all these little details I can now worry about again. AND I can forget
 about all of the big details I can do nothing to change. THAT was the
-\*real\* success of the day.
+*real* success of the day.
 
-| ---
-|  Needless to say, it takes a village to get through this sort of
+---------
+
+Needless to say, it takes a village to get through this sort of
 thing. I would like to thank every member of the tribe (local & virtual)
 that helped me get through this trying time. I know the past 5 months
 have been no easier on you than on me. In any even thank you all for

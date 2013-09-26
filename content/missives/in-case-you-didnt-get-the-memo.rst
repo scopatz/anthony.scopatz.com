@@ -43,10 +43,12 @@ my emotional state, having me think about yours is nearly totally out of
 the question.
 
 | Seeya on the Flip Side!
-|  Wish Me Luck!
+| Wish Me Luck!
+|
 
-| -----
-|  \*Note: I have been studying basically everyday since November for
+---------
+
+\*Note: I have been studying basically everyday since November for
 this. I even managed to squeeze in 6-8 hours a day while my mother was
 here, post-nuptials. So what I mean here is more like 8-14 hours a day.
 Hell, I like neutrons, but I didn't wanna marry them. I need a real fake

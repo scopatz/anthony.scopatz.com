@@ -22,8 +22,7 @@ everything. You're probably a great wife or girlfriend, and you know how
 to make sure that the ones you love are happy. You're probably fun in a
 conversation and I'm sure that you are as loveable as you are beautiful.
 
-`
- Take The What Kind of Girl are You Test`_ at `**HelloQuizzy**`_
+`Take The What Kind of Girl are You Test`_ at `**HelloQuizzy**`_
 
 .. _
  Take The What Kind of Girl are You Test: http://www.helloquizzy.com/tests/the-what-kind-of-girl-are-you-test
