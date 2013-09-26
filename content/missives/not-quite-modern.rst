@@ -15,7 +15,7 @@ Not Quite Modern
 | 2. Pride and Prejudice (Jane Austen)
 | **3. To Kill A Mockingbird (Harper Lee)**
 | 4. Gone With The Wind (Margaret Mitchell)--
-| [STRIKEOUT:**5. The Lord of the Rings: Return of the King (Tolkien)
+| [STRIKEOUT:**5. The Lord of the Rings: Return of the King (Tolkien)**
 | 6. The Lord of the Rings: Fellowship of the Ring (Tolkien)
 | 7. The Lord of the Rings: Two Towers (Tolkien)**]
 | 8. Anne of Green Gables (L. M. Montgomery)
