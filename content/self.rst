@@ -40,15 +40,46 @@ Major Projects
 
 |xdress| - `XDress <http://xdress.org/>`_, lead developer
 
-.. |numfocus| image:: |filename|/images/
+.. |numfocus| image:: |filename|/images/nf-web-with-tag.jpg
     :align: middle
     :target: http://numfocus.org/
 
-|numfocus| - `NumFOCUS, Inc. <http://numfocus.org/>`_, Treasurer & Board Member
+|numfocus| - `NumFOCUS, Inc. <http://numfocus.org/>`_, treasurer & board member
 
 .. |pytables| image:: |filename|/images/pytables-small.png
     :align: middle
     :target: http://pytables.github.io/
 
-|pytables| - `PyNE <http://pytables.github.io/>`_, lead developer
+|pytables| - `PyTables <http://pytables.github.io/>`_, lead developer
+
+
+Other Projects
+---------------
+
+.. |inscight| image:: |filename|/images/inscight.jpg
+    :align: middle
+    :target: http://inscight.org/
+
+|inscight| - `inSCIght <http://inscight.org/>`_, host & moderator
+
+.. |swc| image:: |filename|/images/software-carpentry-logo-285x58.png
+    :align: middle
+    :target: http://software-carpentry.org/
+
+|swc| - `Software Carpentyr <http://software-carpentry.org/>`_, tutor
+
+.. |scipy| image:: |filename|/images/scipy_logo_shiny_blue_no_reflec.png
+    :align: middle
+    :target: http://www.scipy.org/
+
+|scipy| - `SciPy <http://www.scipy.org/>`_, developer
+
+.. |yt| image:: |filename|/images/yt_icon.png
+    :align: middle
+    :target: http://yt-project.org/
+
+|yt| - `inSCIght <http://yt-project.org/>`_, developer
+
+
+
 
