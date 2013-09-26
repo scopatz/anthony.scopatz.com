@@ -46,6 +46,7 @@ GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
 
 MENUITEMS = [('Missives', 'category/missives.html'),
              ('Archives', 'archives.html'),
+             ('Self', 'self.html'),
              ('About', 'about.html'),
              ('Contact', 'contact.html'),
              ]
