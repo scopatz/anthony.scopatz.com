@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-25T00:00:00-05:00</updated><entry><title>About</title><link href="http://anthony.scopatz.com/about.html" rel="alternate"></link><updated>2013-09-25T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-25:about.html</id><summary type="html">&lt;p&gt;This blog represents every blog post I have ever made.  It is therefore cobbled
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-26T00:00:00-05:00</updated><entry><title>Diversity Statement Notes</title><link href="http://anthony.scopatz.com/diversity-statement-notes.html" rel="alternate"></link><updated>2013-09-26T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-26:diversity-statement-notes.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Last week, Matthew Turk asked me to give a brief, 10 minute talk to weekly
+the Astronomy department lunch at Columbia University.  He specifically requested
+that I talk about diversity in technical fields and SciPy 2013.  This was my first
+time speaking on this topic.  I was nervous.  What follows are my mostly undoctored&amp;nbsp;notes.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Matt asked me to talk today about diversity in the worlds of science, scientific
+computing, and software development.   I am guessing this comes out of our
+organization of the SciPy 2013 conference, where I was the communications chair.
+I was changed with increasing attendance from 200 people in 2012 to a hopeful
+350 people.  We sold out weeks in&amp;nbsp;advance.&lt;/p&gt;
+&lt;p&gt;Diversity is a topic near and dear to my heart, so I’d like to start off on a
+personal&amp;nbsp;note.&lt;/p&gt;
+&lt;p&gt;Most of the time, the vast, overwhelming, majority of the time, I think of myself
+as a Python virtual machine.  Occasionally, for survival purposes only, I am also
+a C++ compiler.  Largely I run physics simulations inspired by reality.
+Since computers can do these things way better than I can, I am fairly&amp;nbsp;useless.&lt;/p&gt;
+&lt;p&gt;But this is not how most other humans perceive me.  Most people see me a male, a man.
+I didn’t ask for that.  I am also Jewish - currently a privileged class,
+though not so historically.  I am straight as a broken arrow, have just celebrated
+my first 29th birthday, and earn well above the $40k annual family of 4 median
+poverty line in this&amp;nbsp;country.&lt;/p&gt;
+&lt;p&gt;I could change any of these aspects of myself, but the activation energy to do
+so is high, and most of the time I am going to hum along as a Python interpreter&amp;nbsp;anyway.&lt;/p&gt;
+&lt;p&gt;The current state of diversity is shameful.  Looking only at gender, in software
+development 11% women is considered normal.  PyCon, which had 20% women attendees
+in 2013 is lauded for its extraordinary efforts towards inclusion.  In the physical
+sciences, percentages are not much better, being between 25 - 50% most places.
+Need I remind you that biologically males are the&amp;nbsp;minority!&lt;/p&gt;
+&lt;p&gt;Issues of race, orientation, national origin, &lt;em&gt;etc.&lt;/em&gt; are often times even worse off
+than the gender axis.  These are technical fields.  We should be agnostic to
+these issues and the percentages should roughly match those of the great
+society we live within.  For technical integrity, we should relate to each other
+as Python interpreters and Physics engines, and then as friends.
+We should never interface with each other as classifications.  Types belong in
+programming, not the&amp;nbsp;programmer.&lt;/p&gt;
+&lt;p&gt;Say what you will about LBJs foreign &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; domestic policy, but in justifying
+affirmative action for African Americans he said the following which I believe
+is pertinent to&amp;nbsp;us:&lt;/p&gt;
+&lt;blockquote class="pull-quote"&gt;
+Nothing is more freighted with meaning for our own destiny than the
+revolution of the Negro American&amp;#8230;In far too many ways American Negroes
+have been another nation: deprived of freedom, crippled by hatred, the doors
+of opportunity closed to hope&amp;#8230;But freedom is not enough. You do not wipe
+away the scars of centuries by saying: Now you are free to go where you want,
+and do as you desire, and choose the leaders you please. You do not take a
+person who, for years, has been hobbled by chains and liberate him, bring him
+up to the starting line of a race and then say, &amp;#8216;you are free to compete with
+all the others,&amp;#8217; and still justly believe that you have been completely
+fair&amp;#8230;This is the next and the more profound stage of the battle for civil
+rights. We seek not just freedom but opportunity. We seek not just legal equity
+but human ability, not just equality as a right and a theory but equality as a
+fact and equality as a result&amp;#8230;To this end equal opportunity is essential,
+but not enough, not enough.&lt;/blockquote&gt;
+&lt;p&gt;If the goal is to get to a steady state of equality, then our
+actions require more than not being racist and sexist&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So what to do?&lt;/strong&gt;  We still need to uphold the meritocratic aspects of our
+fields &amp;#8212; no one gets a free pass.  But there are ways to do this that are more
+inclusive than others.  They all involve being more welcoming.  That is it.
+Just let people know that you provide a safe space, you’ll treat them and their
+ideas equally (either equally well or harshly), and that you encourage them but
+will not drag them to&amp;nbsp;participate.&lt;/p&gt;
+&lt;p&gt;Often times, it is the little, overlookable gestures that make a world of
+difference.  Have a diversity statement, have a code of conduct statement,
+provide ladies T-shirts, have a diversity mailing list if&amp;nbsp;requested.&lt;/p&gt;
+&lt;p&gt;The Python Software Foundation has been a true source of leadership in this&amp;nbsp;area:&lt;/p&gt;
+&lt;blockquote class="pull-quote"&gt;
+The Python Software Foundation and the global Python community welcome and
+encourage participation by everyone. Our community is based on mutual respect,
+tolerance, and encouragement, and we are working to help each other live up to
+these principles. We want our community to be more diverse: whoever you are,
+and whatever your background, we welcome you.&lt;/blockquote&gt;
+&lt;p&gt;If you want to go above and beyond this, engage with professional societies that
+cater to diversity.  PyLadies, Women in Science and Engineering, Nuke Pride, and
+so&amp;nbsp;on.&lt;/p&gt;
+&lt;p&gt;If you &lt;em&gt;really&lt;/em&gt; want to jump over the moon, start a non-profit.
+Advocate for inclusion.  Advocate for change. In the face of adversity, stand&amp;nbsp;firm.&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t&amp;nbsp;hate.&lt;/p&gt;
+</summary></entry><entry><title>About</title><link href="http://anthony.scopatz.com/about.html" rel="alternate"></link><updated>2013-09-25T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-25:about.html</id><summary type="html">&lt;p&gt;This blog represents every blog post I have ever made.  It is therefore cobbled
 together from at least four other blogs, not including guests posts.  As such,
 this goes &lt;em&gt;deep&lt;/em&gt; into history and some of the earlier posts should likely
 never be seen by mortal eyes.  Still, I have included them here for to satisfy
