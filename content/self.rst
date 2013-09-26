@@ -24,6 +24,7 @@ Major Projects
 
 .. |cyclus| image:: |filename|/images/cyclus-logo.png
     :align: middle
+    :width: 300px
     :target: http://cyclus.github.io/
 
 |cyclus| - `Cyclus <http://cyclus.github.io/>`_, benevolant dictator
@@ -42,6 +43,7 @@ Major Projects
 
 .. |numfocus| image:: |filename|/images/nf-web-with-tag.jpg
     :align: middle
+    :width: 300px
     :target: http://numfocus.org/
 
 |numfocus| - `NumFOCUS, Inc. <http://numfocus.org/>`_, treasurer & board member
@@ -66,7 +68,7 @@ Other Projects
     :align: middle
     :target: http://software-carpentry.org/
 
-|swc| - `Software Carpentyr <http://software-carpentry.org/>`_, tutor
+|swc| - `Software Carpentry <http://software-carpentry.org/>`_, tutor
 
 .. |scipy| image:: |filename|/images/scipy_logo_shiny_blue_no_reflec.png
     :align: middle
@@ -78,8 +80,22 @@ Other Projects
     :align: middle
     :target: http://yt-project.org/
 
-|yt| - `inSCIght <http://yt-project.org/>`_, developer
+|yt| - `yt <http://yt-project.org/>`_, developer
 
+Metrics
+-------
+
+.. raw:: html
+
+    <a href='https://www.ohloh.net/accounts/111415?ref=Detailed' target='_blank'>
+    <img alt='Ohloh profile for scopatz' border='0' height='35' src='https://www.ohloh.net/accounts/111415/widgets/account_detailed.gif' width='230' />
+    </a>
+
+.. raw:: html
+
+    <a href="http://stackoverflow.com/users/2312428/anthony-scopatz">
+    <img src="http://stackoverflow.com/users/flair/2312428.png?theme=clean" width="208" height="58" alt="profile for Anthony Scopatz at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Anthony Scopatz at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+    </a>
 
 
 
