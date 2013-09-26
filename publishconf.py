@@ -11,7 +11,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 SITEURL = 'http://anthony.scopatz.com'
-#RELATIVE_URLS = False
+RELATIVE_URLS = False
 DISQUS_SITENAME = "anthonyscopatz"
 
 FEED_DOMAIN = SITEURL
