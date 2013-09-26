@@ -59,6 +59,8 @@ $(OUTPUTDIR)/%.html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || find $(OUTPUTDIR) -mindepth 1 -delete
+#	touch _.pyc
+#	rm *.pyc
 
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
