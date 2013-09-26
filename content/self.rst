@@ -19,3 +19,36 @@ and information theory & entropy. I am proudly a fellow of the Python
 Software Foundation and have published and spoken at numerous conferences on 
 a variety of science & software development topics.
 
+Major Projects
+--------------
+
+.. |cyclus| image:: |filename|/images/cyclus-logo.png
+    :align: middle
+    :target: http://cyclus.github.io/
+
+|cyclus| - `Cyclus <http://cyclus.github.io/>`_, benevolant dictator
+
+.. |pyne| image:: |filename|/images/pyne_icon_small.png
+    :align: middle
+    :target: http://pynesim.org/
+
+|pyne| - `PyNE <http://pynesim.org/>`_, lead developer
+
+.. |xdress| image:: |filename|/images/xdress-logo.jpg
+    :align: middle
+    :target: http://xdress.org/
+
+|xdress| - `XDress <http://xdress.org/>`_, lead developer
+
+.. |numfocus| image:: |filename|/images/
+    :align: middle
+    :target: http://numfocus.org/
+
+|numfocus| - `NumFOCUS, Inc. <http://numfocus.org/>`_, Treasurer & Board Member
+
+.. |pytables| image:: |filename|/images/pytables-small.png
+    :align: middle
+    :target: http://pytables.github.io/
+
+|pytables| - `PyNE <http://pytables.github.io/>`_, lead developer
+
