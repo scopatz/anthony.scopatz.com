@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-26T00:00:00-05:00</updated><entry><title>Diversity Statement Notes</title><link href="http://anthony.scopatz.com/diversity-statement-notes.html" rel="alternate"></link><updated>2013-09-26T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-26:diversity-statement-notes.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Last week, Matthew Turk asked me to give a brief, 10 minute talk to weekly
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-30T09:00:00-05:00</updated><entry><title>Bootcamp Student Composition by Domain</title><link href="http://anthony.scopatz.com/bootcamp-student-composition-by-domain.html" rel="alternate"></link><updated>2013-09-30T09:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-30:bootcamp-student-composition-by-domain.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://software-carpentry.org/blog/2013/09/bootcamp-student-domains.html"&gt;Software Carpentry&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+Recently I was challenged to show that computational science is important to 
+biologists, and, more importantly, that biologists care about learning how to 
+develop quality software.  I am &lt;i&gt;not&lt;/i&gt; a biologist.  While I find the 
+subject fascinating I cannot make any broad claims on the topic or hope to speak 
+for all biologists.  So I turned to Software&amp;nbsp;Carpentry.
+&lt;/p&gt;
+
+&lt;p&gt;
+My experience teaching Software Carpentry and related bootcamps has been that 
+biologists are always a significant portion of the student population.  In order
+to demonstrate this I asked to have access to anonymized answers to part of 
+&lt;a href="{{page.root}}/bootcamps/pre-learner.html"&gt;the pre-assessment survey&lt;/a&gt;.
+Specifically, I was interested in the &amp;#8220;&lt;i&gt;Which of the following most closely 
+aligns with your primary discipline?&lt;/i&gt;&amp;#8221; question. With a big assist from Amy 
+Brown I obtained the data I was looking&amp;nbsp;for.
+&lt;/p&gt;
+
+&lt;p&gt;
+Almost immediately, I was confronted with the problem of who exactly is a biologist, 
+physicist, and so on.  The pre-assessment survey options are too fine grained for 
+purposes here.  For example, I consider astrophysicist and geologists both to be 
+physicists.  Furthermore, since the survey question is a check-box type the students
+could select multiple options.  Their selections may span multiple domains.  
+Finally, there is a pesky &amp;#8220;Other&amp;#8221; option which allows the students to submit 
+any discipline they desire.  
+This leads to the conundrum of which domain does the discipline 
+&amp;#8220;Data Analysis&amp;#8221; go in?  All of them I hope.  This survey question certainly
+does not yield a clean&amp;nbsp;taxonomy.
+&lt;/p&gt;
+&lt;p&gt;
+To coarsen the data, I chose the following five domains to group disciplines 
+into: physics, chemistry, biology, mathematics &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; computer science, and 
+humanities &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; social science.  Is this grossly unfair to some disciplines? Yes.
+Does it work? Double yes.  In the spirit of openness, all of the data and analysis
+is available at 
+&lt;a href="https://github.com/scopatz/swc-bc-student-domains"&gt;this repository&lt;/a&gt;.
+You can also view 
+&lt;a href="http://nbviewer.ipython.org/urls/raw.github.com/scopatz/swc-bc-student-domains/master/domains.ipynb"&gt;the IPython notebook&lt;/a&gt; 
+where I did my analysis. Feel free to criticize my groupings in the&amp;nbsp;comments.
+&lt;/p&gt;
+&lt;p&gt;
+The data that Amy provided me with was collected from 306 students over the 
+most recent 9 or 10 bootcamps.  This is a large enough 
+sample size to be able to say something meaningful about the student populous.
+From &lt;a href="#fig1"&gt;Figure 1&lt;/a&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;a href="#tab1"&gt;Table 1&lt;/a&gt;, we can see that 
+my intuition turned out to be&amp;nbsp;correct.
+&lt;/p&gt;
+&lt;p&gt;
+Roughly a third of the participants in the bootcamps come from a biologically 
+oriented field!  This is second only to the physics-related disciplines.  Moreover, 
+the biologists far outstrip their counterparts in the other domains.  So if 
+Software Carpentry bootcamps are any measure of interest in software development
+best practices - and I think they are - then it is clear that the biology domain is&amp;nbsp;thriving.
+&lt;/p&gt;
+&lt;div align="center" id="fig1"&gt;
+&lt;p&gt;&lt;img src="http://anthony.scopatz.com/static/images/students_by_domain.svg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Figure 1:&lt;/b&gt; Percentage of Software Carpentry bootcamp students by domain.  
+&lt;br /&gt;
+These percentages sum to greater than 100% because students may select more that one&amp;nbsp;discipline. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div align="center" id="tab1"&gt;
+&lt;table class="table table-striped"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Domain&lt;/th&gt;
+    &lt;th&gt;Percentage (%)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Physics&lt;/td&gt;
+    &lt;td&gt;45.75&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Chemistry&lt;/td&gt;
+    &lt;td&gt;13.40&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Biology&lt;/td&gt;
+    &lt;td&gt;33.01&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Mathematics &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Computer Science&lt;/td&gt;
+    &lt;td&gt;13.07&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Humanities &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Social Sciences&lt;/td&gt;
+    &lt;td&gt;14.38&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;b&gt;Table 1:&lt;/b&gt; Results of &lt;a href="#fig1"&gt;Figure 1&lt;/a&gt; in tabular&amp;nbsp;form.&lt;/p&gt;
+&lt;/div&gt;
+
+</summary><category term="teaching"></category></entry><entry><title>Diversity Statement Notes</title><link href="http://anthony.scopatz.com/diversity-statement-notes.html" rel="alternate"></link><updated>2013-09-26T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-26:diversity-statement-notes.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Last week, Matthew Turk asked me to give a brief, 10 minute talk to weekly
 the Astronomy department lunch at Columbia University.  He specifically requested
 that I talk about diversity in technical fields and SciPy 2013.  This was my first
 time speaking on this topic.  I was nervous.  What follows are my mostly undoctored&amp;nbsp;notes.&lt;/em&gt;&lt;/p&gt;
