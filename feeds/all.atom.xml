@@ -1771,7 +1771,37 @@ whole system &lt;em&gt;should be&lt;/em&gt; designed to improve the lives of peo
 perpetuate abstract&amp;nbsp;hierarchies. &amp;nbsp;Such are the&amp;nbsp;principals our nation was
 founded&amp;nbsp;on.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>inSCIght Episode 5: Reproducibility in Scientific Computing</title><link href="http://anthony.scopatz.com/inscight-episode-5-reproducibility-in-scientific-computing.html" rel="alternate"></link><updated>2011-03-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2011-03-23:inscight-episode-5-reproducibility-in-scientific-computing.html</id><summary type="html">
+</summary></entry><entry><title>SciPy 2011: Call for Papers</title><link href="http://anthony.scopatz.com/scipy-2011-call-for-papers.html" rel="alternate"></link><updated>2011-03-24T15:26:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2011-03-24:scipy-2011-call-for-papers.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://pyfound.blogspot.com/2011/03/scipy-2011-call-for-papers.html"&gt;Python Software Foundation News&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="reference external" href="http://conference.scipy.org/scipy2011/"&gt;SciPy 2011&lt;/a&gt;, the 10th Python in Science conference, will be held July 11 - 16, 2011, in Austin,&amp;nbsp;&lt;span class="caps"&gt;TX&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;At this conference, novel applications and breakthroughs made in the pursuit of science using Python are presented.
+The conference is preceded by two days of tutorials, during which community experts provide training on several scientific Python&amp;nbsp;packages.&lt;/p&gt;
+&lt;p&gt;Potential speakers are invited to take part by submitting a talk abstract at the &lt;a class="reference external" href="http://conference.scipy.org/scipy2011/papers.php"&gt;conference website&lt;/a&gt;.
+Associated papers (optional) are included in the peer-reviewed conference proceedings, to be published&amp;nbsp;online.&lt;/p&gt;
+&lt;p&gt;This year will also feature two specialized tracks, whose express aim it is to open up SciPy to the broader Python community.
+The first track is &lt;strong&gt;Python in Data Science&lt;/strong&gt; chaired by Peter Wang, and
+the second is entitled &lt;strong&gt;Python and Core Technologies&lt;/strong&gt; chaired by Anthony&amp;nbsp;Scopatz.&lt;/p&gt;
+&lt;div class="section" id="important-dates-for-authors"&gt;
+&lt;h4&gt;Important Dates for&amp;nbsp;Authors&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Friday, April 15: &lt;a class="reference external" href="http://conference.scipy.org/scipy2011/tutorials.php"&gt;Tutorial proposals due&lt;/a&gt; (remember: stipends will be provided for Tutorial&amp;nbsp;instructors)&lt;/li&gt;
+&lt;li&gt;Sunday, April 24: Paper abstracts&amp;nbsp;due&lt;/li&gt;
+&lt;li&gt;Sunday, May 8: &lt;a class="reference external" href="http://conference.scipy.org/scipy2011/student.php"&gt;Student sponsorship request&amp;nbsp;due&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tuesday, May 10: Accepted talks&amp;nbsp;announced&lt;/li&gt;
+&lt;li&gt;Monday, May 16: Student sponsorships&amp;nbsp;announced&lt;/li&gt;
+&lt;li&gt;Monday, May 23: Early Registration&amp;nbsp;ends&lt;/li&gt;
+&lt;li&gt;Sunday, June 20: Papers&amp;nbsp;due&lt;/li&gt;
+&lt;li&gt;Monday-Tuesday, July 11 - 12:&amp;nbsp;Tutorials&lt;/li&gt;
+&lt;li&gt;Wednesday-Thursday, July 13 - July 14:&amp;nbsp;Conference&lt;/li&gt;
+&lt;li&gt;Friday-Saturday, July 15 - July 16:&amp;nbsp;Sprints&lt;/li&gt;
+&lt;/ul&gt;
+
+</summary><category term="scipy"></category></entry><entry><title>inSCIght Episode 5: Reproducibility in Scientific Computing</title><link href="http://anthony.scopatz.com/inscight-episode-5-reproducibility-in-scientific-computing.html" rel="alternate"></link><updated>2011-03-23T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2011-03-23:inscight-episode-5-reproducibility-in-scientific-computing.html</id><summary type="html">
 
 &lt;p&gt;&lt;i&gt;
 This was originally published at 
@@ -2586,6 +2616,8 @@ of a wimp. &amp;nbsp;Can there ever be any real change? &amp;nbsp;What is fake&a
 &lt;p&gt;Just tell those Russians that I said, &amp;nbsp;&amp;#8220;If you like it then &amp;nbsp;you should
 have put a ring on&amp;nbsp;it!&amp;#8221;&lt;/p&gt;
 &lt;p&gt;&lt;object width="425" height="350"&gt;&lt;embed type="application/x-shockwave-flash" width="425" height="350" src="http://www.youtube.com/v/oIr8-f2OWhs"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.youtube.com/watch?v=oIr8-f2OWhs"&gt;You could have had me,&amp;nbsp;&lt;span class="caps"&gt;LJ&lt;/span&gt;!&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Epistemology</title><link href="http://anthony.scopatz.com/epistemology.html" rel="alternate"></link><updated>2010-01-22T16:47:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2010-01-22:epistemology.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;How do you know that you were not, in fact, born in a Tleilaxu
+breeding tank? It is going to be one of those&amp;nbsp;days&amp;#8230;&lt;/strong&gt;&lt;/p&gt;
 </summary></entry><entry><title>Mom’s Out (of the sick people place)</title><link href="http://anthony.scopatz.com/moms-out-of-the-sick-people-place.html" rel="alternate"></link><updated>2009-12-27T07:31:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-12-27:moms-out-of-the-sick-people-place.html</id><summary type="html">&lt;p&gt;I know, I know. I haven&amp;#8217;t been particularly good at communicating. It is
 getting to me even; I have felt disconnected. I didn&amp;#8217;t even log into my
 email for several days, waiting until I had something good to write.
@@ -2733,7 +2765,14 @@ midwestern climes. I grew up with this and left it with purpose and
 dedication. California had my graces for a decade, as does Texas&amp;nbsp;now.&lt;/p&gt;
 &lt;p&gt;More than anything, I am looking forward to seeing my main squeeze Anne.
 One more day and I promise I won&amp;#8217;t leave you anymore. This&amp;nbsp;semester.&lt;/p&gt;
-</summary><category term="northofthewall"></category><category term="physor"></category><category term="southside"></category><category term="unicorn"></category></entry><entry><title>What?! A Month?</title><link href="http://anthony.scopatz.com/what-a-month.html" rel="alternate"></link><updated>2009-10-20T02:04:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-20:what-a-month.html</id><summary type="html">&lt;p&gt;So I haven&amp;#8217;t updated in a &lt;span class="caps"&gt;WHOLE&lt;/span&gt; month. Even my &amp;#8220;minimum once-a-week&amp;#8221;
+</summary><category term="northofthewall"></category><category term="physor"></category><category term="southside"></category><category term="unicorn"></category></entry><entry><title>Gotta get me an *.edu</title><link href="http://anthony.scopatz.com/gotta-get-me-an-edu.html" rel="alternate"></link><updated>2009-10-26T20:09:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-26:gotta-get-me-an-edu.html</id><summary type="html">&lt;p&gt;I have been wisc&amp;#8217;d away and is now living in &amp;#8216;sin. No need to be hopping
+mad&amp;#8217; about it&amp;nbsp;&amp;#8216;son.&lt;/p&gt;
+</summary></entry><entry><title>Get ahold of yourself!</title><link href="http://anthony.scopatz.com/get-ahold-of-yourself.html" rel="alternate"></link><updated>2009-10-24T00:19:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-24:get-ahold-of-yourself.html</id><summary type="html">&lt;p&gt;If you aren&amp;#8217;t yet out of the closet and need someone to talk to, you can&amp;nbsp;bi-query-us.&lt;/p&gt;
+</summary></entry><entry><title>Lady Gotcha</title><link href="http://anthony.scopatz.com/lady-gotcha.html" rel="alternate"></link><updated>2009-10-21T22:12:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-21:lady-gotcha.html</id><summary type="html">&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I am not bluffin&amp;#8217; with my muffin; this cupcake was delicious!&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>What?! A Month?</title><link href="http://anthony.scopatz.com/what-a-month.html" rel="alternate"></link><updated>2009-10-20T02:04:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-20:what-a-month.html</id><summary type="html">&lt;p&gt;So I haven&amp;#8217;t updated in a &lt;span class="caps"&gt;WHOLE&lt;/span&gt; month. Even my &amp;#8220;minimum once-a-week&amp;#8221;
 rule has been shamelessly broken. My Google Reader is in a complete
 disarray. I have been&amp;nbsp;busy.&lt;/p&gt;
 &lt;p&gt;Right now is the first night of a 10 day stint in Madison. It has
@@ -2752,7 +2791,12 @@ in the Bay Area. Someday I will live in my house. Can I hear it for&amp;nbsp;Nov
 &lt;p&gt;If there is one thing I have learned, there are a lot of fucking cool
 people in America. All distilled separately, it proves hard to mix them.
 Seems I&amp;#8217;ll just have to keep travelling and&amp;nbsp;sampling.&lt;/p&gt;
-</summary><category term="northofthewall"></category><category term="unicorn"></category></entry><entry><title>Swine Floozies</title><link href="http://anthony.scopatz.com/swine-floozies.html" rel="alternate"></link><updated>2009-09-30T17:12:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-09-30:swine-floozies.html</id><summary type="html">&lt;p&gt;So I realize I haven&amp;#8217;t updated in a while. Or really been out of the&amp;nbsp;house.&lt;/p&gt;
+</summary><category term="northofthewall"></category><category term="unicorn"></category></entry><entry><title>We could make it a hexagon…</title><link href="http://anthony.scopatz.com/we-could-make-it-a-hexagon.html" rel="alternate"></link><updated>2009-10-18T21:22:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-18:we-could-make-it-a-hexagon.html</id><summary type="html">&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;And I was, like, sitting there thinking, &amp;#8216;That girl is so &lt;span class="caps"&gt;FUCKING&lt;/span&gt;
+cute.&amp;#8217; Turns out I had met her at a party the night before. Seriously,
+it was the drama llama&amp;#8217;s super-secret love pentagon&amp;nbsp;attack!&amp;#8221;&lt;/p&gt;
+</summary></entry><entry><title>It is so fast!</title><link href="http://anthony.scopatz.com/it-is-so-fast.html" rel="alternate"></link><updated>2009-10-14T19:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-10-14:it-is-so-fast.html</id><summary type="html">&lt;p&gt;Rust never sleeps. But if he had known, what would Neil Young have sang
+now that Chrome always&amp;nbsp;burns?&lt;/p&gt;
+</summary></entry><entry><title>Swine Floozies</title><link href="http://anthony.scopatz.com/swine-floozies.html" rel="alternate"></link><updated>2009-09-30T17:12:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-09-30:swine-floozies.html</id><summary type="html">&lt;p&gt;So I realize I haven&amp;#8217;t updated in a while. Or really been out of the&amp;nbsp;house.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Surprise! Guess who had Swine&amp;nbsp;Flu?!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image0" src="http://lh6.ggpht.com/_KFdIKJVlj1w/Sq0sptbGqQI/AAAAAAAAC_M/aeVzqmJw6i0/s400/p9090022.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Well, at least now I am back in the swing of things. I no longer feel
@@ -2899,7 +2943,17 @@ the audience can be quite&amp;nbsp;imposing.&lt;/p&gt;
 &lt;p&gt;Also, in a fit of cosmic annoyance, my adviser missed my debut! He had
 to cover for a talk that was scheduled at the exact same&amp;nbsp;time&amp;#8230;&lt;/p&gt;
 &lt;p&gt;More to come,&amp;nbsp;surely.&lt;/p&gt;
-</summary><category term="global"></category><category term="paris"></category></entry><entry><title>The Cookies Are Delicious, Much Like Your Mother</title><link href="http://anthony.scopatz.com/the-cookies-are-delicious-much-like-your-mother.html" rel="alternate"></link><updated>2009-08-28T01:13:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-28:the-cookies-are-delicious-much-like-your-mother.html</id><summary type="html">&lt;p&gt;So yes, I now have an excess of chocolate coffee cookies. Come and Get&amp;nbsp;&amp;#8216;Em!&lt;/p&gt;
+</summary><category term="global"></category><category term="paris"></category></entry><entry><title>Way Down In France</title><link href="http://anthony.scopatz.com/way-down-in-france.html" rel="alternate"></link><updated>2009-09-06T11:55:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-09-06:way-down-in-france.html</id><summary type="html">&lt;p&gt;There is nothing like getting lost on foot in Paris. Well&amp;#8230;I guess
+zombies make anything&amp;nbsp;worse.&lt;/p&gt;
+</summary></entry><entry><title>Corporate Whore</title><link href="http://anthony.scopatz.com/corporate-whore.html" rel="alternate"></link><updated>2009-09-03T06:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-09-03:corporate-whore.html</id><summary type="html">&lt;p&gt;If you utilize prostitutes, are you&amp;nbsp;buy-sexual?&lt;/p&gt;
+</summary></entry><entry><title>The wound is ‘Afghanistan’.</title><link href="http://anthony.scopatz.com/the-wound-is-afghanistan.html" rel="alternate"></link><updated>2009-09-01T19:02:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-09-01:the-wound-is-afghanistan.html</id><summary type="html">&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;If Allah didn&amp;#8217;t mean for me to pick this scab, then why did I grow&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: &lt;span class="caps"&gt;WARNING&lt;/span&gt;/2 (&lt;tt class="docutils"&gt;/home/scopatz/anthony.scopatz.com/content/missives/the-wound-is-afghanistan.rst&lt;/tt&gt;, line&amp;nbsp;8)&lt;/p&gt;
+Line block ends without a blank line.&lt;/div&gt;
+&lt;p&gt;fingernails?&amp;nbsp;|&lt;/p&gt;
+</summary></entry><entry><title>The Cookies Are Delicious, Much Like Your Mother</title><link href="http://anthony.scopatz.com/the-cookies-are-delicious-much-like-your-mother.html" rel="alternate"></link><updated>2009-08-28T01:13:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-28:the-cookies-are-delicious-much-like-your-mother.html</id><summary type="html">&lt;p&gt;So yes, I now have an excess of chocolate coffee cookies. Come and Get&amp;nbsp;&amp;#8216;Em!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;On A Totally Unrelated Note:&lt;/strong&gt; Yesterday, my bicycle decided to launch
 me off of it. I am alright.&amp;nbsp;Mostly.&lt;/p&gt;
 &lt;div class="line-block"&gt;
@@ -2920,7 +2974,10 @@ didn&amp;#8217;t even know existed today.&amp;nbsp;Fabulous.&lt;/p&gt;
 doesn&amp;#8217;t look like I should plan on graduating until at least August
 2010. I feel like it will probably be even longer. Good news for the
 Austin&amp;nbsp;folks!&lt;/p&gt;
-</summary><category term="onatotallyunrelatednote"></category><category term="onedoesnotsimplyjumpingstilitsintomordor"></category></entry><entry><title>Minor Update</title><link href="http://anthony.scopatz.com/minor-update.html" rel="alternate"></link><updated>2009-08-25T01:50:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-25:minor-update.html</id><summary type="html">&lt;p&gt;Two things. I haven&amp;#8217;t been getting enough work done recently. Today for
+</summary><category term="onatotallyunrelatednote"></category><category term="onedoesnotsimplyjumpingstilitsintomordor"></category></entry><entry><title>Impeach This!</title><link href="http://anthony.scopatz.com/impeach-this.html" rel="alternate"></link><updated>2009-08-26T22:33:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-26:impeach-this.html</id><summary type="html">&lt;p&gt;It only takes one person to stand up and say &amp;#8216;No&amp;#8217;. A singular voice
+ripping down the establishment, uncovering secrets. Unfortunately, there
+is always a Linda Tripp fucking things up for the rest of&amp;nbsp;us.&lt;/p&gt;
+</summary></entry><entry><title>Minor Update</title><link href="http://anthony.scopatz.com/minor-update.html" rel="alternate"></link><updated>2009-08-25T01:50:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-25:minor-update.html</id><summary type="html">&lt;p&gt;Two things. I haven&amp;#8217;t been getting enough work done recently. Today for
 instance. I was going to spend the night programming after my
 departmental function. But no. During the after-party at Crown &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Anchor,
 I got shamefully drunk on a pint and a half of beer. This seems to be
@@ -2938,7 +2995,13 @@ here to enjoy&amp;nbsp;it:&lt;/p&gt;
 pounds of coffee beans (yeah!). Which is frankly too much for me to
 drink in any reasonable time frame. So I am thinking Chocolate Coffee
 Cookies, anyone in? Just want to help me eat them? That is fine&amp;nbsp;too.&lt;/p&gt;
-</summary><category term="(a||b)whof***s(a||b||a&amp;amp;b)"></category><category term="+5"></category><category term="caith"></category><category term="iheartvaginas"></category><category term="notmybrother"></category></entry><entry><title>Genderfuck and Me -or- Do You Know What the Queers are Doing to Our Soil?!</title><link href="http://anthony.scopatz.com/genderfuck-and-me-or-do-you-know-what-the-queers-are-doing-to-our-soil.html" rel="alternate"></link><updated>2009-08-19T20:30:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-19:genderfuck-and-me-or-do-you-know-what-the-queers-are-doing-to-our-soil.html</id><summary type="html">&lt;p&gt;This is the most important post I will make this year, so read&amp;nbsp;up!&lt;/p&gt;
+</summary><category term="(a||b)whof***s(a||b||a&amp;amp;b)"></category><category term="+5"></category><category term="caith"></category><category term="iheartvaginas"></category><category term="notmybrother"></category></entry><entry><title>Choices</title><link href="http://anthony.scopatz.com/choices.html" rel="alternate"></link><updated>2009-08-23T04:02:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-23:choices.html</id><summary type="html">&lt;p&gt;Sometimes all I want to do is kiss you. Sometimes I really just want to
+shoot you. Oh, why do I have to be so conflicted, Zombie&amp;nbsp;Lover?!&lt;/p&gt;
+</summary></entry><entry><title>Your place or mine?</title><link href="http://anthony.scopatz.com/your-place-or-mine.html" rel="alternate"></link><updated>2009-08-20T19:26:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-20:your-place-or-mine.html</id><summary type="html">&lt;p&gt;How to make a mixed drinking buddy: 1 part Woody Allen, 1 part Madeline
+Albright, serve chilled on the&amp;nbsp;Rock.&lt;/p&gt;
+</summary></entry><entry><title>Mad World</title><link href="http://anthony.scopatz.com/mad-world.html" rel="alternate"></link><updated>2009-08-20T19:23:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-20:mad-world.html</id><summary type="html">&lt;p&gt;I met Time at a party. I got her number but she hasn&amp;#8217;t called me back.
+Seems like I have been waiting 25&amp;nbsp;years.&lt;/p&gt;
+</summary></entry><entry><title>Genderfuck and Me -or- Do You Know What the Queers are Doing to Our Soil?!</title><link href="http://anthony.scopatz.com/genderfuck-and-me-or-do-you-know-what-the-queers-are-doing-to-our-soil.html" rel="alternate"></link><updated>2009-08-19T20:30:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-19:genderfuck-and-me-or-do-you-know-what-the-queers-are-doing-to-our-soil.html</id><summary type="html">&lt;p&gt;This is the most important post I will make this year, so read&amp;nbsp;up!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Genderfuck"&gt;**Genderfuck:**&lt;/a&gt; The act of acquiring sexual dimorphic traits that
 are not of one&amp;#8217;s own gender for the express purpose of parody. Ex.
@@ -3092,7 +3155,10 @@ in Gainesville has been reinforced here. I don&amp;#8217;t want to leave; What a
 Austin, you get me back. I am coming for&amp;nbsp;you.&lt;/p&gt;
 &lt;p&gt;I feel that I am now loved in every corner of this big nation. And that
 is important to&amp;nbsp;me.&lt;/p&gt;
-</summary><category term="iheartvaginas"></category><category term="northofthewall"></category><category term="onlyonemanwoulddaregivemetheraspberry"></category></entry><entry><title>Lines Open: Quarter Life Crisis Party? We can help.</title><link href="http://anthony.scopatz.com/lines-open-quarter-life-crisis-party-we-can-help.html" rel="alternate"></link><updated>2009-08-12T13:47:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-12:lines-open-quarter-life-crisis-party-we-can-help.html</id><summary type="html">&lt;p&gt;The times are fast upon us. That is right people, my first in a series
+</summary><category term="iheartvaginas"></category><category term="northofthewall"></category><category term="onlyonemanwoulddaregivemetheraspberry"></category></entry><entry><title>And Take That Vibrator Out Of Your Pocket!</title><link href="http://anthony.scopatz.com/and-take-that-vibrator-out-of-your-pocket.html" rel="alternate"></link><updated>2009-08-13T05:55:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-13:and-take-that-vibrator-out-of-your-pocket.html</id><summary type="html">&lt;p&gt;I can lie to myself. I can say that you don&amp;#8217;t matter to me, anymore. But
+Dammit, It is not &lt;span class="caps"&gt;OK&lt;/span&gt; for someone your age to be seen reading &amp;#8220;The
+Scarlet Letter&amp;#8221; in&amp;nbsp;public!&lt;/p&gt;
+</summary></entry><entry><title>Lines Open: Quarter Life Crisis Party? We can help.</title><link href="http://anthony.scopatz.com/lines-open-quarter-life-crisis-party-we-can-help.html" rel="alternate"></link><updated>2009-08-12T13:47:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-12:lines-open-quarter-life-crisis-party-we-can-help.html</id><summary type="html">&lt;p&gt;The times are fast upon us. That is right people, my first in a series
 of 25th birthdays is coming up! (I subcontract out City of Austin
 Utilities to Tuck Everlasting Water Management.) But my birthday is on a
 Tuesday this year.&amp;nbsp;&lt;span class="caps"&gt;LAME&lt;/span&gt;.&lt;/p&gt;
@@ -3187,7 +3253,10 @@ you&amp;#8217;ve heard this&amp;nbsp;one.&lt;/p&gt;
 &lt;p&gt;And now I am here, back in my hotel room, smoke seeped into my hair. But
 present in such a way that I feel absolutely free. I&amp;#8217;ve got my Status
 Back,&amp;nbsp;Baby.&lt;/p&gt;
-</summary><category term="(a||b)whof***s(a||b||a&amp;amp;b)"></category><category term="+5"></category><category term="argentiniancowboys"></category><category term="bothflamingandhot"></category><category term="caith"></category><category term="lawlsadventure"></category><category term="totallydisillusionedwithstraightmalehood"></category></entry><entry><title>Now I Know Why the Caged Bird Plays AD&amp;D</title><link href="http://anthony.scopatz.com/now-i-know-why-the-caged-bird-plays-add.html" rel="alternate"></link><updated>2009-08-06T21:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-06:now-i-know-why-the-caged-bird-plays-add.html</id><summary type="html">&lt;p&gt;If you want to read something, go outside and look at street signs. If
+</summary><category term="(a||b)whof***s(a||b||a&amp;amp;b)"></category><category term="+5"></category><category term="argentiniancowboys"></category><category term="bothflamingandhot"></category><category term="caith"></category><category term="lawlsadventure"></category><category term="totallydisillusionedwithstraightmalehood"></category></entry><entry><title>So Tasty</title><link href="http://anthony.scopatz.com/so-tasty.html" rel="alternate"></link><updated>2009-08-09T22:55:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-09:so-tasty.html</id><summary type="html">&lt;p&gt;Every once in a while you have an Earth-shattering epiphany. It is life
+changing, world-altering. What if? What if we take the &amp;#8216;root&amp;#8217; out of
+Root Beer&amp;nbsp;Float?&lt;/p&gt;
+</summary></entry><entry><title>Now I Know Why the Caged Bird Plays AD&amp;D</title><link href="http://anthony.scopatz.com/now-i-know-why-the-caged-bird-plays-add.html" rel="alternate"></link><updated>2009-08-06T21:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-06:now-i-know-why-the-caged-bird-plays-add.html</id><summary type="html">&lt;p&gt;If you want to read something, go outside and look at street signs. If
 you want to read the best damn thing written this millennium, find and
 swallow &lt;a class="reference external" href="http://ta-nehisicoates.theatlantic.com/"&gt;Ta-Nehisi Coates&lt;/a&gt;&amp;#8216; &amp;#8220;&lt;a class="reference external" href="http://www.amazon.com/gp/product/0385527462/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=304485901&amp;amp;pf_rd_s=lpo-top-stripe-1&amp;amp;pf_rd_t=201&amp;amp;pf_rd_i=0385520360&amp;amp;pf_rd_m=ATVPDKIKX0DER&amp;amp;pf_rd_r=1DM1Q5ZN57KPCVSF85ZD"&gt;The Beautiful Struggle&lt;/a&gt;.&amp;#8221; It is a fast
 and dangerous&amp;nbsp;read.&lt;/p&gt;
@@ -3261,6 +3330,9 @@ is like thinking you have one M&amp;amp;M, you know, plus or minus 10 million&am
 &lt;p&gt;Mom: &amp;#8220;So, give or take an&amp;nbsp;&amp;#8216;M&amp;#8217;.&amp;#8221;&lt;/p&gt;
 &lt;p&gt;I thought it was cute. I wonder if this is a good way to teach error
 analysis. It worked seamlessly&amp;nbsp;here&amp;#8230;&lt;/p&gt;
+</summary></entry><entry><title>Freak</title><link href="http://anthony.scopatz.com/freak.html" rel="alternate"></link><updated>2009-08-03T05:44:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-03:freak.html</id><summary type="html">&lt;p&gt;Sometimes, in the morning, I stand naked in front of the mirror and
+smile. Then I look down. Mamma said I would outgrow the webbing. Mamma
+was&amp;nbsp;wrong.&lt;/p&gt;
 </summary></entry><entry><title>O Raleigh?</title><link href="http://anthony.scopatz.com/o-raleigh.html" rel="alternate"></link><updated>2009-08-02T18:57:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-08-02:o-raleigh.html</id><summary type="html">&lt;p&gt;&lt;img alt="image0" src="http://th01.deviantart.com/fs15/300W/f/2006/356/5/3/O_RALEIGH__by_trintrin918.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Ya&amp;nbsp;Raleigh!&lt;/p&gt;
 &lt;p&gt;Well, maybe not so exuberant as all that. I have been here a couple of
@@ -3424,7 +3496,9 @@ Of course what I really mean is that we share facial bone structure.
 This is even more clear and present since I have been recently
 beardless. For some reason this bothers me. They have my&amp;nbsp;face!&lt;/p&gt;
 &lt;p&gt;Congrats if you made it&amp;nbsp;here!&lt;/p&gt;
-</summary><category term="argentiniancowboys"></category><category term="duncanidaho"></category><category term="forgottenfilmfriday"></category><category term="lawlsadventure"></category><category term="onedoesnotsimplyjumpingstilitsintomordor"></category></entry><entry><title>Tamil Trouble</title><link href="http://anthony.scopatz.com/tamil-trouble.html" rel="alternate"></link><updated>2009-07-27T17:12:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-27:tamil-trouble.html</id><summary type="html">&lt;p&gt;Alright folks, I rarely proselytize. So that should note to you that
+</summary><category term="argentiniancowboys"></category><category term="duncanidaho"></category><category term="forgottenfilmfriday"></category><category term="lawlsadventure"></category><category term="onedoesnotsimplyjumpingstilitsintomordor"></category></entry><entry><title>Craigslist</title><link href="http://anthony.scopatz.com/craigslist.html" rel="alternate"></link><updated>2009-07-28T17:19:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-28:craigslist.html</id><summary type="html">&lt;p&gt;Somewhere beneath this fat, desiccated cocoon there is a beautiful
+butterfly waiting to emerge. Someone get the&amp;nbsp;Raid.&lt;/p&gt;
+</summary></entry><entry><title>Tamil Trouble</title><link href="http://anthony.scopatz.com/tamil-trouble.html" rel="alternate"></link><updated>2009-07-27T17:12:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-27:tamil-trouble.html</id><summary type="html">&lt;p&gt;Alright folks, I rarely proselytize. So that should note to you that
 this is&amp;nbsp;important.&lt;/p&gt;
 &lt;p&gt;In event that you don&amp;#8217;t know, the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Tamil_people"&gt;Tamil people&lt;/a&gt; are the ethnic
 minority in &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Sri_Lankan_Tamils"&gt;Sri Lanka&lt;/a&gt;. The history of the Tamil&amp;#8217;s shows striking
@@ -3464,6 +3538,8 @@ and flourish in their&amp;nbsp;homeland.&lt;/p&gt;
 that you could forward this statement onto, I know it would be
 appreciated.&amp;nbsp; Help send the message that this sort of inhuman behaviour
 will not be tolerated in the 21st century.&amp;nbsp; You have my personal&amp;nbsp;gratitude.&lt;/p&gt;
+</summary></entry><entry><title>Picture it, Status 1922</title><link href="http://anthony.scopatz.com/picture-it-status-1922.html" rel="alternate"></link><updated>2009-07-26T04:26:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-26:picture-it-status-1922.html</id><summary type="html">&lt;p&gt;Television is lame and stupid. Why doesn&amp;#8217;t the Hallmark channel have the
+good sense to show &amp;#8216;Golden Girls&amp;#8217; on the weekends as well as the&amp;nbsp;weeknights?!&lt;/p&gt;
 </summary></entry><entry><title>[Sequoia: Days Two - Five] More Crazies, Fewer Bears</title><link href="http://anthony.scopatz.com/sequoia-days-two-five-more-crazies-fewer-bears.html" rel="alternate"></link><updated>2009-07-24T17:14:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-24:sequoia-days-two-five-more-crazies-fewer-bears.html</id><summary type="html">&lt;p&gt;Whooo Ok. Let&amp;#8217;s finish this off&amp;nbsp;here.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Day 2:&lt;/strong&gt; Believe it or not, the second day was when the pucky really
 hit the fan. Shane and I slept soundly the night before so we got sort
@@ -3600,7 +3676,27 @@ planned. We went to Three Rivers, took a shower and then drove back to
 Santa&amp;nbsp;Ynez.&lt;/p&gt;
 &lt;p&gt;As Shane said to me at one point, &amp;#8220;I don&amp;#8217;t think I like pain as you.&amp;#8221;
 This trip was&amp;nbsp;incredible!&lt;/p&gt;
-</summary><category term="sequoia"></category></entry><entry><title>[Seqouia: Day One] Yearly Backpacking Trip</title><link href="http://anthony.scopatz.com/seqouia-day-one-yearly-backpacking-trip.html" rel="alternate"></link><updated>2009-07-21T23:13:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-21:seqouia-day-one-yearly-backpacking-trip.html</id><summary type="html">&lt;p&gt;So it has now been a few weeks, I suppose, since I went backpacking with
+</summary><category term="sequoia"></category></entry><entry><title>Total Babe</title><link href="http://anthony.scopatz.com/total-babe.html" rel="alternate"></link><updated>2009-07-22T15:31:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:total-babe.html</id><summary type="html">&lt;p&gt;If justice is blind, I&amp;#8217;ll start learning sign&amp;nbsp;language.&lt;/p&gt;
+</summary></entry><entry><title>Anderson Cooper 360</title><link href="http://anthony.scopatz.com/anderson-cooper-360.html" rel="alternate"></link><updated>2009-07-22T05:13:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:anderson-cooper-360.html</id><summary type="html">&lt;p&gt;Since you left, I&amp;#8217;ll never be the same. Now, I can&amp;#8217;t stop masturbating
+to &lt;span class="caps"&gt;CNN&lt;/span&gt;. (We&amp;#8217;ll always have Hurricane&amp;nbsp;Katrina.)&lt;/p&gt;
+</summary></entry><entry><title>Irons in the Fire</title><link href="http://anthony.scopatz.com/irons-in-the-fire.html" rel="alternate"></link><updated>2009-07-22T05:11:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:irons-in-the-fire.html</id><summary type="html">&lt;p&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;Brand: Me&amp;#8217; is not just a way of communicating. If you want, we can also
+make it a sex&amp;nbsp;act.&lt;/p&gt;
+</summary></entry><entry><title>Mr. James K. Polk</title><link href="http://anthony.scopatz.com/mr-james-k-polk.html" rel="alternate"></link><updated>2009-07-22T05:08:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:mr-james-k-polk.html</id><summary type="html">&lt;p&gt;When I say &amp;#8216;I love you&amp;#8217;, you know I mean that I claim vast territories
+of the United States without&amp;nbsp;you.&lt;/p&gt;
+</summary></entry><entry><title>Life on Mars?</title><link href="http://anthony.scopatz.com/life-on-mars.html" rel="alternate"></link><updated>2009-07-22T05:07:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:life-on-mars.html</id><summary type="html">&lt;p&gt;Don&amp;#8217;t you hate it when someone cute wears too much make-up? Oh Well, I
+guess we all make exceptions for David&amp;nbsp;Bowie.&lt;/p&gt;
+</summary></entry><entry><title>Roman Heritage</title><link href="http://anthony.scopatz.com/roman-heritage.html" rel="alternate"></link><updated>2009-07-22T05:05:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:roman-heritage.html</id><summary type="html">&lt;p&gt;How do I tell her, &amp;#8220;Girl, you are the hottest thing since
+Cleopatra?&amp;#8221;&lt;a href="#id1"&gt;&lt;span class="problematic" id="id2"&gt;&amp;#8220;&lt;/span&gt;&lt;/a&gt;_&lt;/p&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: &lt;span class="caps"&gt;WARNING&lt;/span&gt;/2 (&lt;tt class="docutils"&gt;/home/scopatz/anthony.scopatz.com/content/missives/roman-heritage.rst&lt;/tt&gt;, line 7); &lt;em&gt;&lt;a href="#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Inline literal start-string without end-string.&lt;/div&gt;
+&lt;div class="cssButtonOuter"&gt;&lt;div class="cssButtonMiddle"&gt;&lt;div class="cssButtonInner"&gt;&lt;p&gt;Publish&amp;nbsp;Post&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;&lt;!-- _: --&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: &lt;span class="caps"&gt;WARNING&lt;/span&gt;/2 (&lt;tt class="docutils"&gt;/home/scopatz/anthony.scopatz.com/content/missives/roman-heritage.rst&lt;/tt&gt;, line&amp;nbsp;40)&lt;/p&gt;
+malformed hyperlink target.&lt;/div&gt;
+</summary></entry><entry><title>Nabokov’s Dogs</title><link href="http://anthony.scopatz.com/nabokovs-dogs.html" rel="alternate"></link><updated>2009-07-22T05:02:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-22:nabokovs-dogs.html</id><summary type="html">&lt;p&gt;Read the book; See the Movie; Live the Dream:&amp;nbsp;Lolita.&lt;/p&gt;
+</summary></entry><entry><title>[Seqouia: Day One] Yearly Backpacking Trip</title><link href="http://anthony.scopatz.com/seqouia-day-one-yearly-backpacking-trip.html" rel="alternate"></link><updated>2009-07-21T23:13:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-07-21:seqouia-day-one-yearly-backpacking-trip.html</id><summary type="html">&lt;p&gt;So it has now been a few weeks, I suppose, since I went backpacking with
 my brother Shane in Sequoia. But if it is any indication of how hectic
 my life has been recently, I am just sitting down to write the post
 about&amp;nbsp;it.&lt;/p&gt;
@@ -5122,7 +5218,26 @@ this academic problem of tending towards solitary activities. If I act,
 I act scholastically. This manifestly evident by my late night research
 into Sir Bedivere&amp;#8217;s heraldry. &amp;#8220;Fly my pretty priests!&amp;nbsp;Fly!&amp;#8221;&lt;/p&gt;
 &lt;p&gt;Thoughts?&lt;/p&gt;
-</summary></entry><entry><title>lawl hwo emo</title><link href="http://anthony.scopatz.com/lawl-hwo-emo.html" rel="alternate"></link><updated>2009-03-10T03:18:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-03-10:lawl-hwo-emo.html</id><summary type="html">&lt;p&gt;blargh blargh blargh blargh I hat3z Austindating. blargh blargh blargh&amp;nbsp;blargh&lt;/p&gt;
+</summary></entry><entry><title>Arya is Left-Handed</title><link href="http://anthony.scopatz.com/arya-is-left-handed.html" rel="alternate"></link><updated>2009-03-17T08:58:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-03-17:arya-is-left-handed.html</id><summary type="html">&lt;div style="text-align: justify;"&gt;&lt;p&gt;Maybe this isn&amp;#8217;t much of a give away, but with so much information to
+take in it certainly avoided me for a&amp;nbsp;while.&lt;/p&gt;
+&lt;p&gt;There are two instances where
+this comes up. The first is when Syrio is training Arya for the first time [1].
+He notes that after he tells to hold the practice sword in one hand, she goes
+for the left. The next instance where this comes up that I have found is all
+the way in &amp;#8220;A Feast for Crows&amp;#8221;. As she first arrives in Braavos, Arya wears a
+&amp;#8220;&amp;#8230;dagger on her left hip and Needle on her right.&amp;#8221; Since you keep
+weapons on the opposite side of the hand you use them in, this is more
+proof that she is&amp;nbsp;left-handed.&lt;/p&gt;
+&lt;p&gt;To the best of my knowledge, I don&amp;#8217;t know of any other explicitly
+left-handed characters. Though I would certainly be interested if
+someone could find&amp;nbsp;them.&lt;/p&gt;
+&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&amp;#8211;&amp;#8211;-&lt;/div&gt;
+&lt;div class="line"&gt;&lt;strong&gt;1:&lt;/strong&gt; &lt;em&gt;A Game of Thrones, Small paperback, pg. 224&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;strong&gt;2:&lt;/strong&gt; &lt;em&gt;A Feast for Crows, Hardcover, pg. 92&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;</summary><category term="Arya"></category><category term="Left-Handed"></category><category term="Stark"></category><category term="Syrio Forel"></category></entry><entry><title>lawl hwo emo</title><link href="http://anthony.scopatz.com/lawl-hwo-emo.html" rel="alternate"></link><updated>2009-03-10T03:18:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-03-10:lawl-hwo-emo.html</id><summary type="html">&lt;p&gt;blargh blargh blargh blargh I hat3z Austindating. blargh blargh blargh&amp;nbsp;blargh&lt;/p&gt;
 &lt;p&gt;Honestly, why haven&amp;#8217;t we had sex&amp;nbsp;yet?&lt;/p&gt;
 </summary></entry><entry><title>This year Steve Jobs won’t be able to unvail Anthony2.0</title><link href="http://anthony.scopatz.com/this-year-steve-jobs-wont-be-able-to-unvail-anthony2-0.html" rel="alternate"></link><updated>2009-02-28T23:01:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2009-02-28:this-year-steve-jobs-wont-be-able-to-unvail-anthony2-0.html</id><summary type="html">&lt;p&gt;Today, I got my hair&amp;nbsp;cut.&lt;/p&gt;
 &lt;p&gt;Then I dyed&amp;nbsp;it.&lt;/p&gt;
