@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/missives.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-09-30T09:00:00-05:00</updated><entry><title>Bootcamp Student Composition by Domain</title><link href="http://anthony.scopatz.com/bootcamp-student-composition-by-domain.html" rel="alternate"></link><updated>2013-09-30T09:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-30:bootcamp-student-composition-by-domain.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/missives.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-10-08T21:16:00-05:00</updated><entry><title>Projects by the Coffeeshops They Remind Me Of</title><link href="http://anthony.scopatz.com/projects_by_safe.html" rel="alternate"></link><updated>2013-10-08T21:16:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-10-08:projects_by_safe.html</id><summary type="html">&lt;p&gt;I have avid nostalgia for places - their feel, taste, and look -
+based on what major code project I was hacking on while there.
+Maybe it is the warm Texas night air and the pretty fairy lights,
+maybe it is the DeLorean floating above it all, but for whatever
+reason when I work on certain projects I can not help but recall
+the place and time.  Here is a short&amp;nbsp;list:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pynesim.org/"&gt;PyNE&lt;/a&gt; - &lt;a class="reference external" href="http://spiderhousecafe.com/"&gt;Spiderhouse&lt;/a&gt; - Austin,&amp;nbsp;&lt;span class="caps"&gt;TX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://bright-dev.github.io/"&gt;Bright&lt;/a&gt; - &lt;a class="reference external" href="http://thunderbirdcoffee.com/"&gt;Thunderbird (both locations)&lt;/a&gt; - Austin,&amp;nbsp;&lt;span class="caps"&gt;TX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://cyclus.github.io/"&gt;Cyclus&lt;/a&gt; - &lt;a class="reference external" href="http://www.motherfools.com/"&gt;Mother Fools&lt;/a&gt; - Madison,&amp;nbsp;&lt;span class="caps"&gt;WI&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pytables.github.io/"&gt;PyTables&lt;/a&gt; - &lt;a class="reference external" href="http://www.intelligentsiacoffee.com/"&gt;Intelligentsia (Millenium Park)&lt;/a&gt; - Chicago,&amp;nbsp;&lt;span class="caps"&gt;IL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://xdress.org/"&gt;XDress&lt;/a&gt; - &lt;a class="reference external" href="http://www.thewormhole.us/"&gt;Wormhole&lt;/a&gt; - Chicago,&amp;nbsp;&lt;span class="caps"&gt;IL&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these are in the Central time zone.  I guess I know where
+I am most&amp;nbsp;productive.&lt;/p&gt;
+</summary><category term="coffee"></category><category term="code"></category></entry><entry><title>Bootcamp Student Composition by Domain</title><link href="http://anthony.scopatz.com/bootcamp-student-composition-by-domain.html" rel="alternate"></link><updated>2013-09-30T09:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-09-30:bootcamp-student-composition-by-domain.html</id><summary type="html">
 
 &lt;p&gt;&lt;i&gt;
 This was originally published at 
