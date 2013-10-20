@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-10-08T21:16:00-05:00</updated><entry><title>Projects by the Coffeeshops They Remind Me Of</title><link href="http://anthony.scopatz.com/projects_by_safe.html" rel="alternate"></link><updated>2013-10-08T21:16:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-10-08:projects_by_safe.html</id><summary type="html">&lt;p&gt;I have avid nostalgia for places - their feel, taste, and look -
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-10-19T00:00:00-05:00</updated><entry><title>inSCIght Episode 32: Code Reproducibility and Open Source</title><link href="http://anthony.scopatz.com/inscight-episode-32-code-reproducibility-and-open-source.html" rel="alternate"></link><updated>2013-10-19T00:00:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-10-19:inscight-episode-32-code-reproducibility-and-open-source.html</id><summary type="html">
+
+&lt;p&gt;&lt;i&gt;
+This was originally published at 
+&lt;a href="http://inscight.org/2013/10/19/episode-32-code-reproducibility-and-open-source/"&gt;inSCIght&lt;/a&gt;.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href="http://inscight.s3.amazonaws.com/episodes/inscight_31_2012_10_29.mp3"&gt;
+&lt;img class="aligncenter" alt="" src="http://github.com/inscight/inscight/raw/master/img/icons/InSciGHT.jpg" width="168" height="136" /&gt;
+&lt;/a&gt;
+&lt;h2&gt;&lt;a href="https://s3.amazonaws.com/inscight/episodes/inscight_32_2013_10_18.mp3"&gt;Listen to the&amp;nbsp;podcast&lt;/a&gt;&lt;/h2&gt;
+The panel discussion  in episode 32 raises the importance of code reproducibility for scientific work. Open source software is a great contributor towards that end. The panel gives examples related to those issues from perspectives: spaceflight engineering, healthcare modeling, and nuclear&amp;nbsp;engineering.
+&lt;/p&gt;
+
+&lt;p&gt;
+On today&amp;#8217;s show our hosts include:
+&lt;ul&gt;
+  &lt;li&gt;Jacob Barhak (special&amp;nbsp;guest)&lt;/li&gt;
+  &lt;li&gt;Lealem Mulugeta (special&amp;nbsp;guest)&lt;/li&gt;
+  &lt;li&gt;Anthony Scopatz&amp;nbsp;(moderator)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;!-- Special Guest Bio --&gt;
+&lt;p&gt;
+&lt;div&gt;
+&lt;div&gt;Jacob Barhak has diverse international background in engineering, computing science, and disease modeling. He was educated at the Technion Israel Institute of Tehnology. He aquired experience in manufacturing and healthcare modeling from the university of Michigan. The Reference Model for disease progression was self developed in 2012 and he currently pursues this development effort as a freelancer. His work can be accessed though the following site: &lt;a href="http://sites.google.com/site/jacobbarhak/" target="_blank"&gt;http://sites.google.com/site/jacobbarhak/&lt;/a&gt;  Jacob is a member of the Committee on Credible Practice of Modeling &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Simulation in Healthcare.  &lt;a href="https://simtk.org/home/cpms" target="_blank"&gt;https://simtk.org/home/cpms&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;div&gt;
+&lt;div&gt;Lealem Mulugeta is the current Project/Lead Scientist of &lt;span class="caps"&gt;NASA&lt;/span&gt;&amp;#8217;s Digital Astronaut Project (&lt;span class="caps"&gt;DAP&lt;/span&gt;), a key member of the project leadership responsible for all scientific content and direction of the project. The &lt;span class="caps"&gt;DAP&lt;/span&gt; is dedicated to implementing well-validated computational models to help predict and assess spaceflight health and performance risks, and to enhance the development of health risk countermeasure. Since joining &lt;span class="caps"&gt;DAP&lt;/span&gt;, among his many responsibilities, Lealem has played a strong role in the development and implementation of standardized methods for verification, validation and credibility assessment of &lt;span class="caps"&gt;NASA&lt;/span&gt;’s biomedical computational models. In doing so, he works very closely with highly multidisciplinary teams of researchers and engineers to develop and implement computational models for space biomedical research. Additional information about the &lt;span class="caps"&gt;DAP&lt;/span&gt; is available at: &lt;a href="http://www.dsls.usra.edu/displays/digitalAstronaut.pdf" target="_blank"&gt;http://www.dsls.usra.edu/displays/digitalAstronaut.pdf&lt;/a&gt;  Lealem recently founded and Co-chairs the Committee on Credible Practice of Modeling &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Simulation in Healthcare.  &lt;a href="https://simtk.org/home/cpms" target="_blank"&gt;https://simtk.org/home/cpms&lt;/a&gt;  Additionally, he is a member of the &lt;span class="caps"&gt;ASME&lt;/span&gt; V&amp;amp;V40 Verification and Validation on Computational Modeling of Medical Devices: &lt;a href="http://cstools.asme.org/csconnect/CommitteePages.cfm?Committee=100108782" target="_blank"&gt;http://cstools.asme.org/csconnect/CommitteePages.cfm?Committee=100108782&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;span style="color:#2b6fb6;font-size:14px;"&gt;Show Links:&lt;/span&gt;
+&lt;ol&gt;
+  &lt;li&gt;Committee on Credible Practice of Modeling &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Simulation in Healthcare.  &lt;a href="https://simtk.org/home/cpms" target="_blank"&gt;https://simtk.org/home/cpms&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+
+</summary><category term="inscight"></category></entry><entry><title>Projects by the Coffeeshops They Remind Me Of</title><link href="http://anthony.scopatz.com/projects_by_safe.html" rel="alternate"></link><updated>2013-10-08T21:16:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-10-08:projects_by_safe.html</id><summary type="html">&lt;p&gt;I have avid nostalgia for places - their feel, taste, and look -
 based on what major code project I was hacking on while there.
 Maybe it is the warm Texas night air and the pretty fairy lights,
 maybe it is the DeLorean floating above it all, but for whatever
