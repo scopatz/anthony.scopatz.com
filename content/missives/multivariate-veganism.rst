@@ -115,6 +115,28 @@ However, environmentalists veganism has no such quandries.  Bees - whether they
 can truly feel or not - is irrelevant to honey production.  Honey still requires
 many times the amount of water as opposed to equivalent food stuffs such as sugar.
 
-Thus in the limit where suffering becomes small or alien, enviornmental and 
+Thus in the limit where suffering becomes small or unintellagible, enviornmental and 
 ecological justifications become more important and compelling as a justification 
 for veganism.
+
+Personal Purity
+===============
+This argument is often derided as being selfish, vain, and transitory.  Personal 
+purity justifications span the gamut from trying to loose weight to "my body is 
+a temple" to "I just feel better as a vegan."
+
+However, what the putity argument has that the other arguments lack is a strong
+sense of personal responsibility.  Veganism is something empowered by the individual.
+It is not possible for anyone to be vegan for someone else in this belief. 
+
+If someone has made the choice to be vegan or to remain vegan, this is presumably
+because it brings them some measure of aesthitic or emotional satisfaction. I feel 
+that knocking this argument down is inapproriate.  People should be allowed to 
+enjoy life in whatever mechanism they choose so long as it does not cause implicate
+them in other moral hazards. Veganism has none of these and should be accepted
+on any terms.
+
+Parting Thoughts
+================
+
+
