@@ -11,7 +11,7 @@ Self
 I am a computational scientist and long time Python developer, 
 I hold my BS in Physics from UC, Santa Barbara and a Ph.D. in 
 Mechanical / Nuclear Engineering from UT Austin. A former Enthought employee, 
-I spent his post-doctoral studies at the FLASH Center at the University of 
+I spent my post-doctoral studies at the FLASH Center at the University of 
 Chicago in the Astrophysics Department. I am currently a Staff Scientist at 
 the University of Wisconsin-Maidson in Engineering Physics. My research 
 interests revolve around essential physics modeling of the nuclear fuel cycle, 
@@ -27,7 +27,7 @@ Major Projects
     :width: 300px
     :target: http://cyclus.github.io/
 
-|cyclus| - `Cyclus <http://cyclus.github.io/>`_, benevolant dictator
+|cyclus| - `Cyclus <http://cyclus.github.io/>`_, benevolent dictator
 
 .. |pyne| image:: |filename|/images/pyne_icon_small.png
     :align: middle
