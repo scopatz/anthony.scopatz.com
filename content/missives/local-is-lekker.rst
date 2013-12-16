@@ -183,7 +183,7 @@ and sustained.  In all corners of life there were memorials, remembrances, and
 commentaries.  Even at the trance festival there was a florescent finger paint 
 cloth memorial sponsored by Greenpeace which anyone was free to add to. The memorials
 were a good mix of mourning and celebratory remembrances.  The Onion put it well 
-when the said that he became the `"first politician to be missed." <http://www.theonion.com/articles/nelson-mandela-becomes-first-politician-to-be-miss,34755/>`_
+when they said that he became the `"first politician to be missed." <http://www.theonion.com/articles/nelson-mandela-becomes-first-politician-to-be-miss,34755/>`_
 
 .. raw:: html
 
