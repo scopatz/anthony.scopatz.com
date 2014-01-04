@@ -14,6 +14,8 @@ DEFAULT_LANG = u'en'
 
 THEME = u'octopelican'
 
+SEARCH_BOX = True
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -41,8 +43,11 @@ SOCIAL = (('Other Website', 'http://scopatz.com/'),
 #DISQUS_SITENAME = "anthonyscopatz"
 GITHUB_URL = 'https://github.com/scopatz'
 TWITTER_URL = 'https://twitter.com/scopatz'
-TWITTER_USERNAME = 'scopatz'
+TWITTER_USER = TWITTER_USERNAME = 'scopatz'
 GOOGLEPLUS_URL = 'https://plus.google.com/u/0/116439624339414215461'
+GOOGLE_PLUS_ID = "AnthonyScopatz"
+GOOGLE_PLUS_ONE = True
+FACEBOOK_LIKE = True
 
 MENUITEMS = [('Missives', 'category/missives.html'),
              ('Archives', 'archives.html'),
@@ -72,5 +77,3 @@ RELATIVE_URLS = True
 #RELATIVE_URLS = False
 
 PYGMENTS_RST_OPTIONS = ['nobackground']
-
-
