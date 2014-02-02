@@ -1,5 +1,518 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2013-12-15T17:17:00-06:00</updated><entry><title>Local is Lekker</title><link href="http://anthony.scopatz.com/local-is-lekker.html" rel="alternate"></link><updated>2013-12-15T17:17:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-12-15:local-is-lekker.html</id><summary type="html">&lt;p&gt;I just got back from my month-long visit to Cape Town.  As my friend and collaborator
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2014-02-02T10:35:00-06:00</updated><entry><title>Polyglot Style Guide</title><link href="http://anthony.scopatz.com/polyglot-style-guide.html" rel="alternate"></link><updated>2014-02-02T10:35:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2014-02-02:polyglot-style-guide.html</id><summary type="html">&lt;p&gt;Today the pyne community &lt;a class="reference external" href="https://github.com/pyne/pyne/pull/257"&gt;approved a pull request&lt;/a&gt;
+for &lt;a class="reference external" href="https://github.com/pyne/pyne/blob/staging/docs/devsguide/style_guide.rst"&gt;a new style guide&lt;/a&gt;
+I wrote.  Writing this went against every bone in my body. You are supposed to use
+existing style guides. You are supposed to trust that the authors of other style
+guides know what they are doing. Or barring their competence, that they are at least
+consistent.  These assumptions work great as long&amp;nbsp;as&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;such a style guide exists,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;you live in only one&amp;nbsp;language.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PyNE provides first class APIs in three languages (C++, Python, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Cython) with
+more to come, in all likelihood. Other projects rely on pyne&amp;#8217;s &lt;span class="caps"&gt;API&lt;/span&gt; in all languages
+and users see pyne from all levels.  We are not allowed to hide behind bad design
+because it is &amp;#8216;just an optimization&amp;#8217; or it is for pyne developers only.  We need pyne
+to be nice&amp;nbsp;everywhere.&lt;/p&gt;
+&lt;p&gt;No single style guide I have found really covers the multi-language scenario.
+Sure, CPython has &lt;span class="caps"&gt;PEP7&lt;/span&gt; as a corollary to &lt;span class="caps"&gt;PEP8&lt;/span&gt;, but it falls under the not-for-users
+category. Many projects use different style guides for different languages saying, for
+example, &amp;#8220;use &lt;span class="caps"&gt;PEP8&lt;/span&gt; for Python and the Google C++ Style Guide for C++.&amp;#8221;  However,
+the results of this are weird. Different guides make different assumptions about
+fundamental abstractions: how are types names, how should memory be managed, and
+so&amp;nbsp;on.&lt;/p&gt;
+&lt;p&gt;In the case of Cython, no style guide actually existed and folks just do
+something &lt;span class="caps"&gt;PEP8&lt;/span&gt;-ish.  This really isn&amp;#8217;t enough.  I hope that this is a stepping stone
+for a more formal guide for Cython&amp;nbsp;eventually.&lt;/p&gt;
+&lt;p&gt;In the pyne style guide, I tried to bring consistency across the language
+barriers while remaining idiomatic to the individual languages.  I also tried to
+rely on existing style guides, deferring to or forking from them as needed. I also
+tried to tie together the languages with some head matter that I hope puts the reader
+in the pyne mindset and is good advice no matter what language you are coding&amp;nbsp;in.&lt;/p&gt;
+&lt;p&gt;I have included the style guide here in its current form.  Some of it is a bit
+nuclear engineering specific.&amp;nbsp;Enjoy!&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;div class="section" id="rules-to-write-by"&gt;
+&lt;h2&gt;Rules to Write&amp;nbsp;By&lt;/h2&gt;
+&lt;p&gt;It is important to refer to things and concepts by their most specific name.
+When writing PyNE code or documentation please use technical terms appropriately.
+The following rules help provide needed&amp;nbsp;clarity.&lt;/p&gt;
+&lt;div class="section" id="terminology"&gt;
+&lt;h3&gt;Terminology&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The terms &lt;em&gt;element&lt;/em&gt; or &lt;em&gt;elemental&lt;/em&gt; refer specifically to chemical elements,
+oxygen, uranium, etc.  Use &lt;em&gt;element&lt;/em&gt; only when the physics relies on manipulating
+elements and not their underlying isotopes (ie aqueous&amp;nbsp;reprocessing).&lt;/li&gt;
+&lt;li&gt;The term &lt;em&gt;isotope&lt;/em&gt; refers only to a collection of nuclides containing the
+same Z-number.  &lt;strong&gt;Do not confuse this with&amp;nbsp;*nuclide*!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The term &lt;em&gt;isotone&lt;/em&gt; refers only to a collection of nuclides containing the
+same neutron&amp;nbsp;number.&lt;/li&gt;
+&lt;li&gt;The term &lt;em&gt;isobar&lt;/em&gt; refers only to a collection of nuclides containing the
+same&amp;nbsp;A-number.&lt;/li&gt;
+&lt;li&gt;The term &lt;em&gt;isomer&lt;/em&gt; refers only to a collection of nuclides containing the
+same A-number and the same Z-number but possessing differing internal energy&amp;nbsp;states.&lt;/li&gt;
+&lt;li&gt;The term &lt;em&gt;nuclide&lt;/em&gt; may refer to any species with a nucleus. This is the most
+general term and encompasses isotopes, isotones, isobars, and&amp;nbsp;isomers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interfaces"&gt;
+&lt;h3&gt;Interfaces&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Always provide&amp;nbsp;units!&lt;/li&gt;
+&lt;li&gt;Use square-brace notation to mark units in text, ie&amp;nbsp;[sec].&lt;/li&gt;
+&lt;li&gt;User-facing APIs should be as generic and robust as&amp;nbsp;possible.&lt;/li&gt;
+&lt;li&gt;Nuclear data belongs in&amp;nbsp;nuc_data.h5.&lt;/li&gt;
+&lt;li&gt;Views belong in the &lt;tt class="docutils literal"&gt;gui&lt;/tt&gt; sub-package.&lt;/li&gt;
+&lt;li&gt;Tests belong in the top-level &lt;tt class="docutils literal"&gt;tests&lt;/tt&gt; directory.&lt;/li&gt;
+&lt;li&gt;Documentation belongs in the top-level &lt;tt class="docutils literal"&gt;docs&lt;/tt&gt; directory.&lt;/li&gt;
+&lt;li&gt;The capitalized project name is &amp;#8220;PyNE&amp;#8221; while the lowercase project name is&amp;nbsp;&amp;#8220;pyne&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;Write code in whatever language you want but make sure that it is exposed to Python.
+Python is the glue that holds the universe together. It is the &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;NULL&lt;/span&gt;&lt;/tt&gt; and the
+&lt;tt class="docutils literal"&gt;INT_MAX&lt;/tt&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="variable-name-conventions"&gt;
+&lt;h3&gt;Variable Name&amp;nbsp;Conventions&lt;/h3&gt;
+&lt;p&gt;Please use the following patterns when writing pyne code. These rules should
+only be ignored if they would cause name conflicts. These variable names are
+considered to have the same semantic meaning throughout the entire code&amp;nbsp;base.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;xs&lt;/tt&gt; stands for &amp;#8220;cross&amp;nbsp;section&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;rx&lt;/tt&gt; stands for&amp;nbsp;&amp;#8220;reaction&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;ve&lt;/tt&gt; stands for &amp;#8220;volume&amp;nbsp;element&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;nuc&lt;/tt&gt; stands for a &amp;#8220;nuclide&amp;#8221; in id&amp;nbsp;form.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;nuc_name&lt;/tt&gt; stands for a &amp;#8220;nuclide&amp;#8221; in a string&amp;nbsp;form.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;iso&lt;/tt&gt; stands for an &amp;#8220;isotope&amp;#8221; in id&amp;nbsp;form.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;iso_name&lt;/tt&gt; stands for an &amp;#8220;isotope&amp;#8221; in string&amp;nbsp;form.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;mat&lt;/tt&gt; stands for&amp;nbsp;&amp;#8220;material&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;m&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;mesh&lt;/tt&gt; are used for Mesh&amp;nbsp;instances.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;idx&lt;/tt&gt; stands for &amp;#8220;indices&amp;#8221;. When used with meshes it is the canonical integer
+identifier for an entity. This is not necessarily iteration&amp;nbsp;order.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;i&lt;/tt&gt; is the iteration variable of mesh indices, ie &lt;tt class="docutils literal"&gt;for i in idx&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Generator names should start with the prefix &lt;tt class="docutils literal"&gt;iter&lt;/tt&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="canonical-forms"&gt;
+&lt;h3&gt;Canonical&amp;nbsp;Forms&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;We have canonical forms; use them! For example, if a function accepts a nuclide
+as an argument then you should use nucname to ensure that it accepts all possible
+nuclide name spellings. If a function accepts a reaction name then use the rxname
+module. Turn materials specifications into Material objects.  And so&amp;nbsp;on&amp;#8230;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Mesh is the gentle giant of canonical forms. Use its strong, kind arms when dealing
+with&amp;nbsp;geometries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;If a canonical form doesn&amp;#8217;t exist, follow these&amp;nbsp;steps:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;invent one,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;make it&amp;nbsp;awesome.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Making a canonical form great may take time and many iterations. Do not give&amp;nbsp;up.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Interim working solutions are better than the best solution&amp;nbsp;never.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="caps"&gt;HDF5&lt;/span&gt; is the preferred persistence format for structured&amp;nbsp;data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="expectations"&gt;
+&lt;h3&gt;Expectations&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Code must have associated tests and adequate&amp;nbsp;documentation.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;only&lt;/em&gt; exceptions to not having tests and documentation are when merging in and
+slowly integrating legacy code or code not originally originally written for&amp;nbsp;pyne.&lt;/li&gt;
+&lt;li&gt;Without both tests and documentation, the code must be marked as&amp;nbsp;experimental.&lt;/li&gt;
+&lt;li&gt;Have &lt;em&gt;extreme&lt;/em&gt; empathy for your&amp;nbsp;users.&lt;/li&gt;
+&lt;li&gt;Be selfish. Since you will be writing tests you will be your first&amp;nbsp;user.&lt;/li&gt;
+&lt;li&gt;Nothing says &amp;#8220;I &amp;lt;3 PyNE&amp;#8221; quite like an &lt;span class="caps"&gt;ASCII&lt;/span&gt; art&amp;nbsp;dragon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python-style-guide"&gt;
+&lt;h2&gt;Python Style&amp;nbsp;Guide&lt;/h2&gt;
+&lt;p&gt;PyNE uses &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt; for all Python code.  The following rules apply where &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt;
+is open to&amp;nbsp;interpretation.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use absolute imports (&lt;tt class="docutils literal"&gt;import pyne.material&lt;/tt&gt;) rather than explicit relative imports
+(&lt;tt class="docutils literal"&gt;import .material&lt;/tt&gt;). Implicit relative imports (&lt;tt class="docutils literal"&gt;import material&lt;/tt&gt;) are never&amp;nbsp;allowed.&lt;/li&gt;
+&lt;li&gt;Use &amp;#8216;single quotes&amp;#8217; for string literals, and &amp;#8220;&amp;#8221;&amp;#8220;triple double quotes&amp;#8221;&amp;#8220;&amp;#8221; for
+docstrings. Double quotes are allowed to prevent single quote escaping,
+e.g. &amp;#8220;Y&amp;#8217;all c&amp;#8217;mon o&amp;#8217;er&amp;nbsp;here!&amp;#8221;&lt;/li&gt;
+&lt;li&gt;We use sphinx with the numpydoc extension to autogenerate &lt;span class="caps"&gt;API&lt;/span&gt; documentation. Follow
+the numpydoc standard for docstrings &lt;a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt"&gt;described here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Simple functions should have simple&amp;nbsp;docstrings.&lt;/li&gt;
+&lt;li&gt;Lines should be at most 80 characters long. The 72 and 79 character recommendations
+from &lt;span class="caps"&gt;PEP8&lt;/span&gt; are not required&amp;nbsp;here.&lt;/li&gt;
+&lt;li&gt;All Python code should be compliant with Python 2.7 and Python 3.3+.  At some
+unforeseen date in the future, Python 2.7 support &lt;em&gt;may&lt;/em&gt; be&amp;nbsp;dropped.&lt;/li&gt;
+&lt;li&gt;Tests should be written with nose using a procedural style. Do not use unittest
+directly or write tests in an object-oriented&amp;nbsp;style.&lt;/li&gt;
+&lt;li&gt;Test generators make more dots and the dots must&amp;nbsp;flow!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cython-style-guide"&gt;
+&lt;h2&gt;Cython Style&amp;nbsp;Guide&lt;/h2&gt;
+&lt;p&gt;Cython as a super-set language of Python should follow &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt; for all syntax
+that the two languages share.  Cython-specific syntax should follow these additional&amp;nbsp;rules.&lt;/p&gt;
+&lt;div class="section" id="cdefs-cpdefs-ctypedefs"&gt;
+&lt;h3&gt;cdefs, cpdefs, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;ctypedefs&lt;/h3&gt;
+&lt;p&gt;Separate &lt;tt class="docutils literal"&gt;cdef&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;cpdef&lt;/tt&gt;, and &lt;tt class="docutils literal"&gt;ctypedef&lt;/tt&gt; statements from the following type by
+exactly one space. In turn, separate the type from the variable name by exactly
+one space. Only &lt;tt class="docutils literal"&gt;ctypedef&lt;/tt&gt; one variable per line. You may &lt;tt class="docutils literal"&gt;cdef&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;cpdef&lt;/tt&gt;
+multiple variables per line as long as these are simple declarations - multiple
+assignment, references, or pointers are not allowed. Grouping &lt;tt class="docutils literal"&gt;cdef&lt;/tt&gt; statements
+is allowed.  For&amp;nbsp;example,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;n&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;* &lt;span class="nf"&gt;s&lt;/span&gt;
+&lt;span class="k"&gt;cpdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;k&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;Material&lt;/span&gt; &lt;span class="nf"&gt;mat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Material&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;true_enough&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mf"&gt;1&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt;  &lt;span class="kt"&gt;char&lt;/span&gt; *&lt;span class="nf"&gt;s&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; * &lt;span class="nf"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; * &lt;span class="nf"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; * &lt;span class="nf"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; * &lt;span class="nf"&gt;v&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="nf"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;42&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;Material&lt;/span&gt;     &lt;span class="nf"&gt;mat&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Material&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt;   &lt;span class="kt"&gt;int&lt;/span&gt;   &lt;span class="nf"&gt;falsified&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mf"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inside of a function, place all &lt;tt class="docutils literal"&gt;cdef&lt;/tt&gt; statements at the top of the function&amp;nbsp;body.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;true_enough&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+    &lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;rtn&lt;/span&gt;
+    &lt;span class="n"&gt;rtn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;42&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rtn&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;falsified&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;42&lt;/span&gt;
+    &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+    &lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;rtn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mf"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rtn&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cimport-include-statements"&gt;
+&lt;h3&gt;cimport &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; include&amp;nbsp;statements&lt;/h3&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;cimports&lt;/tt&gt; should follow the same rules defined in &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt; for
+&lt;tt class="docutils literal"&gt;import&lt;/tt&gt; statements.  If a module is both imported and cimported, the
+cimport should come before the&amp;nbsp;import.&lt;/p&gt;
+&lt;p&gt;Do not use &lt;tt class="docutils literal"&gt;include&lt;/tt&gt; statements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="error-return-values"&gt;
+&lt;h3&gt;Error return&amp;nbsp;values&lt;/h3&gt;
+&lt;p&gt;When declaring an error return value with the &lt;tt class="docutils literal"&gt;except&lt;/tt&gt; keyword, use one
+space on both sides of the &lt;tt class="docutils literal"&gt;except&lt;/tt&gt;. If in a function definition, there should
+be no spaces between the error return value and the colon &lt;tt class="docutils literal"&gt;:&lt;/tt&gt;.  Avoid &lt;tt class="docutils literal"&gt;except *&lt;/tt&gt;
+unless it is needed for functions returning &lt;tt class="docutils literal"&gt;void&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;redwood&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;sequoia&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; * &lt;span class="nf"&gt;spruce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;fir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    &lt;span class="k"&gt;except&lt;/span&gt;   &lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pointers-references"&gt;
+&lt;h3&gt;Pointers &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;References&lt;/h3&gt;
+&lt;p&gt;Pointers and references may be either zero or one space away from the type name.
+If followed by a variable name, they must be one space away from the variable name.
+Do not put any spaces between the reference operator &lt;tt class="docutils literal"&gt;&amp;amp;&lt;/tt&gt; and the variable&amp;nbsp;name.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&amp;amp; &lt;span class="nf"&gt;i&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; * &lt;span class="nf"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &amp;amp;&lt;span class="nf"&gt;i&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; *&lt;span class="nf"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="casting"&gt;
+&lt;h3&gt;Casting&lt;/h3&gt;
+&lt;p&gt;When casting a variable there must be no whitespace between the opening &lt;tt class="docutils literal"&gt;&amp;lt;&lt;/tt&gt; and
+the type.  There must one space between the closing &lt;tt class="docutils literal"&gt;&amp;gt;&lt;/tt&gt; and the&amp;nbsp;variable.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;float&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="o"&gt;*&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;void&lt;/span&gt;&lt;span class="o"&gt;*&amp;gt;&lt;/span&gt;  &lt;span class="n"&gt;s&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="loops"&gt;
+&lt;h3&gt;Loops&lt;/h3&gt;
+&lt;p&gt;Use Python loop syntax - &lt;tt class="docutils literal"&gt;for i in range(10):&lt;/tt&gt;.  Other for-loop constructs are
+deprecated and must be&amp;nbsp;avoided.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="property-keyword"&gt;
+&lt;h3&gt;Property&amp;nbsp;Keyword&lt;/h3&gt;
+&lt;p&gt;Properties are great! There should be exactly one space between the &lt;tt class="docutils literal"&gt;property&lt;/tt&gt;
+keyword and the attribute name.  There may be no spaces between the attribute
+name and the colon &lt;tt class="docutils literal"&gt;:&lt;/tt&gt;.  All properties should have docstrings. There should
+be no blank lines between the property declaration line and the following&amp;nbsp;line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;property&lt;/span&gt; &lt;span class="nf"&gt;has_cone&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;This class has a cone.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__get__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;property&lt;/span&gt;    &lt;span class="nf"&gt;has_cone&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__get__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="type-declarations-extern-public-api-readonly"&gt;
+&lt;h3&gt;Type Declarations, Extern, Public, &lt;span class="caps"&gt;API&lt;/span&gt;, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;Readonly&lt;/h3&gt;
+&lt;p&gt;Type declarations, the &lt;tt class="docutils literal"&gt;extern&lt;/tt&gt; keyword, the &lt;tt class="docutils literal"&gt;public&lt;/tt&gt; keyword, the &lt;tt class="docutils literal"&gt;api&lt;/tt&gt;
+keyword, and the &lt;tt class="docutils literal"&gt;readonly&lt;/tt&gt; keyword should always be followed by a single&amp;nbsp;space.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Good&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kr"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; * &lt;span class="nf"&gt;v&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;api&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;i&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sequoia&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="c"&gt;# Bad&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kr"&gt;extern&lt;/span&gt;         &lt;span class="kt"&gt;void&lt;/span&gt; * &lt;span class="nf"&gt;v&lt;/span&gt;
+&lt;span class="k"&gt;cdef&lt;/span&gt; &lt;span class="kr"&gt;public&lt;/span&gt;  &lt;span class="kr"&gt;api&lt;/span&gt;    &lt;span class="kt"&gt;int&lt;/span&gt;    &lt;span class="nf"&gt;i&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;spruce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;   &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="documentation"&gt;
+&lt;h3&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;In addition to following the numpydoc convention, also include the function or method
+signature as the first line in the docstring.  This helps sphinx print out the
+signature.  Include type information in this signature if available and&amp;nbsp;relevant.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="c-c-style-guide"&gt;
+&lt;h2&gt;C/C++ Style&amp;nbsp;Guide&lt;/h2&gt;
+&lt;p&gt;As software that is meant to be exposed to Python, C/C++ code written for pyne
+has special needs.  Existing single-language style guides are non-idiomatic across
+the language barrier.  This style guide attempts to rectify this impedance
+mismatch by defining a hierarchy of style guides and special rules to follow that
+make C/C++ more PyNEthonic. Legacy codes not originally written for pyne in these
+languages need not be migrated to this style.  While a custom style may not be
+ideal in terms of leveraging linters and style checker tools, the benefits
+in readability and portability outweigh this&amp;nbsp;cost.&lt;/p&gt;
+&lt;p&gt;The aim is to have all languages be as similar and have as idiomatic of APIs for that
+language as&amp;nbsp;possible.&lt;/p&gt;
+&lt;p&gt;Except as noted below, C/C++ code should adhere to the rules laid out in the
+following style guides in order of&amp;nbsp;preference:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.maultech.com/chrislott/resources/cstyle/LinuxKernelCodingStyle.txt"&gt;The Linux Kernel Coding&amp;nbsp;Style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml"&gt;The Google C++ Style&amp;nbsp;Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This section was forked from the &lt;a class="reference external" href="http://wiki.ros.org/CppStyleGuide"&gt;&lt;span class="caps"&gt;ROS&lt;/span&gt; C++ Style Guide&lt;/a&gt;.
+If you require clarification on a particular syntax or idiom, please&amp;nbsp;ask!&lt;/p&gt;
+&lt;div class="section" id="files"&gt;
+&lt;h3&gt;Files&lt;/h3&gt;
+&lt;p&gt;Files may have&amp;nbsp;under_scores.&lt;/p&gt;
+&lt;p&gt;C source files have the extension &lt;tt class="docutils literal"&gt;.c&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;C++ source files have the extension &lt;tt class="docutils literal"&gt;.cpp&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Header files have the extension &lt;tt class="docutils literal"&gt;.h&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;If the file primarily implements a class, name the file after the&amp;nbsp;class.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="classes-typedefs-structs"&gt;
+&lt;h3&gt;Classes, Typedefs, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;Structs&lt;/h3&gt;
+&lt;p&gt;Class names are&amp;nbsp;CapCased:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleClass&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Exception:&lt;/strong&gt; if the class name contains a short acronym, the acronym itself
+should be all&amp;nbsp;capitals:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;HokuyoURGLaser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Name the class after what it is. If you can&amp;#8217;t think of what it is, perhaps you
+have not thought through the design well&amp;nbsp;enough.&lt;/p&gt;
+&lt;p&gt;Class names should be&amp;nbsp;nouns.&lt;/p&gt;
+&lt;p&gt;Typedef names should be lowercase_with_underscores, like primitive C/C++ and
+Python&amp;nbsp;types.&lt;/p&gt;
+&lt;p&gt;Struct names should be CapCased if they have non-trivial member functions
+and are more&amp;nbsp;class-like.&lt;/p&gt;
+&lt;p&gt;However, if a struct is meant to be used primarily as compound data type
+it should have a lowercase_with_underscores name, like&amp;nbsp;typedefs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="functions"&gt;
+&lt;h3&gt;Functions&lt;/h3&gt;
+&lt;p&gt;Functions and their arguments are&amp;nbsp;lowercase_with_underscores:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;example_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;example_arg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Functions usually performs an action, so the name should make clear what it does.
+Function names thus should be&amp;nbsp;verbs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="variables"&gt;
+&lt;h3&gt;Variables&lt;/h3&gt;
+&lt;p&gt;Variable names are&amp;nbsp;lowercase_with_underscores.&lt;/p&gt;
+&lt;p&gt;Integral iterator variables can be very short, such as i, j, k. Be consistent in
+how you use iterators (e.g., i on the outer loop, j on the next inner&amp;nbsp;loop).&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;STL&lt;/span&gt; iterator variables should indicate what they are iterating&amp;nbsp;over:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pid_list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;::&lt;/span&gt;&lt;span class="n"&gt;iterator&lt;/span&gt; &lt;span class="n"&gt;pid_it&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="constants"&gt;
+&lt;h3&gt;Constants&lt;/h3&gt;
+&lt;p&gt;Constants, wherever they are used, are&amp;nbsp;ALL_CAPITALS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="member-variables"&gt;
+&lt;h3&gt;Member&amp;nbsp;Variables&lt;/h3&gt;
+&lt;p&gt;Variables that are members of a class are lowercase_with_underscores.
+Private and protected member variables start with a single leading underscore.
+Public member variables do not have a leading&amp;nbsp;underscore.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;public_x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_protected_y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_private_z&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="global-variables"&gt;
+&lt;h3&gt;Global&amp;nbsp;Variables&lt;/h3&gt;
+&lt;p&gt;Global variables should never be&amp;nbsp;used.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exception:&lt;/strong&gt; a file may contain a main()&amp;nbsp;function.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="namespaces"&gt;
+&lt;h3&gt;Namespaces&lt;/h3&gt;
+&lt;p&gt;Namespace names, like Python module names, are lowercase &lt;em&gt;without&lt;/em&gt;&amp;nbsp;underscores.&lt;/p&gt;
+&lt;p&gt;Everything should be in a namespace.  Anonymous namespaces are encouraged to help
+meet this&amp;nbsp;requirement.&lt;/p&gt;
+&lt;p&gt;The bodies of namespace declaration and definition are not indented. This is
+the same as the &lt;a class="reference external" href="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml"&gt;&lt;span class="caps"&gt;GCSG&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Never use a &lt;tt class="docutils literal"&gt;using namespace&lt;/tt&gt; directive. Using-declarations inside of class
+or function scope, which only grab the names you intend to use, are&amp;nbsp;allowed.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// Good&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;    &lt;span class="c1"&gt;// I want to refer to std::list as list&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="c1"&gt;// I want to refer to std::vector as vector&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Bad, because it imports all names from std::&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="access-patterns"&gt;
+&lt;h3&gt;Access&amp;nbsp;Patterns&lt;/h3&gt;
+&lt;p&gt;We are all adults here. Everything should be public.  Use private and protected
+variables only when absolutely&amp;nbsp;necessary.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="accessors-mutator-pattern"&gt;
+&lt;h3&gt;Accessors/Mutator&amp;nbsp;Pattern&lt;/h3&gt;
+&lt;p&gt;Avoid getter and setter member functions. This pattern increases code volume,
+inlining is not guaranteed, and slows down run&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;Use this pattern only if implementing a Python/Cython-like property where
+getting or setting a member variable is non-trivial. In these cases, the
+storage variable should be named with a leading underscore (even though it may be
+public) and the get/set names should have the same name as the variable but without
+the leading&amp;nbsp;underscore:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WithAnX&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="nl"&gt;public:&lt;/span&gt;
+  &lt;span class="c1"&gt;// storage variable&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// getter&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;x&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// setter&lt;/span&gt;
+  &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;x&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="formatting"&gt;
+&lt;h3&gt;Formatting&lt;/h3&gt;
+&lt;p&gt;Indent each block by 2 spaces. Never insert literal tab&amp;nbsp;characters.&lt;/p&gt;
+&lt;p&gt;The contents of a namespace are not&amp;nbsp;indented.&lt;/p&gt;
+&lt;p&gt;We are all friends here! Braces should be &lt;a class="reference external" href="http://gskinner.com/blog/archives/2008/11/curly_braces_to.html"&gt;cuddled&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Braces may be omitted if the enclosed block is a single-line&amp;nbsp;statement:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Only single line comments should be used.  Multi-line comments are inconsistent
+and not&amp;nbsp;allowed.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// This is &lt;span class="caps"&gt;OK&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/* This is not &lt;span class="caps"&gt;OK&lt;/span&gt; */&lt;/span&gt;
+
+&lt;span class="cm"&gt;/* What is even going on here?!&lt;/span&gt;
+&lt;span class="cm"&gt; * All I can see are the stars...&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="line-length"&gt;
+&lt;h3&gt;Line&amp;nbsp;Length&lt;/h3&gt;
+&lt;p&gt;Maximum line length is 80&amp;nbsp;characters.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="include-guards"&gt;
+&lt;h3&gt;Include&amp;nbsp;Guards&lt;/h3&gt;
+&lt;p&gt;All headers must be protected against multiple inclusion by #ifndef guards.
+These guards ought to be&amp;nbsp;UUIDs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#ifndef _W7WGLJVRGRDH7G47RDHRLLCP2A&lt;/span&gt;
+&lt;span class="cp"&gt;#define _W7WGLJVRGRDH7G47RDHRLLCP2A&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Use this command for generating&amp;nbsp;UUIDs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python -c &lt;span class="s2"&gt;&amp;quot;import uuid; import base64; print(&amp;#39;_&amp;#39; + base64.b32encode(uuid.uuid4().bytes).decode().strip(&amp;#39;=&amp;#39;))&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This guard should begin before any other code and should end at the end of the&amp;nbsp;file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h3&gt;Documentation&lt;/h3&gt;
+&lt;p&gt;All code must be documented. We use doxygen to auto-document our code.
+All functions, methods, classes, variables, enumerations, and constants
+should be&amp;nbsp;documented.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="console-output"&gt;
+&lt;h3&gt;Console&amp;nbsp;Output&lt;/h3&gt;
+&lt;p&gt;Avoid printf if in C++.  Use &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::cout&lt;/span&gt;&lt;/tt&gt; instead.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="macros"&gt;
+&lt;h3&gt;Macros&lt;/h3&gt;
+&lt;p&gt;Avoid preprocessor macros whenever possible. Unlike in-line functions and const
+variables, macros are neither typed nor&amp;nbsp;scoped.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="inheritance"&gt;
+&lt;h3&gt;Inheritance&lt;/h3&gt;
+&lt;p&gt;When overriding a virtual method in a subclass always declare it to be virtual
+so that the reader knows what&amp;#8217;s going&amp;nbsp;on.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exceptions"&gt;
+&lt;h3&gt;Exceptions&lt;/h3&gt;
+&lt;p&gt;Built-in exceptions are the preferred error-reporting mechanism,
+as opposed to returning integer error codes or custom exception&amp;nbsp;mechanisms.&lt;/p&gt;
+&lt;p&gt;Do not throw exceptions from&amp;nbsp;destructors.&lt;/p&gt;
+&lt;p&gt;Do not throw exceptions from callbacks that you don&amp;#8217;t invoke&amp;nbsp;directly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="calling-exit"&gt;
+&lt;h3&gt;Calling&amp;nbsp;exit()&lt;/h3&gt;
+&lt;p&gt;Only call &lt;tt class="docutils literal"&gt;exit()&lt;/tt&gt; at a well-defined exit point for the&amp;nbsp;application.&lt;/p&gt;
+&lt;p&gt;Never call &lt;tt class="docutils literal"&gt;exit()&lt;/tt&gt; in a&amp;nbsp;library.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="portability"&gt;
+&lt;h3&gt;Portability&lt;/h3&gt;
+&lt;p&gt;Portability&amp;nbsp;counts.&lt;/p&gt;
+&lt;p&gt;Do not use uint as a type. Instead use unsigned&amp;nbsp;int.&lt;/p&gt;
+&lt;p&gt;Call &lt;tt class="docutils literal"&gt;isnan()&lt;/tt&gt; from within the std namespace, i.e.: &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::isnan()&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Local is Lekker</title><link href="http://anthony.scopatz.com/local-is-lekker.html" rel="alternate"></link><updated>2013-12-15T17:17:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2013-12-15:local-is-lekker.html</id><summary type="html">&lt;p&gt;I just got back from my month-long visit to Cape Town.  As my friend and collaborator
 John Xia put it this was my &amp;#8220;vacation from [my] second job.&amp;#8221;  By this of course,
 he meant open source scientific software development.  Hopefully I didn&amp;#8217;t shirk my
 duties too severely during this month off.  And if I know you from these communities
