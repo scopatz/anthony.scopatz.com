@@ -117,7 +117,7 @@ truly it could have been written in any language.  Writing it in Python gave us
 access to some awesome parts of the Python interpreter. 
 
 You may have noticed that the variable annotations above look a lot like a 
-Python dictionary.  That is because they are!  (Or more generally, they are 
+Python dictionary.  That is because they are! (Or more generally, they are 
 any expression which evaluates to a mapping.  Most JSON is valid here too.)
 This is awesome.  This means that not even our annotations exist in their own
 DSL.  Every part of simulator is valid in a language that we are not the sole
@@ -125,5 +125,183 @@ proprieters of.  If a 3rd party developer has already gone through the process
 of learning C++ to add a model to our simulator, learning Python dictionaries
 is not a barrier to entry.
 
-Furthermore, since these 
+Furthermore, since these are Python expressions, we have wired it up so that 
+the scope of these dicts matches that of the class they are declared within.
+This let's users do neat things like the following:
+
+.. code-block:: c++
+
+    namespace mi6 {
+
+    class Spy {
+      #pragma cyclus var {"default": 7}
+      int id;
+
+      #pragma cyclus var {"default": "James Bond, {0:0>3}".format(id['default'])}
+      std::string name;
+    };
+
+    class Friend {
+      #pragma cyclus var {\
+        "docstring": "Normally helps {0}".format(Spy.name['default'])}
+      std::string help_first;
+    };
+    }; // namespace cyclus
+
+    class Enemy {
+        #pragma cyclus var {'default': mi6.Spy.name['default']}
+        strd::string nemesis;
+    };
+
+If this isn't expressive enough, we also added an ``exec`` pragma which 
+allows users to execute arbitrary Python code, that is added to the global
+namespace of the state variables.
+
+.. code-block:: c++
+
+    #pragma cyclus exec import uuid
+    #pragma cyclus exec x = 10
+
+    class TimeBomb {
+      #pragma cyclus var {"default": int(uuid.uuid1(clock_seq=x))}
+      int deactivation_code;
+    };
+    
+This allows users to keep all of their state variable annotations in a 
+separate sidecar ``*.py`` file and then import and use them rather than
+cluttering up the C++ source code.
+
+Mirror, Mirror
+==============
+*So where is the reflection?*
+
+The reflection comes out of the fact that our state accumulation stage
+is prior to any code that we generate.  ``cycpp`` is in fact a 3-pass
+preproccessor. The three passes are:
+
+1. run cpp normally to canonize all other preprocessor directives,
+2. accumulate annotations for agents and state variables, and
+3. generate code based on annotations.
+
+Two is the minimum that you need, but having the first stage where we 
+run the code through plain old ``cpp`` is ideal because this resolves
+a lot of wacky things that people *can* do with the preproccessor:
+
+.. code-block:: c++
+
+    #define OPEN_CURLY_BRACE {
+    #define CLOSED_CURLY_BRACE }
+
+    class Spy OPEN_CURLY_BRACE
+      int id;
+    CLOSED_CURLY_BRACE;
+
+If you don't use ``cpp`` as a first stage, than to be robust you need to 
+implement ``cpp``. (Which is too much work.)
+
+In the end, we have a whole suite of ``#pragma cyclus`` directives that 
+let users specify what they want generated and where. These are based on:
+
+1. the method they want generated, 
+2. whether they want the declaration, definition, or implementation
+   of this method, or
+3. a wrap up of the above.
+
+These pragmas are, of course, scope aware.  The code generation pragmas 
+are not particularly interesting to someone not doing cyclus development 
+so I will skip them here. To give you a taste though, in the simplest 
+case for one state variable on a single class we transform the code the 
+use has to write from:
+
+.. code-block:: c++
+
+    class Friend: public Spy {
+       public:
+        #pragma cyclus 
+
+        #pragma cyclus var {\
+          "default": "friend of " + Spy.name['default'], \
+          }
+        std::string friend;
+    };
+
+to this automatically:
+
+
+.. code-block:: c++
+
+    class Friend: public Spy {
+     public:
+      virtual void InitFrom(mi6::Friend* m) {
+        mi6::Spy::InitFrom(m);
+        friend = m->friend;
+      };
+
+      virtual void InitFrom(cyclus::QueryableBackend* b) {
+        mi6::Spy::InitFrom(b);
+        cyclus::QueryResult qr = b->Query("Info", NULL);
+        friend = qr.GetVal<std::string>("friend");
+      };
+
+      virtual void InfileToDb(cyclus::InfileTree* tree, cyclus::DbInit di) {
+        mi6::Spy::InfileToDb(tree, di);
+        tree = tree->SubTree("agent/" + agent_impl());
+        di.NewDatum("Info")
+        ->AddVal("friend", cyclus::OptionalQuery<std::string>(tree, "friend", "friend of James Bond, 007"))
+        ->Record();
+      };
+
+      virtual cyclus::Agent* Clone() {
+        mi6::Friend* m = new mi6::Friend(context());
+        m->InitFrom(this);
+        return m;
+      };
+
+      virtual std::string schema() {
+        return ""
+          "<optional>\n"
+          "    <element name=\"friend\">\n"
+          "        <data type=\"string\" />\n"
+          "    </element>\n"
+          "</optional>\n"
+          ;
+      };
+
+      virtual void InitInv(cyclus::Inventories& inv) {
+      };
+
+      virtual cyclus::Inventories SnapshotInv() {
+        cyclus::Inventories invs;
+        return invs;
+      };
+
+      virtual void Snapshot(cyclus::DbInit di) {
+        di.NewDatum("Info")
+        ->AddVal("friend", friend)
+        ->Record();
+      };
+
+    #pragma cyclus var { "default": "friend of " + Spy.name['default'], }
+    std::string friend;
+    };
+
+And The Moral, Mr. Aesop?
+=========================
+Many other simulators abuse APIs, build systems, code generators, and 
+domain-specific languages in various ways. It almost seems that to be
+user-developer friendly at all that such abuse is part of the game. However, 
+you don't need custom languages to acheive this goal.  Existing languages
+(cpp, C++, Python) are good enough and they give simulators the hooks
+that they need.  There is no need to go beyond them.  Any custom build 
+system suport the simulators wants to have is great but not - strictly
+speaking - required.
+
+I am extrodinarily proud that in cyclus we can eat our cake and have it 
+too!  We have user-friendly top-level APIs (the pragmas).  The are 
+conviences for lower level C++ APIs that do the real work and ``cycpp`` is
+entriely optional (though recommended). Furthermore, writing a preproccessor 
+is not hard.  It is only ~1300 lines of Python code in a single file and 
+relies on nothing but the standard library.  About 600 of these lines are
+the code generators, so there is only aorund 700 lines of code that act as
+the preprocessor mechanics.  The hardest part remains dealing with C++!
 
