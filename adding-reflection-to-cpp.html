@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Adding Reflection to C++ with Python</title>
+  <meta name="author" content="Anthony Scopatz">
+
+    <link href="http://anthony.scopatz.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Anthony Scopatz Atom Feed" />
+      <link href="http://anthony.scopatz.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Anthony Scopatz RSS Feed" />
+  
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="http://anthony.scopatz.com/favicon.png" rel="icon">
+  <link href="http://anthony.scopatz.com/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+  <script src="http://anthony.scopatz.com/theme/js/modernizr-2.0.js"></script>
+  <script src="http://anthony.scopatz.com/theme/js/ender.js"></script>
+  <script src="http://anthony.scopatz.com/theme/js/octopress.js" type="text/javascript"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+    </head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://anthony.scopatz.com/">Anthony Scopatz</a></h1>
+      <h2>I think, therefore I amino acid.</h2>
+  </hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!--
+  <li><a href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="subscribe-rss">RSS</a></li>
+  -->
+    <li><a href="http://anthony.scopatz.com/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
+  </ul>
+
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:anthony.scopatz.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+<ul class="main-navigation">
+      <li><a href="http://anthony.scopatz.com/category/missives.html">Missives</a></li>
+      <li><a href="http://anthony.scopatz.com/archives.html">Archives</a></li>
+      <li><a href="http://anthony.scopatz.com/self.html">Self</a></li>
+      <li><a href="http://anthony.scopatz.com/about.html">About</a></li>
+      <li><a href="http://anthony.scopatz.com/contact.html">Contact</a></li>
+            <!-- TODO: add categories here? -->
+  </ul></nav>
+  <div id="main">
+    <div id="content">
+      <div>
+  <article class="hentry" role="article">
+    <header>
+          <h1 class="entry-title">Adding Reflection to C++ with Python</h1>
+          <p class="meta"><time datetime="2014-03-22T10:01:00" pubdate>Sat 22 March 2014</time></p>
+</header>
+
+  <div class="entry-content"><div class="section" id="or-just-write-a-c-pre-processor">
+<h2>Or, Just Write a C++&nbsp;Pre-Processor</h2>
+<p>My main job these days is to be the benevolent dictator, fearless leader, and
+l&#8217;regexer extraordinaire for the <a class="reference external" href="http://fuelcycle.org">Cyclus fuel cycle simulator</a>.
+In addition to being a general solver for the nuclear fuel cycle we have the
+additional design constraints that 3rd parties must be able to write their own
+dynamically loadable agent models (as in <em>agent-based</em>) in C++ and user input files
+in <span class="caps">XML</span> must be validated using RelaxNG. This is not the software stack I would have
+chosen - challenge&nbsp;accepted(?).</p>
+<p>Simulation code has a lot of competing&nbsp;concerns:</p>
+<ol class="arabic simple">
+<li>provide a kernel for solving a problem that performs&nbsp;,</li>
+<li>be modifiable and extensible to non-kernel&nbsp;developers,</li>
+<li>report results in a well-defined <span class="amp">&amp;</span> inspectable way, and&nbsp;finally</li>
+<li>easy and concise to&nbsp;use.</li>
+</ol>
+<p>Failure on any of these implies overall effective failure.  Or the contra-positive,
+Overall success means the simulator is great at all of&nbsp;these!</p>
+<p>Since (1) is domain specific, let&#8217;s assume that a solution exists.  Requirement (2)
+implies that there must be a formal public <span class="caps">API</span> into the kernel so that other people
+can come in and add their piece to the puzzle.  Fine.  Requirement (4) says to make
+that interface beautiful. Great. I wouldn&#8217;t want to use an ugly <span class="caps">API</span> anyway. But then
+along comes persistence (3) and you realize that your public <span class="caps">API</span> just got a
+lot more complicated and that users now have to make calls into the persistence
+infrastructure manually. Also that exercise exposed the fact that some of the APIs
+you wrote were probably not as extensible as you thought and need to be broadened
+(ie made more complex).  At this point you have lost most sane users because it is
+not clear what they get by using your simulator. It is probably easier to roll their
+own rather than interface with&nbsp;yours.</p>
+<p><em>Why is it is easier for people to write their own simulator than use yours?</em>
+For every action that you want to support in the core (saving, loading,
+validation, any problem setup steps) you now have to have a top-level <span class="caps">API</span> that
+model developers <em>must</em> use.  However, in the typical case they will only want a
+small subset of these and would like to rely on default behavior otherwise.
+Furthermore, for the <span class="caps">API</span> to be dynamic now the user has to pass around metadata
+information (type, default values, units, etc.) about each state variable to each
+top-level function. This becomes very tedious and&nbsp;error-prone.</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Reflection_(computer_programming)">Reflection</a>
+solves a lot of these problems. Roughly speaking reflection is the property
+that allows types to introspect themselves <em>at runtime</em>. From the core simulator&#8217;s
+perspective this is great because it allows the core to ask 3rd party modules what
+they think that they are.  <strong>Unfortunately, most strongly typed languages lack&nbsp;reflection.</strong></p>
+</div>
+<div class="section" id="use-that-other-language">
+<h2>Use That Other&nbsp;Language</h2>
+<p>Since we can&#8217;t make C/C++ have reflection, we can fake it by using the preprocessor!
+The whole point of the C preprocessor (<tt class="docutils literal">cpp</tt>) is to modify how language it is
+processing works. We can just add some reflection macros that generate all of the
+nasty repeated code bits. Problem solved! Now we can go back to sipping our Country
+Time lemonade at the pi day&nbsp;party.</p>
+<p>Except! Except, except, except <tt class="docutils literal">cpp</tt> is one-pass.
+So you can&#8217;t add reflection with the preprocessor either. You&#8217;d need the preprocessor
+to go through the code multiple times for any suite of reflection macros to work.
+Well, it was a good idea while it&nbsp;lasted.</p>
+</div>
+<div class="section" id="tepidly-step-into-code-generation">
+<h2>Tepidly Step into Code&nbsp;Generation</h2>
+<p>At this point it is very tempting to start creating a template language that
+looks mostly like C++, has the reflection that is desired, and compiles down
+to&nbsp;C++.</p>
+<p>However, defining custom domain-specific languages (DSLs) is its own headache
+because you - now and forever - have to support a custom language that you
+invented.  There is no external support for this language and never will be.
+Your language won&#8217;t be on Stack Overflow. What a coding&nbsp;horror!</p>
+</div>
+<div class="section" id="the-pragma-trick">
+<h2>The Pragma&nbsp;Trick</h2>
+<p>It turns out that part of the <tt class="docutils literal">cpp</tt> language spec are hooks that let you
+write your own preprocessors! The preprocessor will ignore, but still include,
+any <tt class="docutils literal">#pragma</tt> that it does not understand.  These will pass through the
+preprocessor. To start, pick a token that no one else will ever use - such as
+your project&nbsp;name.</p>
+<p><strong>The prime&nbsp;directive:</strong></p>
+<div class="highlight"><pre><span class="cp">#pragma cyclus</span>
+</pre></div>
+<p>Only the first token (<tt class="docutils literal">cyclus</tt>) is matched by normal <tt class="docutils literal">cpp</tt> to determine if
+it is a known pragma.  This is great, because you can then add arguments to&nbsp;it.</p>
+<p><strong>State variable&nbsp;annotation:</strong></p>
+<div class="highlight"><pre><span class="cp">#pragma cyclus var {&quot;default&quot;: 42.0}</span>
+<span class="kt">double</span> <span class="n">flux</span><span class="p">;</span>
+</pre></div>
+<p>Now you can go through your the code as many times you need, accumulating state <span class="amp">&amp;</span>
+annotations, and inserting whatever C++ code needs to be generated elsewhere.
+This let&#8217;s users write fully compatible and compilable C++ code that can hook into
+your simulation - or&nbsp;not!</p>
+</div>
+<div class="section" id="python-cycpp">
+<h2>Python <span class="amp">&amp;</span>&nbsp;cycpp</h2>
+<p>We have chosen to write the cyclus preprocessor (<tt class="docutils literal">cycpp</tt>) in Python - though
+truly it could have been written in any language.  Writing it in Python gave us
+access to some awesome parts of the Python&nbsp;interpreter.</p>
+<p>You may have noticed that the variable annotations above look a lot like a
+Python dictionary.  That is because they are! (Or more generally, they are
+any expression which evaluates to a mapping.  Most <span class="caps">JSON</span> is valid here too.)
+This is awesome.  This means that not even our annotations exist in their own
+<span class="caps">DSL</span>.  Every part of simulator is valid in a language that we are not the sole
+proprietors of.  If a 3rd party developer has already gone through the process
+of learning C++ to add a model to our simulator, learning Python dictionaries
+is not a barrier to&nbsp;entry.</p>
+<p>Furthermore, since these are Python expressions, we have wired it up so that
+the scope of these dicts matches that of the class they are declared within.
+This let&#8217;s users do neat things like the&nbsp;following:</p>
+<div class="highlight"><pre><span class="k">namespace</span> <span class="n">mi6</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">Spy</span> <span class="p">{</span>
+  <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span><span class="s">&quot;default&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">}</span>
+  <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+
+  <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span><span class="s">&quot;default&quot;</span><span class="o">:</span> <span class="s">&quot;James Bond, {0:0&gt;3}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">id</span><span class="p">[</span><span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="p">])}</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Friend</span> <span class="p">{</span>
+  <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span>\
+    <span class="s">&quot;docstring&quot;</span><span class="o">:</span> <span class="s">&quot;Normally helps {0}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">Spy</span><span class="p">.</span><span class="n">name</span><span class="p">[</span><span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="p">])}</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">help_first</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">};</span> <span class="c1">// namespace cyclus</span>
+
+<span class="k">class</span> <span class="nc">Enemy</span> <span class="p">{</span>
+    <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span><span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="o">:</span> <span class="n">mi6</span><span class="p">.</span><span class="n">Spy</span><span class="p">.</span><span class="n">name</span><span class="p">[</span><span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="p">]}</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">nemesis</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>If this isn&#8217;t expressive enough, we also added an <tt class="docutils literal">exec</tt> pragma which
+allows users to execute arbitrary Python code, that is added to the global
+namespace the state variables are evaluated&nbsp;in.</p>
+<div class="highlight"><pre><span class="cp">#pragma cyclus exec import uuid</span>
+<span class="cp">#pragma cyclus exec x = 10</span>
+
+<span class="k">class</span> <span class="nc">TimeBomb</span> <span class="p">{</span>
+  <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span><span class="s">&quot;default&quot;</span><span class="o">:</span> <span class="kt">int</span><span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="n">uuid1</span><span class="p">(</span><span class="n">clock_seq</span><span class="o">=</span><span class="n">x</span><span class="p">))}</span>
+  <span class="kt">int</span> <span class="n">deactivation_code</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>Users can decide to keep all of their state variable annotations in a
+separate sidecar <tt class="docutils literal">*.py</tt> file and then import and use them rather than
+cluttering up the C++ source&nbsp;code.</p>
+</div>
+<div class="section" id="mirror-mirror">
+<h2>Mirror,&nbsp;Mirror</h2>
+<p><em>So where is the&nbsp;reflection?</em></p>
+<p>The reflection comes out of the fact that our state accumulation stage
+is prior to any code that we generate.  <tt class="docutils literal">cycpp</tt> is a 3-pass
+preprocessor. The three passes&nbsp;are:</p>
+<ol class="arabic simple">
+<li>run cpp normally to canonize all other preprocessor&nbsp;directives,</li>
+<li>accumulate annotations for agents and state variables,&nbsp;and</li>
+<li>generate code based on&nbsp;annotations.</li>
+</ol>
+<p>Two passes are the minimum required, but having the first stage where we
+run the code through plain old <tt class="docutils literal">cpp</tt> is ideal because this resolves
+a lot of wacky things that people <em>can</em> do with the&nbsp;preprocessor:</p>
+<div class="highlight"><pre><span class="cp">#define OPEN_CURLY_BRACE {</span>
+<span class="cp">#define CLOSED_CURLY_BRACE }</span>
+
+<span class="k">class</span> <span class="nc">Spy</span> <span class="n">OPEN_CURLY_BRACE</span>
+  <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+<span class="n">CLOSED_CURLY_BRACE</span><span class="p">;</span>
+</pre></div>
+<p>The above (shamefully) is fully valid C++. So if you don&#8217;t use <tt class="docutils literal">cpp</tt>
+as a first stage then to be robust you need to implement <tt class="docutils literal">cpp</tt>.
+(Which is too much work for a&nbsp;simulator.)</p>
+<p>In the end, we have a whole suite of <tt class="docutils literal">#pragma cyclus</tt> directives that
+let users specify what they want generated and where. These are based&nbsp;on:</p>
+<ol class="arabic simple">
+<li>the method they want&nbsp;generated,</li>
+<li>whether they want the declaration, definition, or implementation
+of this method,&nbsp;or</li>
+<li>a wrap up of the&nbsp;above.</li>
+</ol>
+<p>These pragmas are, of course, scope aware.  The code generation pragmas
+are not particularly interesting to someone not doing cyclus development
+so I will skip them here. To give you a taste though, in the simplest
+case for one state variable on a single class we transform the code the
+user or developer has to write&nbsp;from:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Friend</span><span class="o">:</span> <span class="k">public</span> <span class="n">Spy</span> <span class="p">{</span>
+   <span class="nl">public:</span>
+    <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span>
+
+    <span class="err">#</span><span class="n">pragma</span> <span class="n">cyclus</span> <span class="n">var</span> <span class="p">{</span>\
+      <span class="s">&quot;default&quot;</span><span class="o">:</span> <span class="s">&quot;friend of &quot;</span> <span class="o">+</span> <span class="n">Spy</span><span class="p">.</span><span class="n">name</span><span class="p">[</span><span class="err">&#39;</span><span class="k">default</span><span class="err">&#39;</span><span class="p">],</span> \
+      <span class="p">}</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="k">friend</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>into this&nbsp;automatically:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Friend</span><span class="o">:</span> <span class="k">public</span> <span class="n">Spy</span> <span class="p">{</span>
+ <span class="nl">public:</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="n">InitFrom</span><span class="p">(</span><span class="n">mi6</span><span class="o">::</span><span class="n">Friend</span><span class="o">*</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">mi6</span><span class="o">::</span><span class="n">Spy</span><span class="o">::</span><span class="n">InitFrom</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+    <span class="k">friend</span> <span class="o">=</span> <span class="n">m</span><span class="o">-&gt;</span><span class="k">friend</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">InitFrom</span><span class="p">(</span><span class="n">cyclus</span><span class="o">::</span><span class="n">QueryableBackend</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">mi6</span><span class="o">::</span><span class="n">Spy</span><span class="o">::</span><span class="n">InitFrom</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+    <span class="n">cyclus</span><span class="o">::</span><span class="n">QueryResult</span> <span class="n">qr</span> <span class="o">=</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">Query</span><span class="p">(</span><span class="s">&quot;Info&quot;</span><span class="p">,</span> <span class="nb"><span class="caps">NULL</span></span><span class="p">);</span>
+    <span class="k">friend</span> <span class="o">=</span> <span class="n">qr</span><span class="p">.</span><span class="n">GetVal</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;friend&quot;</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">InfileToDb</span><span class="p">(</span><span class="n">cyclus</span><span class="o">::</span><span class="n">InfileTree</span><span class="o">*</span> <span class="n">tree</span><span class="p">,</span> <span class="n">cyclus</span><span class="o">::</span><span class="n">DbInit</span> <span class="n">di</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">mi6</span><span class="o">::</span><span class="n">Spy</span><span class="o">::</span><span class="n">InfileToDb</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">di</span><span class="p">);</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">-&gt;</span><span class="n">SubTree</span><span class="p">(</span><span class="s">&quot;agent/&quot;</span> <span class="o">+</span> <span class="n">agent_impl</span><span class="p">());</span>
+    <span class="n">di</span><span class="p">.</span><span class="n">NewDatum</span><span class="p">(</span><span class="s">&quot;Info&quot;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="n">AddVal</span><span class="p">(</span><span class="s">&quot;friend&quot;</span><span class="p">,</span> <span class="n">cyclus</span><span class="o">::</span><span class="n">OptionalQuery</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s">&quot;friend&quot;</span><span class="p">,</span> <span class="s">&quot;friend of James Bond, 007&quot;</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="n">Record</span><span class="p">();</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="n">cyclus</span><span class="o">::</span><span class="n">Agent</span><span class="o">*</span> <span class="n">Clone</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">mi6</span><span class="o">::</span><span class="n">Friend</span><span class="o">*</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">mi6</span><span class="o">::</span><span class="n">Friend</span><span class="p">(</span><span class="n">context</span><span class="p">());</span>
+    <span class="n">m</span><span class="o">-&gt;</span><span class="n">InitFrom</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">schema</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s">&quot;&quot;</span>
+      <span class="s">&quot;&lt;optional&gt;</span><span class="se">\n</span><span class="s">&quot;</span>
+      <span class="s">&quot;    &lt;element name=</span><span class="se">\&quot;</span><span class="s">friend</span><span class="se">\&quot;</span><span class="s">&gt;</span><span class="se">\n</span><span class="s">&quot;</span>
+      <span class="s">&quot;        &lt;data type=</span><span class="se">\&quot;</span><span class="s">string</span><span class="se">\&quot;</span><span class="s"> /&gt;</span><span class="se">\n</span><span class="s">&quot;</span>
+      <span class="s">&quot;    &lt;/element&gt;</span><span class="se">\n</span><span class="s">&quot;</span>
+      <span class="s">&quot;&lt;/optional&gt;</span><span class="se">\n</span><span class="s">&quot;</span>
+      <span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">InitInv</span><span class="p">(</span><span class="n">cyclus</span><span class="o">::</span><span class="n">Inventories</span><span class="o">&amp;</span> <span class="n">inv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="n">cyclus</span><span class="o">::</span><span class="n">Inventories</span> <span class="n">SnapshotInv</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cyclus</span><span class="o">::</span><span class="n">Inventories</span> <span class="n">invs</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">invs</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">Snapshot</span><span class="p">(</span><span class="n">cyclus</span><span class="o">::</span><span class="n">DbInit</span> <span class="n">di</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">di</span><span class="p">.</span><span class="n">NewDatum</span><span class="p">(</span><span class="s">&quot;Info&quot;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="n">AddVal</span><span class="p">(</span><span class="s">&quot;friend&quot;</span><span class="p">,</span> <span class="k">friend</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="n">Record</span><span class="p">();</span>
+  <span class="p">};</span>
+
+<span class="cp">#pragma cyclus var { &quot;default&quot;: &quot;friend of &quot; + Spy.name[&#39;default&#39;], }</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="k">friend</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="section" id="and-the-moral-mr-aesop">
+<h2>And The Moral, Mr.&nbsp;Aesop?</h2>
+<p>Many other simulators abuse APIs, build systems, code generators, and
+domain-specific languages in various ways. It almost seems that to be
+user-developer friendly at all that such abuse is part of the game. However,
+you don&#8217;t need custom languages to achieve this goal.  Existing languages
+(cpp, C++, Python) are good enough and they give simulators the hooks
+that they need.  There is no need to go beyond them.  Any custom build
+system support the simulators wants to have is great but not - strictly
+speaking -&nbsp;required.</p>
+<p>I am extraordinarily proud that in cyclus we can eat our cake and have it
+too.  We now have user-friendly top-level APIs (the pragmas).  These are
+conveniences for lower level C++ APIs that do the real work and <tt class="docutils literal">cycpp</tt> is
+entirely optional (though recommended). Furthermore, writing a preprocessor
+is not hard.  It is only ~1300 lines of Python code in a single file. It
+relies on nothing but the standard library. About 600 of these lines are
+the code generators, so there is only around 700 lines of code that act as
+the preprocessor mechanics. The hardest part remains dealing with&nbsp;C++!</p>
+</div>
+</div>
+    <footer>
+      <p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Anthony Scopatz</span>
+  </span>
+  <time datetime="2014-03-22T10:01:00" pubdate>Sat 22 March 2014</time>  </p>      <div class="sharing">
+      <div class="g-plusone" data-size="medium"></div>
+        <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  </div>    </footer>
+  </article>
+
+    <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+  </div>
+      <aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+            <li class="post">
+          <a href="http://anthony.scopatz.com/adding-reflection-to-cpp.html">Adding Reflection to C++ with Python</a>
+      </li>
+            <li class="post">
+          <a href="http://anthony.scopatz.com/keep-tlv-awesome.html">Keep Tel Aviv Awesome</a>
+      </li>
+            <li class="post">
+          <a href="http://anthony.scopatz.com/polyglot-style-guide.html">Polyglot Style Guide</a>
+      </li>
+            <li class="post">
+          <a href="http://anthony.scopatz.com/local-is-lekker.html">Local is Lekker</a>
+      </li>
+            <li class="post">
+          <a href="http://anthony.scopatz.com/multivariate-veganism.html">Veganism: The Multivariate Right Thing To Do</a>
+      </li>
+          </ul>
+  </section>
+    <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+              <li><a href="http://anthony.scopatz.com/category/missives.html">missives</a></li>
+              <li><a href="http://anthony.scopatz.com/category/null.html">null</a></li>
+          </ul>
+  </section>
+   
+
+  <section>
+  <h1>Tags</h1>
+      <a href="http://anthony.scopatz.com/tag/code.html">code</a>,      <a href="http://anthony.scopatz.com/tag/undermythumb.html">undermythumb</a>,      <a href="http://anthony.scopatz.com/tag/finespecimen.html">finespecimen</a>,      <a href="http://anthony.scopatz.com/tag/butsaliwanaplayarya.html">butsaliwanaplayarya!</a>,      <a href="http://anthony.scopatz.com/tag/abwhofsabab.html">(a||b)whof***s(a||b||a&amp;b)</a>,      <a href="http://anthony.scopatz.com/tag/bothflamingandhot.html">bothflamingandhot</a>,      <a href="http://anthony.scopatz.com/tag/goingtwosiesonapadravya.html">goingtwosiesonapadravya</a>,      <a href="http://anthony.scopatz.com/tag/stark.html">Stark</a>,      <a href="http://anthony.scopatz.com/tag/left-handed.html">Left-Handed</a>,      <a href="http://anthony.scopatz.com/tag/totallydisillusionedwithstraightmalehood.html">totallydisillusionedwithstraightmalehood</a>,      <a href="http://anthony.scopatz.com/tag/northofthewall.html">northofthewall</a>,      <a href="http://anthony.scopatz.com/tag/onatotallyunrelatednote.html">onatotallyunrelatednote</a>,      <a href="http://anthony.scopatz.com/tag/caith.html">caith</a>,      <a href="http://anthony.scopatz.com/tag/southside.html">southside</a>,      <a href="http://anthony.scopatz.com/tag/ifiwasgoingtokillmyselfiwouldnttellyou.html">ifiwasgoingtokillmyselfiwouldn'ttellyou</a>,      <a href="http://anthony.scopatz.com/tag/onedoesnotsimplyjumpingstilitsintomordor.html">onedoesnotsimplyjumpingstilitsintomordor</a>,      <a href="http://anthony.scopatz.com/tag/evilloknarisevil.html">evilloknarisevil</a>,      <a href="http://anthony.scopatz.com/tag/kdlang.html">kdlang</a>,      <a href="http://anthony.scopatz.com/tag/doyouhaveadorsalfin.html">doyouhaveadorsalfin?</a>,      <a href="http://anthony.scopatz.com/tag/paris.html">paris</a>,      <a href="http://anthony.scopatz.com/tag/forgottenfilmfriday.html">forgottenfilmfriday</a>,      <a href="http://anthony.scopatz.com/tag/kernelravego.html">kernelravego!</a>,      <a href="http://anthony.scopatz.com/tag/inscight.html">inscight</a>,      <a href="http://anthony.scopatz.com/tag/notmybrother.html">notmybrother</a>,      <a href="http://anthony.scopatz.com/tag/lolstice.html">lolstice</a>,      <a href="http://anthony.scopatz.com/tag/whatevs-oldladyhat.html">whatevs-oldladyhat</a>,      <a href="http://anthony.scopatz.com/tag/teaching.html">teaching</a>,      <a href="http://anthony.scopatz.com/tag/physor.html">physor</a>,      <a href="http://anthony.scopatz.com/tag/onlyonemanwoulddaregivemetheraspberry.html">onlyonemanwoulddaregivemetheraspberry</a>,      <a href="http://anthony.scopatz.com/tag/hardkour.html">hardkour</a>,      <a href="http://anthony.scopatz.com/tag/iheartvaginas.html">iheartvaginas</a>,      <a href="http://anthony.scopatz.com/tag/coffee.html">coffee</a>,      <a href="http://anthony.scopatz.com/tag/picsoritdidnthappen.html">picsoritdidnthappen</a>,      <a href="http://anthony.scopatz.com/tag/exodus.html">exodus</a>,      <a href="http://anthony.scopatz.com/tag/joinmyharem.html">joinmyharem</a>,      <a href="http://anthony.scopatz.com/tag/ladyjessica.html">ladyjessica</a>,      <a href="http://anthony.scopatz.com/tag/iamclearlynotdoingsomethingright.html">iamclearlynotdoingsomethingright</a>,      <a href="http://anthony.scopatz.com/tag/oldladyhat.html">oldladyhat</a>,      <a href="http://anthony.scopatz.com/tag/ssp.html">ssp</a>,      <a href="http://anthony.scopatz.com/tag/waitireallydolikeit.html">waitireallydolikeit</a>,      <a href="http://anthony.scopatz.com/tag/feyd.html">feyd</a>,      <a href="http://anthony.scopatz.com/tag/enigma.html">enigma</a>,      <a href="http://anthony.scopatz.com/tag/unicorn.html">unicorn</a>,      <a href="http://anthony.scopatz.com/tag/sequoia.html">sequoia</a>,      <a href="http://anthony.scopatz.com/tag/global.html">global</a>,      <a href="http://anthony.scopatz.com/tag/arya.html">Arya</a>,      <a href="http://anthony.scopatz.com/tag/ssp2.html">ssp2</a>,      <a href="http://anthony.scopatz.com/tag/lollipop.html">lollipop</a>,      <a href="http://anthony.scopatz.com/tag/shebecrying.html">shebecrying</a>,      <a href="http://anthony.scopatz.com/tag/argentiniancowboys.html">argentiniancowboys</a>,      <a href="http://anthony.scopatz.com/tag/zomgspaceisradioactive.html">zOMGspaceisradioactive!</a>,      <a href="http://anthony.scopatz.com/tag/table4one.html">table4one</a>,      <a href="http://anthony.scopatz.com/tag/gundamisntfree.html">gundamisn'tfree</a>,      <a href="http://anthony.scopatz.com/tag/relenasbutler.html">relena'sbutler</a>,      <a href="http://anthony.scopatz.com/tag/unlessiaminasutriawhereitispunchandpie.html">unlessiaminasutriawhereitispunchandpie</a>,      <a href="http://anthony.scopatz.com/tag/duncanidaho.html">duncanidaho</a>,      <a href="http://anthony.scopatz.com/tag/peoplechangenawtheydont.html">peoplechangenawtheydont</a>,      <a href="http://anthony.scopatz.com/tag/lawlsadventure.html">lawlsadventure</a>,      <a href="http://anthony.scopatz.com/tag/no-utube.html">no-utube</a>,      <a href="http://anthony.scopatz.com/tag/scipy.html">scipy</a>,      <a href="http://anthony.scopatz.com/tag/ifoughtthelawandthelawanallyrapedme.html">ifoughtthelawandthelawanallyrapedme</a>,      <a href="http://anthony.scopatz.com/tag/5.html">+5</a>,      <a href="http://anthony.scopatz.com/tag/switzerland.html">switzerland</a>,      <a href="http://anthony.scopatz.com/tag/idontlikeitbecauseitispopular.html">idontlikeitbecauseitispopular</a>,      <a href="http://anthony.scopatz.com/tag/alittlebirdtoldme.html">alittlebirdtoldme</a>,      <a href="http://anthony.scopatz.com/tag/syrio-forel.html">Syrio Forel</a>,      <a href="http://anthony.scopatz.com/tag/chc-everywhere.html">chc-everywhere!</a>    </section>
+
+    
+    <section>
+        <h1>Social</h2>
+        <ul>
+                    <li><a href="http://anthony.scopatz.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">RSS</a></li>
+                            <li><a href="http://anthony.scopatz.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">ATOM</a></li>
+                            <li><a href="http://scopatz.com/" target="_blank">Other Website</a></li>
+                    <li><a href="https://plus.google.com/u/0/116439624339414215461" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/scopatz" target="_blank">GitHub</a></li>
+                    <li><a href="https://bitbucket.org/scopatz" target="_blank">BitBucket</a></li>
+                    <li><a href="https://twitter.com/scopatz" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/scopatz" target="_blank">LinkedIn</a></li>
+                </ul>
+    </section>
+    
+<section>
+        <p>Follow <a href="http://twitter.com/scopatz">@scopatz</a></p>
+  </section>
+  <section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/AnthonyScopatz?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; Anthony Scopatz
+</p></footer>
+  	<script type="text/javascript">
+	  var disqus_shortname = 'anthonyscopatz';
+                var disqus_identifier = '/adding-reflection-to-cpp.html';
+          var disqus_url = 'http://anthony.scopatz.com/adding-reflection-to-cpp.html';
+          var disqus_title = 'Adding Reflection to C++ with&nbsp;Python';
+      	  (function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	   })();
+	</script>
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

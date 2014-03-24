@@ -1,5 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2014-02-23T17:00:00-06:00</updated><entry><title>Keep Tel Aviv Awesome</title><link href="http://anthony.scopatz.com/keep-tlv-awesome.html" rel="alternate"></link><updated>2014-02-23T17:00:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2014-02-23:keep-tlv-awesome.html</id><summary type="html">&lt;p&gt;Picture it, Tel Aviv, 2014.  What an awesome trip!  I had the pleasure of visiting
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anthony Scopatz</title><link href="http://anthony.scopatz.com/" rel="alternate"></link><link href="http://anthony.scopatz.com/feeds/all.atom.xml" rel="self"></link><id>http://anthony.scopatz.com/</id><updated>2014-03-22T10:01:00-05:00</updated><entry><title>Adding Reflection to C++ with Python</title><link href="http://anthony.scopatz.com/adding-reflection-to-cpp.html" rel="alternate"></link><updated>2014-03-22T10:01:00-05:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2014-03-22:adding-reflection-to-cpp.html</id><summary type="html">&lt;div class="section" id="or-just-write-a-c-pre-processor"&gt;
+&lt;h2&gt;Or, Just Write a C++&amp;nbsp;Pre-Processor&lt;/h2&gt;
+&lt;p&gt;My main job these days is to be the benevolent dictator, fearless leader, and
+l&amp;#8217;regexer extraordinaire for the &lt;a class="reference external" href="http://fuelcycle.org"&gt;Cyclus fuel cycle simulator&lt;/a&gt;.
+In addition to being a general solver for the nuclear fuel cycle we have the
+additional design constraints that 3rd parties must be able to write their own
+dynamically loadable agent models (as in &lt;em&gt;agent-based&lt;/em&gt;) in C++ and user input files
+in &lt;span class="caps"&gt;XML&lt;/span&gt; must be validated using RelaxNG. This is not the software stack I would have
+chosen - challenge&amp;nbsp;accepted(?).&lt;/p&gt;
+&lt;p&gt;Simulation code has a lot of competing&amp;nbsp;concerns:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;provide a kernel for solving a problem that performs&amp;nbsp;,&lt;/li&gt;
+&lt;li&gt;be modifiable and extensible to non-kernel&amp;nbsp;developers,&lt;/li&gt;
+&lt;li&gt;report results in a well-defined &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; inspectable way, and&amp;nbsp;finally&lt;/li&gt;
+&lt;li&gt;easy and concise to&amp;nbsp;use.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Failure on any of these implies overall effective failure.  Or the contra-positive,
+Overall success means the simulator is great at all of&amp;nbsp;these!&lt;/p&gt;
+&lt;p&gt;Since (1) is domain specific, let&amp;#8217;s assume that a solution exists.  Requirement (2)
+implies that there must be a formal public &lt;span class="caps"&gt;API&lt;/span&gt; into the kernel so that other people
+can come in and add their piece to the puzzle.  Fine.  Requirement (4) says to make
+that interface beautiful. Great. I wouldn&amp;#8217;t want to use an ugly &lt;span class="caps"&gt;API&lt;/span&gt; anyway. But then
+along comes persistence (3) and you realize that your public &lt;span class="caps"&gt;API&lt;/span&gt; just got a
+lot more complicated and that users now have to make calls into the persistence
+infrastructure manually. Also that exercise exposed the fact that some of the APIs
+you wrote were probably not as extensible as you thought and need to be broadened
+(ie made more complex).  At this point you have lost most sane users because it is
+not clear what they get by using your simulator. It is probably easier to roll their
+own rather than interface with&amp;nbsp;yours.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Why is it is easier for people to write their own simulator than use yours?&lt;/em&gt;
+For every action that you want to support in the core (saving, loading,
+validation, any problem setup steps) you now have to have a top-level &lt;span class="caps"&gt;API&lt;/span&gt; that
+model developers &lt;em&gt;must&lt;/em&gt; use.  However, in the typical case they will only want a
+small subset of these and would like to rely on default behavior otherwise.
+Furthermore, for the &lt;span class="caps"&gt;API&lt;/span&gt; to be dynamic now the user has to pass around metadata
+information (type, default values, units, etc.) about each state variable to each
+top-level function. This becomes very tedious and&amp;nbsp;error-prone.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Reflection_(computer_programming)"&gt;Reflection&lt;/a&gt;
+solves a lot of these problems. Roughly speaking reflection is the property
+that allows types to introspect themselves &lt;em&gt;at runtime&lt;/em&gt;. From the core simulator&amp;#8217;s
+perspective this is great because it allows the core to ask 3rd party modules what
+they think that they are.  &lt;strong&gt;Unfortunately, most strongly typed languages lack&amp;nbsp;reflection.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="use-that-other-language"&gt;
+&lt;h2&gt;Use That Other&amp;nbsp;Language&lt;/h2&gt;
+&lt;p&gt;Since we can&amp;#8217;t make C/C++ have reflection, we can fake it by using the preprocessor!
+The whole point of the C preprocessor (&lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt;) is to modify how language it is
+processing works. We can just add some reflection macros that generate all of the
+nasty repeated code bits. Problem solved! Now we can go back to sipping our Country
+Time lemonade at the pi day&amp;nbsp;party.&lt;/p&gt;
+&lt;p&gt;Except! Except, except, except &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt; is one-pass.
+So you can&amp;#8217;t add reflection with the preprocessor either. You&amp;#8217;d need the preprocessor
+to go through the code multiple times for any suite of reflection macros to work.
+Well, it was a good idea while it&amp;nbsp;lasted.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tepidly-step-into-code-generation"&gt;
+&lt;h2&gt;Tepidly Step into Code&amp;nbsp;Generation&lt;/h2&gt;
+&lt;p&gt;At this point it is very tempting to start creating a template language that
+looks mostly like C++, has the reflection that is desired, and compiles down
+to&amp;nbsp;C++.&lt;/p&gt;
+&lt;p&gt;However, defining custom domain-specific languages (DSLs) is its own headache
+because you - now and forever - have to support a custom language that you
+invented.  There is no external support for this language and never will be.
+Your language won&amp;#8217;t be on Stack Overflow. What a coding&amp;nbsp;horror!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-pragma-trick"&gt;
+&lt;h2&gt;The Pragma&amp;nbsp;Trick&lt;/h2&gt;
+&lt;p&gt;It turns out that part of the &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt; language spec are hooks that let you
+write your own preprocessors! The preprocessor will ignore, but still include,
+any &lt;tt class="docutils literal"&gt;#pragma&lt;/tt&gt; that it does not understand.  These will pass through the
+preprocessor. To start, pick a token that no one else will ever use - such as
+your project&amp;nbsp;name.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The prime&amp;nbsp;directive:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#pragma cyclus&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Only the first token (&lt;tt class="docutils literal"&gt;cyclus&lt;/tt&gt;) is matched by normal &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt; to determine if
+it is a known pragma.  This is great, because you can then add arguments to&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;State variable&amp;nbsp;annotation:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#pragma cyclus var {&amp;quot;default&amp;quot;: 42.0}&lt;/span&gt;
+&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;flux&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now you can go through your the code as many times you need, accumulating state &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;
+annotations, and inserting whatever C++ code needs to be generated elsewhere.
+This let&amp;#8217;s users write fully compatible and compilable C++ code that can hook into
+your simulation - or&amp;nbsp;not!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python-cycpp"&gt;
+&lt;h2&gt;Python &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;cycpp&lt;/h2&gt;
+&lt;p&gt;We have chosen to write the cyclus preprocessor (&lt;tt class="docutils literal"&gt;cycpp&lt;/tt&gt;) in Python - though
+truly it could have been written in any language.  Writing it in Python gave us
+access to some awesome parts of the Python&amp;nbsp;interpreter.&lt;/p&gt;
+&lt;p&gt;You may have noticed that the variable annotations above look a lot like a
+Python dictionary.  That is because they are! (Or more generally, they are
+any expression which evaluates to a mapping.  Most &lt;span class="caps"&gt;JSON&lt;/span&gt; is valid here too.)
+This is awesome.  This means that not even our annotations exist in their own
+&lt;span class="caps"&gt;DSL&lt;/span&gt;.  Every part of simulator is valid in a language that we are not the sole
+proprietors of.  If a 3rd party developer has already gone through the process
+of learning C++ to add a model to our simulator, learning Python dictionaries
+is not a barrier to&amp;nbsp;entry.&lt;/p&gt;
+&lt;p&gt;Furthermore, since these are Python expressions, we have wired it up so that
+the scope of these dicts matches that of the class they are declared within.
+This let&amp;#8217;s users do neat things like the&amp;nbsp;following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;mi6&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Spy&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;James Bond, {0:0&amp;gt;3}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])}&lt;/span&gt;
+  &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Friend&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;\
+    &lt;span class="s"&gt;&amp;quot;docstring&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Normally helps {0}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])}&lt;/span&gt;
+  &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;help_first&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt; &lt;span class="c1"&gt;// namespace cyclus&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Enemy&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]}&lt;/span&gt;
+    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;nemesis&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If this isn&amp;#8217;t expressive enough, we also added an &lt;tt class="docutils literal"&gt;exec&lt;/tt&gt; pragma which
+allows users to execute arbitrary Python code, that is added to the global
+namespace the state variables are evaluated&amp;nbsp;in.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#pragma cyclus exec import uuid&lt;/span&gt;
+&lt;span class="cp"&gt;#pragma cyclus exec x = 10&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TimeBomb&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;uuid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uuid1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clock_seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))}&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;deactivation_code&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Users can decide to keep all of their state variable annotations in a
+separate sidecar &lt;tt class="docutils literal"&gt;*.py&lt;/tt&gt; file and then import and use them rather than
+cluttering up the C++ source&amp;nbsp;code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mirror-mirror"&gt;
+&lt;h2&gt;Mirror,&amp;nbsp;Mirror&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;So where is the&amp;nbsp;reflection?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The reflection comes out of the fact that our state accumulation stage
+is prior to any code that we generate.  &lt;tt class="docutils literal"&gt;cycpp&lt;/tt&gt; is a 3-pass
+preprocessor. The three passes&amp;nbsp;are:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;run cpp normally to canonize all other preprocessor&amp;nbsp;directives,&lt;/li&gt;
+&lt;li&gt;accumulate annotations for agents and state variables,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;generate code based on&amp;nbsp;annotations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Two passes are the minimum required, but having the first stage where we
+run the code through plain old &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt; is ideal because this resolves
+a lot of wacky things that people &lt;em&gt;can&lt;/em&gt; do with the&amp;nbsp;preprocessor:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#define OPEN_CURLY_BRACE {&lt;/span&gt;
+&lt;span class="cp"&gt;#define CLOSED_CURLY_BRACE }&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Spy&lt;/span&gt; &lt;span class="n"&gt;OPEN_CURLY_BRACE&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;CLOSED_CURLY_BRACE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The above (shamefully) is fully valid C++. So if you don&amp;#8217;t use &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt;
+as a first stage then to be robust you need to implement &lt;tt class="docutils literal"&gt;cpp&lt;/tt&gt;.
+(Which is too much work for a&amp;nbsp;simulator.)&lt;/p&gt;
+&lt;p&gt;In the end, we have a whole suite of &lt;tt class="docutils literal"&gt;#pragma cyclus&lt;/tt&gt; directives that
+let users specify what they want generated and where. These are based&amp;nbsp;on:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;the method they want&amp;nbsp;generated,&lt;/li&gt;
+&lt;li&gt;whether they want the declaration, definition, or implementation
+of this method,&amp;nbsp;or&lt;/li&gt;
+&lt;li&gt;a wrap up of the&amp;nbsp;above.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These pragmas are, of course, scope aware.  The code generation pragmas
+are not particularly interesting to someone not doing cyclus development
+so I will skip them here. To give you a taste though, in the simplest
+case for one state variable on a single class we transform the code the
+user or developer has to write&amp;nbsp;from:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Friend&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Spy&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+   &lt;span class="nl"&gt;public:&lt;/span&gt;
+    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt;
+
+    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;pragma&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;\
+      &lt;span class="s"&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;friend of &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; \
+      &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="k"&gt;friend&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;into this&amp;nbsp;automatically:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Friend&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Spy&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="nl"&gt;public:&lt;/span&gt;
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;InitFrom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Friend&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;InitFrom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;friend&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;friend&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;InitFrom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;QueryableBackend&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;InitFrom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;QueryResult&lt;/span&gt; &lt;span class="n"&gt;qr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Info&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;&lt;span class="caps"&gt;NULL&lt;/span&gt;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;friend&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;qr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetVal&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;friend&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;InfileToDb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;InfileTree&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;DbInit&lt;/span&gt; &lt;span class="n"&gt;di&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Spy&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;InfileToDb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;di&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;SubTree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;agent/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;agent_impl&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+    &lt;span class="n"&gt;di&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NewDatum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Info&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;AddVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;friend&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;OptionalQuery&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;friend&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;friend of James Bond, 007&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Record&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Agent&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Clone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Friend&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;mi6&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Friend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+    &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;InitFrom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;schema&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;&amp;lt;optional&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;    &amp;lt;element name=&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;friend&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;        &amp;lt;data type=&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;string&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s"&gt; /&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;    &amp;lt;/element&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;&amp;lt;/optional&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+      &lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;InitInv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Inventories&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;inv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Inventories&lt;/span&gt; &lt;span class="n"&gt;SnapshotInv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Inventories&lt;/span&gt; &lt;span class="n"&gt;invs&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;invs&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+  &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Snapshot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cyclus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;DbInit&lt;/span&gt; &lt;span class="n"&gt;di&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;di&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NewDatum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Info&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;AddVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;friend&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;friend&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Record&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="cp"&gt;#pragma cyclus var { &amp;quot;default&amp;quot;: &amp;quot;friend of &amp;quot; + Spy.name[&amp;#39;default&amp;#39;], }&lt;/span&gt;
+&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="k"&gt;friend&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="and-the-moral-mr-aesop"&gt;
+&lt;h2&gt;And The Moral, Mr.&amp;nbsp;Aesop?&lt;/h2&gt;
+&lt;p&gt;Many other simulators abuse APIs, build systems, code generators, and
+domain-specific languages in various ways. It almost seems that to be
+user-developer friendly at all that such abuse is part of the game. However,
+you don&amp;#8217;t need custom languages to achieve this goal.  Existing languages
+(cpp, C++, Python) are good enough and they give simulators the hooks
+that they need.  There is no need to go beyond them.  Any custom build
+system support the simulators wants to have is great but not - strictly
+speaking -&amp;nbsp;required.&lt;/p&gt;
+&lt;p&gt;I am extraordinarily proud that in cyclus we can eat our cake and have it
+too.  We now have user-friendly top-level APIs (the pragmas).  These are
+conveniences for lower level C++ APIs that do the real work and &lt;tt class="docutils literal"&gt;cycpp&lt;/tt&gt; is
+entirely optional (though recommended). Furthermore, writing a preprocessor
+is not hard.  It is only ~1300 lines of Python code in a single file. It
+relies on nothing but the standard library. About 600 of these lines are
+the code generators, so there is only around 700 lines of code that act as
+the preprocessor mechanics. The hardest part remains dealing with&amp;nbsp;C++!&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Keep Tel Aviv Awesome</title><link href="http://anthony.scopatz.com/keep-tlv-awesome.html" rel="alternate"></link><updated>2014-02-23T17:00:00-06:00</updated><author><name>Anthony Scopatz</name></author><id>tag:anthony.scopatz.com,2014-02-23:keep-tlv-awesome.html</id><summary type="html">&lt;p&gt;Picture it, Tel Aviv, 2014.  What an awesome trip!  I had the pleasure of visiting
 my brother Shane at his home in Tel Aviv for the past month.  Shane is currently
 a dancer in the &lt;a class="reference external" href="http://www.batsheva.co.il/en/"&gt;Batsheva ensemble&lt;/a&gt;.  This makes
 him famous - at least in Israel and insofar as &lt;em&gt;everyone&lt;/em&gt; knows&amp;nbsp;Batsheva.&lt;/p&gt;
