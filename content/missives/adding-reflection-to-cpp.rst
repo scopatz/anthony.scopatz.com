@@ -9,9 +9,9 @@ Or, Write a C++ Pre-Processor
 ==============================
 
 .. note:: This post is mostly about how to write beautiful and intuitive interfaces
-          in an atangonistic environment.
+          in an antagonistic environment.
 
-My main job these days is to be the benevolant dictator, fearless leader, and 
+My main job these days is to be the benevolent dictator, fearless leader, and 
 l'regexer extrodinaire for the `Cyclus fuel cycle simulator <http://fuelcycle.org>`_. 
 In addition to being a general solver for the nuclear fuel cycle we have the 
 additional design constraints that 3rd parties must be able to write their own 
@@ -22,7 +22,7 @@ chosen - challenge accepted(?).
 Simulation code has a lot of competing concerns:
 
 1. provide a kernel for solving a problem that performs 'well enough',
-2. be modifiable and extensibilable to non-kernel developers, 
+2. be modifiable and extensible to non-kernel developers, 
 3. report results in a well-defined & inspectable way, and finally
 4. easy and concise to use.
 
@@ -33,9 +33,9 @@ Since (1) is domain specific, let's assume that a solution exists.  Requirement 
 implies that there must be a formal public API into the kernel so that other people
 can come in and add their piece to the puzzle.  Fine.  Requirement (4) say to make
 that interface beautiful. Great. I wouldn't want to use an ugly API anyway. But then
-along comes persistance (3) and you realize that to have your public API just got a 
-lot more complicated and that users now have to make calls into the persistance 
-infrastructe manually. Also that exercise exposed the fact that some of the APIs in
+along comes persistence (3) and you realize that to have your public API just got a 
+lot more complicated and that users now have to make calls into the persistence 
+infrastructure manually. Also that exercise exposed the fact that some of the APIs in
 you wrote were probably not as extensible as you thought and need to be broadened
 (ie made more complex).  At this point you have lost most sane users because it is 
 not clear what they get by using your simulator. It it probably easier to roll their
@@ -45,7 +45,7 @@ At this point why is it is easier for people to write their own simulator than u
 yours? For every action that you want to support in the core (saving, loading, 
 validation, any problem setup steps) you now have to have a top-level API that 
 model developer *must* use.  However, in the typical case they'll only want a 
-small subset of these and would like to rely on default behaviour otherwise. 
+small subset of these and would like to rely on default behavior otherwise. 
 Furthermore, for the API to be dynamic now the user has to pass around meta-data
 information (type, default values, units, etc.) about each state variable to each 
 top-level function.  This becomes very tedious and error-prone.
@@ -53,19 +53,19 @@ top-level function.  This becomes very tedious and error-prone.
 `Reflection <http://en.wikipedia.org/wiki/Reflection_(computer_programming)>`_ 
 solves a lot of these problems. Roughly speaking reflection is the property 
 that allows types to introspect themselves *at runtime*. From the core simulators
-perspective this is great because it allows the core to ask 3rd party maodules what 
-they think that they are.  **Unfortnately, most strongly typed languages lack reflection.**
+perspective this is great because it allows the core to ask 3rd party modules what 
+they think that they are.  **Unfortunately, most strongly typed languages lack reflection.**
 
 Use That Other Language
 =======================
-Since we can't make C/C++ have reflection, we can fake it by using the preprocesor!
+Since we can't make C/C++ have reflection, we can fake it by using the preprocessor!
 The whole point of the C preprocessor (``cpp``) is to modify how language it is 
 processing works. We can just add some reflection macros that generate all of the 
 nasty repeated code bits. Problem solved!  Now we can go back to sipping our Country 
 Time lemonade at the pi day party.
 
 Except! Like Eminem in 8-mile you only get one shot since ``cpp`` is one-pass. 
-So you can't add reflection with the preproccessor either. You'd need the preprocessor 
+So you can't add reflection with the preprocessor either. You'd need the preprocessor 
 to go through the code multiple times for any suite of reflection macros to work.
 Snap back to reality.
 
@@ -83,9 +83,9 @@ Stack overflow.
 The Pragma Trick
 ================
 It turns out that part of the ``cpp`` language spec are hooks that let you 
-write your own preproccessors! The preproccessor will ignore, but still include, 
+write your own preprocessors! The preprocessor will ignore, but still include, 
 any ``#pragma`` that it doesn't understand.  These will pass through the 
-preproccessor.  Pick a token that no one else will ever use - such as your project
+preprocessor.  Pick a token that no one else will ever use - such as your project
 name. 
 
 **The prime directive:**
@@ -106,7 +106,7 @@ it.
     double flux;
 
 Now you can go through your the code as many times you need, accumulating state & 
-annotations, and interting whatever C++ code needs to be generated elsewhere.
+annotations, and inserting whatever C++ code needs to be generated elsewhere.
 This let's user write fully compatible and compilable C++ code that can hook into
 your simulation or not!
 
@@ -121,7 +121,7 @@ Python dictionary.  That is because they are! (Or more generally, they are
 any expression which evaluates to a mapping.  Most JSON is valid here too.)
 This is awesome.  This means that not even our annotations exist in their own
 DSL.  Every part of simulator is valid in a language that we are not the sole
-proprieters of.  If a 3rd party developer has already gone through the process
+proprietors of.  If a 3rd party developer has already gone through the process
 of learning C++ to add a model to our simulator, learning Python dictionaries
 is not a barrier to entry.
 
@@ -150,7 +150,7 @@ This let's users do neat things like the following:
 
     class Enemy {
         #pragma cyclus var {'default': mi6.Spy.name['default']}
-        strd::string nemesis;
+        std::string nemesis;
     };
 
 If this isn't expressive enough, we also added an ``exec`` pragma which 
@@ -177,7 +177,7 @@ Mirror, Mirror
 
 The reflection comes out of the fact that our state accumulation stage
 is prior to any code that we generate.  ``cycpp`` is in fact a 3-pass
-preproccessor. The three passes are:
+preprocessor. The three passes are:
 
 1. run cpp normally to canonize all other preprocessor directives,
 2. accumulate annotations for agents and state variables, and
@@ -185,7 +185,7 @@ preproccessor. The three passes are:
 
 Two is the minimum that you need, but having the first stage where we 
 run the code through plain old ``cpp`` is ideal because this resolves
-a lot of wacky things that people *can* do with the preproccessor:
+a lot of wacky things that people *can* do with the preprocessor:
 
 .. code-block:: c++
 
@@ -290,18 +290,18 @@ And The Moral, Mr. Aesop?
 Many other simulators abuse APIs, build systems, code generators, and 
 domain-specific languages in various ways. It almost seems that to be
 user-developer friendly at all that such abuse is part of the game. However, 
-you don't need custom languages to acheive this goal.  Existing languages
+you don't need custom languages to achieve this goal.  Existing languages
 (cpp, C++, Python) are good enough and they give simulators the hooks
 that they need.  There is no need to go beyond them.  Any custom build 
-system suport the simulators wants to have is great but not - strictly
+system support the simulators wants to have is great but not - strictly
 speaking - required.
 
-I am extrodinarily proud that in cyclus we can eat our cake and have it 
+I am extraordinarily proud that in cyclus we can eat our cake and have it 
 too!  We have user-friendly top-level APIs (the pragmas).  The are 
-conviences for lower level C++ APIs that do the real work and ``cycpp`` is
-entriely optional (though recommended). Furthermore, writing a preproccessor 
+conveniences for lower level C++ APIs that do the real work and ``cycpp`` is
+entirely optional (though recommended). Furthermore, writing a preprocessor 
 is not hard.  It is only ~1300 lines of Python code in a single file and 
 relies on nothing but the standard library.  About 600 of these lines are
-the code generators, so there is only aorund 700 lines of code that act as
+the code generators, so there is only around 700 lines of code that act as
 the preprocessor mechanics.  The hardest part remains dealing with C++!
 
