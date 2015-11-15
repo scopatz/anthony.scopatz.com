@@ -16,7 +16,7 @@ you're too scared about your past)
 
 -Longest relationship: 2 and a half years
 
--Shortest relationship: Kerry Vineberg, a quarter and a half.
+-Shortest relationship: Kerry V., a quarter and a half.
 
 -How many boyfriends/girlfriends have told you that they love you?: At
 least 2, no more than 4
